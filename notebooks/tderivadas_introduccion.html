@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Notas prácticas, cuestiones iniciales &#8212; Métodos Matemáticos III - USC</title>
+    <title>Cuestiones iniciales &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -122,13 +122,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../notas_practicas.html">
+   Ejecutar los apuntes en la nube
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../run_cloud.html">
    Ejecutar los apuntes en la nube
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Notas prácticas, cuestiones iniciales
+   Cuestiones iniciales
   </a>
  </li>
 </ul>
@@ -446,11 +451,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#como-acceder-a-los-apuntes-interactivos">
-   ¿Cómo acceder a los apuntes interactivos?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectivos">
    Objectivos
   </a>
@@ -481,7 +481,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Notas prácticas, cuestiones iniciales</h1>
+                <h1>Cuestiones iniciales</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -491,11 +491,6 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#como-acceder-a-los-apuntes-interactivos">
-   ¿Cómo acceder a los apuntes interactivos?
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectivos">
    Objectivos
@@ -528,75 +523,21 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="notas-practicas-cuestiones-iniciales">
-<h1>Notas prácticas, cuestiones iniciales<a class="headerlink" href="#notas-practicas-cuestiones-iniciales" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cuestiones-iniciales">
+<h1>Cuestiones iniciales<a class="headerlink" href="#cuestiones-iniciales" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Last version &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Última ejecución &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Thu Jan 26 16:37:55 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Jan 26 17:38:08 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="como-acceder-a-los-apuntes-interactivos">
-<h2>¿Cómo acceder a los apuntes interactivos?<a class="headerlink" href="#como-acceder-a-los-apuntes-interactivos" title="Permalink to this headline">#</a></h2>
-<p>Los apuntes interactivos están en Jupyter Notebooks.</p>
-<p>Un Jupyter NB permite combinar en una página visible en un navegador distintas celdas de texto y código (por ejemplo <em>Python</em>) que se pueden ejecutar interactivamente.</p>
-<p>Para saber más de los Jupyter Notebook visita: <a class="reference external" href="https://jupyter.org">https://jupyter.org</a></p>
-<p>En tu distribución de Anaconda (<a class="reference external" href="https://anaconda.org">https://anaconda.org</a>) debería aparecerte el logo de Jupyter-Notebook</p>
-<p>Acceso a los apuntes interactivos del curso:</p>
-<ul>
-<li><p>En tu ordenador, accede a la página: <a class="reference external" href="https://github.com/jahernando/USC-MMIII">https://github.com/jahernando/USC-MMIII</a></p></li>
-<li><p>Para acceder de forma <strong>estática</strong> los Jupyter NB clicando en los ficheros con extensión ‘.ipynb’ en tu navegador</p></li>
-<li><p>Para acceder de forma dinámica e <strong>interactiva</strong>, click en <em>binder</em> al final de la página en la sección README</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Se paciente: puede tardar unos minutos mientras se crea un entorno remoto donde ejecutar los NBs.
-</pre></div>
-</div>
-</li>
-<li><p>comienza con el índice del curso: <span class="xref myst">indice.ipynb</span></p></li>
-</ul>
-<p>Métodos para acceder a los ficheros del curso:</p>
-<ol class="simple">
-<li><p>Puedes descargar el repositorio en tu ordenador local.</p></li>
-</ol>
-<p>Pulsando el botón de la derecha, <em>Clone or Download</em> y luego <em>Download Zip</em>.</p>
-<p>Abre a continuación el paquete ‘.zip’ para acceder a los Jupyter NB que están en su interior.</p>
-<ol class="simple">
-<li><p>Puedes copiar localmente, <em>clonar</em>, el repositorio.</p></li>
-</ol>
-<ul>
-<li><p>En el mismo botón <em>Clone or Download</em> copia la dirección URL del repositorio (esto es: <a class="reference external" href="https://github.com/jahernando/USC-MMIII.git">https://github.com/jahernando/USC-MMIII.git</a>)</p></li>
-<li><p>En Linux o Max, abre una terminal (una consola), situáte en el directorio en el que quieras trabajar y ejecuta los comandos:
-&gt; git clone <a class="reference external" href="https://github.com/jahernando/USC-MMIII.git">https://github.com/jahernando/USC-MMIII.git</a>
-&gt; jupyter-notebook</p>
-<p>y debería abrirse tu navegador y en una página web ver el listado de los ficheros del repositorio, cliquea en uno: <em>indice.ipynb</em> y debería abrirse en una pestaña de tu navegador.</p>
-</li>
-</ul>
-<ol>
-<li><p>Método pro (ten el código en un repositorio local, remoto (en GitHub) y corrige los apuntes del profesor):</p>
-<p>Abréte una cuenta en github (es gratis), <a class="reference external" href="https://github.com">https://github.com</a></p>
-<p>Ve a la página del respositorio del curso, <a class="reference external" href="https://github.com/jahernando/USC-MMIII">https://github.com/jahernando/USC-MMIII</a>, cliquea el botón de arriba, <em>fork</em>.</p>
-<p>Aparecerá en tu cuenta de github el repositorio <em>USC-MMIII</em>, una copia idéntica a la original, pero de tu propiedad, que puedes ahora clonarlo localmente con:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone &lt;la dirección URL de tu fork&gt;
-</pre></div>
-</div>
-</li>
-</ol>
-<p>Métodos para actualizar tu repositorio local (si el profesor añadió material nuevo o lo modificó en remoto, en github):</p>
-<ol>
-<li><p>Puedes descargarte de nuevo el fichero ‘.zip’</p></li>
-<li><p>Si clonaste el repositorio puedes hacer, en una consola y en el directorio donde tienes el repositorio:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; git pull
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
 <section id="objectivos">
 <h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
 <p>Presentar los conceptos fundamentales del primer tema:</p>
@@ -655,11 +596,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6952/2001361546.py:13: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_8433/2001361546.py:13: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
   ax = fig.gca(projection=&#39;3d&#39;)
 </pre></div>
 </div>
-<img alt="../_images/tderivadas_introduccion_12_1.png" src="../_images/tderivadas_introduccion_12_1.png" />
+<img alt="../_images/tderivadas_introduccion_6_1.png" src="../_images/tderivadas_introduccion_6_1.png" />
 </div>
 </div>
 <section id="cuestiones">
@@ -745,7 +686,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_introduccion_23_0.png" src="../_images/tderivadas_introduccion_23_0.png" />
+<img alt="../_images/tderivadas_introduccion_17_0.png" src="../_images/tderivadas_introduccion_17_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -784,7 +725,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_introduccion_26_0.png" src="../_images/tderivadas_introduccion_26_0.png" />
+<img alt="../_images/tderivadas_introduccion_20_0.png" src="../_images/tderivadas_introduccion_20_0.png" />
 </div>
 </div>
 <ol>
@@ -808,7 +749,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_introduccion_28_0.png" src="../_images/tderivadas_introduccion_28_0.png" />
+<img alt="../_images/tderivadas_introduccion_22_0.png" src="../_images/tderivadas_introduccion_22_0.png" />
 </div>
 </div>
 </section>
@@ -828,7 +769,7 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Aqui está un <a class="reference external" href="https://www.nobelprize.org/uploads/2018/06/popular-physicsprize2013-1.pdf">enlace</a> sobre el Higgs de la academia sueca y esta es la página del <a class="reference external" href="https://home.cern">CERN</a>.</p>
-<p>Y por último, aquí tienes un <a class="reference external" href="https://www.youtube.com/watch?v=QG8g5JW64BA">video</a> en el que el profesor Ellis del CERN explica de forma sencilla cómo actua el bosón de Higgs. ¡El término <span class="math notranslate nohighlight">\(V(\phi)\)</span> en la última línea de su camiseta es el que hemos dibujado en la primera figura!</p>
+<p>Y por último, aquí tienes un <a class="reference external" href="https://www.youtube.com/watch?v=QG8g5JW64BA">[&gt;] vídeo</a> en el que el profesor Ellis del CERN explica de forma sencilla cómo actua el bosón de Higgs. ¡El término <span class="math notranslate nohighlight">\(V(\phi)\)</span> en la última línea de su camiseta es el que hemos dibujado en la primera figura!</p>
 <p><strong>¡Esto es todo por ahora!</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -846,14 +787,14 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6952/1861541329.py:8: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_8433/1861541329.py:8: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
   ax = fig.gca(projection=&#39;3d&#39;)
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.5, &#39;y&#39;)
 </pre></div>
 </div>
-<img alt="../_images/tderivadas_introduccion_33_2.png" src="../_images/tderivadas_introduccion_33_2.png" />
+<img alt="../_images/tderivadas_introduccion_27_2.png" src="../_images/tderivadas_introduccion_27_2.png" />
 </div>
 </div>
 </section>

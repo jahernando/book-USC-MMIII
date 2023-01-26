@@ -1,0 +1,919 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Integral de línea &#8212; Métodos Matemáticos III - USC</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Teorema de Green" href="tcalvec_green.html" />
+    <link rel="prev" title="Objectivos" href="tintegral_3d.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Métodos Matemáticos III - USC</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Métodos Matemáticos III - USC
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introdución
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_cloud.html">
+   Ejecutar los apuntes en la nube
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_introduccion.html">
+   Notas prácticas, cuestiones iniciales
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivadas en varias dimensiones
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_funcion_escalar_vectorial.html">
+   Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_limites_continuidad.html">
+   Límite y continuidad de funciones escalares y vectoriales.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_parametrizacion_lineas_superficies.html">
+   Parametrización de lineas y de superficies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_direccional_diferencial.html">
+   Derivada direccional y funciones diferenciables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_gradiante_jacobiana.html">
+   Gradiente, matriz jacobiana, funciones diferenciables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_coordenadas_cadena.html">
+   Cambio de coordenadas y regla de la cadena
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_min_max.html">
+   Mínimos y máximos de funciones escalares
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integrales en varias dimensiones
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_1d.html">
+   Integrales en una demisión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_2d.html">
+   Integrales en dos dimensiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_3d.html">
+   Objectivos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cálculo vectorial
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Integral de línea
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_green.html">
+   Teorema de Green
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_rotdiv_conservativos.html">
+   Operador Nabla. Campos conservativos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_integral_superficie.html">
+   Integral de superficie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_stockes_gauss.html">
+   Teorema de Stockes. Teorema de Gauss.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Series de Fourier
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tfourier.html">
+   Series de Fourier
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tcalvec_integral_linea.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tcalvec_integral_linea.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/tcalvec_integral_linea.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectivos">
+   Objectivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Integral de línea
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#revision-de-parametrizacion-de-lineas">
+     Revisión de parametrización de líneas.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integral-de-una-funcion-escalar-a-lo-largo-de-una-linea">
+     Integral de una función escalar a lo largo de una línea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea">
+     Integral de una función vectorial a lo largo de una línea
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Integral de línea</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectivos">
+   Objectivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Integral de línea
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#revision-de-parametrizacion-de-lineas">
+     Revisión de parametrización de líneas.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integral-de-una-funcion-escalar-a-lo-largo-de-una-linea">
+     Integral de una función escalar a lo largo de una línea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea">
+     Integral de una función vectorial a lo largo de una línea
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="integral-de-linea">
+<h1>Integral de línea<a class="headerlink" href="#integral-de-linea" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Last version &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Thu Jan 26 16:37:20 2023
+</pre></div>
+</div>
+</div>
+</div>
+<p>Estructura del tema</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/oK6Z-ZzFcdo">[&gt;]</a> Integral de una función escalar a lo largo de una línea. Revisión de la parametrización de líneas.</p></li>
+<li><p><a class="reference external" href="https://youtu.be/BSp34AFFEIA">[&gt;]</a> Integral de una función vectorial a lo largo de una línea.</p>
+<ul>
+<li><p>ejemplos sencillos.</p></li>
+</ul>
+</li>
+</ul>
+<section id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<p>Revisar la parametrización de líneas o trayectorias.</p>
+<p>Definir la integral de una función escalar y vectorial a lo largo de una línea.</p>
+<p>Mostrar algunos ejemplos sencillos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># general imports</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+
+<span class="c1"># numpy and matplotlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">graph_utils</span> <span class="k">as</span> <span class="nn">gf</span>
+
+<span class="n">figsize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">3.8</span>
+<span class="n">cmap</span>    <span class="o">=</span> <span class="s1">&#39;hot&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Integral de línea<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="revision-de-parametrizacion-de-lineas">
+<h3>Revisión de parametrización de líneas.<a class="headerlink" href="#revision-de-parametrizacion-de-lineas" title="Permalink to this headline">#</a></h3>
+<p>Hemos visto con anterioridad que podemos parametrizar una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, de un especio <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, como una función vectorial definida en un intervalo <span class="math notranslate nohighlight">\([t_a, t_b]\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}\)</span>.</p>
+<p><em>Ejemplo</em>: parametrización de una circunferencia de radio <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+t \in [0, 2 \pi) \to \left( r \cos \omega t , r \sin \omega t \right)
+\]</div>
+<p>con <span class="math notranslate nohighlight">\(\omega = 1\)</span></p>
+<p><em>Ejemplo</em>: parametrización de una hélice de <span class="math notranslate nohighlight">\(n\)</span> vueltas, de radio <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+t \in [0, 2 n \pi] \to \left( r \cos \omega t, r \sin \omega t, v_z t \right)
+\]</div>
+<p>con <span class="math notranslate nohighlight">\(v_z = 1, \; \omega = 1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">vz</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">4</span>
+<span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">xfun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span> <span class="p">:</span> <span class="n">r</span>  <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span> <span class="n">w</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">yfun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span> <span class="p">:</span> <span class="n">r</span>  <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">w</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">zfun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span> <span class="p">:</span> <span class="n">vz</span> <span class="o">*</span> <span class="n">t</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">line3d</span><span class="p">(</span><span class="n">xfun</span><span class="p">,</span> <span class="n">yfun</span><span class="p">,</span> <span class="n">zfun</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tcalvec_integral_linea_7_0.png" src="../_images/tcalvec_integral_linea_7_0.png" />
+</div>
+</div>
+<p>Calculamos la longitud de arco, <span class="math notranslate nohighlight">\(s\)</span>, de una línea, mediante la integral en una dimensión dada por:</p>
+<div class="math notranslate nohighlight">
+\[
+s = \int_{{\bf c}} \, \mathrm{d}s = \int_{t_a}^{t_b} | \dot{{\bf c}}(t) | \mathrm{d}t
+\]</div>
+<p>donde
+$<span class="math notranslate nohighlight">\(
+{\bf \dot{c}}(t) = \left( \frac{\mathrm{d} x_1 (t)}{\mathrm{d}t}, \dots, 
+\frac{\mathrm{d}x_n(t)}{\mathrm{d}t}\right)
+\)</span><span class="math notranslate nohighlight">\(
+es la derivada de \)</span>{\bf c}(t)$.</p>
+<p>Y
+$<span class="math notranslate nohighlight">\(
+\mathrm{d}s = | {\bf \dot{c}}(t)| \, \mathrm{d}t
+\)</span>$
+es un diferencial de distancia. Fíjate que es un escalar.</p>
+<p>En física, si <span class="math notranslate nohighlight">\(t\)</span> es el tiempo, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> es la trayectoria de un móvil, <span class="math notranslate nohighlight">\({\bf \dot{c}}(t)\)</span>, es la velocidad, y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s} = |{\bf \dot{c}}(t)| \mathrm{d}t\)</span>, el diferencial de distancia recorrido en un diferencial de tiempo <span class="math notranslate nohighlight">\(\mathrm{d}t\)</span>.</p>
+</section>
+<section id="integral-de-una-funcion-escalar-a-lo-largo-de-una-linea">
+<h3>Integral de una función escalar a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-escalar-a-lo-largo-de-una-linea" title="Permalink to this headline">#</a></h3>
+<p>El una famosa escena de la novela homónima, Tom Sowyer convence a sus amigos para que pinten por él la valla que su tia Polly le ha obligado pintar como castigo por hacer novillos. ¿Sabría Tom Sayer qué superficie tiene la valla? <a class="reference external" href="https://www.youtube.com/watch?v=kmJLCvp4UD4">[&gt;]</a></p>
+<p>La valla recorre sobre la base una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, y tiene un altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span> en cada punto de esa línea, <span class="math notranslate nohighlight">\(f({\bf c}(t))\)</span>.</p>
+<p>El área de la valla, <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, será la integral de la función altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, a lo largo de la línea de su base, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, parametrizada en función de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{A} = \int_{{\bf c}} f({\bf x}) \, \mathrm{d} s = \int_{t_a}^{t_b} f({\bf c}(t)) \, |{\bf \dot{c}}(t)| \mathrm{d}t 
+\]</div>
+<p>que si te fijas, aunque aparecen vectores, es simplemente una integral de 1 dimensión en <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p><em>Ejercicio</em>: Calcula la integral de línea de la función <span class="math notranslate nohighlight">\(f(x, y) = x + y\)</span> a lo largo de la circunferencia de radio unidad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>   <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>   <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">fc</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">int_fscalar_line</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tcalvec_integral_linea_11_0.png" src="../_images/tcalvec_integral_linea_11_0.png" />
+</div>
+</div>
+<p>La circunferencia de radio unidad puede parametrizarse con:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf c}(t) = \left( \cos t, \sin t \right), \;\; t \in [0, \,2 \pi)
+\]</div>
+<p>El diferencia de longitud de arco:
+$<span class="math notranslate nohighlight">\(
+{\bf \dot{c}}(t) = \left( -\sin t, \cos t \right) \to \mathrm{d} s = |{\bf \dot{c}}(t)| \mathrm{d}t = \sqrt{\sin^2 t + \cos^2 t} \; \mathrm{d}t = \mathrm{d}t
+\)</span>$</p>
+<p>La integral a lo largo de la circunferencia,</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{{\bf c}} (x + y) \, \mathrm{d} s = \int_{0}^{2 \pi} (\sin t + \cos t) \mathrm{d}t  = -\cos t + \sin t \Big|_0^{2 \pi} = 0
+\]</div>
+<p><em>Ejercicio</em>: Calcula la integral de la función <span class="math notranslate nohighlight">\(f(x, y) = 1 + y/3\)</span>, a lo largo de la línea parametrizada por: <span class="math notranslate nohighlight">\({\bf c}(t) = (3 \cos^3 t, 3 \sin^3 t)\)</span> con <span class="math notranslate nohighlight">\(t \in [0, \pi/2]\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf c}(t) = \left( 3 \cos^3 t, 3 \sin^3t \right) \to {\bf \dot{c}}(t) = 9 \cos t \sin t \left( -\cos t, \sin t \right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d} s = |\dot{{\bf c}}(t)| \mathrm{d}t  = 9 \cos t \sin t 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f({\bf c} (t))  = (1 + \sin^3 t) 
+\]</div>
+<p>Luego:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{{\bf c}} f(x, y) \, \mathrm{d}s = \int_0^{\pi/2} 9 \cos t \sin t \, ( 1 + \sin^3 t) \, \mathrm{d}t
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= 9 \left[ \frac{\sin^2 t}{2} + \frac{\sin^5 t}{5} \right]_0^{\pi/2} = 9 \frac{7}{10}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>   <span class="p">:</span> <span class="mf">3.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>   <span class="p">:</span> <span class="mf">3.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">fc</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">y</span><span class="o">/</span><span class="mf">3.</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">int_fscalar_line</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tcalvec_integral_linea_15_0.png" src="../_images/tcalvec_integral_linea_15_0.png" />
+</div>
+</div>
+</section>
+<section id="integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea">
+<h3>Integral de una función vectorial a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea" title="Permalink to this headline">#</a></h3>
+<p>Definimos la integral de una función vectoral, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, a lo largo de una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [t_0, t_1]\)</span>, como:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{{\bf c}} {\bf F} ({\bf x}) \, \mathrm{d} {\bf s} = \int_{t_0}^{t_1} {\bf F}({\bf c}(t)) \, {\bf {\dot c}}(t) \mathrm{d} t
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\({\bf F}({\bf c}(t))\)</span> es la función valorada a lo largo de la línea, <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = {\bf \dot{c}}(t) \mathrm{d} t\)</span>, es el elemento diferencial de arco. Fíjate que ahora es un deferencial vectorial y que integramos el producto escalar entre ambos.</p>
+<p><em>Ejemplo:</em> Sea la función vectoral <span class="math notranslate nohighlight">\({\bf E}(x, y) = (0, E_0)\)</span>.
+Calcular la integral a lo largo de una línea horizonal, otra vertical y en la diagonal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mi">0</span> <span class="o">+</span> <span class="mf">0.</span><span class="o">*</span><span class="n">x</span>
+<span class="n">Ey</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mf">1.</span><span class="o">+</span> <span class="mf">0.</span><span class="o">*</span><span class="n">x</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="mf">1.</span><span class="o">*</span><span class="n">t</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="mf">0.</span><span class="o">*</span><span class="n">t</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">line2d</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span> 
+<span class="n">gf</span><span class="o">.</span><span class="n">quiver2d</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">xrange</span><span class="p">,</span> <span class="n">xrange</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tcalvec_integral_linea_18_0.png" src="../_images/tcalvec_integral_linea_18_0.png" />
+</div>
+</div>
+<p><em>Ejemplo</em>: Calcula la integral de la función <span class="math notranslate nohighlight">\({\bf F}(x,y) = (x, y)\)</span> a lo largo de la circunferencia de radio unidad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span>
+<span class="n">Ey</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">y</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">line2d</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span> 
+<span class="n">gf</span><span class="o">.</span><span class="n">quiver2d</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">xrange</span><span class="p">,</span> <span class="n">xrange</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="n">adjustable</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tcalvec_integral_linea_20_0.png" src="../_images/tcalvec_integral_linea_20_0.png" />
+</div>
+</div>
+<p>En la literatura es normal encontrar la expresión:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d} {\bf s} = (\mathrm{d}x, \mathrm{d} y) \to {\bf {\dot c}} \, \mathrm{d} t = 
+(\dot{x}, \dot{y}) \, \mathrm{d}t
+\]</div>
+<p>Y por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf F} \, \mathrm{d}{\bf s} = (F_x, F_y) \, (\mathrm{d}x, \mathrm{d} y) =F_x \mathrm{d}x + F_y \mathrm{d}y \to (F_x \dot{x} + F_y \dot{y}) \, \mathrm{d}t
+\]</div>
+<p><em>Observa</em>: En la siguiente figura se muestra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> y la elipse con ejes <span class="math notranslate nohighlight">\(a, b\)</span>, que recorremos en este caso en sentido horario (empieza por ejemplo en (-a, 0)). Hazte una idea de cómo es el producto escalar entre el campo y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span> a lo largo de elipse. ¿Dónde es mayor? ¿Dónde es nulo?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span>
+<span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+<span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">41</span><span class="p">)</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span>      <span class="n">y</span> <span class="o">*</span> <span class="mf">1.</span><span class="o">/</span><span class="mf">2.</span>
+<span class="n">Ey</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span>      <span class="n">x</span> <span class="o">*</span> <span class="mf">0.</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="n">b</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">line2d</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span> 
+<span class="n">gf</span><span class="o">.</span><span class="n">quiver2d</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">xrange</span><span class="p">,</span> <span class="n">xrange</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tcalvec_integral_linea_23_0.png" src="../_images/tcalvec_integral_linea_23_0.png" />
+</div>
+</div>
+<p><em>Observa</em>: En las siguiente figura se muestra la elipse, <span class="math notranslate nohighlight">\({\bf c}(t) = (-a \cos t, b \sin t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [0, 2 \pi)\)</span> y el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> recorrida en sentido horario.</p>
+<p>Para una partición de <span class="math notranslate nohighlight">\(t \in [0, 2\pi)\)</span>, el término <span class="math notranslate nohighlight">\({\bf F} \, \mathrm{d}{\bf s} = F_x \, \mathrm{d}x  = y  \, \mathrm{d}x\)</span> corresponde al rectángulo de base <span class="math notranslate nohighlight">\(\mathrm{d}x\)</span> y altura <span class="math notranslate nohighlight">\(y\)</span>. Y la integral nos queda el área de la elipse.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">gf</span><span class="o">.</span><span class="n">int_fvect_line</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;integral &#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>integral  -0.9956796827723801
+</pre></div>
+</div>
+<img alt="../_images/tcalvec_integral_linea_25_1.png" src="../_images/tcalvec_integral_linea_25_1.png" />
+</div>
+</div>
+<p><em>Ejercicio</em>: Integra <span class="math notranslate nohighlight">\({\bf F}(x, y) = (-y, 0)\)</span> en la elipse de exes <span class="math notranslate nohighlight">\(a, b\)</span>, recorrida en sentido anti-horario.</p>
+<p>La elipse podemos parametrizarla con:
+$<span class="math notranslate nohighlight">\(
+{\bf c}(t) = \left(a \cos t, b \sin t \right), \; t \in [0, 2 \pi)
+\)</span><span class="math notranslate nohighlight">\(
+su derivada es:
+\)</span><span class="math notranslate nohighlight">\(
+\dot{{\bf c}}(t) = \left(-a \sin t, b \cos t \right)
+\)</span>$</p>
+<p>El campo, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (-y, 0)\)</span> valorado en la elipse es:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf F}({\bf c}(t)) = (-b \sin t, 0)
+\]</div>
+<p>Por lo tanto el producto:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf F}({\bf c}(t)) \, \dot{{\bf c}}(t) = ab \, \sin^2 t  = ab \frac{( 1 - \cos 2 t)}{2}
+\]</div>
+<p>Luego:
+$<span class="math notranslate nohighlight">\(
+\int_{{\bf c}} {\bf F} \, \mathrm{d}{\bf s} = \int_0^{2\pi} \frac{ab}{2}(1-\cos 2t) \mathrm{d}t = \frac{ab}{2} \left(t - \frac{\sin 2t}{2} \right) \Big|_0^{2\pi}= a b \pi 
+\)</span>$</p>
+<p><em>Ejercicio</em>: Integra <span class="math notranslate nohighlight">\({\bf F}(x, y) = (-y, x)/2\)</span> en la elipse de exes <span class="math notranslate nohighlight">\(a, b\)</span>, recorrida en sentido anti-horario.</p>
+<p>La elipse podemos parametrizarla con:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf c}(t) = \left(a \cos t, b \sin t \right), \; t \in [0, 2 \pi)
+\]</div>
+<p>su derivada es:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{{\bf c}}(t) = \left(-a \sin t, b \cos t \right)
+\]</div>
+<p>El campo, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (-y, x)/2\)</span> valorado en la elipse es:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf F}({\bf c}(t)) = (-b \sin t, a \cos t)/2
+\]</div>
+<p>Por lo tanto el producto:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf F}({\bf c}(t)) \, \dot{{\bf c}}(t) = ab \, (\sin^2 t +\cos^2 t)/2 = ab/2 
+\]</div>
+<p>Luego:
+$<span class="math notranslate nohighlight">\(
+\int_{{\bf c}} {\bf F} \, \mathrm{d}{\bf s} = \int_0^{2\pi} \frac{ab}{2} \mathrm{d}t = \frac{ab}{2} t \big|_0^{2\pi}= a b \pi 
+\)</span>$</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="tintegral_3d.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Objectivos</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tcalvec_green.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Teorema de Green</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By José Ángel Hernando Morata<br/>
+  
+      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

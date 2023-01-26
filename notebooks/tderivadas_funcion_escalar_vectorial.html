@@ -1,0 +1,1129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales. &#8212; Métodos Matemáticos III - USC</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Límite y continuidad de funciones escalares y vectoriales." href="tderivadas_limites_continuidad.html" />
+    <link rel="prev" title="Notas prácticas, cuestiones iniciales" href="tderivadas_introduccion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Métodos Matemáticos III - USC</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Métodos Matemáticos III - USC
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introdución
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run_cloud.html">
+   Ejecutar los apuntes en la nube
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_introduccion.html">
+   Notas prácticas, cuestiones iniciales
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivadas en varias dimensiones
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_limites_continuidad.html">
+   Límite y continuidad de funciones escalares y vectoriales.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_parametrizacion_lineas_superficies.html">
+   Parametrización de lineas y de superficies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_direccional_diferencial.html">
+   Derivada direccional y funciones diferenciables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_gradiante_jacobiana.html">
+   Gradiente, matriz jacobiana, funciones diferenciables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_coordenadas_cadena.html">
+   Cambio de coordenadas y regla de la cadena
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_min_max.html">
+   Mínimos y máximos de funciones escalares
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integrales en varias dimensiones
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_1d.html">
+   Integrales en una demisión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_2d.html">
+   Integrales en dos dimensiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_3d.html">
+   Objectivos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cálculo vectorial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_integral_linea.html">
+   Integral de línea
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_green.html">
+   Teorema de Green
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_rotdiv_conservativos.html">
+   Operador Nabla. Campos conservativos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_integral_superficie.html">
+   Integral de superficie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tcalvec_stockes_gauss.html">
+   Teorema de Stockes. Teorema de Gauss.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Series de Fourier
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tfourier.html">
+   Series de Fourier
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tderivadas_funcion_escalar_vectorial.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_funcion_escalar_vectorial.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/tderivadas_funcion_escalar_vectorial.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectivos">
+   Objectivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-escalares">
+   Funciones escalares
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grafica-de-una-funcion">
+     Gráfica de una función
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjuntos-de-nivel">
+     Conjuntos de nivel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-vectoriales">
+   Funciones vectoriales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones-componentes">
+     Funciones componentes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-dibujar-un-campo-vectorial">
+     ¿Cómo dibujar un campo vectorial?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aun-hay-mas">
+     ¡Aún hay más!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectivos">
+   Objectivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-escalares">
+   Funciones escalares
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grafica-de-una-funcion">
+     Gráfica de una función
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjuntos-de-nivel">
+     Conjuntos de nivel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-vectoriales">
+   Funciones vectoriales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones-componentes">
+     Funciones componentes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-dibujar-un-campo-vectorial">
+     ¿Cómo dibujar un campo vectorial?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aun-hay-mas">
+     ¡Aún hay más!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="funciones-escalares-graficas-conjuntos-de-nivel-y-funciones-vectoriales">
+<h1>Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.<a class="headerlink" href="#funciones-escalares-graficas-conjuntos-de-nivel-y-funciones-vectoriales" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Last version &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Thu Jan 26 16:37:45 2023
+</pre></div>
+</div>
+</div>
+</div>
+<section id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<p>Presentar los conceptos de</p>
+<ul class="simple">
+<li><p>funciones escalares y la gráfica de una función escalar</p></li>
+<li><p>los conjuntos de nivel</p></li>
+<li><p>funciones vectoriales</p></li>
+</ul>
+<p>y asociarlos a funciones conocidas en Física Clásica:</p>
+<ul class="simple">
+<li><p>el potencial y el campo eléctrico</p></li>
+</ul>
+<p>o de otros ámbitos:</p>
+<ul class="simple">
+<li><p>los mapas de superficie topográficos o los mapas de isobaras.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># general imports</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># numpy and matplotlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="c1"># possible styles: ggplot (simplicity), bmh (scientify data), </span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="funciones-escalares">
+<h2>Funciones escalares<a class="headerlink" href="#funciones-escalares" title="Permalink to this headline">#</a></h2>
+<p>Observa la siguiente figura:</p>
+<ul class="simple">
+<li><p>¿Has visto en Física alguna función similar a la que estamos dibujando?</p></li>
+<li><p>¿Reconoces a qué se parece?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">charge_potential</span><span class="p">():</span>
+    <span class="n">rs</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span>     <span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">phis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">rms</span><span class="p">,</span> <span class="n">pms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">phis</span><span class="p">)</span>
+    <span class="c1"># compute the electromagnetic potential</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">;</span> <span class="n">q</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1"># GeV2</span>
+    <span class="n">vms</span> <span class="o">=</span>  <span class="n">k</span><span class="o">*</span><span class="n">q</span> <span class="o">/</span> <span class="n">rms</span> <span class="c1"># potencial  </span>
+    <span class="n">vms</span><span class="p">[</span><span class="n">vms</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1"># truncate the figure</span>
+    <span class="n">xms</span> <span class="o">=</span> <span class="n">rms</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pms</span><span class="p">)</span>
+    <span class="n">yms</span> <span class="o">=</span> <span class="n">rms</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pms</span><span class="p">)</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">vms</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">);</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;$V(x, y)$&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$V(x, y) = 1/ \sqrt{x^2 + y^2}$&#39;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">vms</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">vms</span> <span class="o">=</span> <span class="n">charge_potential</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6941/228372907.py:11: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_6_1.png" src="../_images/tderivadas_funcion_escalar_vectorial_6_1.png" />
+</div>
+</div>
+<p>Es el potencial electromagnético de una carga en el plano</p>
+<div class="math notranslate nohighlight">
+\[
+V(x, y) = k \frac{q}{\sqrt{x^2 + y^2}}
+\]</div>
+<p>Solo que hemos tomado por simplicidad <span class="math notranslate nohighlight">\(k = 1\)</span> y <span class="math notranslate nohighlight">\(q=1\)</span>.</p>
+<p>También hemos truncando la gráfica para poder verla mejor.</p>
+<p>La anterior función es una <strong>función escalar</strong>.</p>
+<p>Una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, asigna un valor real, a un punto, <span class="math notranslate nohighlight">\({\bf x}\)</span>, de un dominio, <span class="math notranslate nohighlight">\(\mathcal{D}\)</span>, en un espacio real de dimensión <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf x} \in \mathcal{D} \subset \mathrm{R}^n \mapsto f({\bf x}) \in \mathrm{R}
+\]</div>
+<p>El potencial eléctrico anterior es una función escalar de <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span>, donde el dominio es todo <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> menos el origen, <span class="math notranslate nohighlight">\((0, 0)\)</span>, donde la función no está definida.</p>
+<section id="grafica-de-una-funcion">
+<h3>Gráfica de una función<a class="headerlink" href="#grafica-de-una-funcion" title="Permalink to this headline">#</a></h3>
+<p>La figura anterior es la <strong>gráfica</strong> del potencial eléctrico de una carga.</p>
+<p>Sea <span class="math notranslate nohighlight">\(f(x, y)\)</span> una función escalar con dominio <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span>, la gráfica de la función son los puntos de <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span> dados por:</p>
+<div class="math notranslate nohighlight">
+\[
+\{(x, \, y, \, f(x, y)), \; \forall \;(x, \, y) \, \in \, \mathcal{D}\}
+\]</div>
+<p>En el caso anterior, la gráfica de la función <span class="math notranslate nohighlight">\(f(x, y)\)</span> son los puntos <span class="math notranslate nohighlight">\((x, y, z = f(x, y))\)</span>.</p>
+<p>¡Los humanos somos algo limitados solo podemos ‘ver’ las gráficas de las funciones escalares de dos dimensiones!</p>
+</section>
+<section id="conjuntos-de-nivel">
+<h3>Conjuntos de nivel<a class="headerlink" href="#conjuntos-de-nivel" title="Permalink to this headline">#</a></h3>
+<p>Si te fijas, el valor del potencial eléctrico es el mismo para todos los puntos de una circunferencia centrada en el origen. Decimos que son puntos equipotenciales.</p>
+<p>De otra forma, si calculamos cuáles son los puntos cuya función vale un determinado valor <span class="math notranslate nohighlight">\(c\)</span>, esto es <span class="math notranslate nohighlight">\(f(x, y) = c\)</span>, obtenemos la ecuación de una circunferencia:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x, y) = c \;\; \Rightarrow \frac{1}{\sqrt{x^2 + y^2}} = c\;\;  \Rightarrow x^2 + y^2 = (1/c)^2
+\]</div>
+<p>El conjunto de nivel son todos los puntos, <span class="math notranslate nohighlight">\({\bf x} = {x_1, \dots }\)</span> del dominio inicial, <span class="math notranslate nohighlight">\(\mathcal{D}\)</span>, en un espacio real de dimension <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, cuyo valor de la función es un mismo valor, <span class="math notranslate nohighlight">\(c\)</span>.
+Esto es:</p>
+<div class="math notranslate nohighlight">
+\[
+\{  \forall \, {\bf x} \, \in \mathcal{D} \subset \mathrm{R}^n \; | \; f({\bf x}) = c \}
+\]</div>
+<p>De hecho, podemos dibujar una función a partir de sus conjuntos de nivel.</p>
+<p>Observa la siguiente figura. Hemos dibujado la misma función, el potencial eléctrico, pero usando diversos conjuntos de nivel. ¿Puedes imaginar su gráfica en tres dimensiones a partir de los conjuntos de nivel?</p>
+<p>Los conjuntos de nivel tienen una ventaja adicional, si nos movemos dentro de uno de ellos ¡la función no cambia de valor!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">sf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">vms</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$V(x, y) = 1/ \sqrt{x^2 + y^2}$&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_12_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_12_0.png" />
+</div>
+</div>
+<p><em>Cuestión</em>: En el caso del potencial eléctrico en tres dimensiones de una carga situada en el origen, ¿qué figura geométrica forman sus conjuntos de nivel?</p>
+<p><em>Ejercicio</em>: Indica cuál es su dominio y dibuja la gráfica de la función escalar:</p>
+<p><span class="math notranslate nohighlight">\(f(x, y) = x^2 + y^2\)</span></p>
+<p>¿Qué forma geométrica forman sus conjuntos de nivel?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ys</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span> 
+<span class="n">zms</span> <span class="o">=</span> <span class="n">xms</span><span class="o">*</span><span class="n">xms</span> <span class="o">+</span> <span class="n">yms</span><span class="o">*</span><span class="n">yms</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">sf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;hot&#39;</span><span class="p">);</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$x^2 + y^2$&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6941/1120808753.py:5: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_15_1.png" src="../_images/tderivadas_funcion_escalar_vectorial_15_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">sf</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span>  <span class="p">;</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$x^2 + y^2$&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_16_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_16_0.png" />
+</div>
+</div>
+<p><em>Solución</em>: el dominio es todo <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span>.</p>
+<p>Los conjuntos de nivel son circunferencias (<span class="math notranslate nohighlight">\(c &gt; 0\)</span>):
+$<span class="math notranslate nohighlight">\(
+x^{2} + y^{2} = c
+\)</span><span class="math notranslate nohighlight">\(
+Para \)</span>c = 0<span class="math notranslate nohighlight">\(, el cojunto de nivel es el origen \)</span>(0, 0)$.</p>
+<p><em>Ejercicio</em>: Considera ahora la función escalar <span class="math notranslate nohighlight">\(f(x, y) = \frac{x^2}{a^2} + \frac{y^2}{b^2}\)</span>, donde <span class="math notranslate nohighlight">\(a, \, b\)</span> son constantes. Estudia su dominio, dibuja sus gráfica y sus conjuntos de nivel. ¿qué figura geométrica son? Usa valores concretos para <span class="math notranslate nohighlight">\(a, \, b\)</span>, por ejemplo <span class="math notranslate nohighlight">\(a =1, \, b = 2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ys</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span> 
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span>     <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a &#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;, b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">zms</span> <span class="o">=</span> <span class="o">+</span><span class="n">xms</span><span class="o">*</span><span class="n">xms</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="n">yms</span><span class="o">*</span><span class="n">yms</span><span class="o">/</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">sf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;hot&#39;</span><span class="p">);</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$x^2/a^2 + y^2/b^2$&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a  1.0 , b = 2.0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6941/2580978554.py:7: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_19_2.png" src="../_images/tderivadas_funcion_escalar_vectorial_19_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span>
+<span class="n">sf</span>  <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">);</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$x^2/a^2 + y^2/b^2$&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_20_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_20_0.png" />
+</div>
+</div>
+<p><em>Solución</em>: los conjuntos de nivel son elipses (<span class="math notranslate nohighlight">\(c &gt;0)\)</span>:
+$<span class="math notranslate nohighlight">\(
+\frac{x^2}{c \, a^2} + \frac{y^2}{c \, b^2} = 1
+\)</span><span class="math notranslate nohighlight">\(
+cuando \)</span>a = b<span class="math notranslate nohighlight">\(, son circunferencias. 
+Y para \)</span>c = 0<span class="math notranslate nohighlight">\(? el conjunto de nivel es el origen \)</span>(0, 0)$.</p>
+<p><em>Ejercicio</em>: Considera ahora la función escalar <span class="math notranslate nohighlight">\(f(x, y) = x^2 - y^2\)</span>. Estudia su dominio, dibuja sus gráfica y sus conjuntos de nivel. ¿qué figura geométrica son?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ys</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span> 
+<span class="n">zms</span> <span class="o">=</span> <span class="n">xms</span><span class="o">*</span><span class="n">xms</span> <span class="o">-</span> <span class="n">yms</span><span class="o">*</span><span class="n">yms</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">sf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">);</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$x^2 - y^2$&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6941/501296304.py:5: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_23_1.png" src="../_images/tderivadas_funcion_escalar_vectorial_23_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span>
+<span class="n">sf</span>  <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">);</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$x^2 - y^2$&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_24_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_24_0.png" />
+</div>
+</div>
+<p><em>Solución</em>: los cojuntos de nivel son hipérbolas:
+$<span class="math notranslate nohighlight">\(
+x^2 - y^2 = c
+\)</span><span class="math notranslate nohighlight">\(
+Para el caso \)</span>c = 0<span class="math notranslate nohighlight">\(, el conjunto de nivel son las rectas:
+\)</span><span class="math notranslate nohighlight">\(
+y = \pm x
+\)</span>$</p>
+<p><em>Ejercicio</em>: Dibuja la gráfica del potencial de un dipolo eléctrico, centrado en origen, cuyas cargas, <span class="math notranslate nohighlight">\(q\)</span> están separadas una distancia <span class="math notranslate nohighlight">\(d\)</span>. Considera por simplicidad <span class="math notranslate nohighlight">\(k=1, q = \pm 1\)</span>, <span class="math notranslate nohighlight">\(d = 2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dipole_potential</span><span class="p">():</span>
+    <span class="n">dsize</span> <span class="o">=</span> <span class="mf">2.</span>
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">dsize</span><span class="p">,</span> <span class="n">dsize</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">dsize</span><span class="p">,</span> <span class="n">dsize</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">Vfield</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">q0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">):</span>
+        <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">xs</span> <span class="o">-</span> <span class="n">x0</span><span class="p">,</span> <span class="n">ys</span> <span class="o">-</span> <span class="n">y0</span>
+        <span class="n">rr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xx</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">yy</span><span class="o">*</span> <span class="n">yy</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">k</span><span class="o">*</span><span class="n">q0</span><span class="o">/</span><span class="n">rr</span>
+
+    <span class="n">V_neg</span> <span class="o">=</span> <span class="n">Vfield</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">)</span> <span class="c1"># field of - charge at (-1, 0)</span>
+    <span class="n">V_pos</span> <span class="o">=</span> <span class="n">Vfield</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.</span><span class="p">)</span> <span class="c1"># field of + charge at (+1, 0)</span>
+    <span class="n">V</span>     <span class="o">=</span> <span class="n">V_neg</span> <span class="o">+</span> <span class="n">V_pos</span>
+    <span class="n">vmax</span>  <span class="o">=</span> <span class="mf">10.</span> <span class="c1"># truncate the potential</span>
+    <span class="n">V</span><span class="p">[</span><span class="n">V</span> <span class="o">&gt;</span> <span class="n">vmax</span><span class="p">]</span> <span class="o">=</span> <span class="n">vmax</span><span class="p">;</span> <span class="n">V</span><span class="p">[</span> <span class="n">V</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">vmax</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">vmax</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+    <span class="n">sf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">);</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;V dipolo&#39;</span><span class="p">);</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">V</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">vdipolo</span> <span class="o">=</span> <span class="n">dipole_potential</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6941/1137147322.py:18: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_28_1.png" src="../_images/tderivadas_funcion_escalar_vectorial_28_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">vdipolo</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;V dipolo&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sf</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_6941/3657187204.py:4: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
+  fig.colorbar(sf); plt.axis(&#39;equal&#39;); plt.tight_layout();
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_29_1.png" src="../_images/tderivadas_funcion_escalar_vectorial_29_1.png" />
+</div>
+</div>
+<p><em>Cuestión</em>: ¿Qué indica que los conjuntos de nivel están muy próximos entre ellos? ¿Y cuándo están alejados?</p>
+</section>
+</section>
+<section id="funciones-vectoriales">
+<h2>Funciones vectoriales<a class="headerlink" href="#funciones-vectoriales" title="Permalink to this headline">#</a></h2>
+<p>Considera la siguiente función que, supogo, la has visto con anterioridad en Electromagnetismo.</p>
+<p>Es el campo eléctrico de una carga <span class="math notranslate nohighlight">\(q\)</span> centrada en el origin <span class="math notranslate nohighlight">\((0, 0, 0)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf E} (x, y, z) = k\frac{q}{(x^2 + y^2 + z^2)^{3/2}} \left( x, y, z \right) 
+\]</div>
+<p>Quizás lo reconozcas mejor si lo reescribimos en coordenades esféricas, donde <span class="math notranslate nohighlight">\(r\)</span> es la distancia a la carga, y <span class="math notranslate nohighlight">\({\hat r}\)</span>, el vector unitario que une la carga con el punto donde estimamos el campo.</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf E} ({\bf r}) =  k\frac{q}{r^2} {\hat r}
+\]</div>
+<p>El campo eléctrico, <span class="math notranslate nohighlight">\({\bf E} (x, y, z)\)</span>, es una <strong>función vectorial</strong>.</p>
+<p>Una función vectorial asigna a cada punto, <span class="math notranslate nohighlight">\({\bf x}\)</span>, de una región, o dominio, <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> de un espacio real de dimensión <span class="math notranslate nohighlight">\(n\)</span>, con <span class="math notranslate nohighlight">\(n \ge 1\)</span>, <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, un punto de un espacio real de dimensión <span class="math notranslate nohighlight">\(m\)</span>, con <span class="math notranslate nohighlight">\(m &gt;1\)</span>, <span class="math notranslate nohighlight">\(\mathrm{R}^m\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf x} \in \mathcal{D} \subset \mathrm{R}^n \mapsto \bf{f}(\bf x) \in \mathrm{R}^m
+\]</div>
+<p>Nota que <span class="math notranslate nohighlight">\(n \ge 1\)</span> y <span class="math notranslate nohighlight">\( m &gt;1\)</span>.</p>
+<section id="funciones-componentes">
+<h3>Funciones componentes<a class="headerlink" href="#funciones-componentes" title="Permalink to this headline">#</a></h3>
+<p>Si te fijas el campo eléctrico, <span class="math notranslate nohighlight">\({\bf E}({\bf x})\)</span> lo hemos expresado como tres funciones escalares:</p>
+<div class="math notranslate nohighlight">
+\[
+E_x ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{x}{\sqrt{x^2 + y^2 + z^2}} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+E_y ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{y}{\sqrt{x^2 + y^2 + z^2}} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}} 
+\]</div>
+<p>Cada una de ellas es una función componente.</p>
+<p>Llamamos función componente, <span class="math notranslate nohighlight">\(f_i({\bf x})\)</span>, a cada función escalar que representa la coordenada <span class="math notranslate nohighlight">\(i\)</span>-ésima de una función vectorial,</p>
+<div class="math notranslate nohighlight">
+\[
+{\bf f} ({\bf x}) = \left( f_1 ({\bf x}), \dots, f_m({\bf x}) \, \right).
+\]</div>
+<p>O lo que es lo mismo, para dar una función vectorial, basta con dar sus funciones componentes.</p>
+<p><em>Nota</em>: Para indicar valores o funciones vectoriales usamos letras en negrita, mientras que usamos tipos normales para valores o funciones escalares.</p>
+</section>
+<section id="como-dibujar-un-campo-vectorial">
+<h3>¿Cómo dibujar un campo vectorial?<a class="headerlink" href="#como-dibujar-un-campo-vectorial" title="Permalink to this headline">#</a></h3>
+<p>En realidad no podemos dibujar adecuadamente un campo vectorial.</p>
+<p>No obstante podemos ‘visualizar’ un campo vectorial colocando sobre el espacio inicial unos vectorcitos o flechas, que por su tamaño, grosor o color nos digan en qué dirección va el campo y cuál es su módulo. ¡Aunque sólo podemos hacerlo en <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> y <em>malamente</em> en <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>!</p>
+<p>La siguiente figura intenta visualizar el campo eléctrico en dos dimensiones de una carga.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">charge_electric_field</span><span class="p">():</span>
+
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+
+    <span class="n">rms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xms</span><span class="o">*</span><span class="n">xms</span> <span class="o">+</span> <span class="n">yms</span><span class="o">*</span><span class="n">yms</span><span class="p">)</span>
+    <span class="n">k</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span>
+
+    <span class="n">Ex</span> <span class="o">=</span>  <span class="n">k</span> <span class="o">*</span> <span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="n">rms</span><span class="o">*</span><span class="n">rms</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">xms</span><span class="o">/</span><span class="n">rms</span><span class="p">)</span>
+    <span class="n">Ey</span> <span class="o">=</span>  <span class="n">k</span> <span class="o">*</span> <span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="n">rms</span><span class="o">*</span><span class="n">rms</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">yms</span><span class="o">/</span><span class="n">rms</span><span class="p">)</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">))</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">inferno</span><span class="p">,</span>
+                  <span class="n">density</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">arrowsize</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$(E_x, E_y)$&#39;</span><span class="p">);</span> 
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">lines</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xms</span><span class="p">,</span> <span class="n">ysm</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span> <span class="o">=</span> <span class="n">charge_electric_field</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_39_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_39_0.png" />
+</div>
+</div>
+<p>El campo eléctrico es radial y se debilita conforme nos alejamos de la carga.</p>
+<p><em>Ejercicio</em>:</p>
+<p>Intenta dibujar el campo eléctrico en el plano producido por un dipolo, centrado en el origen, cuyas cargas están separadas una distancia <span class="math notranslate nohighlight">\(d =2\)</span>. Considera por simplicidad <span class="math notranslate nohighlight">\(k =1, \, q = \pm 1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dipole_electric_field</span><span class="p">():</span>
+    <span class="n">dsize</span>    <span class="o">=</span> <span class="mf">3.</span>
+    <span class="n">xs</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">dsize</span><span class="p">,</span> <span class="n">dsize</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">ys</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">dsize</span><span class="p">,</span> <span class="n">dsize</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+ 
+    <span class="k">def</span> <span class="nf">Efield</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">q0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">):</span>
+        <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="p">(</span><span class="n">xs</span> <span class="o">-</span> <span class="n">x0</span><span class="p">),</span> <span class="n">ys</span> <span class="o">-</span> <span class="n">y0</span>
+        <span class="n">rr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xx</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">yy</span><span class="o">*</span> <span class="n">yy</span><span class="p">)</span>
+        <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">q0</span><span class="o">*</span><span class="n">xx</span><span class="o">/</span><span class="n">rr</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">k</span><span class="o">*</span><span class="n">q0</span><span class="o">*</span><span class="n">yy</span><span class="o">/</span><span class="n">rr</span><span class="o">**</span><span class="mi">3</span>
+        <span class="k">return</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span>
+
+    <span class="n">Ex_neg</span><span class="p">,</span> <span class="n">Ey_neg</span> <span class="o">=</span> <span class="n">Efield</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">)</span> 
+    <span class="n">Ex_pos</span><span class="p">,</span> <span class="n">Ey_pos</span> <span class="o">=</span> <span class="n">Efield</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.</span><span class="p">)</span> 
+    <span class="n">Ex</span>    <span class="p">,</span> <span class="n">Ey</span>     <span class="o">=</span> <span class="n">Ex_neg</span> <span class="o">+</span> <span class="n">Ex_pos</span><span class="p">,</span> <span class="n">Ey_neg</span> <span class="o">+</span> <span class="n">Ey_pos</span>
+
+    <span class="n">color</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">))</span>
+    <span class="n">fig</span>   <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">))</span> 
+    <span class="n">st</span>    <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> 
+                          <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">inferno</span><span class="p">,</span>
+                          <span class="n">density</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">arrowsize</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$(E_x, E_y)$&#39;</span><span class="p">);</span> 
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">lines</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xms</span><span class="p">,</span> <span class="n">ysm</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span> <span class="o">=</span> <span class="n">dipole_electric_field</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_43_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_43_0.png" />
+</div>
+</div>
+<p>La líneas de campo eléctrico de un dipolo salen de la carga positiva y mueren en la negativa.</p>
+</section>
+<section id="aun-hay-mas">
+<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
+<p>El concepto de conjunto de nivel es bastante común, seguramente conoces los mapas de nivel que representan una zona topográfica a partir de sus curvas de nivel. Cuando las líneas están muy juntas significa que la pendiente sube abruptamente, mientras que cuando están muy separadas indica que la pendiente es muy suave, un falso llano.</p>
+<p>La imagen muestra el mapa topográfico de la zona de Canfranc, en el Pirineo, donde se encuentra, bajo la montaña de “El Tobazo” el Laboratorio Subterráneo de Canfranc donde se estudia, entre otras cosas, cuál es la naturaleza del neutrino o si existe la materia oscura. El enlace al laboratorio es <a class="reference external" href="https://lsc-canfranc.es">éste</a>. Fíjate lo empinado de sus laderas al lado de la estación internacional de Canfranc, luego míralas en la <a class="reference external" href="http://notatherdesk.com/travel/exploring-canfranc-railway-station/">foto</a></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><img src="imgs/Canfranc_mapa.png" width="250" /></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Líneas de nivel en la zona de Canfranc Estación (Huesca)</p></td>
+</tr>
+</tbody>
+</table>
+<p>También puedes visitar la página del <a class="reference external" href="http://www.meteogalicia.gal/web/index.action">tiempo</a> de Galicia y ver cómo dibujan las funciones escalares de la presión y las vectoriales de los vientos.</p>
+<p><strong>¡Esto es todo por ahora!</strong></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="tderivadas_introduccion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Notas prácticas, cuestiones iniciales</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tderivadas_limites_continuidad.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Límite y continuidad de funciones escalares y vectoriales.</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By José Ángel Hernando Morata<br/>
+  
+      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

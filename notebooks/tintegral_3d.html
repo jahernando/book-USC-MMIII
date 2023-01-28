@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Objectivos &#8212; Métodos Matemáticos III - USC</title>
+    <title>Integrales en varias dimensiones &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -117,23 +117,18 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introdución
+  Notas prácticas
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../notas_practicas.html">
-   Ejecutar los apuntes en la nube
+   Cómo acceder a los apuntes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run_cloud.html">
    Ejecutar los apuntes en la nube
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tderivadas_introduccion.html">
-   Cuestiones iniciales
   </a>
  </li>
 </ul>
@@ -143,6 +138,11 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tderivadas_introduccion.html">
+   Cuestiones iniciales
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tderivadas_funcion_escalar_vectorial.html">
    Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.
@@ -187,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tintegral_1d.html">
-   Integrales en una demisión
+   Integrales en una dimensión
   </a>
  </li>
  <li class="toctree-l1">
@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Objectivos
+   Integrales en varias dimensiones
   </a>
  </li>
 </ul>
@@ -450,29 +450,24 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectivos">
    Objectivos
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#integrales-en-varias-dimensiones">
-   Integrales en varias dimensiones
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extension-de-la-integral-a-3d">
+   Extensión de la integral a 3D
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extension-de-la-integral">
-     Extensión de la integral.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integrales-en-volumenes-que-no-son-un-prisma">
      Integrales en volumenes que no son un prisma.
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cambio-de-variables">
    Cambio de variables
   </a>
@@ -486,7 +481,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Objectivos</h1>
+                <h1>Integrales en varias dimensiones</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -496,29 +491,24 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectivos">
    Objectivos
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#integrales-en-varias-dimensiones">
-   Integrales en varias dimensiones
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extension-de-la-integral-a-3d">
+   Extensión de la integral a 3D
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extension-de-la-integral">
-     Extensión de la integral.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integrales-en-volumenes-que-no-son-un-prisma">
      Integrales en volumenes que no son un prisma.
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cambio-de-variables">
    Cambio de variables
   </a>
@@ -533,7 +523,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="integrales-en-varias-dimensiones">
+<h1>Integrales en varias dimensiones<a class="headerlink" href="#integrales-en-varias-dimensiones" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Última ejecución  &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
@@ -541,7 +533,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Jan 26 17:38:37 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Jan 28 17:24:54 2023
 </pre></div>
 </div>
 </div>
@@ -556,7 +548,7 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://youtu.be/_zcybsGfcu8">[&gt;]</a> Cambio de variables</p></li>
 </ul>
 <section id="objectivos">
-<h1>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h1>
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
 <p>Extender la integral de una función escalar de dos dimensions.</p>
 <p>Definición de regiones en varias dimensiones.</p>
 <p>Extender cómo integrar con un cambio de variables.</p>
@@ -583,10 +575,8 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="integrales-en-varias-dimensiones">
-<h1>Integrales en varias dimensiones<a class="headerlink" href="#integrales-en-varias-dimensiones" title="Permalink to this headline">#</a></h1>
-<section id="extension-de-la-integral">
-<h2>Extensión de la integral.<a class="headerlink" href="#extension-de-la-integral" title="Permalink to this headline">#</a></h2>
+<section id="extension-de-la-integral-a-3d">
+<h2>Extensión de la integral a 3D<a class="headerlink" href="#extension-de-la-integral-a-3d" title="Permalink to this headline">#</a></h2>
 <p>Sea una función escalar, <span class="math notranslate nohighlight">\(f(x, y, z)\)</span>, y un prisma dado por: <span class="math notranslate nohighlight">\([a, b] \times [c, d] \times [e, f]\)</span>. La integral de la función en el prisma es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -602,9 +592,8 @@ title="Print to PDF"
 \[
 = \int_e^f \left[ \int_c^d \left[ \int_a^b f(x, y, z) \, \mathrm{d}x \right] \mathrm{d}y \right]  \mathrm{d}z = \; ...
 \]</div>
-</section>
 <section id="integrales-en-volumenes-que-no-son-un-prisma">
-<h2>Integrales en volumenes que no son un prisma.<a class="headerlink" href="#integrales-en-volumenes-que-no-son-un-prisma" title="Permalink to this headline">#</a></h2>
+<h3>Integrales en volumenes que no son un prisma.<a class="headerlink" href="#integrales-en-volumenes-que-no-son-un-prisma" title="Permalink to this headline">#</a></h3>
 <p>Considera el siguiente volumen limitado por superficie <span class="math notranslate nohighlight">\(z = x^2 + y^2\)</span> hasta <span class="math notranslate nohighlight">\(z = 2\)</span>, con <span class="math notranslate nohighlight">\(x \ge 0\)</span> e <span class="math notranslate nohighlight">\(y \ge 0\)</span>.</p>
 <p>La siguiente figura te muestra este volumen.</p>
 <div class="cell docutils container">
@@ -779,7 +768,7 @@ El intervalo en <span class="math notranslate nohighlight">\(x\)</span> en <span
 </section>
 </section>
 <section id="cambio-de-variables">
-<h1>Cambio de variables<a class="headerlink" href="#cambio-de-variables" title="Permalink to this headline">#</a></h1>
+<h2>Cambio de variables<a class="headerlink" href="#cambio-de-variables" title="Permalink to this headline">#</a></h2>
 <p>En el caso anterior, la integral se resuelve de forma más cómoda en cilíndricas.</p>
 <p>Al igual que vimos en funciones escalares de dos dimensiones. En unas nuevas variables <span class="math notranslate nohighlight">\((u, v, w)\)</span>, con <span class="math notranslate nohighlight">\(x(u, v, w), y (u, v, w), z(u, v, w)\)</span>, viene dada por:</p>
 <div class="math notranslate nohighlight">
@@ -879,6 +868,7 @@ $<span class="math notranslate nohighlight">\(
 $<span class="math notranslate nohighlight">\(
 \int_0^1 \int_0^{2\pi} \int_0^\pi e^{r^3} \, r^2 \sin \theta \;\mathrm{d}r \mathrm{d}\theta \mathrm{d} \phi = \phi \big|_0^{2\pi} (-\cos \theta) \big|_0^\pi \frac{1}{3} e^{r^3} \big|_0^1 = \frac{4 \pi}{3} (e-1)
 \)</span>$</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

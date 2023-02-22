@@ -303,7 +303,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tintegral_1d.ipynb"
+        <a href="https://mybinder.org/v2/gh/jahernando/book-USC-MMIII/master?urlpath=tree/docs/notebooks/tintegral_1d.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jahernando/book-USC-MMIII/blob/master/docs/notebooks/tintegral_1d.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +364,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/jahernando/book-USC-MMIII"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +381,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tintegral_1d.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jahernando/book-USC-MMIII/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tintegral_1d.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -573,7 +591,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Jan 28 17:45:10 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 16:56:57 2023
 </pre></div>
 </div>
 </div>
@@ -661,7 +679,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 2.00001
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 2.00016
 </pre></div>
 </div>
 <img alt="../_images/tintegral_1d_10_1.png" src="../_images/tintegral_1d_10_1.png" />
@@ -755,10 +773,11 @@ F'(c) = f(c)
 \int_a^b f(x) \, \mathrm{d}x = P(b)-P(a)
 \]</div>
 <p><em>Demostración:</em></p>
-<p>Sea
-$<span class="math notranslate nohighlight">\(
+<p>Sea</p>
+<div class="math notranslate nohighlight">
+\[
 F(x) = \int_a^x f(x) \, \mathrm{d}x
-\)</span>$</p>
+\]</div>
 <p>Se cumple por el teorema anterior <span class="math notranslate nohighlight">\(F'(x)=f(x)\)</span> o que <span class="math notranslate nohighlight">\(F(x)\)</span> es una primitiva de <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
 <p>Dos primitivas difieren por una constante <span class="math notranslate nohighlight">\(C\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -766,11 +785,12 @@ F(x) = \int_a^x f(x) \, \mathrm{d}x
 F(a) = P(a) +C = 0 \\
 F(b) = P(b) + C
 \end{split}\]</div>
-<p>luego:
-$<span class="math notranslate nohighlight">\(
+<p>luego:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 C = - P(a) \\
 F(b) = P(b) - P(a)
-\)</span>$</p>
+\end{split}\]</div>
 </section>
 </section>
 <section id="metodos-de-integracion">
@@ -785,7 +805,7 @@ F(b) = P(b) - P(a)
 <li><p>Integración de funciones trigonométicas.</p></li>
 <li><p>Integrales impropias.</p></li>
 </ul>
-<p><span class="xref myst">Aquí</span> tienes un resumen de los métodos de integración con algunos ejemplos</p>
+<p><a class="reference external" href="https://github.com/jahernando/book-USC-MMIII/notebooks/pdfs/tintegrales_metodos.pdf">Aquí</a> tienes un resumen de los métodos de integración con algunos ejemplos</p>
 </section>
 </section>
 

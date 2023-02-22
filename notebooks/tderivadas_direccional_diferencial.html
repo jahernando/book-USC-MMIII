@@ -303,7 +303,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tderivadas_direccional_diferencial.ipynb"
+        <a href="https://mybinder.org/v2/gh/jahernando/book-USC-MMIII/master?urlpath=tree/docs/notebooks/tderivadas_direccional_diferencial.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jahernando/book-USC-MMIII/blob/master/docs/notebooks/tderivadas_direccional_diferencial.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +364,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/jahernando/book-USC-MMIII"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +381,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_direccional_diferencial.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jahernando/book-USC-MMIII/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_direccional_diferencial.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -563,7 +581,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Sat Jan 28 17:44:34 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Wed Feb 22 15:53:43 2023
 </pre></div>
 </div>
 </div>
@@ -596,6 +614,12 @@ title="Print to PDF"
 
 <span class="n">figsize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">3.8</span>
 <span class="n">cmap</span>    <span class="o">=</span> <span class="s1">&#39;hot&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
 </pre></div>
 </div>
 </div>
@@ -650,7 +674,7 @@ que pasa por el origen y que tiene pendiente <span class="math notranslate nohig
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span>
-<span class="n">vx</span><span class="p">,</span> <span class="n">vy</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span>
+<span class="n">vx</span><span class="p">,</span> <span class="n">vy</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span>
 <span class="n">fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">graph</span><span class="p">(</span><span class="n">fun</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">graph_section</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">vx</span><span class="p">,</span> <span class="n">vy</span><span class="p">,</span> <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
@@ -667,7 +691,7 @@ que pasa por el origen y que tiene pendiente <span class="math notranslate nohig
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span>
-<span class="n">vx</span><span class="p">,</span> <span class="n">vy</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span>
+<span class="n">vx</span><span class="p">,</span> <span class="n">vy</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span>
 <span class="n">fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">graph</span><span class="p">(</span><span class="n">fun</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">graph_section</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">vx</span><span class="p">,</span> <span class="n">vy</span><span class="p">,</span> <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
@@ -688,30 +712,36 @@ f'({\bf x}_0; \, {\bf v}) = \lim_{h \to 0} \frac{f({\bf x}_0 + h {\bf v}) - f({\
 <p>Date cuenta que en la derivada direccional aparece explícitamente la dirección <span class="math notranslate nohighlight">\({\bf v}\)</span>.</p>
 <p>En la figura enterior, la derivada, <span class="math notranslate nohighlight">\(f'({\bf x}_0; \; {\bf v})\)</span> corresponde a la pendiente en <span class="math notranslate nohighlight">\({\bf x}_0\)</span>; y en la gráfica de <span class="math notranslate nohighlight">\(f({\bf x}_0 + t {\bf v})\)</span> vs <span class="math notranslate nohighlight">\(t\)</span>, a la pendiente en <span class="math notranslate nohighlight">\(t=0\)</span>, en negrita.</p>
 <p><em>Ejemplo</em>: Vamos a calcular la derivada direccional del plano <span class="math notranslate nohighlight">\(f(x, y) = y - x\)</span>  en el origen y en las direcciones <span class="math notranslate nohighlight">\((1, 0), \; (0, 1), \; (1, 1)\)</span>.</p>
-<p>Calculamos:
-$<span class="math notranslate nohighlight">\(
+<p>Calculamos:</p>
+<div class="math notranslate nohighlight">
+\[
 f'((0, 0), \; (v_x, v_y)) = \lim_{h\to 0} \frac{f(h v_x, \, h  v_y) - \,f (0,0)}{ h}
-\)</span><span class="math notranslate nohighlight">\(
-donde \)</span> f(x, y) = y - x<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\( f(x, y) = y - x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 f(h v_x,h  v_y) = h v_y -  h v_x = h (v_y - v_x), \;\;\; f(0, 0) = 0
-\)</span><span class="math notranslate nohighlight">\(
-i) para el vector \)</span>(1, 0)<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>i) para el vector <span class="math notranslate nohighlight">\((1, 0)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 f'((0, 0) ; \, (1, 0)) = \lim_{h \to 0} \frac{-h}{h} = -1
-\)</span><span class="math notranslate nohighlight">\(
-ii) para el vector \)</span>(0, 1)<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>ii) para el vector <span class="math notranslate nohighlight">\((0, 1)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 f'((0, 0) ; \, (0, 1)) = \lim_{h \to 0} \frac{h}{h} = 1
-\)</span><span class="math notranslate nohighlight">\(
-iii) para el vector \)</span>(1, 1)<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>iii) para el vector <span class="math notranslate nohighlight">\((1, 1)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 f'((0, 0) ; \, (1, 1)) = \lim_{h \to 0} \frac{h (1 -1)}{h} = 0
-\)</span>$</p>
-<p>iv) y para un vector genérico <span class="math notranslate nohighlight">\((v_x, v_y)\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>iv) y para un vector genérico <span class="math notranslate nohighlight">\((v_x, v_y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 f'((0, 0) ; \, (v_x, v_y)) = \lim_{h \to 0} \frac{h (v_y - v_x)}{h} = v_y - v_x
-\)</span>$</p>
+\]</div>
 <p>En concreto, para <span class="math notranslate nohighlight">\((v_x, 0)\)</span> y <span class="math notranslate nohighlight">\((0, v_y)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -744,24 +774,27 @@ f'((0, 0); \, \lambda (v_x, v_y)) = \lambda \, f'((0, 0); \, (v_x, v_y))
 </div>
 </div>
 <p>La función es: <span class="math notranslate nohighlight">\(f(x, y) = 9 -x^2 - y^2\)</span></p>
-<p>Calculamos:
-$<span class="math notranslate nohighlight">\(
+<p>Calculamos:</p>
+<div class="math notranslate nohighlight">
+\[
 f(1, 1) = 9-1-1=7
-\)</span><span class="math notranslate nohighlight">\(
-Y 
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Y</p>
+<div class="math notranslate nohighlight">
+\[
 f((1, 1)+ h(1, 0)) = f(1+h, 1) = 9 - (1+h)^2 - 1 = 8 -1-2h-h^2= 7 -2h - h^2
-\)</span>$</p>
+\]</div>
 <p>Y ahora la derivada direccional la dirección <span class="math notranslate nohighlight">\((1, 0)\)</span> en el punto <span class="math notranslate nohighlight">\((1, 1)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 f'((1, 1);\; (1, 0)) = \lim_{h \to 0} \frac{f((1, 1)+ h(1, 0)) - f(1,1)}{h} =
 \lim_{h \to 0}  \frac{7-2h-h^2 -7}{h} = -2
 \]</div>
-<p>Para
-$<span class="math notranslate nohighlight">\(
+<p>Para</p>
+<div class="math notranslate nohighlight">
+\[
 f((1, 1)+ h(0, 1)) = f(1, 1+h) = 9 -1 - (1+h)^2  = 8 -1 - 2h -h^2 = 7 -2h - h^2
-\)</span>$</p>
+\]</div>
 <p>Y la derivada dirección en la dirección <span class="math notranslate nohighlight">\((1, 0)\)</span> en el punto <span class="math notranslate nohighlight">\((1, 1)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -786,14 +819,16 @@ f'_y (x, y) = \frac{\partial f(x, y)}{ \partial y} = f'((x, y); \, (0, 1))
 <p>Date cuenta de que usamos distintas notaciones con igual significado.</p>
 <p>Para calcular las derivadas direccionales podemos valernos de los métodos de derivación de funciones reales de una dimensión.</p>
 <p>Si calculamos la derivada parcial respecto a <span class="math notranslate nohighlight">\(x\)</span>, consideramos la <span class="math notranslate nohighlight">\(y\)</span> como una constante en la expresión de la función, y derivaremos normalmente respecto a <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>Considera la función:
-$<span class="math notranslate nohighlight">\(
+<p>Considera la función:</p>
+<div class="math notranslate nohighlight">
+\[
 f(x, y) = 9 -x^2 - y^2
-\)</span>$</p>
-<p>Las derivadas parciales serán:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Las derivadas parciales serán:</p>
+<div class="math notranslate nohighlight">
+\[
 f'_x (x, y) = -2 x, \;\, f'_y(x, y) = -2 y
-\)</span>$</p>
+\]</div>
 <p>Si las valoramos en el punto <span class="math notranslate nohighlight">\((1, 1)\)</span>, obtenemos:</p>
 <div class="math notranslate nohighlight">
 \[ 
@@ -893,18 +928,14 @@ x+y &amp; \quad \mbox{si $x=0$ o $y=0$} \\
 <span class="n">zms</span> <span class="o">=</span> <span class="mf">0.</span><span class="o">*</span><span class="n">xms</span> <span class="o">+</span> <span class="mf">0.</span><span class="o">*</span><span class="n">yms</span> <span class="o">+</span><span class="n">a</span>
 <span class="n">sel</span> <span class="o">=</span> <span class="p">(</span><span class="n">xms</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span> <span class="n">zms</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span> <span class="o">=</span> <span class="n">xms</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span> <span class="o">+</span> <span class="n">yms</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span>
 <span class="n">sel</span> <span class="o">=</span> <span class="p">(</span><span class="n">yms</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span> <span class="n">zms</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span> <span class="o">=</span> <span class="n">xms</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span> <span class="o">+</span> <span class="n">yms</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">);</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">);</span> <span class="c1">#ax.set_aspect(&#39;equal&#39;);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_27908/2137108462.py:8: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  fig = plt.figure(figsize=(8, 6)); ax = plt.gca(projection=&#39;3d&#39;)
-</pre></div>
-</div>
-<img alt="../_images/tderivadas_direccional_diferencial_31_1.png" src="../_images/tderivadas_direccional_diferencial_31_1.png" />
+<img alt="../_images/tderivadas_direccional_diferencial_31_0.png" src="../_images/tderivadas_direccional_diferencial_31_0.png" />
 </div>
 </div>
 </section>
@@ -976,7 +1007,7 @@ z(x, y) = z_0 + a (x - x_0) + b (y - y_0)
 <p>donde identificamos rápidamente:</p>
 <div class="math notranslate nohighlight">
 \[
-a = f'_x (x_0, y_0), \; b = f'_y (x_0, y_0)
+a = f'_x (x_0, y_0), \; b = f'_y (x_0, y_0), \; z_0 = f(x_0, y_0)
 \]</div>
 <p>que son, claro está, las derivadas parciales.</p>
 <p>Observa la gráfica de la función:</p>
@@ -990,10 +1021,11 @@ f(x, y) = 9 -x^2 - y^2
 f(x, y) \approx f(x_0, y_0) + f'_x(x_0, y_0) \,  (x-x_0) + f'_y(x_0, y_0) \,( y - y_0) 
 \]</div>
 <p><em>Explora</em>: cambia el punto y observa cómo el desarrollo del Taylor, el plano tangente, cubre, solapa la gráfica en una región alrededor del <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>. Algo similar a lo que ocurría con la recta en una función de una dimensión.</p>
-<p>En este caso:
-$<span class="math notranslate nohighlight">\(
+<p>En este caso:</p>
+<div class="math notranslate nohighlight">
+\[
 f(x_0, y_0) = 9 -x^2_0 - y^2_0, \;\, f'_x(x_0, y_0) = -2 x_0, \;\; f'_y(x_0, y_0) = -2 y_0
-\)</span>$</p>
+\]</div>
 <p>luego el desarrollo de Taylor en torno al punto <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1002,7 +1034,7 @@ f(x, y) \approx 9 -x^2_0 - y^2_0 - 2 x_0 (x - x_0) - 2 y_0 ( y - y_0)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.</span>
 <span class="n">fun</span>    <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">9</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
 <span class="n">fpx</span>    <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">y</span>
 <span class="n">fpy</span>    <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">x</span>
@@ -1058,10 +1090,11 @@ f'((x_0, y_0); \, (v_x, v_y)) =  f'_x(x_0, y_0) v_x + f'_y (x_0, y_0)  v_y
 \[
 f'_x(x, y) = -2x, \; f'_y(x, y) = -2y
 \]</div>
-<p>En el punto <span class="math notranslate nohighlight">\((1, 1)\)</span> valen:
-$<span class="math notranslate nohighlight">\(
+<p>En el punto <span class="math notranslate nohighlight">\((1, 1)\)</span> valen:</p>
+<div class="math notranslate nohighlight">
+\[
 f'_x(1, 1) = -2, \; f'_y(1, 1) = -2
-\)</span>$</p>
+\]</div>
 <p>Y la derivada direccional en el vector <span class="math notranslate nohighlight">\((1, 1)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[

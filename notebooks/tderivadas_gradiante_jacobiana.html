@@ -303,7 +303,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tderivadas_gradiante_jacobiana.ipynb"
+        <a href="https://mybinder.org/v2/gh/jahernando/book-USC-MMIII/master?urlpath=tree/docs/notebooks/tderivadas_gradiante_jacobiana.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jahernando/book-USC-MMIII/blob/master/docs/notebooks/tderivadas_gradiante_jacobiana.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +364,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/jahernando/book-USC-MMIII"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +381,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_gradiante_jacobiana.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jahernando/book-USC-MMIII/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_gradiante_jacobiana.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -553,7 +571,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Jan 28 17:44:47 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 15:47:28 2023
 </pre></div>
 </div>
 </div>
@@ -626,7 +644,7 @@ También nos muestra  el campo eléctrico, (el gradiente cambiado de signo), en 
 <p><em>Explora</em> y cambia el punto y observa como cambia el gradiente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span>  <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span>  <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.5</span>
 <span class="n">V</span>  <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Ex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Ey</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">y</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
@@ -657,10 +675,11 @@ f({\bf x}_0 + {\bf v} ) \simeq f({\bf x_0}) + \nabla f ({\bf x_0}) \, {\bf v}
 <li><p><span class="math notranslate nohighlight">\(\nabla f(x, y) = \left( -\sin x \sin y, \; \cos x \cos y \right)\)</span></p></li>
 </ol>
 <p>El gradiente nos aporta más información sobre la función. Fíjate:</p>
-<p>El término:
-$<span class="math notranslate nohighlight">\(
+<p>El término:</p>
+<div class="math notranslate nohighlight">
+\[
 \nabla f ({\bf x}_0) \, {\bf v} 
-\)</span>$</p>
+\]</div>
 <p>es un producto escalar que podemos reescribir cómo:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -689,7 +708,7 @@ $<span class="math notranslate nohighlight">\(
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">common_functions</span> <span class="kn">import</span> <span class="n">edipole</span>
-<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span>
 <span class="n">V</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span> <span class="o">=</span> <span class="n">edipole</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">contours</span><span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">zlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">))</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">Ex</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">Ey</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">));</span>
@@ -697,18 +716,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">56</span><span class="o">/</span><span class="n">_pmdccc97ljb_l3v3s6gkrxm0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_27921</span><span class="o">/</span><span class="mf">2330542962.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">common_functions</span> <span class="kn">import</span> <span class="n">edipole</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">V</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span> <span class="o">=</span> <span class="n">edipole</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">gf</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">contours</span><span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">zlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">gf</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">Ex</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">Ey</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">));</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;common_functions&#39;
-</pre></div>
-</div>
+<img alt="../_images/tderivadas_gradiante_jacobiana_17_0.png" src="../_images/tderivadas_gradiante_jacobiana_17_0.png" />
 </div>
 </div>
 <p>La siguiente celda te permite dibujar el potencial de un conjunto de cargas. El dibujo corresponde a dos cargas negativas situadas en el eje vertical separadas por 2 unidades.</p>
@@ -717,7 +725,7 @@ $<span class="math notranslate nohighlight">\(
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">common_functions</span> <span class="kn">import</span> <span class="n">esystem</span>
-<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span> 
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span> 
 <span class="n">charges</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">)]</span>
 <span class="n">V</span><span class="p">,</span> <span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span> <span class="o">=</span> <span class="n">esystem</span><span class="p">(</span><span class="n">charges</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">contours</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">zlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">))</span>
@@ -824,7 +832,7 @@ f({\bf x}_0 + {\bf v}) \approx f({\bf x}_0) + \nabla f ({\bf x}_0) \, {\bf v}
 <p><em>Explora</em>: puedes cambiar el valor de <span class="math notranslate nohighlight">\(t_0\)</span> y observa como cambia la velocidad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span> <span class="o">=</span> <span class="mf">3.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
 <span class="n">fx</span>  <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span>    <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
 <span class="n">fy</span>  <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span>    <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
@@ -837,7 +845,7 @@ f({\bf x}_0 + {\bf v}) \approx f({\bf x}_0) + \nabla f ({\bf x}_0) \, {\bf v}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_gradiante_jacobiana_28_0.png" src="../_images/tderivadas_gradiante_jacobiana_28_0.png" />
+<img alt="../_images/tderivadas_gradiante_jacobiana_29_0.png" src="../_images/tderivadas_gradiante_jacobiana_29_0.png" />
 </div>
 </div>
 </section>
@@ -854,11 +862,12 @@ f({\bf x}_0 + {\bf v}) \approx f({\bf x}_0) + \nabla f ({\bf x}_0) \, {\bf v}
 \[
 \lim_{{\bf v} \to {\bf 0}} {\bf E(x,v)} = {\bf 0} 
 \]</div>
-<p>Esto es:
-$<span class="math notranslate nohighlight">\(
+<p>Esto es:</p>
+<div class="math notranslate nohighlight">
+\[
 \lim_{{\bf v} \to {\bf 0}} \frac{ {\bf f}({\bf x}+{\bf v}) - {\bf f} ({\bf x}) - {\bf T_x}({\bf v} )}{\| {\bf v} \|}  = \lim_{{\bf v} \to {\bf 0}} {\bf E(x,v)} = {\bf 0} 
-\)</span><span class="math notranslate nohighlight">\(
-A \)</span>{\bf T_x}<span class="math notranslate nohighlight">\( se llama diferencial o **derivada** de \)</span>{\bf f}<span class="math notranslate nohighlight">\( en \)</span>{\bf x}$.</p>
+\]</div>
+<p>A <span class="math notranslate nohighlight">\({\bf T_x}\)</span> se llama diferencial o <strong>derivada</strong> de <span class="math notranslate nohighlight">\({\bf f}\)</span> en <span class="math notranslate nohighlight">\({\bf x}\)</span>.</p>
 <p>La expresión anterior es el <strong>desarrollo de Taylor</strong> de primer orden de <span class="math notranslate nohighlight">\({\bf f}({\bf x}+{\bf v})\)</span></p>
 <p><span class="math notranslate nohighlight">\({\bf T_x}\)</span> es la <strong>derivada</strong> de <span class="math notranslate nohighlight">\({\bf f}\)</span> en <span class="math notranslate nohighlight">\({\bf x}\)</span>.</p>
 <ul class="simple">
@@ -871,7 +880,7 @@ A \)</span>{\bf T_x}<span class="math notranslate nohighlight">\( se llama difer
 <li><p>Si se trata de un función escalar, <span class="math notranslate nohighlight">\({\bf T_x}({\bf v})  = \nabla f({\bf x}) {\bf v}\)</span>.</p></li>
 <li><p>Si se trata de una función vectorial, <span class="math notranslate nohighlight">\({\bf T_x}({\bf v}) = {\bf Df}({\bf x}) {\bf v}\)</span></p></li>
 </ul>
-<p>#### Propiedades de las funciones diferenciables</p>
+<p><strong>Propiedades de las funciones diferenciables</strong></p>
 <p><em>Ejercicios</em>: Intenta ahora demostrar los siguientes teoremas:</p>
 <p><em>Teorema</em></p>
 <p>Si una función <span class="math notranslate nohighlight">\({\bf f}({\bf x})\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}^m\)</span> es diferenciable en un punto interior <span class="math notranslate nohighlight">\({\bf x}\)</span>, entonces en continua en ese punto.</p>
@@ -924,7 +933,7 @@ iv) \;\;\; f ({\bf x})/g ({\bf x}); \;\;\; {\text si } \; g({\bf x}) \not= 0\;\;
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_gradiante_jacobiana_35_0.png" src="../_images/tderivadas_gradiante_jacobiana_35_0.png" />
+<img alt="../_images/tderivadas_gradiante_jacobiana_36_0.png" src="../_images/tderivadas_gradiante_jacobiana_36_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -935,7 +944,7 @@ iv) \;\;\; f ({\bf x})/g ({\bf x}); \;\;\; {\text si } \; g({\bf x}) \not= 0\;\;
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_gradiante_jacobiana_36_0.png" src="../_images/tderivadas_gradiante_jacobiana_36_0.png" />
+<img alt="../_images/tderivadas_gradiante_jacobiana_37_0.png" src="../_images/tderivadas_gradiante_jacobiana_37_0.png" />
 </div>
 </div>
 <p><strong>¡Esto es todo por ahora!</strong></p>
@@ -975,26 +984,30 @@ f({\bf x}+{\bf v}) - f({\bf x})  = f({\bf x} + {\bf v}_n) - f({\bf x} + {\bf v}_
 <div class="math notranslate nohighlight">
 \[
   = \sum_{k=1}^n f({\bf x} + {\bf v}_k)-f({\bf x}+{\bf v}_{k-1})  =  \sum_{k=1}^n f({\bf b}_{k} )-f({\bf b}_{k-1}) 
-   =  \sum_{k=1}^n f({\bf b}_{k-1} + \lambda u_k {\bf e}_k)-f({\bf b}_{k-1})  
+  =  \sum_{k=1}^n f({\bf b}_{k-1} + \lambda u_k {\bf e}_k)-f({\bf b}_{k-1})  
 \]</div>
-<p>Cada sumando del sumatorio, por ejemplo: <span class="math notranslate nohighlight">\(f({\bf b}_{k-1} + \lambda u_k {\bf e}_k)-f({\bf b}_{k-1})\)</span>, es simplemente una función de una dimensión, en la coordenada <span class="math notranslate nohighlight">\(k\)</span>.
-Podemos aplicar el teorema del valor medio, un punto <span class="math notranslate nohighlight">\({\bf c}_k\)</span> entre <span class="math notranslate nohighlight">\({\bf b}_{k-1} + \lambda u_k {\bf e}_k\)</span> y <span class="math notranslate nohighlight">\({\bf b}_{k-1}\)</span>, y siendo la anchura del intervalo <span class="math notranslate nohighlight">\(\lambda u_k\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>Cada sumando, por ejemplo: <span class="math notranslate nohighlight">\(f({\bf b}_{k-1} + \lambda u_k {\bf e}_k)-f({\bf b}_{k-1})\)</span>, es una función de una dimensión, en la coordenada <span class="math notranslate nohighlight">\(k\)</span>.
+Podemos aplicar por lo tanto el teorema del valor medio en un punto <span class="math notranslate nohighlight">\({\bf c}_k\)</span> entre <span class="math notranslate nohighlight">\({\bf b}_{k-1} + \lambda u_k {\bf e}_k\)</span> y <span class="math notranslate nohighlight">\({\bf b}_{k-1}\)</span> y siendo la anchura del intervalo <span class="math notranslate nohighlight">\(\lambda u_k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
   =  \sum_{k=1}^n f({\bf b}_{k-1} + \lambda u_k {\bf e}_k)-f({\bf b}_{k-1})   = \sum_{k=1}^n \lambda u_k f'_{k}({\bf c}_{k})
-\)</span>$</p>
-<p>Ahora introducimos un sumando nulo, <span class="math notranslate nohighlight">\(\sum_{k=1}^n \lambda u_k \, [f'_k({\bf x}) -f'_k({\bf x})]\)</span>, con el fin de obtener el término <span class="math notranslate nohighlight">\(\nabla f({\bf x}) \, {\bf v}\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Introducimos un sumando nulo por conveniencia, <span class="math notranslate nohighlight">\(\sum_{k=1}^n \lambda u_k \, [f'_k({\bf x}) -f'_k({\bf x})]\)</span>, con el fin de obtener el término <span class="math notranslate nohighlight">\(\nabla f({\bf x}) \, {\bf v}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
   =  \sum_{k=1}^n \lambda u_k \, f'_k({\bf c}_k) + \sum_{k=1}^n \lambda u_k \, [f'_k({\bf x}) -f'_k({\bf x})]
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
  = \nabla f({\bf x}) \cdot {\bf v} + \lambda \sum_{k=1}^{n} [f'_k({\bf c}_k)-f'_k({\bf x}) ] u_k 
-\)</span><span class="math notranslate nohighlight">\(
-Si recuperamos la expresión de función diferenciable:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Si recuperamos la expresión de función diferenciable:</p>
+<div class="math notranslate nohighlight">
+\[
 f({\bf x} + {\bf v}) =  f({\bf x}) + \nabla f({\bf x}) \, {\bf v} + \parallel {\bf v} \parallel E({\bf x}, {\bf v}); \; \mathrm{donde: }\; E({\bf x},{\bf v}) = \sum_{k=1}^{n} [f'_k({\bf c}_k)-f'_k({\bf x})] u_k 
-\)</span>$</p>
-<p>Cuando <span class="math notranslate nohighlight">\({\bf v} \to 0, \; \lambda \to 0\)</span>, entonces <span class="math notranslate nohighlight">\(\forall k, \: {\bf c}_k \to {\bf x}\)</span>.
-<em>Si las derivadas parciales</em>, <span class="math notranslate nohighlight">\(f'_k({\bf x})\)</span>, <em>son continuas</em> entoces <span class="math notranslate nohighlight">\({\bf x}\)</span>, <span class="math notranslate nohighlight">\(E({\bf x},{\bf v}) \to 0\)</span>.
+\]</div>
+<p>Cuando <span class="math notranslate nohighlight">\({\bf v} \to 0, \; \lambda \to 0\)</span>, entonces <span class="math notranslate nohighlight">\(\forall k, \: {\bf c}_k \to {\bf x}\)</span>.</p>
+<p><em>Si las derivadas parciales</em>, <span class="math notranslate nohighlight">\(f'_k({\bf x})\)</span>, <em>son continuas</em> entoces <span class="math notranslate nohighlight">\({\bf x}\)</span>, <span class="math notranslate nohighlight">\(E({\bf x},{\bf v}) \to 0\)</span>.
 Luego la función es diferenciable. Q.E.D</p>
 </section>
 </section>

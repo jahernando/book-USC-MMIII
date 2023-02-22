@@ -303,7 +303,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tderivadas_min_max.ipynb"
+        <a href="https://mybinder.org/v2/gh/jahernando/book-USC-MMIII/master?urlpath=tree/docs/notebooks/tderivadas_min_max.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jahernando/book-USC-MMIII/blob/master/docs/notebooks/tderivadas_min_max.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +364,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/jahernando/book-USC-MMIII"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +381,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_min_max.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jahernando/book-USC-MMIII/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_min_max.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -597,7 +615,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Jan 28 17:44:57 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 16:14:45 2023
 </pre></div>
 </div>
 </div>
@@ -644,14 +662,16 @@ title="Print to PDF"
 <section id="revision-de-los-conceptos-de-extremos-minimos-y-maximos">
 <h3>Revisión de los conceptos de extremos, mínimos y máximos.<a class="headerlink" href="#revision-de-los-conceptos-de-extremos-minimos-y-maximos" title="Permalink to this headline">#</a></h3>
 <p>Para las funciones reales, <span class="math notranslate nohighlight">\(f(x)\)</span>, habíamos definido como mínimo local, aquel valor <span class="math notranslate nohighlight">\(x_0\)</span> del dominio tal que en los valores en un intervalo en torno suyo, de anchura <span class="math notranslate nohighlight">\(h\)</span>, la función es mayor o igual que en <span class="math notranslate nohighlight">\(x_0\)</span>. De forma similar definimos el máximo local.</p>
-<p>Llamamos mínimo local:
-$<span class="math notranslate nohighlight">\(
+<p>Llamamos mínimo local:</p>
+<div class="math notranslate nohighlight">
+\[
 x \in [x_0 - h, x_0 + h] \Rightarrow f(x) \ge f(x_0)
-\)</span>$</p>
-<p>Llamamos máximo local:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Llamamos máximo local:</p>
+<div class="math notranslate nohighlight">
+\[
 x \in [x_0 - h, x_0 + h] \Rightarrow f(x) \le f(x_0)
-\)</span>$</p>
+\]</div>
 <p><span class="math notranslate nohighlight">\(x_0\)</span> es un mínimo global si todos el valor de la función en todos los puntos del dominio es mayor que en <span class="math notranslate nohighlight">\(x_0\)</span>, y de forma similar para el máximo.</p>
 <p><em>Ejemplo</em>: La siguiente función real presenta un mínimo local en el <span class="math notranslate nohighlight">\(x_0 = -1\)</span>.</p>
 <p>¿Recuerdas cómo calculábamos los mínimos o máximos? Ambos cumplían la condición de que su pendiente era nula y el signo de segunda derivada nos indicaba si era positiva que era un mínimo, y si era negativa, que era un máximo.</p>
@@ -723,20 +743,23 @@ f({\bf x}_0 + {\bf v}) \simeq f({\bf x}_0) + \nabla f({\bf x}_0) \, {\bf v} + \f
 \[
 f({\bf x}_0) = 0
 \]</div>
-<p>El gradiente es
-$<span class="math notranslate nohighlight">\(
+<p>El gradiente es</p>
+<div class="math notranslate nohighlight">
+\[
 \nabla f ({\bf x}) = (4 x , 8 y)  
-\)</span><span class="math notranslate nohighlight">\(
-lo que nos da:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>lo que nos da:</p>
+<div class="math notranslate nohighlight">
+\[
 \nabla f ({\bf x}_0) = (0, 0) 
-\)</span>$
-No hay pendientes en ese punto.</p>
-<p>La matriz hessiana es:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>No hay pendientes en ese punto.</p>
+<p>La matriz hessiana es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 {\bf H}({\bf x}) = \left( \begin{array}{cc} 4 &amp; 0 \\ 0 &amp; 8\end{array} \right)
-\)</span><span class="math notranslate nohighlight">\(
-que es independiente del punto, \)</span>{\bf x}$.</p>
+\end{split}\]</div>
+<p>que es independiente del punto, <span class="math notranslate nohighlight">\({\bf x}\)</span>.</p>
 <p>Luego el desarrollo de Taylor respecto al punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -798,19 +821,22 @@ f({\bf x}_0 + {\bf v}) = \frac{1}{2} (v_x, v_y) \, \left( \begin{array}{cc} 4 &a
 </div>
 </div>
 <p><em>Ejercicio</em>: Da el desarrolo de Taylor de segundo orden de la función <span class="math notranslate nohighlight">\(f(x, y) = 2 x^2 - 4 y^2\)</span> en el punto silla <span class="math notranslate nohighlight">\((0, 0)\)</span>.</p>
-<p>La función en <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, vale:
-$<span class="math notranslate nohighlight">\(
+<p>La función en <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, vale:</p>
+<div class="math notranslate nohighlight">
+\[
 f({\bf x}_0) = 0
-\)</span><span class="math notranslate nohighlight">\(
-El gradiente es nulo:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>El gradiente es nulo:</p>
+<div class="math notranslate nohighlight">
+\[
 \nabla f(x, y) = (4 x, -8y) \Rightarrow \nabla f({\bf x}_0) = (0, 0)
-\)</span><span class="math notranslate nohighlight">\(
-La matriz hessiana es:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>La matriz hessiana es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 {\bf H}({\bf x}) = \left( \begin{array}{cc} 4 &amp; 0 \\ 0 &amp; -8\end{array} \right)
-\)</span><span class="math notranslate nohighlight">\(
-que es independiente del punto, \)</span>{\bf x}$.</p>
+\end{split}\]</div>
+<p>que es independiente del punto, <span class="math notranslate nohighlight">\({\bf x}\)</span>.</p>
 <p>Luego el desarrollo de Taylor respecto al punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -907,36 +933,42 @@ $<span class="math notranslate nohighlight">\(
 \[\begin{split}
 \left| \begin{array}{cc} (6-\lambda) &amp; -2 \\ -2 &amp; (6-\lambda) \end{array}\right| = (6-\lambda)^2 -4 = 0
 \end{split}\]</div>
-<p>Esto es:
-$<span class="math notranslate nohighlight">\(
+<p>Esto es:</p>
+<div class="math notranslate nohighlight">
+\[
 (6-\lambda) = \pm 2 \; \Rightarrow \, \lambda = 6 \pm 2 \; \Rightarrow \, \lambda'_1 = 4, \; \lambda'_2 = 8
-\)</span>$</p>
+\]</div>
 <p>El punto extremo es mínimo porque los dos autovalores son positivos.</p>
 <p>Calculemos sus autovectores <span class="math notranslate nohighlight">\({\bf e}'_1 = (u_x, u_y), \; {\bf e}'_2 = (v_x, v_y)\)</span>, que recordemos deben ser ortonormales:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
  \left( \begin{array}{cc} 6 &amp; -2 \\ -2 &amp; 6\end{array}\right) \, \left( \begin{array}{c} u_x \\ u_y \end{array}\right) = 4 \left( \begin{array}{c} u_x \\ u_y \end{array} \right)
 \end{split}\]</div>
-<p>Esto es:
-$<span class="math notranslate nohighlight">\(
+<p>Esto es:</p>
+<div class="math notranslate nohighlight">
+\[
 6 u_x - 2 u_y =  4 u_x \; \Rightarrow 2u_x =  2u_y \; \Rightarrow u_x = u_y \
-\)</span><span class="math notranslate nohighlight">\(
-Dado que el vector tiene norma unidad:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Dado que el vector tiene norma unidad:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf e}'_1 = \left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right)
-\)</span>$</p>
-<p>Mientras que para el segundo autovector:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Mientras que para el segundo autovector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
  \left( \begin{array}{cc} 6 &amp; -2 \\ -2 &amp; 6\end{array}\right) \, \left( \begin{array}{c} v_x \\ v_y \end{array}\right) = 8 \left( \begin{array}{c} v_x \\ v_y \end{array} \right)
-\)</span><span class="math notranslate nohighlight">\(
-Esto es:
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Esto es:</p>
+<div class="math notranslate nohighlight">
+\[
 6 v_x - 2 v_y =  8 v_x \; \Rightarrow  -2 v_x =  2 v_y \; \Rightarrow \, v_x = - v_y
-\)</span><span class="math notranslate nohighlight">\(
-Como tienen que ser ortonormales:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Como tienen que ser ortonormales:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf e}'_2 = \left( -\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right)
-\)</span>$</p>
+\]</div>
 <p>En la siguiente celda dibujamos los conjuntos de nivel de la función y sobre el punto extremo, dibujamos los autovectores.</p>
 <p><em>Cuestión</em>: ¿Puedes dar la relación que guardan los autovectores, los autovalores y los conjuntos de nivel del desarrollo de Taylor en torno a un extremo?</p>
 <div class="cell docutils container">
@@ -1070,10 +1102,11 @@ g(x, y) = x^2 + y^2 = c
 \[
 \nabla f (x, y) = (2x, -2y)
 \]</div>
-<p>La condición podemos darla por:
-$<span class="math notranslate nohighlight">\(
+<p>La condición podemos darla por:</p>
+<div class="math notranslate nohighlight">
+\[
 g(x, y) = x^2 + y^2
-\)</span>$</p>
+\]</div>
 <p>La condición de Lagrange:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1088,8 +1121,8 @@ g(x, y) = x^2 + y^2
 <p>Fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Un hombre de su tiempo, italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela “École Polytechnique”, recién fundada por Napoleón. A él le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
 <p><strong>¡Aún hay más!</strong></p>
 <p><strong>Principio de mínima acción</strong></p>
-<p>Los máximos y mínimos juegan un papel fundamental en Física. De hecho, la mecánica clásica (y también la moderna) pueden formularse en función del principio de mínima acción, que nos dice que la dinámica de un sistema físico está regida por la búsqueda de la mínima acción, que matemáticamente se define como la integral de un término que se denomina, <strong>Lagrangiano</strong>. Aquí en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Principle_of_least_action">https://en.wikipedia.org/wiki/Principle_of_least_action</a></p>
-<p>Este principio se enunció por primera vez por el físico francés Maupertius en el siglo XVIII, y en su versión moderna, en el siglo XX por el físico y profesor americano Richard <strong>Feymann</strong>. Aquí tienes un enlace a una de sus famosas clases <a class="reference external" href="http://www.feynmanlectures.caltech.edu/II_19.html">video</a> y su entrada en la wikipedia, <a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Feynman">Feynman</a></p>
+<p>Los máximos y mínimos juegan un papel fundamental en Física. De hecho, la mecánica clásica (y también la moderna) pueden formularse en función del <a class="reference external" href="https://en.wikipedia.org/wiki/Principle_of_least_action">principio de mínima acción</a>, que nos dice que la dinámica de un sistema físico está regida por la búsqueda de la mínima acción, que matemáticamente se define como la integral de un término que se denomina, <strong>Lagrangiano</strong>. Aquí en la wikipedia:</p>
+<p>Este principio se enunció por primera vez por el físico francés Maupertius en el siglo XVIII, y en su versión moderna, en el siglo XX por el físico y profesor americano Richard <strong>Feymann</strong>. Aquí tienes un enlace a una de sus famosas clases <a class="reference external" href="http://www.feynmanlectures.caltech.edu/II_19.html">[&gt;]</a> y su entrada en la wikipedia, <a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Feynman">Feynman</a></p>
 <p><strong>El método de mínimos cuadrados</strong></p>
 <p>Los mínimos y máximos juegan un papel fundamental también en la estimación de parámetros y observables.</p>
 <p>Seguramente has utilizado en técnicas experimental de laboratorio el método de los mínimos cuadrados para hacer el ajuste de unos datos, por ejemplo, para ajustarlos a una recta.</p>
@@ -1140,7 +1173,7 @@ g(x, y) = x^2 + y^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9425026365664252 b =  0.32748963561145483
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  1.080315621827824 b =  -0.448993340433693
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_53_1.png" src="../_images/tderivadas_min_max_53_1.png" />
@@ -1165,7 +1198,7 @@ g(x, y) = x^2 + y^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.8890429603373007
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  1.1384406246244156
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_55_1.png" src="../_images/tderivadas_min_max_55_1.png" />
@@ -1174,7 +1207,7 @@ g(x, y) = x^2 + y^2
 <p><strong>Las redes neuronales</strong></p>
 <p>Las redes neuronales son algoritmos matemáticos que pueden ‘aprender’ cómo identificar patrones o clasificar muestras. Por ejemplo, Google desarrolló una potente red neuronal que puede distingir imágenes de gatos y perros. Se llaman así porque simulan el corportamento de las redes neuronales del sistema nervioso.</p>
 <p>Las redes están compuestas de neuronas, que se disponen en capas. En la figura se muestra un esquema de una red neuronal. Cada neurona tienen un conjunto de entradas y una sola salida. Matemáticamente cada neurona es una función escalar. La última capa de la red suele ser una sola neurona y su salida la respuesta final. Por ejemplo, su respuesta es un valor entre [0, 1], donde el 0 indica que la imagen era de un gato y 1 de un perro.</p>
-<p>A good introduction about <a class="reference external" href="https://www.youtube.com/watch?v=aircAruvnKk">NN structure</a> and <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">learning</a></p>
+<p>En estos vídeos puedes encontrar una introducción sencillas a las redes neuronales <a class="reference external" href="https://www.youtube.com/watch?v=aircAruvnKk">[&gt;]</a> y a sus métodos de entrenamiento <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a></p>
 <p>Cada neurona is una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, donde <span class="math notranslate nohighlight">\({\bf x}\)</span> son los valores de las neuronas en la capa anterior, y el valor de la función, de la neurona, está dentro del intervalo [0, 1].</p>
 <p>Las neuronas en la primera capa reiciben los datos del mundo ‘exterior’ y las neuronas en la última capa dan la respuest de la red, por ejemplo deciden si la imagen es de un gato perro o un gato.</p>
 <img src="./imgs/NN.png" width="400"/>
@@ -1215,13 +1248,13 @@ E({\bf a}^{lm}, b^{lm}) = \sum_{i= 1}^M (v({\bf x_i}) - y_i)^2
 <p>Los parámetros de la función error, <span class="math notranslate nohighlight">\(E({\bf a}^{lm}, b^{lm})\)</span>, son muchísimos, todos los parámetros internos, <span class="math notranslate nohighlight">\(({\bf a}, b)\)</span>, de las neuronas, del orden de <span class="math notranslate nohighlight">\(L N (N +1)\)</span>, donde <span class="math notranslate nohighlight">\(L\)</span> es el número de capas y <span class="math notranslate nohighlight">\(N\)</span> el número de neuronas por capa.</p>
 <p>Si te das cuenta, la función error será <em>mínima</em> cuando la red ‘acierte’ la imágenes, esto es su salida, <span class="math notranslate nohighlight">\(v({\bf x}_i)\)</span> coincida con el valor verdadero <span class="math notranslate nohighlight">\(y_i\)</span>, 0 para gato y 1 para perro.</p>
 <p>¿Cómo calculamos pues los parámetros internos de las neuronas? ¡Minimizamos la función error! Algo parecido a lo que hicimos con el ajuste a una recta por mínimos cuadrados con la función <span class="math notranslate nohighlight">\(\chi^2\)</span>. Claro que como hay tantos parámetros no es trivial. Ahí es donde entra Google y sus empleados matemáticos, para desarrollar algorizmos que minimicen rápidamente. ¡Sus algorizmos estan basados en calcular grandientes!</p>
-<p>Aquí hay un <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">video</a> que lo explica.</p>
+<p>Aquí hay un vídeo <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a> que lo explica.</p>
 <p>Una vez la red está “entrenada” o “ha aprendido” (esto es, la hemos minimizado), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, nos dará una respuesta.</p>
 <p>¿Y ésto tiene que ver con la Física?</p>
 <p>Más de lo que te imaginas. En la actualidad pocos son los análisis en Física de Partículas, por ejemplo, donde no se utilice una red neuronal o un método similar.</p>
 <p>Se utilizan para identificar si una partícula es un electrón o un muón (su hermano más pesado). O si en una interacción hay un bosón de Higgs o no. Para decidir si una interacción es relevante o es del montón.</p>
 <p>Ya te puedes imaginar que las redes neuronales están detrás de algunas aplicaciones como Facebook, Instagram, Spotify y de todos los genios matématicos que online intentan predecir tus gustos.</p>
-<p>Si quieres apreder algo más sobre la redes neuronales puedes leer este libro online: <a class="reference external" href="http://neuralnetworksanddeeplearning.com/index.html">http://neuralnetworksanddeeplearning.com/index.html</a> y puedes experimental con el modulo de Python <a class="reference external" href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></p>
+<p>Si quieres apreder algo más sobre la redes neuronales puedes leer este <a class="reference external" href="http://neuralnetworksanddeeplearning.com/index.html">libro online</a> y puedes experimental con el modulo <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> de Python.</p>
 <img src="./imgs/NEXT_signal_bkg_mc_event.png" width="800"/><p><strong>¡Esto es todo por ahora!</strong></p>
 </section>
 </section>

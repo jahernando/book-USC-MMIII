@@ -303,7 +303,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tderivadas_parametrizacion_lineas_superficies.ipynb"
+        <a href="https://mybinder.org/v2/gh/jahernando/book-USC-MMIII/master?urlpath=tree/docs/notebooks/tderivadas_parametrizacion_lineas_superficies.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jahernando/book-USC-MMIII/blob/master/docs/notebooks/tderivadas_parametrizacion_lineas_superficies.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +364,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/jahernando/book-USC-MMIII"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +381,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_parametrizacion_lineas_superficies.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jahernando/book-USC-MMIII/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_parametrizacion_lineas_superficies.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -543,7 +561,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Jan 28 17:45:04 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 15:39:35 2023
 </pre></div>
 </div>
 </div>
@@ -617,7 +635,9 @@ title="Print to PDF"
 <span class="n">xs</span> <span class="o">=</span> <span class="n">r</span>  <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">ts</span><span class="p">)</span>
 <span class="n">ys</span> <span class="o">=</span> <span class="n">r</span>  <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">ts</span><span class="p">)</span>
 <span class="n">zs</span> <span class="o">=</span> <span class="n">vz</span> <span class="o">*</span> <span class="n">ts</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> 
+<span class="n">ax</span>  <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;3d&#39;</span><span class="p">)</span> 
+<span class="c1">#ax = fig.gca(projection=&#39;3d&#39;)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">zs</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">);</span> <span class="c1">#plt.axis(&#39;equal&#39;)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
@@ -625,11 +645,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_27947/2759188652.py:6: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
-</pre></div>
-</div>
-<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_9_1.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_9_1.png" />
+<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_9_0.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_9_0.png" />
 </div>
 </div>
 <p><strong>Explora</strong> cómo cambia la trayectoria variándo los parámetros <span class="math notranslate nohighlight">\(r, \omega, v_z\)</span> y el intervalo de <span class="math notranslate nohighlight">\(t\)</span>.</p>
@@ -750,10 +766,11 @@ s = \int_{0}^{2 \pi} r \mathrm{d}t = r \, t \, \big|_{0}^{2 \pi} = 2 \pi r
 \[
 s = \int_{t_0}^{t_e} || {\bf r}' (t) || \, \mathrm{d}t
 \]</div>
-<p>Donde:
-$<span class="math notranslate nohighlight">\(
+<p>Donde:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf r}' (t) = \left( x'_1(t), \dots, x'_n(t) \right)
-\)</span>$</p>
+\]</div>
 <p><em>Nota</em>: Date cuenta que <span class="math notranslate nohighlight">\({\bf r}'(t)\)</span> en el caso de que <span class="math notranslate nohighlight">\(t\)</span> sea el tiempo y <span class="math notranslate nohighlight">\({\bf r}(t)\)</span> la trayectoria de un móvil a lo largo del tiempo es ¡<em>la velocidad</em>!</p>
 <p><strong>Ejercicio</strong>: Considera ahora la parametrización anterior de la hélice. ¿Puedes calcular su longitud de arco?</p>
 <p>Es más, ¿podrías <em>re-parametrizar</em> la hélice pero ahora utilizando su longitud?</p>
@@ -771,18 +788,14 @@ $<span class="math notranslate nohighlight">\(
 <span class="n">r</span> <span class="o">=</span> <span class="mf">1.</span>
 <span class="n">xms</span> <span class="o">=</span> <span class="n">r</span>  <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pms</span><span class="p">)</span>
 <span class="n">yms</span> <span class="o">=</span> <span class="n">r</span>  <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pms</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span>  <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;3d&#39;</span><span class="p">)</span> <span class="c1"># ax = fig.gca(projection=&#39;3d&#39;)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">);</span> <span class="c1">#ax.set_aspect(&#39;equal&#39;)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_27947/3140045391.py:7: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
-</pre></div>
-</div>
-<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_25_1.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_25_1.png" />
+<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_25_0.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_25_0.png" />
 </div>
 </div>
 <p>Si cortases la pared del cilindro a lo largo de una línea vertical y la desplegases, tendrías una hoja cuadriculada.</p>
@@ -807,7 +820,7 @@ $<span class="math notranslate nohighlight">\(
 <span class="n">ys</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">xms</span><span class="p">,</span> <span class="n">yms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
 <span class="n">rms</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">xms</span><span class="o">*</span><span class="n">xms</span> <span class="o">+</span> <span class="n">yms</span><span class="o">*</span><span class="n">yms</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span>    <span class="n">rms</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="mf">0.</span><span class="o">*</span><span class="n">rms</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span> <span class="p">);</span>
 <span class="c1">#ax.set_aspect(&#39;equal&#39;);</span>
@@ -815,11 +828,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_27947/2313474572.py:5: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  fig = plt.figure(); ax = fig.gca(projection=&#39;3d&#39;)
-</pre></div>
-</div>
-<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_30_1.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_30_1.png" />
+<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_30_0.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_30_0.png" />
 </div>
 </div>
 <p>Es este caso la región <span class="math notranslate nohighlight">\(\mathcal{R} = [-2, 2] \times [-2, 2]\)</span> es la zona en rojo, y las variables <span class="math notranslate nohighlight">\((u, v)\)</span> son simplemente <span class="math notranslate nohighlight">\((x, y)\)</span>. La superfice está es azul y su parametrización es muy sencilla:</p>
@@ -839,20 +848,13 @@ $<span class="math notranslate nohighlight">\(
 <span class="n">xms</span>  <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">thetams</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phims</span><span class="p">)</span>
 <span class="n">yms</span>  <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">thetams</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phims</span><span class="p">)</span>
 <span class="n">zms</span>  <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">thetams</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> 
-<span class="c1">#fig.add_subplot(111, aspect=1.0)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">xms</span><span class="p">,</span> <span class="n">yms</span><span class="p">,</span> <span class="n">zms</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">);</span> 
-<span class="c1">#plt.axis().aspect(&#39;equal&#39;);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_27947/266335366.py:10: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  ax = fig.gca(projection=&#39;3d&#39;)
-</pre></div>
-</div>
-<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_33_1.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_33_1.png" />
+<img alt="../_images/tderivadas_parametrizacion_lineas_superficies_33_0.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_33_0.png" />
 </div>
 </div>
 <p><em>solución</em>: La región <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> viene dada por las variables <span class="math notranslate nohighlight">\(\theta, \phi\)</span> que toman valores en los intervalos <span class="math notranslate nohighlight">\(\theta \in [0, \pi]\)</span>, y  <span class="math notranslate nohighlight">\(\phi \in [0, 2 \pi)\)</span>.</p>

@@ -303,7 +303,25 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks/tderivadas_coordenadas_cadena.ipynb"
+        <a href="https://mybinder.org/v2/gh/jahernando/book-USC-MMIII/master?urlpath=tree/docs/notebooks/tderivadas_coordenadas_cadena.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jahernando/book-USC-MMIII/blob/master/docs/notebooks/tderivadas_coordenadas_cadena.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +364,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/jahernando/book-USC-MMIII"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +381,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_coordenadas_cadena.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jahernando/book-USC-MMIII/issues/new?title=Issue%20on%20page%20%2Fnotebooks/tderivadas_coordenadas_cadena.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -567,7 +585,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Sat Jan 28 17:44:29 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Wed Feb 22 16:01:16 2023
 </pre></div>
 </div>
 </div>
@@ -637,12 +655,13 @@ V(r) = k \frac{q}{r}
 \[
 (r, \phi, z) \to (x, y, z)
 \]</div>
-<p>Donde:
-$<span class="math notranslate nohighlight">\(
+<p>Donde:</p>
+<div class="math notranslate nohighlight">
+\[
 x = r \cos \phi, \;\,
 y = r \sin \phi, \;\,
 z = z
-\)</span>$</p>
+\]</div>
 <p>El dominio en cilíndricas es <span class="math notranslate nohighlight">\(r \in [0, \infty)\)</span>, <span class="math notranslate nohighlight">\(\phi \in [0, 2 \pi)\)</span>, mientras que <span class="math notranslate nohighlight">\(z\)</span> es todo <span class="math notranslate nohighlight">\(\mathrm{R}\)</span>.</p>
 <p><em>Cuestión</em>: ¿Cuál es la transformación inversa, de cartesianas a cilíndricas?</p>
 <p>La transformación inversa, de <em>cilíndricas</em> a <em>cartesianas</em> viene dada por:</p>
@@ -699,27 +718,29 @@ r = \sqrt{x^2 + y^2 + z^2}, \;\, \cos \phi = \frac{x}{\sqrt{x^2 + y^2}}, \;\, \c
 \[
 {\bf x}(r, \phi, z) \; =  \, \left( r \cos \phi, \, r \sin \phi, \,  z \right)
 \]</div>
-<p>Y su matriz jacobiana:
-$<span class="math notranslate nohighlight">\(
+<p>Y su matriz jacobiana:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 {\bf Dx}(r, \phi, z) = \left( \begin{array}{ccc} 
 \cos \phi &amp; - r \sin \phi &amp; 0 \\
 \sin \phi &amp;   r \cos \phi &amp; 0 \\
         0 &amp;             0 &amp; 1 
 \end{array} \right)
-\)</span>$</p>
+\end{split}\]</div>
 <p>la función vectorial del cambio de coordenadas a esféricas es:</p>
 <div class="math notranslate nohighlight">
 \[
 {\bf x}(r, \phi, \theta) \; =  \, \left( r \cos \phi \sin \theta, \, r \sin \phi \sin \theta, \,  r \cos \theta \right)
 \]</div>
-<p>Y su matriz jacobiana:
-$<span class="math notranslate nohighlight">\(
+<p>Y su matriz jacobiana:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 {\bf Dx}(r, \phi, \theta) = \left( \begin{array}{ccc} 
 \cos \phi \sin \theta &amp; - r \sin \phi \sin \theta &amp;  r \cos \phi \cos \theta \\
 \sin \phi \sin \theta &amp;   r \cos \phi \sin \theta &amp;  r \sin \phi \cos \theta \\
           \cos \theta &amp;                         0 &amp; -r \sin \theta  
 \end{array} \right)
-\)</span>$</p>
+\end{split}\]</div>
 </section>
 </section>
 <section id="la-regla-de-la-cadena">
@@ -774,10 +795,11 @@ Como producto de derivadas:</p>
 <p><em>Ejercicio</em>: Verifica la regla de la cadena para la función compuesta
 <span class="math notranslate nohighlight">\(h = f \circ {\bf g}: \mathbf{R}^3 \to \mathbf{R}\)</span> dada por <span class="math notranslate nohighlight">\(g:\mathbf{R}^3 \to \mathbf{R}^3\)</span>, <span class="math notranslate nohighlight">\({\bf g}(x,y,z)=(x^2y,y^2,e^{-xz})\)</span> y <span class="math notranslate nohighlight">\(f:\mathbf{R}^3\to\mathbf{R}\)</span>, <span class="math notranslate nohighlight">\(f(u,v,w)=u^2+v^2-w\)</span>.</p>
 <p><em>Solución</em>:</p>
-<p>Sustituyendo:
-$<span class="math notranslate nohighlight">\(
+<p>Sustituyendo:</p>
+<div class="math notranslate nohighlight">
+\[
 h(x,y,z)  = (x^2y)^2+(y^2)^2-e^{-xz} 
-\)</span>$</p>
+\]</div>
 <div class="math notranslate nohighlight">
 \[
 \nabla h(x,y,z)  =(4x^3y^2+ze^{-xz},2x^4y+4y^3,xe^{-xz}) 
@@ -882,20 +904,23 @@ v-meridiano : (4.329780281177467e-17, -0.7071067811865476, -0.7071067811865475)
 <p>El punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, en coordenadas esféricas es <span class="math notranslate nohighlight">\(r = 1, \theta = \pi/4, \phi = 3 \pi/2\)</span>.</p>
 <p>El gradiente de la función es: <span class="math notranslate nohighlight">\(\nabla f (x, y, z) = (2 x, 2y, 2z)\)</span>.</p>
 <p>Y en el punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span> vale: <span class="math notranslate nohighlight">\(\nabla f ({\bf x}_0) = \left(0, -\sqrt{2}, \sqrt{2}\right)\)</span>.</p>
-<p>El plano tangente, en un punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span> de la esfera cumple la ecuación:
-$<span class="math notranslate nohighlight">\(
+<p>El plano tangente, en un punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span> de la esfera cumple la ecuación:</p>
+<div class="math notranslate nohighlight">
+\[
 2x_0 (x - x_0) + 2 y_0 (y - y_0) + 2 z_0 (z - z_0) = 0
-\)</span>$</p>
-<p>Y en el punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span>  es:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Y en el punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span>  es:</p>
+<div class="math notranslate nohighlight">
+\[
 -\sqrt{2} \left( y + \frac{1}{\sqrt{2}} \right) + \sqrt{2} \left( z - \frac{1}{\sqrt{2}} \right) = 0
-\)</span>$</p>
-<p>Por lo tanto el plano tangente tiene como ecuación:
-$<span class="math notranslate nohighlight">\( 
+\]</div>
+<p>Por lo tanto el plano tangente tiene como ecuación:</p>
+<div class="math notranslate nohighlight">
+\[ 
 z = y + \sqrt{2} 
-\)</span>$</p>
+\]</div>
 <p><strong>¡Aún hay más!</strong></p>
-<p>Las simetrías en Física son fundamentales. Fue la gran física <a class="reference external" href="https://es.wikipedia.org/wiki/Emmy_Noether">Emmy Noether</a> quien formuló un teorema que afirma que detrás de una simetría en un problema física hay una cantidad conservada. Por ejemplo, si el problema tiene simetría esférica, la cantidad conservada es el momento angular.</p>
+<p>Las simetrías en Física son fundamentales. Fue la gran física <a class="reference external" href="https://es.wikipedia.org/wiki/Emmy_Noether">Emmy Noether</a> quien formuló un teorema que afirma que detrás de una simetría hay en Física una cantidad conservada. Por ejemplo, si el problema tiene simetría esférica, la cantidad conservada es el momento angular.</p>
 <p>Emmy Noether sufrió desafortunadamentelos los males de su tiempo (y que aún perduran en los nuestros), el machismo de sus compañeros de Universidad y el antisemitismo nazi.</p>
 <p><strong>¡Esto es todo por ahora!</strong></p>
 </section>

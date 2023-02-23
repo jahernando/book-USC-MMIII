@@ -1210,7 +1210,7 @@ g(x, y) = x^2 + y^2
 <p>En estos vídeos puedes encontrar una introducción sencillas a las redes neuronales <a class="reference external" href="https://www.youtube.com/watch?v=aircAruvnKk">[&gt;]</a> y a sus métodos de entrenamiento <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a></p>
 <p>Cada neurona is una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, donde <span class="math notranslate nohighlight">\({\bf x}\)</span> son los valores de las neuronas en la capa anterior, y el valor de la función, de la neurona, está dentro del intervalo [0, 1].</p>
 <p>Las neuronas en la primera capa reiciben los datos del mundo ‘exterior’ y las neuronas en la última capa dan la respuest de la red, por ejemplo deciden si la imagen es de un gato perro o un gato.</p>
-<img src="./imgs/NN.png" width="400"/>
+<a class="reference internal image-reference" href="../_images/NN.png"><img alt="../_images/NN.png" src="../_images/NN.png" style="width: 400px;" /></a>
 <p>Intenta emular el comportamiento de nuestro sistema nervioso.</p>
 <p>La función escalar de la neurona es habitualmente una sigmoide.</p>
 <p>Cada una de las neuronas recibe la entrada de las neuronas de la capa anterior. La neurona <span class="math notranslate nohighlight">\(lm\)</span> es la neurona <span class="math notranslate nohighlight">\(m\)</span>-ésima de la capa <span class="math notranslate nohighlight">\(l\)</span>-ésima. Ella recibe como entrada las respuestas de las neuronas de la capa anterior, <span class="math notranslate nohighlight">\(x_i\)</span>, donde <span class="math notranslate nohighlight">\(i\)</span> recorre todas la neuronas de la capa <span class="math notranslate nohighlight">\(l-1\)</span>, supongamos que hay <span class="math notranslate nohighlight">\(N\)</span> neuronas en todas las capas. Cada neurona en sí es una función escalar, que a partir del vector de entradas <span class="math notranslate nohighlight">\({\bf x}\)</span>, y mediante un vector interno <span class="math notranslate nohighlight">\({\bf a}\)</span>, y una posible constante <span class="math notranslate nohighlight">\(b\)</span>, da respuesta a partir de la cantidad escalar <span class="math notranslate nohighlight">\({\bf a} {\bf x} + b\)</span>, mediante una función real:</p>
@@ -1255,7 +1255,8 @@ E({\bf a}^{lm}, b^{lm}) = \sum_{i= 1}^M (v({\bf x_i}) - y_i)^2
 <p>Se utilizan para identificar si una partícula es un electrón o un muón (su hermano más pesado). O si en una interacción hay un bosón de Higgs o no. Para decidir si una interacción es relevante o es del montón.</p>
 <p>Ya te puedes imaginar que las redes neuronales están detrás de algunas aplicaciones como Facebook, Instagram, Spotify y de todos los genios matématicos que online intentan predecir tus gustos.</p>
 <p>Si quieres apreder algo más sobre la redes neuronales puedes leer este <a class="reference external" href="http://neuralnetworksanddeeplearning.com/index.html">libro online</a> y puedes experimental con el modulo <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> de Python.</p>
-<img src="./imgs/NEXT_signal_bkg_mc_event.png" width="800"/><p><strong>¡Esto es todo por ahora!</strong></p>
+<a class="reference internal image-reference" href="../_images/NEXT_signal_bkg_mc_event.png"><img alt="../_images/NEXT_signal_bkg_mc_event.png" src="../_images/NEXT_signal_bkg_mc_event.png" style="width: 800px;" /></a>
+<p><strong>¡Esto es todo por ahora!</strong></p>
 </section>
 </section>
 <section id="apendices">

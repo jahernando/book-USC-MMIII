@@ -725,15 +725,17 @@ title="Print to PDF"
 {\bf t}_u  \mathrm{d}u,  \;
 {\bf t}_v  \mathrm{d}v 
 \]</div>
-<p>El vector normal a los dos vendrá dado por:
-$<span class="math notranslate nohighlight">\(
+<p>El vector normal a los dos vendrá dado por:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf n} = {\bf t}_u \times {\bf t}_v
-\)</span>$</p>
+\]</div>
 <p>Si te das cuenta <span class="math notranslate nohighlight">\(|{\bf n}|\)</span> es la normal a los dos vectores y su módulo corresponde al área del paralelogramo que sustentan <span class="math notranslate nohighlight">\({\bf t}_u, \; {\bf t}_v\)</span>.</p>
-<p>El diferencial de área
-$<span class="math notranslate nohighlight">\(
+<p>El diferencial de área</p>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{d} \vec{\sigma} = {\bf n} \, \mathrm{d}u \mathrm{d} v, \; \mathrm{d}\sigma = |{\bf n}| \, \mathrm{d}u \mathrm{d} v,
-\)</span>$</p>
+\]</div>
 <p>Diremos que una superficie es regular siempre que exista <span class="math notranslate nohighlight">\({\bf n}\)</span> en todo el rango de <span class="math notranslate nohighlight">\((u, v)\)</span>.</p>
 <p><em>Observa</em>: los vectores tangentes, <span class="math notranslate nohighlight">\({\bf t}_u, \, {\bf t}_v\)</span> a la superficie un punto y su vector normal <span class="math notranslate nohighlight">\({\bf n}\)</span>.</p>
 <p><em>Explora</em>: cambia la posición <span class="math notranslate nohighlight">\((i, j)\)</span> de la malla de <span class="math notranslate nohighlight">\((u, v)\)</span> donde dibujamos los tres vectores.</p>
@@ -834,10 +836,11 @@ r \cos \theta \cos \phi &amp;  r \cos \theta \sin \phi &amp; - r \sin \theta \\ 
 \[
 {\bf n} = \left( r^2 \sin^2 \theta \cos \phi, \; r^2 \sin^2 \theta \sin \phi, \; r^2 \cos \theta \sin \theta \right)
 \]</div>
-<p>Y por lo tanto
-$<span class="math notranslate nohighlight">\(
+<p>Y por lo tanto</p>
+<div class="math notranslate nohighlight">
+\[
 |{\bf n}| = \sqrt{r^4 \sin^4 \theta + r^4 \cos^2 \theta \sin^2 \theta} = r^2\sin \theta
-\)</span>$</p>
+\]</div>
 <p>El área de la superficie es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -873,10 +876,11 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \mathrm{d} u \mathrm{d}v  
  \end{array} 
  \right| = \left(-\frac{\partial z}{\partial x}, -\frac{\partial z}{\partial y}, 1\right) 
 \end{split}\]</div>
-<p>Y el módulo:
-$<span class="math notranslate nohighlight">\(
+<p>Y el módulo:</p>
+<div class="math notranslate nohighlight">
+\[
 |{\bf n}| = \sqrt{1 + \left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y} \right)^2}
-\)</span>$</p>
+\]</div>
 <p><em>Observa</em>: la siguiente figura, donde se representa la gráfica de la función, <span class="math notranslate nohighlight">\(f(x, y) = x^2 + y^2\)</span>, y se dibuja una partición de la región <span class="math notranslate nohighlight">\((x, y)\)</span>. Para cada uno de los rectángulitos de la gráfica, que es una pequeña sección de un plano, estamos dando su área como:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -887,11 +891,12 @@ $<span class="math notranslate nohighlight">\(
 <span class="math notranslate nohighlight">\(
 \mathrm{d}x\mathrm{d}y
 \)</span></p>
-<p>Podemos reescribir:
-$<span class="math notranslate nohighlight">\(
+<p>Podemos reescribir:</p>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{d}\sigma = \frac{\mathrm{d}x \mathrm{d}y}{\cos \gamma}, \;\;
 \cos \gamma = \frac{1}{\sqrt{1 + \left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y} \right)^2}}
-\)</span>$</p>
+\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(\gamma\)</span> es ahora el ángulo que forma la normal con el eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -962,35 +967,39 @@ $<span class="math notranslate nohighlight">\(
 <img alt="../_images/tcalvec_integral_superficie_36_0.png" src="../_images/tcalvec_integral_superficie_36_0.png" />
 </div>
 </div>
-<p>A partir de la superficie parametrizada:
-$<span class="math notranslate nohighlight">\(
+<p>A partir de la superficie parametrizada:</p>
+<div class="math notranslate nohighlight">
+\[
 \sigma (r, \theta) = \left( r \cos \theta, r \sin \theta, \theta \right)
-\)</span>$</p>
-<p>Calculamos los vectores:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Calculamos los vectores:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf t}_r = \left( \cos \theta, \sin \theta, 0 \right),
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 {\bf t}_{\theta} = \left( - r \sin \theta, r \cos \theta, 1 \right)
-\)</span>$</p>
-<p>y el vector normal
-$$
-{\bf n} = \left| \begin{array}{ccc} {\bf i} &amp; {\bf j} &amp; {\bf k} \
-\cos \theta      &amp;  \sin \theta  &amp; 0 \</p>
-<ul class="simple">
-<li><p>r \sin \theta &amp; r \cos \theta &amp; 1\
-\end{array}
-\right| = \left(\sin \theta, - \cos \theta, r \right)
-$$</p></li>
-</ul>
-<p>La función en la superficie vale:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>y el vector normal</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\bf n} = \left| \begin{array}{ccc} {\bf i} &amp; {\bf j} &amp; {\bf k} \\
+  \cos \theta      &amp;  \sin \theta  &amp; 0 \\
+   - r \sin \theta &amp; r \cos \theta &amp; 1\\
+ \end{array} 
+ \right| = \left(\sin \theta, - \cos \theta, r \right) 
+\end{split}\]</div>
+<p>La función en la superficie vale:</p>
+<div class="math notranslate nohighlight">
+\[
 f(\sigma(r, \theta)) = \sqrt{ r^2 \cos^2 \theta + r^2 \sin^2 \theta + 1} = \sqrt{r^2 +1 }
-\)</span>$</p>
-<p>El diferencial de área:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>El diferencial de área:</p>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{d}\sigma = |{\bf n}| \mathrm{d}\theta \mathrm{d}r = \sqrt{1+r^2} \, \mathrm{d}\theta \mathrm{d}r
-\)</span>$</p>
+\]</div>
 <p>Y la integral de la función en la superficie:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1034,28 +1043,32 @@ Llamamos integral de la función <span class="math notranslate nohighlight">\({\
 <img alt="../_images/tcalvec_integral_superficie_42_0.png" src="../_images/tcalvec_integral_superficie_42_0.png" />
 </div>
 </div>
-<p>Vimos antes que:
-$<span class="math notranslate nohighlight">\(
+<p>Vimos antes que:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf n} = \left(
 \sin^2 \theta \cos \phi,  \sin^2 \theta \sin \phi, \cos \theta \sin \theta
 \right)
-\)</span>$</p>
-<p>El campo en la esfera es:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>El campo en la esfera es:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf F}(\sigma(\theta, \phi)) 
 = (\sin \theta \cos \phi, \sin \theta \sin \phi, \cos \theta)
-\)</span>$</p>
-<p>Por lo tanto:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf F}(\sigma (\theta, \phi)) \, {\bf n} = 
  \sin^3 \theta \cos^2 \phi +  \sin^3 \theta \sin^2 \phi + \sin \theta \cos^2 \theta =  \sin \theta
-\)</span>$</p>
-<p>Y la integral
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Y la integral</p>
+<div class="math notranslate nohighlight">
+\[
 \int_{\sigma} {\bf F}({\bf x}) \, \mathrm{d} \vec{\sigma}
 = \int_0^{2 \pi} \int_0^{\pi}  \sin \theta \, \mathrm{d}\theta \mathrm{d}\phi
 = 4 \pi 
-\)</span>$</p>
+\]</div>
 </section>
 </section>
 </section>

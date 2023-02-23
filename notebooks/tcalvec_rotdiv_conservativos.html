@@ -585,10 +585,11 @@ title="Print to PDF"
 </section>
 <section id="operador-nabla">
 <h2>Operador nabla.<a class="headerlink" href="#operador-nabla" title="Permalink to this headline">#</a></h2>
-<p>Definimos el operador nabla:
-$<span class="math notranslate nohighlight">\(
+<p>Definimos el operador nabla:</p>
+<div class="math notranslate nohighlight">
+\[
 \nabla = \left( \frac{\partial }{ \partial x}, \frac{\partial }{ \partial y}, \frac{\partial }{\partial z} \right)
-\)</span>$</p>
+\]</div>
 <p>que puede actuar sobre campos escalares, <span class="math notranslate nohighlight">\(f(x, y, z)\)</span>, dando lugar al <strong>gradiente</strong>, <span class="math notranslate nohighlight">\(\nabla f(x, y, z)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -742,11 +743,12 @@ F_x &amp; F_y &amp; F_z \\
 \[
 \oint_{{\bf c}} {\bf F} \, \mathrm{d}{\bf s} = \int_R \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}\right) \mathrm{d}x \mathrm{d}y
 \]</div>
-<p>Si se cumple,
-$<span class="math notranslate nohighlight">\(
+<p>Si se cumple,</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} = 0,
-\)</span>$
-entonces el campo es conservativo.</p>
+\]</div>
+<p>entonces el campo es conservativo.</p>
 <p>Si en alguna bola no se cumple</p>
 <div class="math notranslate nohighlight">
 \[
@@ -790,36 +792,40 @@ entonces el campo es conservativo.</p>
 U(x, y) = \int_{x_0}^x F_x(x, y) \, \mathrm{d}x + g(y)
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\(g(y)\)</span> es una función de <span class="math notranslate nohighlight">\(y\)</span>. Se cumple: <span class="math notranslate nohighlight">\( F_x = \frac{\partial U}{\partial x}\)</span></p>
-<p><span class="math notranslate nohighlight">\(F_y\)</span> debe ser:
-$<span class="math notranslate nohighlight">\(
+<p><span class="math notranslate nohighlight">\(F_y\)</span> debe ser:</p>
+<div class="math notranslate nohighlight">
+\[
 F_y(x, y) = \frac{\partial U(x, y)}{\partial y} 
 = \frac{\partial }{\partial y} \left( \int_{x_0}^x F_x(x, y) \, \mathrm{d}x + g(y) \right) 
 = \int_{x_0}^x \frac{\partial F_x(x, y) }{\partial y} \, \mathrm{d}x + \frac{\mathrm{d} g(y)}{\mathrm{d}y}  
-\)</span><span class="math notranslate nohighlight">\(
-Luego:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Luego:</p>
+<div class="math notranslate nohighlight">
+\[
 g(y) = \int_{y_0}^y \left( F_y(x, y) - \int_{x_0}^x \frac{\partial F_x(x, y)}{\partial y} \, \mathrm{d}x \right) \mathrm{d}y
-\)</span><span class="math notranslate nohighlight">\(
-y verificamos que \)</span>g(y)<span class="math notranslate nohighlight">\( solo depende de \)</span>y<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>y verificamos que <span class="math notranslate nohighlight">\(g(y)\)</span> solo depende de <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\partial g(y)}{\partial x} = \int_{y_0}^y \left( \frac{\partial F_y}{ \partial x} - \frac{\partial F_x}{\partial y}\right) \mathrm{d}y = 0
-\)</span>$</p>
+\]</div>
 <p><em>Ejercicio</em>: Calcula el campo escalar, <span class="math notranslate nohighlight">\(U(x, y)\)</span>, cuyo campo conservativo es <span class="math notranslate nohighlight">\({\bf F}(x, y) = (2xy + y^3, x^2 + 3xy^2 + y^2)\)</span>.</p>
 <p>tomemos <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> el origen.</p>
 <div class="math notranslate nohighlight">
 \[
 U(x, y) = \int_0^x (2xy + y^3) \, \mathrm{d}x + g(y) = x^2y + x y^3 + g(y)
 \]</div>
-<p>donde
-$<span class="math notranslate nohighlight">\(
+<p>donde</p>
+<div class="math notranslate nohighlight">
+\[
 F_y = \frac{\partial U}{\partial y} \to x^2 + 3xy^2 + 2y = x^2 + 3xy^2 + \frac{\mathrm{d}g(y)}{\mathrm{d}y}
-\)</span><span class="math notranslate nohighlight">\(
-luego:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>luego:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\mathrm{d}g(y)}{\mathrm{d}y} = 2y \to g(y) = y^2 + C
-\)</span><span class="math notranslate nohighlight">\(
-donde \)</span>C$ es una constante.</p>
-<p>Así:</p>
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(C\)</span> es una constante. Así:</p>
 <div class="math notranslate nohighlight">
 \[
 U(x, y) = x^2y + x y^3 + y^2 +C
@@ -880,15 +886,17 @@ Si un campo no tiene rotacional es convervativo. Y si es conservativo no tiene r
 \[
 E(t) = \frac{1}{2} m \dot{{\bf c}}^2(t) + U({\bf c}(t))
 \]</div>
-<p>Si derivamos respecto at <span class="math notranslate nohighlight">\(t\)</span>, y aplicando la regla de la cadena:
-$<span class="math notranslate nohighlight">\(
+<p>Si derivamos respecto at <span class="math notranslate nohighlight">\(t\)</span>, y aplicando la regla de la cadena:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\mathrm{d}E}{\mathrm{d}t} = m \, \dot{{\bf c}}(t) \, \ddot{{\bf c}}(t) + \nabla U({\bf c}(t)) \, \dot{{\bf c}}(t) 
 = \left[m \, \ddot{{\bf c}}(t)  + \nabla U({\bf c}(t)) \right] \, \dot{{\bf c}}(t) = 0
-\)</span>$</p>
-<p>Si se cumple
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Si se cumple</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf F} = - \nabla U = m \ddot{{\bf c}}
-\)</span>$</p>
+\]</div>
 </section>
 </section>
 </section>

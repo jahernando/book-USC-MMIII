@@ -581,7 +581,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Mon Apr 18 10:06:55 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [[&gt;]]  Thu Feb 23 09:45:30 2023
 </pre></div>
 </div>
 </div>
@@ -692,20 +692,23 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 \[
 \int_{{\bf c}_1} {\bf F}({\bf x}) \, \mathrm{d} {\bf s} = \int_{{\bf c}_1} y \, \mathrm{d}x
 \]</div>
-<p>Dado que <span class="math notranslate nohighlight">\({\bf c}_1 = (x, y_1(x))\)</span>, el elemento vectorial diferencial de arco es:
-$<span class="math notranslate nohighlight">\(
+<p>Dado que <span class="math notranslate nohighlight">\({\bf c}_1 = (x, y_1(x))\)</span>, el elemento vectorial diferencial de arco es:</p>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{d} {\bf s} = {\bf {\dot c}}(x) \,\mathrm{d} x = \left(1, \dot{y}_1(x) \right) \mathrm{d} x
-\)</span>$</p>
-<p>Y el producto vectorial:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Y el producto vectorial:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf F}({\bf x}) \, \mathrm{d} {\bf s} \to (y_1(x), 0) \, \left(1, \dot{y}_1(x) \right) \, \mathrm{d}x = y_1(x) \, \mathrm{d}x
-\)</span>$</p>
-<p>Por lo tanto:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[
 \int_{{\bf c}_1} {\bf F}({\bf x}) \, \mathrm{d} {\bf s} 
 = \int_{{\bf c}_1} y \, \mathrm{d}x
 = \int_a^b y_1(x) \mathrm{d}x
-\)</span>$</p>
+\]</div>
 <p>Que corresponde al área que hay entre la línea <span class="math notranslate nohighlight">\(y_1(x)\)</span> (o <span class="math notranslate nohighlight">\({\bf c}_1\)</span>) y el eje <span class="math notranslate nohighlight">\(y=0\)</span>, en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> de <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>De igual forma, la integral de la función vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span>, a lo largo de la línea superior, <span class="math notranslate nohighlight">\({\bf c}_2(x)\)</span> que da la frontera superior de la región queda:</p>
 <div class="math notranslate nohighlight">
@@ -752,13 +755,15 @@ $<span class="math notranslate nohighlight">\(
 \[
 \{ a \le x \le b, \; y_1(x) \le y \le y_2(x)\}
 \]</div>
-<p>con:
-$<span class="math notranslate nohighlight">\(
+<p>con:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf c}_1(x) = \left( x, y_1(x) \right), \; x \in [a, b]
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 {\bf c}_2(x) = \left( x, y_2(x) \right), \; x \in [a, b]
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
@@ -798,11 +803,12 @@ $<span class="math notranslate nohighlight">\(
 \[
 \mathrm{d} {\bf s} = {\bf {\dot c}_2}(x) \, \mathrm{d}x = \left(1, \dot{y}_2(x) \right) \mathrm{d}x
 \]</div>
-<p>Y por lo tanto
-$<span class="math notranslate nohighlight">\(
+<p>Y por lo tanto</p>
+<div class="math notranslate nohighlight">
+\[
 \int_{{\bf c}_2} \left(F_x(x, y), 0 \right) \,\mathrm{d} {\bf s} 
 = \int_a^b \left( F_x(x, y_2(x)), 0 \right) \, \left( 1, \dot{y}_2(x) \right) \mathrm{d} x = \int_a^b F_x(x, y_2(x)) \, \mathrm{d}x
-\)</span>$</p>
+\]</div>
 <p>que corresponde al primer término de la integral anterior de área.</p>
 <p>Si calculamos entonces la integral del campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), 0 \right)\)</span> en dirección horaria de la curva cerrada, <span class="math notranslate nohighlight">\({\bf c}\)</span>, que es la frontera de <span class="math notranslate nohighlight">\(R\)</span>, y que corresponde a integrar en <span class="math notranslate nohighlight">\({\bf c}_2\)</span> y luego en <span class="math notranslate nohighlight">\({\bf c}_1\)</span> (en sentido opuesto), esto es, en sentido horario, obtenemos:</p>
 <div class="math notranslate nohighlight">
@@ -850,10 +856,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 \]</div>
-<p>La integral de línea:
-$<span class="math notranslate nohighlight">\(
+<p>La integral de línea:</p>
+<div class="math notranslate nohighlight">
+\[
 \oint_{\bf c} (x, y) \, \mathrm{d}{\bf s} = \int_0^{2\pi} (\cos t, \sin t) \, (-\sin t, \cos t) \, \mathrm{d} t= 0
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -996,22 +1003,26 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <ol class="simple">
-<li><p>Calculamos
-$<span class="math notranslate nohighlight">\(
-\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \to 2x -1
-\)</span>$</p></li>
+<li><p>Calculamos</p></li>
 </ol>
-<p>Luego:
-$<span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \to 2x -1
+\]</div>
+<p>Luego:</p>
+<div class="math notranslate nohighlight">
+\[
 \int_R \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathrm{d}x \mathrm{d}y
 \to  \int_0^1 \left[ \int_{x}^{x^2} (2x -1) \mathrm{d}y \right] \mathrm{d}x
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 = \int_0^1 (2x-1) \, y \big|_x^{x^2} \mathrm{d}x = \int_0^1 (2x-1) (x-x^2) \mathrm{d}x 
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 = \int_0^1 (-2x^3 + 3x^2 -x) \mathrm{d}x = \left(-\frac{x^4}{2} + x^3 - \frac{x}{2} \right) \Big|_0^1 = 0 
-\)</span>$</p>
+\]</div>
 <ol class="simple">
 <li><p>Parametrizamos la línea frontera inferior <span class="math notranslate nohighlight">\({\bf c}_1(x)\)</span> y superior <span class="math notranslate nohighlight">\({\bf c}_2(x)\)</span>:</p></li>
 </ol>

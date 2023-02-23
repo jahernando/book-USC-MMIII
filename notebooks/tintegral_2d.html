@@ -605,7 +605,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Mon Mar 28 09:18:40 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Feb 23 09:38:08 2023
 </pre></div>
 </div>
 </div>
@@ -938,15 +938,17 @@ title="Print to PDF"
 \int_0^1 \left[ \int_y^1 \, \mathrm{d}x \right] \mathrm{d}y = \int_0^1 \left. x \right|_y^1 \mathrm{d}y  = \int_0^1 (1-y) \, \mathrm{d}y  = \left. \left( y - \frac{y^2}{2} \right) \right|_0^1 = \frac{1}{2}
 \]</div>
 <p>En general si queremos integral la función, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, en una región <span class="math notranslate nohighlight">\(R\)</span>, primero debemos definirla</p>
-<p>de tipo I:
-$<span class="math notranslate nohighlight">\(
+<p>de tipo I:</p>
+<div class="math notranslate nohighlight">
+\[
 \{ a \le x \le b, \;\; \phi_0(x) \le y \le \phi_1(x) \}
-\)</span>$</p>
+\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(\phi_0 (x)\)</span> y <span class="math notranslate nohighlight">\(\phi_1(x)\)</span> son dos funciones reales que para un valor de <span class="math notranslate nohighlight">\(x\)</span> dan los extremos del intervalo en los que integramos <span class="math notranslate nohighlight">\(y\)</span>.</p>
-<p>o de tipo II:
-$<span class="math notranslate nohighlight">\(
+<p>o de tipo II:</p>
+<div class="math notranslate nohighlight">
+\[
 \{ c \le y \le d, \;\; \xi_0(y) \le x \le \xi_1(y) \}
-\)</span>$</p>
+\]</div>
 <p>Algunas regiones admites definirlas de los dos tipos.</p>
 <p>Si la región, <span class="math notranslate nohighlight">\(R\)</span>, es de tipo I, la integral queda:</p>
 <div class="math notranslate nohighlight">
@@ -1100,12 +1102,13 @@ $<span class="math notranslate nohighlight">\(
 <p>El área de cada uno de las regiones en el plano <span class="math notranslate nohighlight">\((x, y)\)</span> viene dado por el producto escalar de los vectores de sus lados.</p>
 <p>Consideremos un cambio de variables <span class="math notranslate nohighlight">\((u, v) \to (x, y)\)</span>.</p>
 <p>El vector entre <span class="math notranslate nohighlight">\((u_0, v_0)\)</span> y <span class="math notranslate nohighlight">\((u_0 + \Delta u, v_0)\)</span> (uno de los lados de los rectángulos en <span class="math notranslate nohighlight">\((u, v)\)</span>), se transforma en el vector (que corresponde con uno de los lados del polígono en <span class="math notranslate nohighlight">\((x,y)\)</span>):</p>
-<p>Al ser al cambio diferenciable, el punto queda:
-$<span class="math notranslate nohighlight">\(
+<p>Al ser al cambio diferenciable, el punto queda:</p>
+<div class="math notranslate nohighlight">
+\[
 \left (x(u_0+\Delta u, v_0) , \;\; y(u_0+\Delta u, v_0) \,\right) = 
 \left (x(u_0, v_0) + \frac{\partial x}{\partial u}(u_0, v_0) \, \Delta u,
 \;\; y(u_0, v_0) + \frac{\partial y}{\partial u} (u_0, v_0) \, \Delta u \right)
-\)</span>$</p>
+\]</div>
 <p>Y el vector:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1186,10 +1189,11 @@ x(r, \phi) = r \cos \phi, \;\; y(r, \phi) = r \sin \phi
 \[
 r \mathrm{d}\phi \mathrm{d} r
 \]</div>
-<p>La región de integración está definida en polares:
-$<span class="math notranslate nohighlight">\(
+<p>La región de integración está definida en polares:</p>
+<div class="math notranslate nohighlight">
+\[
 \{ a \le r \le b, \; 0 \le \phi \le \pi/2\}
-\)</span>$</p>
+\]</div>
 <p>El jacobiano del cambio de coordenadas, que calculamos antes, es: <span class="math notranslate nohighlight">\(J = r\)</span></p>
 <p>para <span class="math notranslate nohighlight">\(f(x, y) = 1\)</span> la integral es:
 $<span class="math notranslate nohighlight">\(

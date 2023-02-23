@@ -700,10 +700,11 @@ title="Print to PDF"
 </ol>
 <p>para <span class="math notranslate nohighlight">\(n=1, 2, \dots \in \mathcal{N}\)</span></p>
 <p><em>Ejercicio</em>: Toda función <span class="math notranslate nohighlight">\(f(x)\)</span> se puede expresar como la suma de una función par y otra impar.</p>
-<p>Definimos:
-$<span class="math notranslate nohighlight">\(
+<p>Definimos:</p>
+<div class="math notranslate nohighlight">
+\[
 h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
-\)</span>$</p>
+\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h(x)\)</span> es par, <span class="math notranslate nohighlight">\(g(x)\)</span> es impar y <span class="math notranslate nohighlight">\(f(x) = h(x) + g(x)\)</span></p>
 <p><em>Ejemplo:</em> Convertir <span class="math notranslate nohighlight">\(f(x) = 0\)</span> si <span class="math notranslate nohighlight">\(x \le 0\)</span> y 1 si <span class="math notranslate nohighlight">\(x \gt 0\)</span> en una suma de función par e impar.</p>
 </section>
@@ -736,35 +737,42 @@ h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
 <img alt="../_images/tfourier_15_0.png" src="../_images/tfourier_15_0.png" />
 </div>
 </div>
-<p>La integral
-$<span class="math notranslate nohighlight">\(
+<p>La integral</p>
+<div class="math notranslate nohighlight">
+\[
 \int_{-\pi}^{\pi} \sin n x \cos mx \, \mathrm{d}x = 0
-\)</span>$
-es nula por ser el integrando una  función impar.</p>
-<p>La integral
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>es nula por ser el integrando una  función impar.</p>
+<p>La integral</p>
+<div class="math notranslate nohighlight">
+\[
 \int_{-\pi}^{\pi} \sin nx \sin mx \, \mathrm{d}x 
 = \int_{-\pi}^{\pi} \frac{1}{2} \left( \cos (n -m) x - \cos (n+m) x \right) \mathrm{d}x
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 = \frac{1}{2}\left( \frac{1}{n-m} \sin (n-m)x - \frac{1}{n+m} \sin(n+m) x\right) \Big|_{-\pi}^{\pi}
-\)</span>$</p>
-<p>que vale 0 si <span class="math notranslate nohighlight">\( n \ne m\)</span> y para <span class="math notranslate nohighlight">\(n=m\)</span>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>que vale 0 si <span class="math notranslate nohighlight">\( n \ne m\)</span> y para <span class="math notranslate nohighlight">\(n=m\)</span></p>
+<div class="math notranslate nohighlight">
+\[
 \frac{1}{2}\left( x - \frac{1}{2 n} \sin 2n x \right) \Big|_{-\pi}^{\pi} = \pi
-\)</span>$</p>
-<p>y finalmente, la integral
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>y finalmente, la integral</p>
+<div class="math notranslate nohighlight">
+\[
 \int_{-\pi}^{\pi} \cos nx \cos mx \, \mathrm{d}x 
 = \int_{-\pi}^{\pi} \frac{1}{2} \left( \cos (n -m) x + \cos (n+m) x \right) \mathrm{d}x
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 = \frac{1}{2}\left( \frac{1}{n-m} \sin (n-m)x + \frac{1}{n+m} \sin(n+m) x\right) \Big|_{-\pi}^{\pi}
-\)</span>$</p>
-<p>que vale 0 si <span class="math notranslate nohighlight">\( n \ne m\)</span> y para <span class="math notranslate nohighlight">\(n=m\)</span>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>que vale 0 si <span class="math notranslate nohighlight">\( n \ne m\)</span> y para <span class="math notranslate nohighlight">\(n=m\)</span></p>
+<div class="math notranslate nohighlight">
+\[
 \frac{1}{2}\left( x + \frac{1}{2 n} \sin 2n x \right) \Big|_{\pi}^{\pi} = \pi
-\)</span>$</p>
+\]</div>
 <p>Diremos que dos <strong>funciones son ortogonales</strong>, <span class="math notranslate nohighlight">\(f(x), \, g(x)\)</span>, en un intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> si:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -844,10 +852,11 @@ a_n = \frac{2}{\pi} \int_0^\pi x \, \cos n x \, \mathrm{d}x
 \[
 a_k = \frac{-4}{\pi (2k+1)^2}, \; k = 0, 1, 2 \in \mathcal{N}
 \]</div>
-<p>Asi:
-$<span class="math notranslate nohighlight">\(
+<p>Asi:</p>
+<div class="math notranslate nohighlight">
+\[
 S(x) = \frac{\pi}{2} - \frac{4}{\pi} \sum_k \frac{1}{(2k+1)^2} \cos (2k+1) x
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
@@ -884,10 +893,11 @@ S(0) = \frac{\pi}{2} - \sum_{k=0}^\infty \frac{4}{(2 k +1)^2 \pi} = 0
 <p><strong>Teorema de Dirichlet</strong> Toda función periódica en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span> (continua en un número finito de trozos y con un número finito de máximos y mínimos) admite desarrollo en serie de Fourier.</p>
 <p>La función puede ser discontinua en un número finito de puntos mientras que la serie de Fourier <em>siempre</em> es continua.</p>
 <p>En los puntos de discontinuidad la serie nos da el valor medio entre su valor a la izquierda y la derecha de la función en ese punto.</p>
-<p><em>Ejemplo:</em> Sea la función definida en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span>
-$<span class="math notranslate nohighlight">\(
+<p><em>Ejemplo:</em> Sea la función definida en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span></p>
+<div class="math notranslate nohighlight">
+\[
 f(x) = 0 \; \mathrm{si} \, x \lt 0, 1 \; \mathrm{si} \, x \ge 0
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -914,11 +924,12 @@ a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \cos nx \, \mathrm{d}x = \frac{1}{
 \[
 b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \sin nx \, \mathrm{d}x = \frac{1}{\pi} \int_0^{\pi} \sin nx \, \mathrm{d}x = -\frac{1}{n \pi} \cos nx \Big|_0^{\pi} = -  \frac{(-1)^n -1}{n \pi} =  \frac{1-(-1)^n}{n \pi}
 \]</div>
-<p>los términos <span class="math notranslate nohighlight">\(b_n\)</span> para <span class="math notranslate nohighlight">\(n\)</span> par se anulan, así podemos dar:
-$<span class="math notranslate nohighlight">\(
+<p>los términos <span class="math notranslate nohighlight">\(b_n\)</span> para <span class="math notranslate nohighlight">\(n\)</span> par se anulan, así podemos dar:</p>
+<div class="math notranslate nohighlight">
+\[
 b_k = \frac{2}{(2k+1) \pi}
-\)</span><span class="math notranslate nohighlight">\(
-con \)</span>k=0, 1, 2 \dots \in \mathcal{N}$</p>
+\]</div>
+<p>con <span class="math notranslate nohighlight">\(k=0, 1, 2 \dots \in \mathcal{N}\)</span></p>
 <p>Por lo tanto la función se expresa con la siguiente serie de Fourier:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -964,10 +975,11 @@ a_n = \frac{1}{L} \int_{-L}^{L} f(x) \, \cos \frac{n \pi x}{L} \, \mathrm{d}x
 \[
 b_n = \frac{1}{L} \int_{-L}^{L} f(x) \, \sin \frac{n \pi x}{L} \, \mathrm{d}x
 \]</div>
-<p>Así:
-$<span class="math notranslate nohighlight">\(
+<p>Así:</p>
+<div class="math notranslate nohighlight">
+\[
 S(x) = \frac{a_0}{2} + \sum_{n} a_n \cos \frac{n \pi x}{L} + \sum_{n} b_n \sin \frac{n \pi x}{L}
-\)</span>$</p>
+\]</div>
 <p><em>Cuestión</em>: ¿Qué funciones y desarrollo obtienes con <span class="math notranslate nohighlight">\(L=\pi\)</span>?</p>
 </section>
 <section id="desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l">
@@ -994,10 +1006,11 @@ a_n = \frac{1}{2} \int_{-2}^2 x^2 \cos \frac{n \pi x}{2} \, \mathrm{d}x
 = \left[\frac{2x^2}{n \pi} \sin \frac{n\pi x}{2}  + \frac{8x}{(n \pi)^2} \cos \frac{n\pi x}{2} - \frac{16}{(n\pi)^3} \sin \frac{n \pi x}{2} \right] \Big|_0^2
 = \frac{16}{(n \pi)^2} (-1)^n
 \]</div>
-<p>Luego:
-$<span class="math notranslate nohighlight">\(
+<p>Luego:</p>
+<div class="math notranslate nohighlight">
+\[
 S(x) = \frac{4}{3} + 16 \sum_n \frac{(-1)^n}{(n \pi)^2} \cos \frac{n \pi x}{2}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
@@ -1022,26 +1035,28 @@ S(x) = \frac{4}{3} + 16 \sum_n \frac{(-1)^n}{(n \pi)^2} \cos \frac{n \pi x}{2}
 \[
 \cos n x = \frac{1}{2} \left( e^{inx} + e^{-inx} \right), \; \sin n x = -\frac{i}{2} \left( e^{inx} - e^{-inx} \right),  
 \]</div>
-<p>Así:
-$<span class="math notranslate nohighlight">\(
+<p>Así:</p>
+<div class="math notranslate nohighlight">
+\[
 S(x) = \frac{a_0}{2} + \frac{1}{2} \sum_{n=1} (a_n - i b_n) \, e^{inx} + \frac{1}{2} \sum_{n=1} (a_n + i b_n) \, e^{-inx}
-\)</span>$</p>
-<p>Si definimos:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Si definimos:</p>
+<div class="math notranslate nohighlight">
+\[
 c_0 = a_0/2, \; c_n = \frac{1}{2}(a_n - i b_n), \; c_{-n} = c^*_n = \frac{1}{2}(a_n + i b_n)
-\)</span>$</p>
+\]</div>
 <p>tenemos:</p>
 <div class="math notranslate nohighlight">
 \[
 S(x) = \sum_{n = -\infty}^{\infty} c_n \, e^{inx}
 \]</div>
-<p><em>Pero ésta es otra historia y debe ser contada en otro ocasión</em></p>
+<p><em>Pero ésta es otra historia y debe ser contada en otra ocasión</em></p>
 </section>
 <section id="aun-hay-mas">
 <h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
 <p>Joseph Fourier fue un gran físico y matemático Francés que se dio cuenta que una función periódica podía descomponerse en una serie de sumas de senos y cosenos. Fourier participó en la famosa expedición “científica” de Napoleón a Egipto.</p>
 <img src="imgs/Fourier.jpg" width="200"/>
-<p>Aquí tienes su entrada en la Wikipedia: <a class="reference external" href="https://es.wikipedia.org/wiki/Joseph_Fourier">https://es.wikipedia.org/wiki/Joseph_Fourier</a></p>
+<p>Aquí tienes su <a class="reference external" href="https://es.wikipedia.org/wiki/Joseph_Fourier">entrada</a> en la Wikipedia.</p>
 <p>Por cierto, Dirichlet fue alumno suyo.</p>
 <p>En análisis en transformadas de Fourier es fundamental en Física cuántica, en Optica, y tiene aplicaciones fundamentales en propagación de señales y tratamiento de imágenes.</p>
 <p>¡Algunos de tus filtros de instagram son algoritmos que modifican las transformadas de Fourier de las imágenes!</p>

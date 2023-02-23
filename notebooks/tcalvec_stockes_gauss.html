@@ -760,10 +760,11 @@ F_y(x_0 + \Delta x, y_0) \; \Delta y - F_y(x_0, y_0) \Delta y = \frac{\partial F
 \[
 - F_x(x_0, y_0 + \Delta y) \; \Delta x + F_x(x_0, y_0) \Delta x = - \frac{\partial F_x}{\partial y}(x_0 ,y_0) \Delta y \Delta x
 \]</div>
-<p>Por lo tanto, la integral a lo largo de la espira infinitesimal es:
-$<span class="math notranslate nohighlight">\(
+<p>Por lo tanto, la integral a lo largo de la espira infinitesimal es:</p>
+<div class="math notranslate nohighlight">
+\[
 \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \, \mathrm{d}x \mathrm{d}y
-\)</span>$</p>
+\]</div>
 <p><em>Ejercicio</em>: Verificar el teorema de Stockes en la superficie dada por la intersección de un cilindro infinito con eje en la dirección <span class="math notranslate nohighlight">\(z\)</span> y base <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>, y el plano <span class="math notranslate nohighlight">\(x+y+z =1\)</span>, con <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (-y^3, x^3, z^3)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -831,22 +832,26 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <p>Recordemos que la superficie tiene como base un disco de radio unidad y la intersección con el plano <span class="math notranslate nohighlight">\(x + y + z = 1\)</span></p>
-<p>Podemos parametrizar la superficie:
-$<span class="math notranslate nohighlight">\(
+<p>Podemos parametrizar la superficie:</p>
+<div class="math notranslate nohighlight">
+\[
 \sigma (x, y ) = (x, y, 1 - x -y), \;\;\; x^2 + y^2 \le 1
-\)</span>$</p>
-<p>donde:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>donde:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf n}(x, y) = (1, 1, 1)
-\)</span>$</p>
-<p>Y la frontera con la línea:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Y la frontera con la línea:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf c}(\phi) = (\cos \phi, \sin \phi, 1 - \cos \phi - \sin \phi),\,\,\, \phi \in [0, 2 \pi]
-\)</span>$</p>
-<p>donde:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>donde:</p>
+<div class="math notranslate nohighlight">
+\[
 \dot{{\bf c}}(\phi) = (-\sin \phi, \cos \phi, \sin \phi + \cos \phi)
-\)</span>$</p>
+\]</div>
 <p>El rotacional de <span class="math notranslate nohighlight">\({\bf F} = (-y^3, x^3, z^3)\)</span> es:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -890,21 +895,25 @@ $<span class="math notranslate nohighlight">\(
 \[
  \int_0^{2\pi} (\sin^4 \phi + \cos^4 \phi) \mathrm{d}\phi + \int_0^{2\pi} (1-\cos\phi-\sin\phi)^3 (\sin \phi -\cos \phi) \, \mathrm{d}\phi
 \]</div>
-<p>La primera intergral, como:
-$<span class="math notranslate nohighlight">\(
+<p>La primera intergral, como:</p>
+<div class="math notranslate nohighlight">
+\[
 \sin^4 \phi + \cos^4 \phi
 = \frac{1}{4}\left( 1 - \cos 2 \phi \right)^2 + \frac{1}{4}\left(1 + \cos 2\phi \right)^2 
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 = \frac{1}{4} \left( 1 + \cos^2 2\phi - 2 \cos 2 \phi + 1 + \cos^2 2\phi + 2 \cos 2 \phi\right)
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 = \frac{1}{2} (1 + \cos^2 2 \phi) = \frac{1}{2} \left( 1 + \frac{1}{2} (1 + \cos 4 \phi ) \right)
-\)</span><span class="math notranslate nohighlight">\(
-Así:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Así:</p>
+<div class="math notranslate nohighlight">
+\[
 \int_0^{2\pi} \left(\frac{3}{4} + \frac{1}{4} \cos 4 \phi \right) \mathrm{d}\phi = \left( \frac{3 \phi}{4} + \frac{1}{16} \sin  4 \phi\right) \Big|_0^{2\pi}  =  \frac{3\pi}{2}
-\)</span>$</p>
+\]</div>
 <p>La segunda integral se calcula directamente:</p>
 <div class="math notranslate nohighlight">
 \[ 
@@ -1026,12 +1035,13 @@ Así:
 \]</div>
 <p>donde la superficie cerrada está definida hacia afuera.</p>
 <p>Sea un volumen regular definido por una región <span class="math notranslate nohighlight">\(D\)</span> en <span class="math notranslate nohighlight">\((x, y)\)</span> y <span class="math notranslate nohighlight">\(z_1(x, y) \le z \le z_2(x, y)\)</span>, donde <span class="math notranslate nohighlight">\(z_1(x,y), \, z_2(x,y)\)</span> son dos funciones escalares que nos limitan los valores de <span class="math notranslate nohighlight">\(z\)</span>.</p>
-<p>Consideremos:
-$<span class="math notranslate nohighlight">\(
+<p>Consideremos:</p>
+<div class="math notranslate nohighlight">
+\[
 \int_V \frac{\partial F_z}{\partial z} \, \mathrm{d}x\mathrm{d}y\mathrm{d}z 
 = \int_D F_z(x, y, z) \Big|_{z_1}^{z_2} \, \mathrm{d}x\mathrm{d}y
 = \int_D  \left[F_z(x, y, z_2(x,y)) - F_z(x, y, z_1(x,y) \right] \mathrm{d}x \mathrm{d}y
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">,</span> <span class="n">phirange</span>              <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -1058,14 +1068,15 @@ $<span class="math notranslate nohighlight">\(
 = \int_{D} F_z \hat{k} \, \frac{\mathrm{d}x\mathrm{d}y}{|\cos \gamma|} \hat{n}
 = \int_{z_2} F_z \hat{k} \, \mathrm{d}\vec{\sigma}
 \]</div>
-<p>Donde hemos introducido el término
-$<span class="math notranslate nohighlight">\(
+<p>Donde hemos introducido el término</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\hat{k} \, \hat{n}}{|\hat{k} \, \hat{n}|} = \frac{\hat{k} \, \hat{n}}{|\cos \gamma|},
-\)</span>$</p>
-<p>y
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{d}\vec{\sigma} = \frac{\hat{n}}{|\cos \gamma|} \mathrm{d}x\mathrm{d}y
-\)</span>$</p>
+\]</div>
 <p><span class="math notranslate nohighlight">\(\hat{n}\)</span> es el verctor unitario normal al diferencial de superficie de la superfice dada por <span class="math notranslate nohighlight">\(z_2\)</span>, y <span class="math notranslate nohighlight">\(\gamma\)</span> el ángulo que forma <span class="math notranslate nohighlight">\(\hat{n}\)</span> con <span class="math notranslate nohighlight">\(\hat{k}\)</span>. Este término es <span class="math notranslate nohighlight">\(1\)</span> para <span class="math notranslate nohighlight">\(z_2\)</span>, y es <span class="math notranslate nohighlight">\(-1\)</span> para <span class="math notranslate nohighlight">\(z_1\)</span> dado que hemos definido la superficie hacia fuera.</p>
 <p>Así:</p>
 <div class="math notranslate nohighlight">
@@ -1122,10 +1133,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 {\bf F} (\theta, \phi) = \left(\sin \theta \cos \phi, \sin \theta \sin \phi, \cos \theta \right)
 \]</div>
-<p>Luego:
-$<span class="math notranslate nohighlight">\(
+<p>Luego:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf F} \, {\bf n} = \sin \theta
-\)</span>$</p>
+\]</div>
 <p>Así</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1153,20 +1165,22 @@ $<span class="math notranslate nohighlight">\(
 \int_V  2 \, \mathrm{d}x\mathrm{d}y\mathrm{d}z = 2 \frac{4 \pi}{3}
 \]</div>
 <p><em>Ejercicio:</em> Calcular el flujo del campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x y^2, y x^2, y)\)</span> sobre el cilindro de disco unidad y altura en <span class="math notranslate nohighlight">\(z\)</span> en <span class="math notranslate nohighlight">\([-1, 1]\)</span></p>
-<p>Aplicamos el teorema de Gauss:
-$<span class="math notranslate nohighlight">\(
+<p>Aplicamos el teorema de Gauss:</p>
+<div class="math notranslate nohighlight">
+\[
 \nabla \, {\bf F} = y^2 + x^2
-\)</span>$</p>
+\]</div>
 <p>La integral del volumen la hacemos en coordenadas cilíndricas, (recuerda que el jacobiano es <span class="math notranslate nohighlight">\(r\)</span>):</p>
 <div class="math notranslate nohighlight">
 \[
 \int_V \nabla \, {\bf F} \, \mathrm{d}x \mathrm{d}y \mathrm{d}z 
 = \int_{-1}^{1} \int_0^{2 \pi}  \int_0^1 r^2\, r\mathrm{d}r \mathrm{d}\phi \mathrm{d}z 
 \]</div>
-<p>Esto es:
-$<span class="math notranslate nohighlight">\(
+<p>Esto es:</p>
+<div class="math notranslate nohighlight">
+\[
 = z \Big|_{-1}^{+1} \phi \Big|_0^{2\pi} \frac{r^4}{4} \Big|_0^1 = \pi
-\)</span>$</p>
+\]</div>
 <section id="aun-hay-mas">
 <h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
 <p>Carl Friedrich <a class="reference external" href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Gauss</a> fue uno de las grandes matemáticos de la historia, con importantes contribuciones en Física, en Electromagnetismo y en Estadistica. La probabilidad normal, con la que ocurren casi todos los fenémonos de medida, sigue se ley de Gauss.</p>

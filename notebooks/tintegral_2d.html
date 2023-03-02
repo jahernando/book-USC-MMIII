@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integrales en dos dimensiones &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Integrales en varias dimensiones" href="tintegral_3d.html" />
     <link rel="prev" title="Integrales en una dimensión" href="tintegral_1d.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -595,8 +595,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="integrales-en-dos-dimensiones">
-<h1>Integrales en dos dimensiones<a class="headerlink" href="#integrales-en-dos-dimensiones" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="integrales-en-dos-dimensiones">
+<h1>Integrales en dos dimensiones<a class="headerlink" href="#integrales-en-dos-dimensiones" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -605,7 +605,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Feb 23 09:38:08 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:28:13 2023
 </pre></div>
 </div>
 </div>
@@ -628,8 +628,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<section id="estructura-del-tema">
-<h2>Estructura del tema<a class="headerlink" href="#estructura-del-tema" title="Permalink to this headline">#</a></h2>
+<div class="section" id="estructura-del-tema">
+<h2>Estructura del tema<a class="headerlink" href="#estructura-del-tema" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Introducción</p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=PJn_TxdpfnM&amp;feature=youtu.be">[&gt;]</a> Integral 2D</p></li>
@@ -645,20 +645,20 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-</section>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Extender el concepto de integral de Riemann en dos dimensiones</p>
 <p>El Teorema de Fubini: la integral no depende del orden de integración</p>
 <p>Principio de Cavilieri.</p>
 <p>Integrales en regiones no rectangulares.</p>
 <p>Cambio de variables, polares.</p>
 <p>Mostrar algunos ejemplos sencillos</p>
-</section>
-<section id="introduccion">
-<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
-<section id="recordatorio-de-la-suma-de-riemann">
-<h3>Recordatorio de la Suma De Riemann<a class="headerlink" href="#recordatorio-de-la-suma-de-riemann" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
+<div class="section" id="recordatorio-de-la-suma-de-riemann">
+<h3>Recordatorio de la Suma De Riemann<a class="headerlink" href="#recordatorio-de-la-suma-de-riemann" title="Permalink to this heading">#</a></h3>
 <p>Para calcular el <em>área</em> bajo una curva de una función real, <span class="math notranslate nohighlight">\(f(x)\)</span>, y el eje <span class="math notranslate nohighlight">\(y=0\)</span> en un intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, habíamos introducido la integral de una dimensión.</p>
 <p>Que la defininmos a partir de la <strong>suma de Riemann</strong>. Dada la partición de un intervalo , y una función, acotada y continua en dicho intervalo, dábamos la suma de Riemman como:</p>
 <div class="math notranslate nohighlight">
@@ -688,10 +688,10 @@ title="Print to PDF"
 \[
 \mathcal{L}(f, \mathcal{P}) \le \mathcal{S}(f, \mathcal{P}) \le \mathcal{U}(f, \mathcal{P}) 
 \]</div>
-</section>
-</section>
-<section id="integrales-2d">
-<h2>Integrales 2D<a class="headerlink" href="#integrales-2d" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="integrales-2d">
+<h2>Integrales 2D<a class="headerlink" href="#integrales-2d" title="Permalink to this heading">#</a></h2>
 <p>Sabemos el área entre su gráfica de una función real, <span class="math notranslate nohighlight">\(f(x)\)</span>, en un intervalo, <span class="math notranslate nohighlight">\([a, b], \)</span>y el eje <span class="math notranslate nohighlight">\(x\)</span>, corresponde a su integral definida:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -762,9 +762,9 @@ title="Print to PDF"
 \sum \to \int, \;\;\; \Delta x_i = x_i - x_{i-1} \to \mathrm{d}x, \;\;\; \Delta y_j = y_j - y_{j-1} \to \mathrm{d}y,
 \]</div>
 <p>Notar que las variables de integración son <em>mudas</em>, las únicas variables son los límites de integración <span class="math notranslate nohighlight">\([a, b] \times [c, d]\)</span>.</p>
-</section>
-<section id="teorema-de-fubini">
-<h2>Teorema de Fubini<a class="headerlink" href="#teorema-de-fubini" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="teorema-de-fubini">
+<h2>Teorema de Fubini<a class="headerlink" href="#teorema-de-fubini" title="Permalink to this heading">#</a></h2>
 <p>Nos dice que si una función, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, es integrable en una región <span class="math notranslate nohighlight">\([a, b] \times [c, d]\)</span>, podemos integral en el orden que consideremos.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -829,8 +829,8 @@ title="Print to PDF"
 <img alt="../_images/tintegral_2d_23_0.png" src="../_images/tintegral_2d_23_0.png" />
 </div>
 </div>
-<section id="principio-de-cavalieri">
-<h3>Principio de Cavalieri.<a class="headerlink" href="#principio-de-cavalieri" title="Permalink to this headline">#</a></h3>
+<div class="section" id="principio-de-cavalieri">
+<h3>Principio de Cavalieri.<a class="headerlink" href="#principio-de-cavalieri" title="Permalink to this heading">#</a></h3>
 <p>Para cuerpos de revolución, obtenidos de girar una figura alrededor de un eje.</p>
 <p><em>Ejercicio</em>: Calcula el volumen de un cono formado al girar el triángulo que tiene dos lados iguales, como en la figura.</p>
 <p><em>Explora</em>: Considera que para un determinado <span class="math notranslate nohighlight">\(z\)</span>, el radio máximo es <span class="math notranslate nohighlight">\(z^2\)</span>, ¿Cómo quedaría la figura?</p>
@@ -853,10 +853,10 @@ title="Print to PDF"
 <img alt="../_images/tintegral_2d_25_0.png" src="../_images/tintegral_2d_25_0.png" />
 </div>
 </div>
-</section>
-</section>
-<section id="integracion-en-una-region-no-rectangular">
-<h2>Integración en una región no rectangular.<a class="headerlink" href="#integracion-en-una-region-no-rectangular" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="integracion-en-una-region-no-rectangular">
+<h2>Integración en una región no rectangular.<a class="headerlink" href="#integracion-en-una-region-no-rectangular" title="Permalink to this heading">#</a></h2>
 <p>Considera que queremos integrar una función, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, en la región, <span class="math notranslate nohighlight">\(R\)</span>, no necesariamente un rectángulo, por ejemplo en el siguiente triángulo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1032,9 +1032,9 @@ $<span class="math notranslate nohighlight">\(
 <img alt="../_images/tintegral_2d_45_0.png" src="../_images/tintegral_2d_45_0.png" />
 </div>
 </div>
-</section>
-<section id="cambio-de-variables-jacobiano">
-<h2>Cambio de variables. Jacobiano<a class="headerlink" href="#cambio-de-variables-jacobiano" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="cambio-de-variables-jacobiano">
+<h2>Cambio de variables. Jacobiano<a class="headerlink" href="#cambio-de-variables-jacobiano" title="Permalink to this heading">#</a></h2>
 <p>En el caso anterior puede ser más conveniente realizar la integral en coordenadas polares. ¿Cómo se integra tras cambiar de coordenadas?</p>
 <p>Observa en las figuras siguientes como la región de una sección del anillo de radio <span class="math notranslate nohighlight">\([0.5, 1.]\)</span> y ángulo <span class="math notranslate nohighlight">\([0, \pi/2]\)</span> es una región rectangular en <span class="math notranslate nohighlight">\((r, \phi)\)</span>.</p>
 <p>Sin embargo las particiones rectángulares en <span class="math notranslate nohighlight">\((r, \phi)\)</span> se transforman en polígonos en el plano <span class="math notranslate nohighlight">\((x, y)\)</span>.</p>
@@ -1233,8 +1233,8 @@ $<span class="math notranslate nohighlight">\(
 <img alt="../_images/tintegral_2d_62_0.png" src="../_images/tintegral_2d_62_0.png" />
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

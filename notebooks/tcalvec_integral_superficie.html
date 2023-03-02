@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integral de superficie &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Teorema de Stockes y Teorema de Gauss" href="tcalvec_stockes_gauss.html" />
     <link rel="prev" title="Operador Nabla. Campos conservativos" href="tcalvec_rotdiv_conservativos.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -565,8 +565,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="integral-de-superficie">
-<h1>Integral de superficie<a class="headerlink" href="#integral-de-superficie" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="integral-de-superficie">
+<h1>Integral de superficie<a class="headerlink" href="#integral-de-superficie" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -575,13 +575,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Mon Apr 25 10:20:01 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:09 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Revisar la parametrización de superficies</p>
 <p>Definir la integral de una función escalar y vectorial en una superficie.</p>
 <p>Mostrar algunos ejemplos sencillos.</p>
@@ -606,11 +606,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="integral-en-una-superficies">
-<h2>Integral en una superficies<a class="headerlink" href="#integral-en-una-superficies" title="Permalink to this headline">#</a></h2>
-<section id="revision-de-parametrizacion-de-superficies">
-<h3>Revisión de parametrización de superficies.<a class="headerlink" href="#revision-de-parametrizacion-de-superficies" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="integral-en-una-superficies">
+<h2>Integral en una superficies<a class="headerlink" href="#integral-en-una-superficies" title="Permalink to this heading">#</a></h2>
+<div class="section" id="revision-de-parametrizacion-de-superficies">
+<h3>Revisión de parametrización de superficies.<a class="headerlink" href="#revision-de-parametrizacion-de-superficies" title="Permalink to this heading">#</a></h3>
 <p>Hemos visto con anterioridad que podemos parametrizar una superficie, <span class="math notranslate nohighlight">\({\bf \sigma}(u, v)\)</span>, de un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span> como una función vectorial definida en un región <span class="math notranslate nohighlight">\(R\)</span> de un espacio <span class="math notranslate nohighlight">\((u, v)\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -710,7 +710,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tcalvec_integral_superficie_13_0.png" src="../_images/tcalvec_integral_superficie_13_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2659/3476961022.py:11: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  plt.gca(projection=&#39;3d&#39;).auto_scale_xyz((-1, 1), (-1, 1), (-1, 1))
+</pre></div>
+</div>
+<img alt="../_images/tcalvec_integral_superficie_13_1.png" src="../_images/tcalvec_integral_superficie_13_1.png" />
 </div>
 </div>
 <p>En un punto <span class="math notranslate nohighlight">\((u, v)\)</span> podemos obtenemos los vectores tangentes a las líneas en ese punto.</p>
@@ -850,8 +854,8 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \mathrm{d} u \mathrm{d}v  
 \[
 = r^2 \, \phi \Big|_0^{2 \pi} \, (-\cos \theta)\Big|_0^{\pi} = 4 \pi r^2
 \]</div>
-<section id="parametrizacion-de-la-superficie-de-una-grafica">
-<h4>Parametrización de la superficie de una gráfica.<a class="headerlink" href="#parametrizacion-de-la-superficie-de-una-grafica" title="Permalink to this headline">#</a></h4>
+<div class="section" id="parametrizacion-de-la-superficie-de-una-grafica">
+<h4>Parametrización de la superficie de una gráfica.<a class="headerlink" href="#parametrizacion-de-la-superficie-de-una-grafica" title="Permalink to this heading">#</a></h4>
 <p>Podemos considerar la gráfica de una función <span class="math notranslate nohighlight">\(f(x, y)\)</span> definida en una reción <span class="math notranslate nohighlight">\(R\)</span> como la parametrización de una superficie con <span class="math notranslate nohighlight">\((x, y)\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -941,10 +945,10 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \mathrm{d} u \mathrm{d}v  
 <img alt="../_images/tcalvec_integral_superficie_32_1.png" src="../_images/tcalvec_integral_superficie_32_1.png" />
 </div>
 </div>
-</section>
-</section>
-<section id="integral-de-una-funcion-escalar-en-una-superfice">
-<h3>Integral de una función escalar en una superfice<a class="headerlink" href="#integral-de-una-funcion-escalar-en-una-superfice" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="integral-de-una-funcion-escalar-en-una-superfice">
+<h3>Integral de una función escalar en una superfice<a class="headerlink" href="#integral-de-una-funcion-escalar-en-una-superfice" title="Permalink to this heading">#</a></h3>
 <p>Sea <span class="math notranslate nohighlight">\(S\)</span> una superficie parametrizada con <span class="math notranslate nohighlight">\(\sigma(u, v)\)</span> en una region <span class="math notranslate nohighlight">\(R\)</span> de <span class="math notranslate nohighlight">\((u, v)\)</span>, y <span class="math notranslate nohighlight">\(f(x, y, z)\)</span> una función escalar definida en los puntos de la superficie. Llamamos integral de la función <span class="math notranslate nohighlight">\(f(x, y, z)\)</span> en la superficie <span class="math notranslate nohighlight">\(\sigma(u, v)\)</span> a:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1011,9 +1015,9 @@ f(\sigma(r, \theta)) = \sqrt{ r^2 \cos^2 \theta + r^2 \sin^2 \theta + 1} = \sqr
 = \int_0^{2 \pi} \int_0^1 (r^2 +1) \, \mathrm{d}r \mathrm{d}\theta 
 = 2 \pi \left( r + \frac{r^3}{3 }\right) \Big|_0^1 = \frac{8 \pi}{3}
 \]</div>
-</section>
-<section id="integral-de-una-funcion-vectorial-a-traves-de-una-superfice">
-<h3>Integral de una función vectorial a través de una superfice<a class="headerlink" href="#integral-de-una-funcion-vectorial-a-traves-de-una-superfice" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="integral-de-una-funcion-vectorial-a-traves-de-una-superfice">
+<h3>Integral de una función vectorial a través de una superfice<a class="headerlink" href="#integral-de-una-funcion-vectorial-a-traves-de-una-superfice" title="Permalink to this heading">#</a></h3>
 <p>Sea <span class="math notranslate nohighlight">\(S\)</span> una superficie parametrizada con <span class="math notranslate nohighlight">\(\sigma(u, v)\)</span> en una region <span class="math notranslate nohighlight">\(R\)</span> de <span class="math notranslate nohighlight">\((u, v)\)</span>, y <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = \left(F_x, F_y, F_z \right)\)</span> una función vectorial definida en los puntos de la superficie.
 Llamamos integral de la función <span class="math notranslate nohighlight">\({\bf F}(x, y, z)\)</span> a través de la superficie <span class="math notranslate nohighlight">\(\sigma(u, v)\)</span> a:</p>
 <div class="math notranslate nohighlight">
@@ -1069,9 +1073,9 @@ Llamamos integral de la función <span class="math notranslate nohighlight">\({\
 = \int_0^{2 \pi} \int_0^{\pi}  \sin \theta \, \mathrm{d}\theta \mathrm{d}\phi
 = 4 \pi 
 \]</div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

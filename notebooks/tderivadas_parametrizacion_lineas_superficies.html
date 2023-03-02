@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parametrización de lineas y de superficies &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Derivada direccional y funciones diferenciables" href="tderivadas_direccional_diferencial.html" />
     <link rel="prev" title="Límite y continuidad de funciones escalares y vectoriales" href="tderivadas_limites_continuidad.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -551,8 +551,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="parametrizacion-de-lineas-y-de-superficies">
-<h1>Parametrización de lineas y de superficies<a class="headerlink" href="#parametrizacion-de-lineas-y-de-superficies" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="parametrizacion-de-lineas-y-de-superficies">
+<h1>Parametrización de lineas y de superficies<a class="headerlink" href="#parametrizacion-de-lineas-y-de-superficies" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -561,13 +561,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 15:39:35 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:28:01 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Presentar a introducir los conceptos de:</p>
 <ul class="simple">
 <li><p>Parametrización de líneas</p></li>
@@ -592,9 +592,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="parametrizacion-de-lineas">
-<h2>Parametrización de líneas<a class="headerlink" href="#parametrizacion-de-lineas" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="parametrizacion-de-lineas">
+<h2>Parametrización de líneas<a class="headerlink" href="#parametrizacion-de-lineas" title="Permalink to this heading">#</a></h2>
 <p>Considera la siguiente función:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -682,8 +682,8 @@ y(t) = r \, (1 - \cos(v_x t/r))
 <img alt="../_images/tderivadas_parametrizacion_lineas_superficies_13_0.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_13_0.png" />
 </div>
 </div>
-<section id="longitud-de-arco">
-<h3>Longitud de arco<a class="headerlink" href="#longitud-de-arco" title="Permalink to this headline">#</a></h3>
+<div class="section" id="longitud-de-arco">
+<h3>Longitud de arco<a class="headerlink" href="#longitud-de-arco" title="Permalink to this heading">#</a></h3>
 <p>Fíjate en el código <em>Python</em> con el que dibujamos antes la circunfencia. La figura <em>parece</em> una cincunferencia. Pero en realidad estamos dibujando segmentos que unen puntos de la circunferencia, solo que están tan próximos que el resultado final se <em>aproxima</em> a una circunferencia.</p>
 <p>La siguiente figura muestra una sección de ese dibujo, donde hemos marcados los puntos para que se vean más claros los segmentos.</p>
 <div class="cell docutils container">
@@ -775,10 +775,10 @@ s = \int_{t_0}^{t_e} || {\bf r}' (t) || \, \mathrm{d}t
 <p><strong>Ejercicio</strong>: Considera ahora la parametrización anterior de la hélice. ¿Puedes calcular su longitud de arco?</p>
 <p>Es más, ¿podrías <em>re-parametrizar</em> la hélice pero ahora utilizando su longitud?</p>
 <p>Imagina para ello que se trata de un móvil que recorre la hélice con velocidad angular <span class="math notranslate nohighlight">\(\omega = 1\)</span> y velocidad en <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(v_z = 1\)</span>. ¿Puedes decir en qué punto se encuentra el móvil en la hélice cuando haya recorrido una distancia <span class="math notranslate nohighlight">\(s\)</span>? Esto es, ¿puedes dar <span class="math notranslate nohighlight">\({\bf r}(s)\)</span>, donde <span class="math notranslate nohighlight">\(s\)</span> es la longitud recorrida?</p>
-</section>
-</section>
-<section id="introduccion-a-la-parametrizacion-de-superficies">
-<h2>Introducción a la parametrización de superficies<a class="headerlink" href="#introduccion-a-la-parametrizacion-de-superficies" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="introduccion-a-la-parametrizacion-de-superficies">
+<h2>Introducción a la parametrización de superficies<a class="headerlink" href="#introduccion-a-la-parametrizacion-de-superficies" title="Permalink to this heading">#</a></h2>
 <p>Fíjate en la siguiente figura. Es la superficie del lateral de un cilindro vertical cuya base es un disco. Observa cómo está dibujada la superfice.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -875,9 +875,9 @@ z(\theta, \phi)  = r \, \cos \theta \\
 <p>Parametrizar una superficie en el espacio es como si dispusíeramos de un material plano imaginario que pudieramos recortar, para tener una región <span class="math notranslate nohighlight">\(\mathcal{R}\)</span>, y que luego pudieramos moldear, comprimir o expandir a voluntad en el espacio para crear con él la superficie <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
 <p>En el caso de que no comprimamos o estiremos ese material imaginario, el área de la superfice, <span class="math notranslate nohighlight">\(\sigma\)</span>, corresponde al área de la región <span class="math notranslate nohighlight">\(\mathcal{R}\)</span>. Ese es el caso de la pared del cilindro del ejemplo anterior. Pero no el de la esfera, ya que para darle forma con ese mágico material tendríamos que comprimirlo y estirarlo.</p>
 <p>Supongo que intuyes cómo calcularemos las áreas de las superficies parametrizadas, pero aún no disponemos de todas las herramientas necesarias. Tenemos que esperar al final del capítulo de integrales.</p>
-</section>
-<section id="aun-hay-mas">
-<h2>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="aun-hay-mas">
+<h2>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h2>
 <p>Supongo que sabes que una partícula cargada cuando entra normal a un campo magnético uniforme describe una hélice, como la que hemos dibujado antes.</p>
 <p>En física de partículas, la hélice juega un papel fundamental.</p>
 <p>Fíjate en esta imagen de ‘una’ colisión de protones en el detector <a class="reference external" href="https://atlas.cern">ATLAS</a>, donde están reconstruidas las trayectorias de distintas partículas.</p>
@@ -896,8 +896,8 @@ z(\theta, \phi)  = r \, \cos \theta \\
 </table>
 <p>La imagen corresponde a uno de los primeros sucesos con un Higgs que tomó detector ATLAS en junio del 2012, donde el bosón de Higgs se desintegra a dos muones (en rojo) y dos electrones (en verde). Por supuesto. Hay muchas más particulas que las que vienen del Higgs.</p>
 <p><strong>¡Esto es todo por ahora!</strong></p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

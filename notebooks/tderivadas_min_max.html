@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mínimos y máximos de funciones escalares &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Integrales en una dimensión" href="tintegral_1d.html" />
     <link rel="prev" title="Cambio de coordenadas y regla de la cadena" href="tderivadas_coordenadas_cadena.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -505,14 +505,43 @@ title="Print to PDF"
      Clasificación de puntos extremos
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#minimos-y-maximos-condicionados">
-     Mínimos y máximos condicionados
-    </a>
-   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimos-y-maximos-condicionados">
+   Mínimos y máximos condicionados
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multiplicadores-de-lagrange">
      Multiplicadores de Lagrange
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aun-hay-mas">
+   ¡Aún hay más!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#joseph-louis-lagrange">
+     Joseph Louis Lagrange
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principio-de-minima-accion">
+     Principio de mínima acción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-metodo-de-minimos-cuadrados">
+     El método de mínimos cuadrados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#las-redes-neuronales">
+     Las redes neuronales
     </a>
    </li>
   </ul>
@@ -578,14 +607,43 @@ title="Print to PDF"
      Clasificación de puntos extremos
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#minimos-y-maximos-condicionados">
-     Mínimos y máximos condicionados
-    </a>
-   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimos-y-maximos-condicionados">
+   Mínimos y máximos condicionados
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multiplicadores-de-lagrange">
      Multiplicadores de Lagrange
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aun-hay-mas">
+   ¡Aún hay más!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#joseph-louis-lagrange">
+     Joseph Louis Lagrange
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principio-de-minima-accion">
+     Principio de mínima acción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-metodo-de-minimos-cuadrados">
+     El método de mínimos cuadrados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#las-redes-neuronales">
+     Las redes neuronales
     </a>
    </li>
   </ul>
@@ -605,8 +663,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="minimos-y-maximos-de-funciones-escalares">
-<h1>Mínimos y máximos de funciones escalares<a class="headerlink" href="#minimos-y-maximos-de-funciones-escalares" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="minimos-y-maximos-de-funciones-escalares">
+<h1>Mínimos y máximos de funciones escalares<a class="headerlink" href="#minimos-y-maximos-de-funciones-escalares" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -615,13 +673,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 16:14:45 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:27:49 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Recordar el concepto de mínimo y máximo de una función real y cómo se calculan.</p>
 <p>Introducir el desarrollo de Taylor de 2º orden de funciones escalares y la matriz hessiana.</p>
 <ul class="simple">
@@ -656,11 +714,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="desarrollo-de-taylor-de-2o-orden-de-funciones-escalares">
-<h2>Desarrollo de Taylor de 2º orden de funciones escalares.<a class="headerlink" href="#desarrollo-de-taylor-de-2o-orden-de-funciones-escalares" title="Permalink to this headline">#</a></h2>
-<section id="revision-de-los-conceptos-de-extremos-minimos-y-maximos">
-<h3>Revisión de los conceptos de extremos, mínimos y máximos.<a class="headerlink" href="#revision-de-los-conceptos-de-extremos-minimos-y-maximos" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="desarrollo-de-taylor-de-2o-orden-de-funciones-escalares">
+<h2>Desarrollo de Taylor de 2º orden de funciones escalares.<a class="headerlink" href="#desarrollo-de-taylor-de-2o-orden-de-funciones-escalares" title="Permalink to this heading">#</a></h2>
+<div class="section" id="revision-de-los-conceptos-de-extremos-minimos-y-maximos">
+<h3>Revisión de los conceptos de extremos, mínimos y máximos.<a class="headerlink" href="#revision-de-los-conceptos-de-extremos-minimos-y-maximos" title="Permalink to this heading">#</a></h3>
 <p>Para las funciones reales, <span class="math notranslate nohighlight">\(f(x)\)</span>, habíamos definido como mínimo local, aquel valor <span class="math notranslate nohighlight">\(x_0\)</span> del dominio tal que en los valores en un intervalo en torno suyo, de anchura <span class="math notranslate nohighlight">\(h\)</span>, la función es mayor o igual que en <span class="math notranslate nohighlight">\(x_0\)</span>. De forma similar definimos el máximo local.</p>
 <p>Llamamos mínimo local:</p>
 <div class="math notranslate nohighlight">
@@ -700,9 +758,9 @@ f(x_0 + h) \simeq f(x_0) + f'(x_0) h + \frac{1}{2} f''(x_0) h^2
 <p>Recuerda también que la condición suficiente para que una función real tenga desarrollo de Taylor de segundo orden en un valor <span class="math notranslate nohighlight">\(x_0\)</span> es que su derivada segunda en un entorno de ese valor sea continua.</p>
 <p>Interpretando <span class="math notranslate nohighlight">\(f'(x_0)\)</span> como la pendiente, vemos que para que la función no cambie de valor entorno a <span class="math notranslate nohighlight">\(x_0\)</span>, su pendiente tiene que ser nula.</p>
 <p>Y después, el segundo sumando, <span class="math notranslate nohighlight">\(\frac{1}{2} f''(x_0) h^2\)</span>, es positivo o negativo dependiendo del signo de la derivada segunda, <span class="math notranslate nohighlight">\(f''(x_0)\)</span>. De ahí la condición de mínimo o máximo.</p>
-</section>
-<section id="igualdad-de-las-derivadas-segundas-cruzadas">
-<h3>Igualdad de las derivadas segundas cruzadas<a class="headerlink" href="#igualdad-de-las-derivadas-segundas-cruzadas" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="igualdad-de-las-derivadas-segundas-cruzadas">
+<h3>Igualdad de las derivadas segundas cruzadas<a class="headerlink" href="#igualdad-de-las-derivadas-segundas-cruzadas" title="Permalink to this heading">#</a></h3>
 <p>Antes de abordar el desarrollo de Taylor de segundo orden de funciones escalares, vamos a ver este teorema importante:</p>
 <p><em>Teorema</em>: Sea <span class="math notranslate nohighlight">\(f({\bf x})\)</span> una función escalar de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, si las derivadas segundas son continuas en una bola centrada en un punto, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, se cumple que las derivadas cruzadas son iguales:</p>
 <div class="math notranslate nohighlight">
@@ -710,10 +768,10 @@ f(x_0 + h) \simeq f(x_0) + f'(x_0) h + \frac{1}{2} f''(x_0) h^2
 \frac{\partial^2 f({\bf x}_0)}{\partial x_i \partial x_j} = \frac{\partial^2 f({\bf x}_0)}{\partial x_j \partial x_i}
 \]</div>
 <p>con <span class="math notranslate nohighlight">\(i \ne j, \; i = 1, \dots, n; \, j = 1, \dots, n\)</span>.</p>
-</section>
-</section>
-<section id="desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares">
-<h2>Desarrollo de Taylor de segundo orden de funciones escalares<a class="headerlink" href="#desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares">
+<h2>Desarrollo de Taylor de segundo orden de funciones escalares<a class="headerlink" href="#desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares" title="Permalink to this heading">#</a></h2>
 <p>Sea una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, con derivadas segundas continuas en un punto interior, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, del dominio, se puede aproximar en un punto ‘próximo’, <span class="math notranslate nohighlight">\({\bf x}\)</span>, separado de <span class="math notranslate nohighlight">\({\bf x}_0\)</span> por un vector ‘pequeño’ <span class="math notranslate nohighlight">\({\bf v}\)</span>, por su <strong>desarrollo de Taylor de segundo orden</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -789,9 +847,9 @@ f({\bf x}_0 + {\bf v}) = \frac{1}{2} (v_x, v_y) \, \left( \begin{array}{cc} 4 &a
 <img alt="../_images/tderivadas_min_max_17_0.png" src="../_images/tderivadas_min_max_17_0.png" />
 </div>
 </div>
-</section>
-<section id="id1">
-<h2>Mínimos y máximos de funciones escalares<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="id1">
+<h2>Mínimos y máximos de funciones escalares<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Como en una dimensión, llamaremos un punto <strong>extremo</strong> o <strong>crítico</strong>, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, de una función escalar diferenciable, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, a aquellos puntos del dominio cuyo gradiente sea nulo, <span class="math notranslate nohighlight">\(\nabla f ({\bf x}_0) = {\bf 0}\)</span>.</p>
 <p>En el ejemplo anterior, la función escalar, <span class="math notranslate nohighlight">\(f(x, y) = 2x^2 + 4y^2\)</span> tiene un extremo en <span class="math notranslate nohighlight">\((0, 0)\)</span>.</p>
 <p>Observa la gráfica y los conjuntos de nivel de la siguiente función, <span class="math notranslate nohighlight">\(f(x, y) = 2x^2 - 4y^2\)</span>. Puedes comprobar que el punto <span class="math notranslate nohighlight">\((0, 0)\)</span> es un extremo, tiene gradiente nulo (el gradiente es <span class="math notranslate nohighlight">\(\nabla f(x, y) = (4x, -8 y)\)</span>), sin embargo no es ni máximo ni mínimo, es un <strong>punto silla</strong>. Definimos como tal, al punto extremo a partir del que la función asciende en una dirección y desciende en otra.</p>
@@ -843,8 +901,8 @@ f({\bf x}_0) = 0
 f({\bf x}_0 + {\bf v}) =  \frac{1}{2} (v_x, v_y) \, \left( \begin{array}{cc} 4 &amp; 0 \\ 0 &amp; - 8\end{array} \right) \, \left( \begin{array}{c} v_x \\ v_y \end{array} \right) =  2 v^2_x - 4 v^2_y 
 \end{split}\]</div>
 <p>Donde vemos que si avanzamos <em>solo</em> en la dirección <span class="math notranslate nohighlight">\(x\)</span> la función asciende, mientras que si avanzamos <em>solo</em> en la dirección <span class="math notranslate nohighlight">\(y\)</span>, desciende. Se trata pues de un punto silla.</p>
-<section id="clasificacion-de-puntos-extremos">
-<h3>Clasificación de puntos extremos<a class="headerlink" href="#clasificacion-de-puntos-extremos" title="Permalink to this headline">#</a></h3>
+<div class="section" id="clasificacion-de-puntos-extremos">
+<h3>Clasificación de puntos extremos<a class="headerlink" href="#clasificacion-de-puntos-extremos" title="Permalink to this heading">#</a></h3>
 <p>Los puntos extremos de una función escalar, serán máximos, mínimos o puntos silla, dependiendo de valor del término de la matriz hessiana de su desarrollo de Taylor:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -901,10 +959,11 @@ Si es negativo, es un máximo, la función desciende siempre. Y si dependiendo d
 \[
 {\bf H}({\bf x}_0) = {\bf U} \, {\bf H}' ({\bf x}_0) \, {\bf U}^T
 \]</div>
-<p>donde:
-$<span class="math notranslate nohighlight">\(
+<p>donde:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf U} { \bf U}^T = {\bf U}^T { \bf U}  = {\bf I}
-\)</span>$</p>
+\]</div>
 <p>El vector <span class="math notranslate nohighlight">\({\bf v}\)</span> lo podemos expresar en la base de los autovectores (lo denotamos como <span class="math notranslate nohighlight">\({\bf v}'\)</span>), mediante el cambio:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -913,13 +972,13 @@ $<span class="math notranslate nohighlight">\(
 <p>Podemos entonces reescribir el término de la hessiana del desarrollo de Taylor en la base de los autovectores:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{2}{\bf v}^T \, {\bf H}({\bf x}_0) \, {\bf v} = \frac{1}{2}{\bf v}'^T {\bf U}^T \, {\bf U} {\bf H}'({\bf x_0}){\bf U}^T \, {\bf U} {\bf v}'= \frac{1}{2} {\bf v}' \, {\bf H}'({\bf x_0}) \,{\bf v}'
+\frac{1}{2}{\bf v}^T \, {\bf H}({\bf x}_0) \, {\bf v} = \frac{1}{2}{\bf v}'^T {\bf U}^T \, {\bf U} {\bf H}'({\bf x_0}){\bf U}^T \, {\bf U} {\bf v}'= \frac{1}{2} {\bf v}'^T \, {\bf H}'({\bf x_0}) \,{\bf v}'
 \]</div>
 <p>Esto es, el término de la hessiana del desarrollo de Taylor no depende de la base en la que lo calculemos.</p>
 <p>Si expresamos el vector, <span class="math notranslate nohighlight">\((v_x, v_y)\)</span>, en la base de los autovectores, esto es, <span class="math notranslate nohighlight">\((v'_x, v'_y)\)</span>, tenemos</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\frac{1}{2} {\bf v'} \, {\bf H}'({\bf x}_0) \, {\bf v}'^T =   \frac{1}{2} (v'_x, v'_y) \, \left( \begin{array}{cc} \lambda'_1 &amp; 0 \\ 0 &amp; \lambda'_2\end{array} \right) \, \left( \begin{array}{c} v'_x \\ v'_y \end{array} \right) = 
+\frac{1}{2} {\bf v'}^T \, {\bf H}'({\bf x}_0) \, {\bf v}' =   \frac{1}{2} (v'_x, v'_y) \, \left( \begin{array}{cc} \lambda'_1 &amp; 0 \\ 0 &amp; \lambda'_2\end{array} \right) \, \left( \begin{array}{c} v'_x \\ v'_y \end{array} \right) = 
 \frac{1}{2} \left( \lambda'_1 v'^2_x + \lambda'_2 v'^2_y \right)
 \end{split}\]</div>
 <p>Y por lo tanto, si los dos autovectores de la Hessiana son positivos, <span class="math notranslate nohighlight">\(\lambda'_1 &gt; 0, \lambda'_2 &gt;0\)</span>, el punto extremo <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es mínimo; si los dos son negativos <span class="math notranslate nohighlight">\(\lambda'_1 &lt;0, \lambda'_2 &lt;0\)</span>, es un máximo, y si uno es positivo y otro negativo, es un punto silla.</p>
@@ -1010,9 +1069,10 @@ f(x'_0 + v'_x, \, y'_0 + v'_y) \simeq f(x'_0, y'_0) + \frac{1}{2}\left( \lambda'
 <p>Finalmente, es <strong>punto silla</strong> si en toda bola centrada en <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, hay puntos dentro de la bola cuyo valor de la función es mayor y otros menor que el valor en el punto crítico.</p>
 <p>El punto extremo es un mínimo, si todos los <strong>autovalores</strong>, <span class="math notranslate nohighlight">\(\{\lambda_i, \, i=1, \dots, n \}\)</span>, de su <strong>matriz hessiana</strong>, <span class="math notranslate nohighlight">\({\bf H}({\bf x_0})\)</span>, son positivos; es un máximo si todos son negativos; y es un punto silla si alguno es negativo y alguno positivo.</p>
 <p><em>Cuestión</em>: Considera una función escalar <span class="math notranslate nohighlight">\(f(x, y)\)</span> y el punto extremo, <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>, el determinante de la matriz hessiana es negativo. ¿Puedes clasificar el extremo, es mínimo, máximo, punto silla? ¿Y si el determinante es positivo?</p>
-</section>
-<section id="minimos-y-maximos-condicionados">
-<h3>Mínimos y máximos condicionados<a class="headerlink" href="#minimos-y-maximos-condicionados" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="minimos-y-maximos-condicionados">
+<h2>Mínimos y máximos condicionados<a class="headerlink" href="#minimos-y-maximos-condicionados" title="Permalink to this heading">#</a></h2>
 <p>Considera el caso de que queremos calcular los extremos de una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, pero no en todo su dominio, si no en una parte del mismo. En este caso hablamos de <strong>extremos condicionados</strong>.</p>
 <p>Por ejemplo, sea la función: <span class="math notranslate nohighlight">\(f(x, y) = x^2 - y^2\)</span>, y queremos calcular sus extremos en la circunferencia de radio unidad, esto es, en los puntos que cumplen <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>.</p>
 <p>La siguiente celda te dibuja los conjuntos de nivel de la función y la circunferencia. Como puedes ver hemos parametrizado la circunferencia en función de <span class="math notranslate nohighlight">\(t\)</span> que toma los valores en <span class="math notranslate nohighlight">\([0, 2 \pi]\)</span>.</p>
@@ -1088,9 +1148,8 @@ g(x, y) = x^2 + y^2 = c
 <img alt="../_images/tderivadas_min_max_44_0.png" src="../_images/tderivadas_min_max_44_0.png" />
 </div>
 </div>
-</section>
-<section id="multiplicadores-de-lagrange">
-<h3>Multiplicadores de Lagrange<a class="headerlink" href="#multiplicadores-de-lagrange" title="Permalink to this headline">#</a></h3>
+<div class="section" id="multiplicadores-de-lagrange">
+<h3>Multiplicadores de Lagrange<a class="headerlink" href="#multiplicadores-de-lagrange" title="Permalink to this heading">#</a></h3>
 <p>Sea una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, los extremos, <span class="math notranslate nohighlight">\({\bf x_0}\)</span> de esa función, donde <span class="math notranslate nohighlight">\({\bf x}_0\)</span> pertenece a los conjuntos de nivel dados por <span class="math notranslate nohighlight">\(g({\bf x}) = c\)</span>, cumplen que:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1116,21 +1175,48 @@ g(x, y) = x^2 + y^2
 <p>De la segunda condición <span class="math notranslate nohighlight">\(2 y_0 = - \lambda 2 y_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(\lambda = -1\)</span>; pero para que se cumpla en este caso la primera, <span class="math notranslate nohighlight">\(2 x_0 = 2 \lambda x_0\)</span> con <span class="math notranslate nohighlight">\(\lambda = -1\)</span>, entonces <span class="math notranslate nohighlight">\(x_0 = 0\)</span>. Solo hay dos puntos en la circunferencia con <span class="math notranslate nohighlight">\(x_0 = 0\)</span> que son: <span class="math notranslate nohighlight">\((0, 1)\)</span> y <span class="math notranslate nohighlight">\((0, -1)\)</span>. Son también extremos condicionados</p>
 <p>La función en <span class="math notranslate nohighlight">\((-1, 0)\)</span> y <span class="math notranslate nohighlight">\((1, 0)\)</span> vale <span class="math notranslate nohighlight">\(1\)</span>. Mientras que en <span class="math notranslate nohighlight">\((0, 1)\)</span> y <span class="math notranslate nohighlight">\((0, -1)\)</span> vale <span class="math notranslate nohighlight">\(-1\)</span>. Los dos primeros son máximos condicionados y los dos últimos mínimos condicionados.</p>
 <p><em>Verifica</em>: que es correcto en la celda anterior, colocando <span class="math notranslate nohighlight">\(t = 0, \pi/2, \pi, 3 \pi/2\)</span>, y observa como los gradientes se alinean y coinciden con los valores máximos y mínimos que puede tomar la función en la circunferencia.</p>
-<p><strong>¡Aún hay más!</strong></p>
-<p><strong>Joseph Louis Lagrange</strong></p>
-<p>Fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Un hombre de su tiempo, italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela “École Polytechnique”, recién fundada por Napoleón. A él le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
-<p><strong>¡Aún hay más!</strong></p>
-<p><strong>Principio de mínima acción</strong></p>
-<p>Los máximos y mínimos juegan un papel fundamental en Física. De hecho, la mecánica clásica (y también la moderna) pueden formularse en función del <a class="reference external" href="https://en.wikipedia.org/wiki/Principle_of_least_action">principio de mínima acción</a>, que nos dice que la dinámica de un sistema físico está regida por la búsqueda de la mínima acción, que matemáticamente se define como la integral de un término que se denomina, <strong>Lagrangiano</strong>. Aquí en la wikipedia:</p>
-<p>Este principio se enunció por primera vez por el físico francés Maupertius en el siglo XVIII, y en su versión moderna, en el siglo XX por el físico y profesor americano Richard <strong>Feymann</strong>. Aquí tienes un enlace a una de sus famosas clases <a class="reference external" href="http://www.feynmanlectures.caltech.edu/II_19.html">[&gt;]</a> y su entrada en la wikipedia, <a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Feynman">Feynman</a></p>
-<p><strong>El método de mínimos cuadrados</strong></p>
+</div>
+</div>
+<div class="section" id="aun-hay-mas">
+<h2>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h2>
+<div class="section" id="joseph-louis-lagrange">
+<h3>Joseph Louis Lagrange<a class="headerlink" href="#joseph-louis-lagrange" title="Permalink to this heading">#</a></h3>
+<p>Lagrange fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Fue un hombre de su tiempo, italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela “École Polytechnique”, recién fundada por Napoleón. Le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
+</div>
+<div class="section" id="principio-de-minima-accion">
+<h3>Principio de mínima acción<a class="headerlink" href="#principio-de-minima-accion" title="Permalink to this heading">#</a></h3>
+<p>Los máximos y mínimos juegan un papel fundamental en Física. De hecho, la mecánica clásica (y también la moderna) pueden formularse en función del <a class="reference external" href="https://en.wikipedia.org/wiki/Principle_of_least_action">principio de mínima acción</a>, que nos dice que la dinámica de un sistema físico está regida por la búsqueda de la acción mínima, que matemáticamente se define como la integral de un término que se denomina, <strong>Lagrangiano</strong>.</p>
+<p>Este principio se enunció por primera vez por el físico francés Maupertius en el siglo XVIII, y en su versión moderna, en el siglo XX por el físico y profesor americano Richard <strong>Feynman</strong>. Aquí tienes un enlace a una de sus famosas <a class="reference external" href="http://www.feynmanlectures.caltech.edu/II_19.html">clases</a> y su entrada en la wikipedia, <a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Feynman">Feynman</a></p>
+</div>
+<div class="section" id="el-metodo-de-minimos-cuadrados">
+<h3>El método de mínimos cuadrados<a class="headerlink" href="#el-metodo-de-minimos-cuadrados" title="Permalink to this heading">#</a></h3>
 <p>Los mínimos y máximos juegan un papel fundamental también en la estimación de parámetros y observables.</p>
-<p>Seguramente has utilizado en técnicas experimental de laboratorio el método de los mínimos cuadrados para hacer el ajuste de unos datos, por ejemplo, para ajustarlos a una recta.</p>
-<p>Como sabes la Naturaleza tiene un comportamiento probabilístico, y nuestras medidas estás sujetas <em>siempre</em> a las incertidumbres de medida, físicas o teóricas.</p>
-<p>En el método de mínimos cuadrados, se calcula la distancia (al cuadrado) de los valores medidos frente al valor de una función de hipótesis, por ejemplo la recta, que depende de unos parámetros a estimar, (en el caso de la recta son la pendiente, <span class="math notranslate nohighlight">\(a\)</span>, y el umbral en el origen, <span class="math notranslate nohighlight">\(b\)</span>). Estimamos sus parámetros y sus incertidumbres calculando el mínimo de la suma de las distancias al cuadrado, a esta función la llamamos, <span class="math notranslate nohighlight">\(\chi^2\)</span>, que en el caso de ajuste a una recta, es una función escalar de dos variables, <span class="math notranslate nohighlight">\(a, b\)</span>, los parámetros de la recta.</p>
-<p>En las siguientes celdas hemos preparado un experimento de ajuste a una recta.</p>
-<p>Primero el experimento genera <span class="math notranslate nohighlight">\(n\)</span> puntos aleatorios <span class="math notranslate nohighlight">\((x_i, y_i)\)</span> a lo largo de una recta, cada uno con la misma incertidumbre <span class="math notranslate nohighlight">\(\sigma\)</span>. Luego estimamos la pendiente y el umbral mediante el método de mínimos cuadrados.</p>
+<p>Seguramente has utilizado en técnicas experimental de laboratorio el método de los mínimos cuadrados para hacer el ajuste de unos datos a una línea recta.</p>
+<p>Como sabes la Naturaleza tiene un comportamiento probabilístico, y nuestras medidas estás sujetas <em>siempre</em> a las incertidumbres.</p>
+<p>En el método de mínimos cuadrados, se calcula la distancia (al cuadrado) de los valores medidos frente al valor de una función de hipótesis, por ejemplo la recta, que depende de diversos parámetros, (en el caso de la recta, los parámetros son la pendiente, <span class="math notranslate nohighlight">\(a\)</span>, y el umbral en el origen, <span class="math notranslate nohighlight">\(b\)</span>). Estimamos éstos parámetros y sus incertidumbres calculando el mínimo de la suma de las distancias al cuadrado. A esta función la llamamos, <span class="math notranslate nohighlight">\(\chi^2\)</span>, que en el caso de ajuste a una recta, es una función escalar de dos variables, <span class="math notranslate nohighlight">\(a, b\)</span>.</p>
+<p>Esto es determinamos los parámetros de nuestro modelo como aquellos que hacen que la suma las distancias al cuadrado de los datos con respecto al modelo sea la menor posible.</p>
+<p>En el caso de la recta:</p>
+<p>Tenemos una muestra de datos <span class="math notranslate nohighlight">\(\{(x_i, y_u), \; i = 1, \dots, n\}\)</span>, con errores <span class="math notranslate nohighlight">\(\sigma_i = \sigma\)</span>.</p>
+<p>Se distribuyen a lo largo de una recta, que tiene dos parámetros, <span class="math notranslate nohighlight">\(a\)</span>, la pendiente y <span class="math notranslate nohighlight">\(b\)</span>, el umbral en el origen.</p>
+<div class="math notranslate nohighlight">
+\[
+y(x \, | \, a, b) = a \, x + b
+\]</div>
+<p>y construimos la función escalar <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> como:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi2(a, b) = \sum_{i=1}^n \frac{(y_i - y(x_i | a, b))^2}{\sigma^2}   
+= \sum_{i=1}^n \frac{(y_i - a \, x_i - b)^2}{\sigma^2}
+\]</div>
+<p>Estimamos los parámetros <span class="math notranslate nohighlight">\(\hat{a}, \hat{b}\)</span>, como aquellos que minimizan la <span class="math notranslate nohighlight">\(\chi^2\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+(\hat{a}, \hat{b}) \;\;\; \mathrm{t.q.} \;\; \chi^2(\hat{a}, \hat{b}) = \mathrm{min}(\chi^2(a, b))
+\]</div>
+<p>Las siguientes celdas muestran el ajuste a una recta de datos simulados.</p>
+<p>Generamos primero una muestra de datos aleatorios <span class="math notranslate nohighlight">\(\{ (x_i, y_i), \; i= 1, \dots, n \}\)</span>, a lo largo de una recta, cada uno con la misma incertidumbre <span class="math notranslate nohighlight">\(\sigma_i = \sigma\)</span>. Luego estimamos los parámetros, <span class="math notranslate nohighlight">\((\hat{a}, \hat{b})\)</span>, mediante el método de mínimos cuadrados.</p>
 <p>En la figura se dibujan los puntos con su error, la recta verdadera y la recta estimada.</p>
+<p><em>Explora</em> Cambia el número de puntos, o los parámetros verdaderos para ver cómo cambia el ajuste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span>    <span class="k">as</span> <span class="nn">stats</span>
@@ -1159,7 +1245,7 @@ g(x, y) = x^2 + y^2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atrue</span><span class="p">,</span> <span class="n">btrue</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">npoints</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atrue</span><span class="p">,</span> <span class="n">btrue</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">npoints</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">8</span>
 <span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span>     <span class="o">=</span> <span class="n">experiment</span><span class="p">(</span><span class="n">atrue</span><span class="p">,</span> <span class="n">btrue</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">npoints</span><span class="p">,</span> <span class="n">xrange</span> <span class="o">=</span> <span class="n">xrange</span><span class="p">)</span>
 <span class="n">ahat</span><span class="p">,</span> <span class="n">bhat</span> <span class="o">=</span> <span class="n">lsq_fit</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span> 
@@ -1173,10 +1259,10 @@ g(x, y) = x^2 + y^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  1.080315621827824 b =  -0.448993340433693
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9640309887033567 b =  0.23189420901368357
 </pre></div>
 </div>
-<img alt="../_images/tderivadas_min_max_53_1.png" src="../_images/tderivadas_min_max_53_1.png" />
+<img alt="../_images/tderivadas_min_max_54_1.png" src="../_images/tderivadas_min_max_54_1.png" />
 </div>
 </div>
 <p>En la siguiente celda, dibujamos los conjuntos de nivel de la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> para los datos del experimento, <span class="math notranslate nohighlight">\(\{(x_i, y_i); \; i = 1, \dots, n \}\)</span>. Esto es:</p>
@@ -1198,32 +1284,32 @@ g(x, y) = x^2 + y^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  1.1384406246244156
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.974174784940158
 </pre></div>
 </div>
-<img alt="../_images/tderivadas_min_max_55_1.png" src="../_images/tderivadas_min_max_55_1.png" />
+<img alt="../_images/tderivadas_min_max_56_1.png" src="../_images/tderivadas_min_max_56_1.png" />
 </div>
 </div>
-<p><strong>Las redes neuronales</strong></p>
-<p>Las redes neuronales son algoritmos matemáticos que pueden ‘aprender’ cómo identificar patrones o clasificar muestras. Por ejemplo, Google desarrolló una potente red neuronal que puede distingir imágenes de gatos y perros. Se llaman así porque simulan el corportamento de las redes neuronales del sistema nervioso.</p>
-<p>Las redes están compuestas de neuronas, que se disponen en capas. En la figura se muestra un esquema de una red neuronal. Cada neurona tienen un conjunto de entradas y una sola salida. Matemáticamente cada neurona es una función escalar. La última capa de la red suele ser una sola neurona y su salida la respuesta final. Por ejemplo, su respuesta es un valor entre [0, 1], donde el 0 indica que la imagen era de un gato y 1 de un perro.</p>
+</div>
+<div class="section" id="las-redes-neuronales">
+<h3>Las redes neuronales<a class="headerlink" href="#las-redes-neuronales" title="Permalink to this heading">#</a></h3>
+<p>Las redes neuronales son algoritmos matemáticos que <em>aprenden</em> a identificar patrones y clasificar muestras. Hace poco más de una década Google desarrolló una potente red neuronal que distinguía entre imágenes de gatos y perros. Desde entonces, quizás sin que te des cuenta, las redes neuronales están en nuestras vidas.</p>
+<p>La redes neuronales toman el nombre de su similitud con nuestro sistema nervioso.
+Una red está compuesta de neuronas que se disponen en capas. En la figura de la siguiente celda se muestra un esquema de una red neuronal. Cada neurona tienen un conjunto de entradas y una sola salida. Matemáticamente cada neurona es una función escalar, <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es el número de entradas. La última capa de la red suele ser una sola neurona y su salida es la respuesta de la red. Matemáticamente toda la red es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^N \to \mathrm{R}\)</span>, donde <span class="math notranslate nohighlight">\(N\)</span> es el número de entradas en la primera capa.</p>
 <p>En estos vídeos puedes encontrar una introducción sencillas a las redes neuronales <a class="reference external" href="https://www.youtube.com/watch?v=aircAruvnKk">[&gt;]</a> y a sus métodos de entrenamiento <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a></p>
-<p>Cada neurona is una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, donde <span class="math notranslate nohighlight">\({\bf x}\)</span> son los valores de las neuronas en la capa anterior, y el valor de la función, de la neurona, está dentro del intervalo [0, 1].</p>
-<p>Las neuronas en la primera capa reiciben los datos del mundo ‘exterior’ y las neuronas en la última capa dan la respuest de la red, por ejemplo deciden si la imagen es de un gato perro o un gato.</p>
+<p><strong>Esquema de una red neuronal</strong></p>
+<p>Las neuronas en la primera capa reciben los datos del mundo “exterior” y la neurona de la última capa da la respuest de la red.</p>
 <a class="reference internal image-reference" href="../_images/NN.png"><img alt="../_images/NN.png" src="../_images/NN.png" style="width: 400px;" /></a>
-<p>Intenta emular el comportamiento de nuestro sistema nervioso.</p>
+<p>Las capas intermedias las podemos considerar <em>ocultas</em>.</p>
 <p>La función escalar de la neurona es habitualmente una sigmoide.</p>
-<p>Cada una de las neuronas recibe la entrada de las neuronas de la capa anterior. La neurona <span class="math notranslate nohighlight">\(lm\)</span> es la neurona <span class="math notranslate nohighlight">\(m\)</span>-ésima de la capa <span class="math notranslate nohighlight">\(l\)</span>-ésima. Ella recibe como entrada las respuestas de las neuronas de la capa anterior, <span class="math notranslate nohighlight">\(x_i\)</span>, donde <span class="math notranslate nohighlight">\(i\)</span> recorre todas la neuronas de la capa <span class="math notranslate nohighlight">\(l-1\)</span>, supongamos que hay <span class="math notranslate nohighlight">\(N\)</span> neuronas en todas las capas. Cada neurona en sí es una función escalar, que a partir del vector de entradas <span class="math notranslate nohighlight">\({\bf x}\)</span>, y mediante un vector interno <span class="math notranslate nohighlight">\({\bf a}\)</span>, y una posible constante <span class="math notranslate nohighlight">\(b\)</span>, da respuesta a partir de la cantidad escalar <span class="math notranslate nohighlight">\({\bf a} {\bf x} + b\)</span>, mediante una función real:</p>
+<p>La sigmoide tiene como parámetros un vector de n-dimensiones, <span class="math notranslate nohighlight">\({\bf a}\)</span>, y un escalar, <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p>Su forma es la siguiente:</p>
 <div class="math notranslate nohighlight">
 \[
-u( {\bf a} {\bf x} + b)
+u( {\bf x} \, | \, {\bf a}, b ) = \frac{1}{1 + e^{-{\bf a x} - b}}
 \]</div>
-<p>donde <span class="math notranslate nohighlight">\({\bf a}, b\)</span> son los parámetros de cada neurona. La función más común es un sigmoide, que tiene su salida comprendida entre <span class="math notranslate nohighlight">\([0, 1]\)</span>. En la siguiente celda se muestra la función sigmoide.</p>
-<div class="math notranslate nohighlight">
-\[
-u({\bf x}) = \frac{1}{1 + e^{-{\bf a x} - b}}
-\]</div>
-<p><em>Explora:</em> Modifica el coeficiente <span class="math notranslate nohighlight">\(a\)</span> en la siguiente celda y observa el respuesta de la neurona.</p>
+<p>Nota que es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span> y que su valor está comprendido en el intervalo <span class="math notranslate nohighlight">\([0, 1]\)</span></p>
+<p><em>Explora:</em> Modifica el coeficiente <span class="math notranslate nohighlight">\(a\)</span> en la siguiente celda y observa cómo cambia el respuesta de la sigmoide.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">2.</span><span class="p">,</span> <span class="mi">0</span>
@@ -1233,34 +1319,39 @@ u({\bf x}) = \frac{1}{1 + e^{-{\bf a x} - b}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_min_max_60_0.png" src="../_images/tderivadas_min_max_60_0.png" />
+<img alt="../_images/tderivadas_min_max_61_0.png" src="../_images/tderivadas_min_max_61_0.png" />
 </div>
 </div>
-<p>Pero, ¿Cómo funcionan?</p>
-<p>Mediante entrenamiento, imaginate que le muestras una imagen de un gato a las neuronas iniciales (cada neurona de la primera capa ‘ve’ un ‘pixel’ de la imagen) y esperas que de como respuesta un 0, si
-le enseñas la imagen de un perro debe dar un 1.</p>
-<p>La red neuronal es pues en sí misma una función escalar que a partir de la imagen inicial <span class="math notranslate nohighlight">\({\bf x}\)</span> (los pixels de la imagen son <span class="math notranslate nohighlight">\(x_{ij}\)</span>) nos da una sola respuesta <span class="math notranslate nohighlight">\(v({\bf x})\)</span>.
-Entrenamos la red mediante la construcción de siguiente función error, que compara la respuesta de la red, <span class="math notranslate nohighlight">\(v({\bf x}_i)\)</span>, con el valor verdadero, <span class="math notranslate nohighlight">\(y_i\)</span>, donde 0 corresponde a la imagen de un gato y 1 de un perro perro, con un número <span class="math notranslate nohighlight">\(M\)</span>, (<span class="math notranslate nohighlight">\(i = 1, \dots, M)\)</span>, grande, de imágenes.</p>
+<p><strong>¿Cómo funcionan las redes neuronales?</strong></p>
+<p>Mediante entrenamiento, esto es, minimizando una función escalar que llamamos error.</p>
+<p>Consideremos el caso de la red neuronal que distingue imágenes de perros y gatos.</p>
+<p>La imagen la podemos matematizar dándola como un conjunto de píxeles (como si la imagen fuera un mosaico y cada tesela un <em>pixel</em>), y el valor de cada pixel correspondería por ejemplo a un valor en la escala de grises si la imagen está en blanco y negro. Hemos convertido por lo tanto la imagen en un vector <span class="math notranslate nohighlight">\({\bf x}\)</span>, que será la entrada a nuestra red.</p>
+<p>La red tendra varias capas con diversas neuronas, por ejemplo <span class="math notranslate nohighlight">\(L\)</span> capas, con <span class="math notranslate nohighlight">\(K\)</span> neuronas en cada capa, y acabará con una neurona final. Ésta dará un valor entre <span class="math notranslate nohighlight">\([0, 1]\)</span>, el 0 corresponderá a la imagen de un gato y 1 a la del perro.</p>
+<p>La red neuronal es pues en sí misma una función escalar que a partir de la imagen inicial <span class="math notranslate nohighlight">\({\bf x}\)</span> nos da una sola respuesta <span class="math notranslate nohighlight">\(v({\bf x} | {\bf a}^{lk}, b^{lk})\)</span>, donde <span class="math notranslate nohighlight">\({\bf a}^{lk}, b^{lk}\)</span> son los parámetros de la neurona que está la capa <span class="math notranslate nohighlight">\(l\)</span> y en la posición <span class="math notranslate nohighlight">\(k\)</span> dentro de esa capa. La respuesta de la red neuronal es por lo tanto una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^N \to \mathrm{R}\)</span>, siendo <span class="math notranslate nohighlight">\(N\)</span> el número de pixels de nuestras imágenes.</p>
+<p>A partir de una muestra de imágenes de perros y gatos <span class="math notranslate nohighlight">\(\{ {\bf x}_i, \; i = 1, \dots, M\}\)</span>, donde <span class="math notranslate nohighlight">\(M\)</span> es un número muy grande, y de la respuesta correcta para cada imagen <span class="math notranslate nohighlight">\(\{ y_i, \; i = 1, \dots, M \}\)</span>, que serán 0 cuando la imagen sea de un gato y 1 de un perro, construimos la función error</p>
 <div class="math notranslate nohighlight">
 \[
-E({\bf a}^{lm}, b^{lm}) = \sum_{i= 1}^M (v({\bf x_i}) - y_i)^2
+E({\bf a}^{lk}, b^{lk}) = \sum_{i=1}^M (y_i - v({\bf x}_i | {\bf a}^{lk}, b^{lk}))^2
 \]</div>
-<p>Los parámetros de la función error, <span class="math notranslate nohighlight">\(E({\bf a}^{lm}, b^{lm})\)</span>, son muchísimos, todos los parámetros internos, <span class="math notranslate nohighlight">\(({\bf a}, b)\)</span>, de las neuronas, del orden de <span class="math notranslate nohighlight">\(L N (N +1)\)</span>, donde <span class="math notranslate nohighlight">\(L\)</span> es el número de capas y <span class="math notranslate nohighlight">\(N\)</span> el número de neuronas por capa.</p>
-<p>Si te das cuenta, la función error será <em>mínima</em> cuando la red ‘acierte’ la imágenes, esto es su salida, <span class="math notranslate nohighlight">\(v({\bf x}_i)\)</span> coincida con el valor verdadero <span class="math notranslate nohighlight">\(y_i\)</span>, 0 para gato y 1 para perro.</p>
-<p>¿Cómo calculamos pues los parámetros internos de las neuronas? ¡Minimizamos la función error! Algo parecido a lo que hicimos con el ajuste a una recta por mínimos cuadrados con la función <span class="math notranslate nohighlight">\(\chi^2\)</span>. Claro que como hay tantos parámetros no es trivial. Ahí es donde entra Google y sus empleados matemáticos, para desarrollar algorizmos que minimicen rápidamente. ¡Sus algorizmos estan basados en calcular grandientes!</p>
+<p>La función error es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^L \to R\)</span>, donde <span class="math notranslate nohighlight">\(L\)</span> es la suma de los parámetros de todas las neuronas.</p>
+<p>Date cuenta que en el caso de que la red acertase siempre, la función error valdría 0.</p>
+<p>En el método de mínimos cuadrados, estimamos los parámetros, <span class="math notranslate nohighlight">\((\hat{a}, \hat{b})\)</span> minimizando la función <span class="math notranslate nohighlight">\(\chi^2(a,b)\)</span>, ahora determinaremos los parámetros de la neuronas, minimizando la función error. Esto es, fijaremos los parámetros de las neuronas a aquellos con los que la red se equivoque lo menos posible en la muestra con la hemos entrenado.</p>
+<p>En el ejemplo del ajuste por mínimos cuadrados, la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> dependía de dos parámetros, y podíamos calcularlos analíticamente, pero ahora nuestra función error de la red <span class="math notranslate nohighlight">\(E({\bf a}^{lk}, b^{lk})\)</span> puede tener muchísimos.</p>
+<p>Sería imposible calcular el mínimo analíticamente, pero los ingeniros, físicos y matemáticos de Google han sido capaces de desarrollar una serie de métodos computacionales muy potentes con los que estimar los parámetros de las neuronas minimizando la función error. ¡Y se basan en calcular <strong>grandientes</strong> y aplicar <strong>la regla de la cadena</strong>!</p>
 <p>Aquí hay un vídeo <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a> que lo explica.</p>
-<p>Una vez la red está “entrenada” o “ha aprendido” (esto es, la hemos minimizado), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, nos dará una respuesta.</p>
-<p>¿Y ésto tiene que ver con la Física?</p>
-<p>Más de lo que te imaginas. En la actualidad pocos son los análisis en Física de Partículas, por ejemplo, donde no se utilice una red neuronal o un método similar.</p>
+<p>Una vez la red está “entrenada” o “ha aprendido” (esto es, hemos minimizado su función error), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, predicirá para nuestro asombro si son perros o gatos.</p>
+<p><strong>¿Y ésto tiene que ver con la Física?</strong></p>
+<p>¡Mucho! En la actualidad pocos son los análisis en Física de Partículas, por ejemplo, donde no se utilice una red neuronal o un método similar.</p>
 <p>Se utilizan para identificar si una partícula es un electrón o un muón (su hermano más pesado). O si en una interacción hay un bosón de Higgs o no. Para decidir si una interacción es relevante o es del montón.</p>
-<p>Ya te puedes imaginar que las redes neuronales están detrás de algunas aplicaciones como Facebook, Instagram, Spotify y de todos los genios matématicos que online intentan predecir tus gustos.</p>
+<p>Ya te puedes imaginar que las redes neuronales están detrás de algunas aplicaciones como Facebook, Instagram, Spotify, TikTok y de todos los genios matématicos que online intentan predecir tus gustos.</p>
 <p>Si quieres apreder algo más sobre la redes neuronales puedes leer este <a class="reference external" href="http://neuralnetworksanddeeplearning.com/index.html">libro online</a> y puedes experimental con el modulo <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> de Python.</p>
+<p>La siguiente imagen muestra las trazas de dos eventos de un detector que busca una nueva desintegración nuclear, que correspondería a la imagen de la izquierda, mientras que la de la derecha muestra un evento típico de contaminación o de fondo. ¿Ves las diferencia entre las dos? ¿Nos sería de ayuda un red neurnal para distinguir los dos tipos de eventos, para separar la señal del fondo?</p>
 <a class="reference internal image-reference" href="../_images/NEXT_signal_bkg_mc_event.png"><img alt="../_images/NEXT_signal_bkg_mc_event.png" src="../_images/NEXT_signal_bkg_mc_event.png" style="width: 800px;" /></a>
 <p><strong>¡Esto es todo por ahora!</strong></p>
-</section>
-</section>
-<section id="apendices">
-<h2>Apendices<a class="headerlink" href="#apendices" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="apendices">
+<h2>Apendices<a class="headerlink" href="#apendices" title="Permalink to this heading">#</a></h2>
 <p>¡Algo más complicado!</p>
 <p><em>Ejercicio</em>: Utiliza Python y las métodos del modulo scipy para calcular los extremos de la función:</p>
 <div class="math notranslate nohighlight">
@@ -1276,7 +1367,7 @@ f(x, y) = \frac{x - y}{ 2 x^2 + 8 y^2 + 3}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_min_max_67_0.png" src="../_images/tderivadas_min_max_67_0.png" />
+<img alt="../_images/tderivadas_min_max_69_0.png" src="../_images/tderivadas_min_max_69_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1286,13 +1377,14 @@ f(x, y) = \frac{x - y}{ 2 x^2 + 8 y^2 + 3}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_min_max_68_0.png" src="../_images/tderivadas_min_max_68_0.png" />
+<img alt="../_images/tderivadas_min_max_70_0.png" src="../_images/tderivadas_min_max_70_0.png" />
 </div>
 </div>
 <p>De los conjuntos de nivel observamos que hay un mínimo en torno al <span class="math notranslate nohighlight">\((-1, 0)\)</span> y un máximo cerca del <span class="math notranslate nohighlight">\((1, 0)\)</span>, y que los ejes de simetría en los extremos coinciden con los ejes coordenadas.</p>
+<p>En este ejercicio es imposible calcular analíticamente los puntos extremos, y tenemos que utilizar métodos numéricos en Python.</p>
 <p>En las siguientes celdas, primero calculamos numéricamente el punto mínimo y máximo.</p>
 <p>Luego usaremos cálculo simbólico para calcular las derivadas parciales y segundas, para después evaluar la matriz hessiana en los puntos extremos.</p>
-<p>Finalmente calcularemos numéricamente los autovalores y autovectores de la matriz hessiana, y comprobaremos que se trata de un máximo y un mínimo y como los autovectores coinciden con los vectores de coordenadas.</p>
+<p>Finalmente calcularemos numéricamente los autovalores y autovectores de la matriz hessiana, y comprobaremos que se trata de un máximo y un mínimo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="k">as</span> <span class="nn">optimize</span>
@@ -1409,8 +1501,8 @@ autovector 2 : [1.23404266e-05 1.00000000e+00]
 </div>
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

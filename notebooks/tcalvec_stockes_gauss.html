@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teorema de Stockes y Teorema de Gauss &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Series de Fourier" href="tfourier.html" />
     <link rel="prev" title="Integral de superficie" href="tcalvec_integral_superficie.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -555,8 +555,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="teorema-de-stockes-y-teorema-de-gauss">
-<h1>Teorema de Stockes y Teorema de Gauss<a class="headerlink" href="#teorema-de-stockes-y-teorema-de-gauss" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="teorema-de-stockes-y-teorema-de-gauss">
+<h1>Teorema de Stockes y Teorema de Gauss<a class="headerlink" href="#teorema-de-stockes-y-teorema-de-gauss" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -565,13 +565,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Mon May  2 09:10:41 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:16 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Extender el teorema de Green a 3D. Teorema de Stockes.</p>
 <p>Extender el teorema de la divergencia a 3D. Teorema de Gauss.</p>
 <p>Mostrar algunos ejemplos sencillos.</p>
@@ -596,11 +596,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="teorema-de-stockes">
-<h2>Teorema de Stockes<a class="headerlink" href="#teorema-de-stockes" title="Permalink to this headline">#</a></h2>
-<section id="superficies-orientables">
-<h3>Superficies orientables<a class="headerlink" href="#superficies-orientables" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="teorema-de-stockes">
+<h2>Teorema de Stockes<a class="headerlink" href="#teorema-de-stockes" title="Permalink to this heading">#</a></h2>
+<div class="section" id="superficies-orientables">
+<h3>Superficies orientables<a class="headerlink" href="#superficies-orientables" title="Permalink to this heading">#</a></h3>
 <p>Una superficie es orientable si tiene dos caras.
 ¡Una cinta de Moebius solo tiene una cara!</p>
 <a class="reference internal image-reference" href="../_images/escher-moebius.jpg"><img alt="../_images/escher-moebius.jpg" src="../_images/escher-moebius.jpg" style="width: 300px;" /></a>
@@ -1023,10 +1023,10 @@ F_y(x_0 + \Delta x, y_0) \; \Delta y - F_y(x_0, y_0) \Delta y = \frac{\partial F
 \[
 = \int_0^{2\pi} 4 (\sin^2 \phi + \cos^2 \phi) \mathrm{d}\phi = \int_0^{2\pi}4 \mathrm{d}\phi = 8 \pi
 \]</div>
-</section>
-</section>
-<section id="teorema-de-strogradski-gauss">
-<h2>Teorema de Strogradski-Gauss<a class="headerlink" href="#teorema-de-strogradski-gauss" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="teorema-de-strogradski-gauss">
+<h2>Teorema de Strogradski-Gauss<a class="headerlink" href="#teorema-de-strogradski-gauss" title="Permalink to this heading">#</a></h2>
 <p>El teorema de Gauss corresponde al teorema de la divergencia en 3 dimensiones.</p>
 <p><em>Teorema</em>: Sea un volumen regular, <span class="math notranslate nohighlight">\(V\)</span> limitado por una superficie cerrada <span class="math notranslate nohighlight">\(S\)</span>, y sea un campo vectorial con derivadas primeras continuas <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = \left( F_x, F_y, F_z \right)\)</span>, se cumple:</p>
 <div class="math notranslate nohighlight">
@@ -1181,13 +1181,13 @@ F_y(x_0 + \Delta x, y_0) \; \Delta y - F_y(x_0, y_0) \Delta y = \frac{\partial F
 \[
 = z \Big|_{-1}^{+1} \phi \Big|_0^{2\pi} \frac{r^4}{4} \Big|_0^1 = \pi
 \]</div>
-<section id="aun-hay-mas">
-<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
+<div class="section" id="aun-hay-mas">
+<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
 <p>Carl Friedrich <a class="reference external" href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Gauss</a> fue uno de las grandes matemáticos de la historia, con importantes contribuciones en Física, en Electromagnetismo y en Estadistica. La probabilidad normal, con la que ocurren casi todos los fenémonos de medida, sigue se ley de Gauss.</p>
 <a class="reference internal image-reference" href="../_images/gauss.jpg"><img alt="../_images/gauss.jpg" src="../_images/gauss.jpg" style="width: 200px;" /></a>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

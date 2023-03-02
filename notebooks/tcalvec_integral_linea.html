@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integral de línea &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Teorema de Green" href="tcalvec_green.html" />
     <link rel="prev" title="Integrales en varias dimensiones" href="tintegral_3d.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -551,8 +551,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="integral-de-linea">
-<h1>Integral de línea<a class="headerlink" href="#integral-de-linea" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="integral-de-linea">
+<h1>Integral de línea<a class="headerlink" href="#integral-de-linea" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -561,7 +561,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Feb 23 09:42:29 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:06 2023
 </pre></div>
 </div>
 </div>
@@ -575,8 +575,8 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Revisar la parametrización de líneas o trayectorias.</p>
 <p>Definir la integral de una función escalar y vectorial a lo largo de una línea.</p>
 <p>Mostrar algunos ejemplos sencillos.</p>
@@ -601,11 +601,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="id1">
-<h2>Integral de línea<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<section id="revision-de-parametrizacion-de-lineas">
-<h3>Revisión de parametrización de líneas.<a class="headerlink" href="#revision-de-parametrizacion-de-lineas" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="id1">
+<h2>Integral de línea<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="section" id="revision-de-parametrizacion-de-lineas">
+<h3>Revisión de parametrización de líneas.<a class="headerlink" href="#revision-de-parametrizacion-de-lineas" title="Permalink to this heading">#</a></h3>
 <p>Hemos visto con anterioridad que podemos parametrizar una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, de un especio <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, como una función vectorial definida en un intervalo <span class="math notranslate nohighlight">\([t_a, t_b]\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}\)</span>.</p>
 <p><em>Ejemplo</em>: parametrización de una circunferencia de radio <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -653,9 +653,9 @@ s = \int_{{\bf c}} \, \mathrm{d}s = \int_{t_a}^{t_b} | \dot{{\bf c}}(t) | \mathr
 \]</div>
 <p>es un diferencial de distancia. Fíjate que es un escalar.</p>
 <p>En física, si <span class="math notranslate nohighlight">\(t\)</span> es el tiempo, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> es la trayectoria de un móvil, <span class="math notranslate nohighlight">\({\bf \dot{c}}(t)\)</span>, es la velocidad, y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s} = |{\bf \dot{c}}(t)| \mathrm{d}t\)</span>, el diferencial de distancia recorrido en un diferencial de tiempo <span class="math notranslate nohighlight">\(\mathrm{d}t\)</span>.</p>
-</section>
-<section id="integral-de-una-funcion-escalar-a-lo-largo-de-una-linea">
-<h3>Integral de una función escalar a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-escalar-a-lo-largo-de-una-linea" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="integral-de-una-funcion-escalar-a-lo-largo-de-una-linea">
+<h3>Integral de una función escalar a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-escalar-a-lo-largo-de-una-linea" title="Permalink to this heading">#</a></h3>
 <p>El una famosa escena de la novela homónima, Tom Sowyer convence a sus amigos para que pinten por él la valla que su tia Polly le ha obligado pintar como castigo por hacer novillos. ¿Sabría Tom Sayer qué superficie tiene la valla? <a class="reference external" href="https://www.youtube.com/watch?v=kmJLCvp4UD4">[&gt;]</a></p>
 <p>La valla recorre sobre la base una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, y tiene un altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span> en cada punto de esa línea, <span class="math notranslate nohighlight">\(f({\bf c}(t))\)</span>.</p>
 <p>El área de la valla, <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, será la integral de la función altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, a lo largo de la línea de su base, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, parametrizada en función de <span class="math notranslate nohighlight">\(t\)</span>.</p>
@@ -730,9 +730,9 @@ f({\bf c} (t))  = (1 + \sin^3 t)
 <img alt="../_images/tcalvec_integral_linea_15_0.png" src="../_images/tcalvec_integral_linea_15_0.png" />
 </div>
 </div>
-</section>
-<section id="integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea">
-<h3>Integral de una función vectorial a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea">
+<h3>Integral de una función vectorial a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea" title="Permalink to this heading">#</a></h3>
 <p>Definimos la integral de una función vectoral, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, a lo largo de una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [t_0, t_1]\)</span>, como:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -876,9 +876,9 @@ Calcular la integral a lo largo de una línea horizonal, otra vertical y en la d
 \[
 \int_{{\bf c}} {\bf F} \, \mathrm{d}{\bf s} = \int_0^{2\pi} \frac{ab}{2} \mathrm{d}t = \frac{ab}{2} t \big|_0^{2\pi}= a b \pi 
 \]</div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

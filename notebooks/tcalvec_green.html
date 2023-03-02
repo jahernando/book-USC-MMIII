@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teorema de Green &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Operador Nabla. Campos conservativos" href="tcalvec_rotdiv_conservativos.html" />
     <link rel="prev" title="Integral de línea" href="tcalvec_integral_linea.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -571,8 +571,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="teorema-de-green">
-<h1>Teorema de Green<a class="headerlink" href="#teorema-de-green" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="teorema-de-green">
+<h1>Teorema de Green<a class="headerlink" href="#teorema-de-green" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -581,21 +581,21 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [[&gt;]]  Thu Feb 23 09:45:30 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [[&gt;]]  Thu Mar  2 20:27:02 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="indice">
-<h2>Indice<a class="headerlink" href="#indice" title="Permalink to this headline">#</a></h2>
+<div class="section" id="indice">
+<h2>Indice<a class="headerlink" href="#indice" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Integral de área como integral de línea</p></li>
 <li><p><a class="reference external" href="https://youtu.be/nZgbSd2MoZI">[&gt;]</a> Teorema de Green</p></li>
 <li><p><a class="reference external" href="https://youtu.be/iO1iR_bsH5M">[&gt;]</a> Teorema de la divergencia</p></li>
 </ul>
-</section>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Relación entre la integral de área de una región y la integral de línea de determinados campos vectoriales.</p>
 <p>El teorema de Green. Relación entre la integral a lo largo de una curva cerrada de una función vectorial y la integral de la tercera componente del rotacional dentro de la región encerrada.</p>
 <p>Demostrar el teorema con dos lemas.</p>
@@ -621,11 +621,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="id1">
-<h2>Teorema de Green<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<section id="relacion-entre-integral-de-linea-de-un-campo-vectorial-e-integral-de-superficie">
-<h3>Relación entre integral de línea de un campo vectorial e integral de superficie.<a class="headerlink" href="#relacion-entre-integral-de-linea-de-un-campo-vectorial-e-integral-de-superficie" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="id1">
+<h2>Teorema de Green<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="section" id="relacion-entre-integral-de-linea-de-un-campo-vectorial-e-integral-de-superficie">
+<h3>Relación entre integral de línea de un campo vectorial e integral de superficie.<a class="headerlink" href="#relacion-entre-integral-de-linea-de-un-campo-vectorial-e-integral-de-superficie" title="Permalink to this heading">#</a></h3>
 <p>Considera una región, <span class="math notranslate nohighlight">\(R\)</span>, en plano <span class="math notranslate nohighlight">\((x, y)\)</span> definida de tipo I:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -733,9 +733,9 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 = \oint_{{\bf c}} x \, \mathrm{d}y
 = \int_{R} \mathrm{d}x \mathrm{d}y
 \]</div>
-</section>
-<section id="id2">
-<h3>Teorema de Green<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="id2">
+<h3>Teorema de Green<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p><strong>Teorema</strong>: La integral del campo vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), \; F_y(x, y)\right)\)</span>, con <span class="math notranslate nohighlight">\(F_x(x, y), F_y(x, y)\)</span> con derivadas primeras continuas en una región, <span class="math notranslate nohighlight">\(R\)</span>, a lo largo de una línea frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span> de la región <span class="math notranslate nohighlight">\(R\)</span> en sentido anti-horario es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -879,9 +879,9 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 <img alt="../_images/tcalvec_green_25_0.png" src="../_images/tcalvec_green_25_0.png" />
 </div>
 </div>
-</section>
-<section id="teorema-de-la-divergencia">
-<h3>Teorema de la divergencia.<a class="headerlink" href="#teorema-de-la-divergencia" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="teorema-de-la-divergencia">
+<h3>Teorema de la divergencia.<a class="headerlink" href="#teorema-de-la-divergencia" title="Permalink to this heading">#</a></h3>
 <p>Vamos a considerar la integral de una función vectorial de dos dimensiones, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, <em>a través de</em> una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>.</p>
 <p>Dado el elemento vectorial diferencial de arco <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = (\mathrm{d}x, \mathrm{d}y)\)</span>, en vez de calcular el productor escalar del campo a lo largo de la trayectoria, <span class="math notranslate nohighlight">\( {\bf F}(x, y) \, \mathrm{d}{\bf s}\)</span>, lo calculamos a través de ella, normal a ella, <span class="math notranslate nohighlight">\({\bf F}(x, y) \, \mathrm{d}{\bf n}\)</span>, donde, <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n}\)</span> es normal a <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span>, pero con igual módulo, que damos por: <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n} = ( \mathrm{d}y, -\mathrm{d}x)\)</span>.</p>
 <p>Esto es:</p>
@@ -979,9 +979,9 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 <img alt="../_images/tcalvec_green_32_0.png" src="../_images/tcalvec_green_32_0.png" />
 </div>
 </div>
-</section>
-<section id="apendices">
-<h3>Apéndices<a class="headerlink" href="#apendices" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="apendices">
+<h3>Apéndices<a class="headerlink" href="#apendices" title="Permalink to this heading">#</a></h3>
 <p><em>Ejercicio</em>: Verifica el teorema de Green para el campo, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, x^2)\)</span> en la región definida como: <span class="math notranslate nohighlight">\(\{0 \le x \le 1, \; x^2 \le y \le x \}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1055,9 +1055,9 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 \[
 \oint_{{\bf c}} {\bf F} \, \mathrm{d} {\bf s} = \int_{{\bf c}_1} {\bf F} \, \mathrm{d} {\bf s} - \int_{{\bf c}_2} {\bf F} \, \mathrm{d} {\bf s} = \frac{5}{6} - \frac{5}{6} = 0
 \]</div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

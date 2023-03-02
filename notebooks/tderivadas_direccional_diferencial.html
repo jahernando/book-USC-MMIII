@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Derivada direccional y funciones diferenciables &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Gradiente, matriz jacobiana, funciones diferenciables" href="tderivadas_gradiante_jacobiana.html" />
     <link rel="prev" title="Parametrización de lineas y de superficies" href="tderivadas_parametrizacion_lineas_superficies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -571,8 +571,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="derivada-direccional-y-funciones-diferenciables">
-<h1>Derivada direccional y funciones diferenciables<a class="headerlink" href="#derivada-direccional-y-funciones-diferenciables" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="derivada-direccional-y-funciones-diferenciables">
+<h1>Derivada direccional y funciones diferenciables<a class="headerlink" href="#derivada-direccional-y-funciones-diferenciables" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -581,13 +581,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Wed Feb 22 15:53:43 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:25 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Recordar que la derivada está relacionada con la pendiente de la función.</p>
 <p>Presentar los conceptos de:</p>
 <ul class="simple">
@@ -617,16 +617,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The autoreload extension is already loaded. To reload it, use:
-  %reload_ext autoreload
-</pre></div>
 </div>
 </div>
-</div>
-</section>
-<section id="derivada-direccional">
-<h2>Derivada direccional<a class="headerlink" href="#derivada-direccional" title="Permalink to this headline">#</a></h2>
+<div class="section" id="derivada-direccional">
+<h2>Derivada direccional<a class="headerlink" href="#derivada-direccional" title="Permalink to this heading">#</a></h2>
 <p>En funciones de una dimensión, <span class="math notranslate nohighlight">\(f(x)\)</span>, la derivada estaba asociada la la “pendiente” de la función en un punto.</p>
 <p>La definición de derivada de una función real en un punto <span class="math notranslate nohighlight">\(x\)</span> es:</p>
 <div class="math notranslate nohighlight">
@@ -803,8 +797,8 @@ f'((1, 1);\; (0, 1)) = \lim_{h \to 0} \frac{f((1, 1)+ h(0, 1)) - f(1,1)}{h} =
 \]</div>
 <p>Las dos coinciden.</p>
 <hr class="docutils" />
-<section id="derivadas-parciales">
-<h3>Derivadas parciales<a class="headerlink" href="#derivadas-parciales" title="Permalink to this headline">#</a></h3>
+<div class="section" id="derivadas-parciales">
+<h3>Derivadas parciales<a class="headerlink" href="#derivadas-parciales" title="Permalink to this heading">#</a></h3>
 <p>Llamaremos <strong>derivadas parciales</strong> de una función escalar en un punto a las derivadas direccionales en los ejes coordenados.</p>
 <p>En el caso anterior, la derivada parcial con respecto a <span class="math notranslate nohighlight">\(x\)</span> es:</p>
 <div class="math notranslate nohighlight">
@@ -835,10 +829,10 @@ f'_x (x, y) = -2 x, \;\, f'_y(x, y) = -2 y
 f'_x(1, 1) = -2, \;\, f'_y(1, 1) = -2
 \]</div>
 <p>Lo mismo que obtuvimos antes  a partir de la definición de derivada direccional.</p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="derivadas-segundas">
-<h3>Derivadas segundas<a class="headerlink" href="#derivadas-segundas" title="Permalink to this headline">#</a></h3>
+<div class="section" id="derivadas-segundas">
+<h3>Derivadas segundas<a class="headerlink" href="#derivadas-segundas" title="Permalink to this heading">#</a></h3>
 <p>Cada derivada parcial es una función escalar a la que a su vez podemos calcular sus derivadas parciales, que llamaremos <strong>derivadas segundas</strong>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -892,10 +886,10 @@ f''_x (x, y) = e^x \cos y, \;\; f''_y (x, y) = - e^x \cos y
 \[
 f''_{xy} (x, y) = - e^x \sin y, \;\; f''_{yx} (x, y) =  - e^x \sin y
 \]</div>
-</section>
+</div>
 <hr class="docutils" />
-<section id="malditas-funciones-raras">
-<h3>¡Malditas funciones raras!<a class="headerlink" href="#malditas-funciones-raras" title="Permalink to this headline">#</a></h3>
+<div class="section" id="malditas-funciones-raras">
+<h3>¡Malditas funciones raras!<a class="headerlink" href="#malditas-funciones-raras" title="Permalink to this heading">#</a></h3>
 <p>Estudia ahora la siguiente función:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -938,10 +932,10 @@ x+y &amp; \quad \mbox{si $x=0$ o $y=0$} \\
 <img alt="../_images/tderivadas_direccional_diferencial_31_0.png" src="../_images/tderivadas_direccional_diferencial_31_0.png" />
 </div>
 </div>
-</section>
-</section>
-<section id="funciones-diferenciables">
-<h2>Funciones diferenciables<a class="headerlink" href="#funciones-diferenciables" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="funciones-diferenciables">
+<h2>Funciones diferenciables<a class="headerlink" href="#funciones-diferenciables" title="Permalink to this heading">#</a></h2>
 <p>En funciones reales en 1D, decíamos que una función era diferenciable si era <strong>“suave”</strong>: si era continua, no tenía ni dobleces, ni quiebros.</p>
 <p>En otras palabras, era diferenciable si admitía el <strong>desarrollo de Taylor</strong>.</p>
 <p>En primer orden, el desarrollo de Taylor de en una función real de 1D nos permitía aproximar, en un valor <span class="math notranslate nohighlight">\(x\)</span> “cercano” a <span class="math notranslate nohighlight">\(x_0\)</span> la función por una recta tangente con pendiente <span class="math notranslate nohighlight">\(f'(x_0)\)</span>, la derivada en <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
@@ -1135,9 +1129,9 @@ V(x, y, z) = \frac{1}{\sqrt{x^2 + y^2 + z^2}}
 \frac{\partial V(x, y, z)}{ \partial z} = - \frac{z}{(x^2 + y^2 + z^2)^{3/2}}
 \]</div>
 <p><strong>¡Esto es todo por ahora!</strong></p>
-</section>
-<section id="apendices">
-<h2>Apendices<a class="headerlink" href="#apendices" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="apendices">
+<h2>Apendices<a class="headerlink" href="#apendices" title="Permalink to this heading">#</a></h2>
 <p>¡Algo más complicado!</p>
 <p><em>Ejercicio</em>: calcula la derivada direccional de la función <span class="math notranslate nohighlight">\(f({\bf x}) = \| {\bf x} \|^2\)</span> en la dirección <span class="math notranslate nohighlight">\({\bf v}\)</span>.</p>
 <p><em>Solución</em>:</p>
@@ -1154,8 +1148,8 @@ f'({\bf x}; {\bf v}) = \lim_{h \to 0} \frac{({\bf x}+h{\bf v})({\bf x}+h{\bf v})
 \[
  = \lim_{h \to 0} \frac{ 2 h {\bf x}{\bf v} + h^2 {\bf v}{\bf v} }{h} = 2 {\bf x}{\bf v}
 \]</div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

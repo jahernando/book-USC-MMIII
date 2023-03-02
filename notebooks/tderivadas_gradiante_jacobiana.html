@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gradiente, matriz jacobiana, funciones diferenciables &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Cambio de coordenadas y regla de la cadena" href="tderivadas_coordenadas_cadena.html" />
     <link rel="prev" title="Derivada direccional y funciones diferenciables" href="tderivadas_direccional_diferencial.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -561,8 +561,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="gradiente-matriz-jacobiana-funciones-diferenciables">
-<h1>Gradiente, matriz jacobiana, funciones diferenciables<a class="headerlink" href="#gradiente-matriz-jacobiana-funciones-diferenciables" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="gradiente-matriz-jacobiana-funciones-diferenciables">
+<h1>Gradiente, matriz jacobiana, funciones diferenciables<a class="headerlink" href="#gradiente-matriz-jacobiana-funciones-diferenciables" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -571,13 +571,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 15:47:28 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:27:38 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Presentar los conceptos de</p>
 <ul class="simple">
 <li><p>gradiente y matriz jacobiana</p></li>
@@ -610,9 +610,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="gradiente">
-<h2>Gradiente<a class="headerlink" href="#gradiente" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="gradiente">
+<h2>Gradiente<a class="headerlink" href="#gradiente" title="Permalink to this heading">#</a></h2>
 <p>Para una función escalar <span class="math notranslate nohighlight">\(f(x, y)\)</span> diferenciable, hemos dado el desarrollo de Taylor en un punto <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> si nos desplazamos en el espacio origen un vector <span class="math notranslate nohighlight">\((v _x, v_y)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -737,9 +737,9 @@ f({\bf x}_0 + {\bf v} ) \simeq f({\bf x_0}) + \nabla f ({\bf x_0}) \, {\bf v}
 <img alt="../_images/tderivadas_gradiante_jacobiana_19_0.png" src="../_images/tderivadas_gradiante_jacobiana_19_0.png" />
 </div>
 </div>
-</section>
-<section id="matriz-jacobiana">
-<h2>Matriz Jacobiana<a class="headerlink" href="#matriz-jacobiana" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="matriz-jacobiana">
+<h2>Matriz Jacobiana<a class="headerlink" href="#matriz-jacobiana" title="Permalink to this heading">#</a></h2>
 <p>Una función vectorial es diferenciable, si y solo si, lo son cada una de sus funciones componentes.</p>
 <p>Sea una función vectorial, <span class="math notranslate nohighlight">\({\bf f}({\bf x})\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}^m\)</span>, que es diferenciable en un punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span></p>
 <p>cada uno de sus funciones componentes debe ser diferenciable, pongamoslas una debajo de la otra:</p>
@@ -848,9 +848,9 @@ f({\bf x}_0 + {\bf v}) \approx f({\bf x}_0) + \nabla f ({\bf x}_0) \, {\bf v}
 <img alt="../_images/tderivadas_gradiante_jacobiana_29_0.png" src="../_images/tderivadas_gradiante_jacobiana_29_0.png" />
 </div>
 </div>
-</section>
-<section id="funcion-diferenciable">
-<h2>Función diferenciable<a class="headerlink" href="#funcion-diferenciable" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="funcion-diferenciable">
+<h2>Función diferenciable<a class="headerlink" href="#funcion-diferenciable" title="Permalink to this heading">#</a></h2>
 <p>Hemos visto como son las funciones, diferenciable, pero ¿cómo las definimos matemáticamente? ¿cuándo una función será diferenciable?</p>
 <p>Sea <span class="math notranslate nohighlight">\({\bf f}: D \subset \mathbf{R}^n \to \mathbf{R}^m\)</span>, decimos que la función es <strong>diferenciable</strong> en un punto <span class="math notranslate nohighlight">\({\bf x}\)</span> interior a <span class="math notranslate nohighlight">\(D\)</span> si en una bola centrada en <span class="math notranslate nohighlight">\({\bf x}\)</span> de radio <span class="math notranslate nohighlight">\(r\)</span> y para los vectores que cumplen <span class="math notranslate nohighlight">\(\| {\bf v} \| &lt; r\)</span>,  existe una <em>transformación lineal</em> <span class="math notranslate nohighlight">\({\bf T_x}: \mathbf{R}^n \to \mathbf{R}^m\)</span> y una <em>función error</em>, <span class="math notranslate nohighlight">\({\bf E}:\mathbf{R}^n \to \mathbf{R}^m\)</span>,  <span class="math notranslate nohighlight">\({\bf E}({\bf x},{\bf v})\)</span>, tales que:</p>
 <div class="math notranslate nohighlight">
@@ -918,8 +918,8 @@ iii) \;\;\; f ({\bf x}) \, g ({\bf x}); \;\;\; \nabla [f ({\bf x}) \, g({\bf x})
 iv) \;\;\; f ({\bf x})/g ({\bf x}); \;\;\; {\text si } \; g({\bf x}) \not= 0\;\;\; \nabla [f({\bf x})/g({\bf x})] = 
 \frac{\nabla f({\bf x}) g({\bf x}) - f({\bf x}) \nabla g({\bf x})}{g^2({\bf x})} 
 \]</div>
-<section id="condicion-suficiente-de-diferenciabilidad">
-<h3>Condición suficiente de diferenciabilidad<a class="headerlink" href="#condicion-suficiente-de-diferenciabilidad" title="Permalink to this headline">#</a></h3>
+<div class="section" id="condicion-suficiente-de-diferenciabilidad">
+<h3>Condición suficiente de diferenciabilidad<a class="headerlink" href="#condicion-suficiente-de-diferenciabilidad" title="Permalink to this heading">#</a></h3>
 <p>Si recuerdas un función real de una dimensión, <span class="math notranslate nohighlight">\(f(x)\)</span>, era diferenciable, tenía desarrollo de Taylor, en un punto interior, <span class="math notranslate nohighlight">\(x\)</span>, si su derivada, <span class="math notranslate nohighlight">\(f'(x)\)</span>, era continua en un intervalo centrado en ese punto <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>Ahora para funciones escalares, se cumple:</p>
 <p><em>Teorema</em>:</p>
@@ -948,10 +948,10 @@ iv) \;\;\; f ({\bf x})/g ({\bf x}); \;\;\; {\text si } \; g({\bf x}) \not= 0\;\;
 </div>
 </div>
 <p><strong>¡Esto es todo por ahora!</strong></p>
-</section>
-</section>
-<section id="apendices">
-<h2>Apendices<a class="headerlink" href="#apendices" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="apendices">
+<h2>Apendices<a class="headerlink" href="#apendices" title="Permalink to this heading">#</a></h2>
 <p><em>Demostración</em> de la condición suficiente de diferenciabilidad</p>
 <p>Lo demostraremos solamente en funciones escalares.</p>
 <p>Queremos comprobar que</p>
@@ -1009,8 +1009,8 @@ f({\bf x} + {\bf v}) =  f({\bf x}) + \nabla f({\bf x}) \, {\bf v} + \parallel {\
 <p>Cuando <span class="math notranslate nohighlight">\({\bf v} \to 0, \; \lambda \to 0\)</span>, entonces <span class="math notranslate nohighlight">\(\forall k, \: {\bf c}_k \to {\bf x}\)</span>.</p>
 <p><em>Si las derivadas parciales</em>, <span class="math notranslate nohighlight">\(f'_k({\bf x})\)</span>, <em>son continuas</em> entoces <span class="math notranslate nohighlight">\({\bf x}\)</span>, <span class="math notranslate nohighlight">\(E({\bf x},{\bf v}) \to 0\)</span>.
 Luego la función es diferenciable. Q.E.D</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

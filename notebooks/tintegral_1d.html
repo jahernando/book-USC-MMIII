@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integrales en una dimensión &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Integrales en dos dimensiones" href="tintegral_2d.html" />
     <link rel="prev" title="Mínimos y máximos de funciones escalares" href="tderivadas_min_max.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -581,8 +581,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="integrales-en-una-dimension">
-<h1>Integrales en una dimensión<a class="headerlink" href="#integrales-en-una-dimension" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="integrales-en-una-dimension">
+<h1>Integrales en una dimensión<a class="headerlink" href="#integrales-en-una-dimension" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -591,13 +591,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Wed Feb 22 16:56:57 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:28:09 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Introducir el concepto de suma de Riemman</p>
 <p>Mostrar algunos ejemplos</p>
 <p>Recordad los métodos de Integración</p>
@@ -622,9 +622,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="integrales">
-<h2>Integrales<a class="headerlink" href="#integrales" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="integrales">
+<h2>Integrales<a class="headerlink" href="#integrales" title="Permalink to this heading">#</a></h2>
 <p>En la siguiente figura, ¿Cómo calcularías el área bajo la gráfica y el eje x?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -641,15 +641,15 @@ title="Print to PDF"
 </div>
 </div>
 <p>Vamos a definir primero qué es una partición de un intervalo</p>
-<section id="particion">
-<h3>Partición<a class="headerlink" href="#particion" title="Permalink to this headline">#</a></h3>
+<div class="section" id="particion">
+<h3>Partición<a class="headerlink" href="#particion" title="Permalink to this heading">#</a></h3>
 <p>Una partición, <span class="math notranslate nohighlight">\(P\)</span> es un conjunto finito, <span class="math notranslate nohighlight">\(x_0, \; i = 0, \dots, n\)</span>, de puntos consecutivos en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, de tal forma que <span class="math notranslate nohighlight">\(x_0 = a, \; x_n = b\)</span> y <span class="math notranslate nohighlight">\(x_i &lt; x_{i +1} \; \forall i\)</span></p>
 <p>El tamaño o  norma, <span class="math notranslate nohighlight">\(\| P \|\)</span>, de una partición será el tamaño del mayor de sus subintervalos, <span class="math notranslate nohighlight">\(\mathrm{máx}\{x_{i} - x_{i-1}; \; i = 1, \dots, n \}\)</span></p>
 <p>Una partición es más pequeña o más fina que otra si su norma es más pequeña.</p>
 <p>Una partición es regular si <span class="math notranslate nohighlight">\(\Delta x_i = \delta, \; i = 1, \dots, n\)</span></p>
-</section>
-<section id="suma-de-riemann">
-<h3>Suma de Riemann<a class="headerlink" href="#suma-de-riemann" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="suma-de-riemann">
+<h3>Suma de Riemann<a class="headerlink" href="#suma-de-riemann" title="Permalink to this heading">#</a></h3>
 <p>Sea <span class="math notranslate nohighlight">\(P\)</span> una partición del intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, y <span class="math notranslate nohighlight">\(t_i\)</span> un punto en el subintervalo <span class="math notranslate nohighlight">\([x_{i-1}, x_i]\)</span> y <span class="math notranslate nohighlight">\(\Delta x_i = x_{i} - x_{i-1}\)</span> con <span class="math notranslate nohighlight">\(i = 0, \dots, n\)</span>, y <span class="math notranslate nohighlight">\(f(x)\)</span> una función, <span class="math notranslate nohighlight">\(\mathcal{R} \to \mathcal{R}\)</span>; llamamos suma de Rienmman a la cantidad:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -679,7 +679,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 2.00016
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 2.00001
 </pre></div>
 </div>
 <img alt="../_images/tintegral_1d_10_1.png" src="../_images/tintegral_1d_10_1.png" />
@@ -701,9 +701,9 @@ title="Print to PDF"
 </div>
 </div>
 <p>Comprobamos que la suma de Riemann para particiones cada vez más finas converte a un determinado valor <span class="math notranslate nohighlight">\(S\)</span></p>
-</section>
-<section id="integral-de-riemman">
-<h3>Integral de Riemman<a class="headerlink" href="#integral-de-riemman" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="integral-de-riemman">
+<h3>Integral de Riemman<a class="headerlink" href="#integral-de-riemman" title="Permalink to this heading">#</a></h3>
 <p>Decimos que la función <span class="math notranslate nohighlight">\(f(x)\)</span> es integrable Rienmann si existe un número <span class="math notranslate nohighlight">\(S\)</span>, o integral de Riemman, tal que <span class="math notranslate nohighlight">\(\forall \epsilon &gt;0\)</span>, existe una partición <span class="math notranslate nohighlight">\(P_\epsilon\)</span> del intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, tal que para una partición más fina que <span class="math notranslate nohighlight">\(P_\epsilon\)</span>, y para cada elección de puntos <span class="math notranslate nohighlight">\(t_i\)</span> del subintervalo <span class="math notranslate nohighlight">\([x_{i-1}, \, x_i]\)</span>, se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -731,9 +731,9 @@ S = \int_a^b f(x) \; \mathrm{d}x
 \[
 \mathcal{L}(f, \mathcal{P}) \le \mathcal{S}(f, \mathcal{P}) \le \mathcal{U}(f, \mathcal{P}) 
 \]</div>
-</section>
-<section id="primer-teorema-fundamental-del-calculo-integral">
-<h3>Primer teorema fundamental del cálculo integral<a class="headerlink" href="#primer-teorema-fundamental-del-calculo-integral" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="primer-teorema-fundamental-del-calculo-integral">
+<h3>Primer teorema fundamental del cálculo integral<a class="headerlink" href="#primer-teorema-fundamental-del-calculo-integral" title="Permalink to this heading">#</a></h3>
 <p>Sea <span class="math notranslate nohighlight">\(f(x)\)</span> una función integrable Riemann en el intervalo <span class="math notranslate nohighlight">\([a,b]\)</span>, definimos la función:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -757,9 +757,9 @@ F(c+h)-F(c)  = \int_a^{c+h} f(x) \; \mathrm{d}x - \int_a^{c} f(x) \; \mathrm{d}x
 \[
 F'(c) = f(c)
 \]</div>
-</section>
-<section id="segundo-teorema-fundamental-del-calculo-integral">
-<h3>Segundo teorema fundamental del cálculo integral<a class="headerlink" href="#segundo-teorema-fundamental-del-calculo-integral" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="segundo-teorema-fundamental-del-calculo-integral">
+<h3>Segundo teorema fundamental del cálculo integral<a class="headerlink" href="#segundo-teorema-fundamental-del-calculo-integral" title="Permalink to this heading">#</a></h3>
 <p>Una función <span class="math notranslate nohighlight">\(F(x)\)</span> se llama <em>primitiva</em> de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un intervalo abierto <span class="math notranslate nohighlight">\((a,b)\)</span> si <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> para todo <span class="math notranslate nohighlight">\(x \in (a,b)\)</span>.</p>
 <p>Dos primitivas de una funci’on solo pueden diferir en una constante: <span class="math notranslate nohighlight">\(P(x) = F(x) + C\)</span></p>
 <p><strong>Teorema:</strong> Sea <span class="math notranslate nohighlight">\(f(x)\)</span> integrable Riemann en <span class="math notranslate nohighlight">\([a,b]\)</span>, sea <span class="math notranslate nohighlight">\(P(x)\)</span> una función definida en <span class="math notranslate nohighlight">\((a,b)\)</span>, tal que exista la derivada <span class="math notranslate nohighlight">\(P'(x)\)</span> en <span class="math notranslate nohighlight">\((a,b)\)</span> y cuyo valor sea <span class="math notranslate nohighlight">\(P'(x) = f(x)\)</span>, se cumple:</p>
@@ -791,10 +791,10 @@ F(b) = P(b) + C
 C = - P(a) \\
 F(b) = P(b) - P(a)
 \end{split}\]</div>
-</section>
-</section>
-<section id="metodos-de-integracion">
-<h2>Métodos de Integración<a class="headerlink" href="#metodos-de-integracion" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="metodos-de-integracion">
+<h2>Métodos de Integración<a class="headerlink" href="#metodos-de-integracion" title="Permalink to this heading">#</a></h2>
 <p>Derivas es una tarea casi mecánica en Matemáticas, pero integrar, encontrar la primitiva, no lo es.</p>
 <p>Existen diversos métodos de integración que aplican en diferentes casos:</p>
 <ul class="simple">
@@ -806,8 +806,8 @@ F(b) = P(b) - P(a)
 <li><p>Integrales impropias.</p></li>
 </ul>
 <p><span class="xref myst">Aquí</span> tienes un resumen de los métodos de integración con algunos ejemplos</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

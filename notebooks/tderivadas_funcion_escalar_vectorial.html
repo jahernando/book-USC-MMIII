@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales. &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Límite y continuidad de funciones escalares y vectoriales" href="tderivadas_limites_continuidad.html" />
     <link rel="prev" title="Cuestiones iniciales" href="tderivadas_introduccion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -585,8 +585,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="funciones-escalares-graficas-conjuntos-de-nivel-y-funciones-vectoriales">
-<h1>Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.<a class="headerlink" href="#funciones-escalares-graficas-conjuntos-de-nivel-y-funciones-vectoriales" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="funciones-escalares-graficas-conjuntos-de-nivel-y-funciones-vectoriales">
+<h1>Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.<a class="headerlink" href="#funciones-escalares-graficas-conjuntos-de-nivel-y-funciones-vectoriales" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -595,13 +595,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Wed Feb 22 13:52:04 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:31 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Presentar los conceptos de</p>
 <ul class="simple">
 <li><p>funciones escalares y la gráfica de una función escalar</p></li>
@@ -633,9 +633,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="funciones-escalares">
-<h2>Funciones escalares<a class="headerlink" href="#funciones-escalares" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="funciones-escalares">
+<h2>Funciones escalares<a class="headerlink" href="#funciones-escalares" title="Permalink to this heading">#</a></h2>
 <p>Observa la siguiente figura:</p>
 <ul class="simple">
 <li><p>¿Has visto en Física alguna función similar a la que estamos dibujando?</p></li>
@@ -687,8 +687,8 @@ V(x, y) = k \frac{q}{\sqrt{x^2 + y^2}}
 {\bf x} \in \mathcal{D} \subset \mathrm{R}^n \mapsto f({\bf x}) \in \mathrm{R}
 \]</div>
 <p>El potencial eléctrico anterior es una función escalar de <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span>, donde el dominio es todo <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> menos el origen, <span class="math notranslate nohighlight">\((0, 0)\)</span>, donde la función no está definida.</p>
-<section id="grafica-de-una-funcion">
-<h3>Gráfica de una función<a class="headerlink" href="#grafica-de-una-funcion" title="Permalink to this headline">#</a></h3>
+<div class="section" id="grafica-de-una-funcion">
+<h3>Gráfica de una función<a class="headerlink" href="#grafica-de-una-funcion" title="Permalink to this heading">#</a></h3>
 <p>La figura anterior es la <strong>gráfica</strong> del potencial eléctrico de una carga.</p>
 <p>Sea <span class="math notranslate nohighlight">\(f(x, y)\)</span> una función escalar con dominio <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span>, la gráfica de la función son los puntos de <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span> dados por:</p>
 <div class="math notranslate nohighlight">
@@ -697,9 +697,9 @@ V(x, y) = k \frac{q}{\sqrt{x^2 + y^2}}
 \]</div>
 <p>En el caso anterior, la gráfica de la función <span class="math notranslate nohighlight">\(f(x, y)\)</span> son los puntos <span class="math notranslate nohighlight">\((x, y, z = f(x, y))\)</span>.</p>
 <p>¡Los humanos somos algo limitados solo podemos ‘ver’ las gráficas de las funciones escalares de dos dimensiones!</p>
-</section>
-<section id="conjuntos-de-nivel">
-<h3>Conjuntos de nivel<a class="headerlink" href="#conjuntos-de-nivel" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="conjuntos-de-nivel">
+<h3>Conjuntos de nivel<a class="headerlink" href="#conjuntos-de-nivel" title="Permalink to this heading">#</a></h3>
 <p>Si te fijas, el valor del potencial eléctrico es el mismo para todos los puntos de una circunferencia centrada en el origen. Decimos que son puntos equipotenciales.</p>
 <p>De otra forma, si calculamos cuáles son los puntos cuya función vale un determinado valor <span class="math notranslate nohighlight">\(c\)</span>, esto es <span class="math notranslate nohighlight">\(f(x, y) = c\)</span>, obtenemos la ecuación de una circunferencia:</p>
 <div class="math notranslate nohighlight">
@@ -905,14 +905,18 @@ y = \pm x
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tderivadas_funcion_escalar_vectorial_29_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_29_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2700/3657187204.py:4: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
+  fig.colorbar(sf); plt.axis(&#39;equal&#39;); plt.tight_layout();
+</pre></div>
+</div>
+<img alt="../_images/tderivadas_funcion_escalar_vectorial_29_1.png" src="../_images/tderivadas_funcion_escalar_vectorial_29_1.png" />
 </div>
 </div>
 <p><em>Cuestión</em>: ¿Qué indica que los conjuntos de nivel están muy próximos entre ellos? ¿Y cuándo están alejados?</p>
-</section>
-</section>
-<section id="funciones-vectoriales">
-<h2>Funciones vectoriales<a class="headerlink" href="#funciones-vectoriales" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="funciones-vectoriales">
+<h2>Funciones vectoriales<a class="headerlink" href="#funciones-vectoriales" title="Permalink to this heading">#</a></h2>
 <p>Considera la siguiente función que, supogo, la has visto con anterioridad en Electromagnetismo.</p>
 <p>Es el campo eléctrico de una carga <span class="math notranslate nohighlight">\(q\)</span> centrada en el origin <span class="math notranslate nohighlight">\((0, 0, 0)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -931,8 +935,8 @@ y = \pm x
 {\bf x} \in \mathcal{D} \subset \mathrm{R}^n \mapsto \bf{f}(\bf x) \in \mathrm{R}^m
 \]</div>
 <p>Nota que <span class="math notranslate nohighlight">\(n \ge 1\)</span> y <span class="math notranslate nohighlight">\( m &gt;1\)</span>.</p>
-<section id="funciones-componentes">
-<h3>Funciones componentes<a class="headerlink" href="#funciones-componentes" title="Permalink to this headline">#</a></h3>
+<div class="section" id="funciones-componentes">
+<h3>Funciones componentes<a class="headerlink" href="#funciones-componentes" title="Permalink to this heading">#</a></h3>
 <p>Si te fijas el campo eléctrico, <span class="math notranslate nohighlight">\({\bf E}({\bf x})\)</span> lo hemos expresado como tres funciones escalares:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -954,9 +958,9 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
 \]</div>
 <p>O lo que es lo mismo, para dar una función vectorial, basta con dar sus funciones componentes.</p>
 <p><em>Nota</em>: Para indicar valores o funciones vectoriales usamos letras en negrita, mientras que usamos tipos normales para valores o funciones escalares.</p>
-</section>
-<section id="como-dibujar-un-campo-vectorial">
-<h3>¿Cómo dibujar un campo vectorial?<a class="headerlink" href="#como-dibujar-un-campo-vectorial" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="como-dibujar-un-campo-vectorial">
+<h3>¿Cómo dibujar un campo vectorial?<a class="headerlink" href="#como-dibujar-un-campo-vectorial" title="Permalink to this heading">#</a></h3>
 <p>En realidad no podemos dibujar adecuadamente un campo vectorial.</p>
 <p>No obstante podemos ‘visualizar’ un campo vectorial colocando sobre el espacio inicial unos vectorcitos o flechas, que por su tamaño, grosor o color nos digan en qué dirección va el campo y cuál es su módulo. ¡Aunque sólo podemos hacerlo en <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> y <em>malamente</em> en <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>!</p>
 <p>La siguiente figura intenta visualizar el campo eléctrico en dos dimensiones de una carga.</p>
@@ -1040,9 +1044,9 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
 </div>
 </div>
 <p>La líneas de campo eléctrico de un dipolo salen de la carga positiva y mueren en la negativa.</p>
-</section>
-<section id="aun-hay-mas">
-<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="aun-hay-mas">
+<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
 <p>El concepto de conjunto de nivel es bastante común, seguramente conoces los mapas de nivel que representan una zona topográfica a partir de sus curvas de nivel. Cuando las líneas están muy juntas significa que la pendiente sube abruptamente, mientras que cuando están muy separadas indica que la pendiente es muy suave, un falso llano.</p>
 <p>La imagen muestra el mapa topográfico de la zona de Canfranc, en el Pirineo, donde se encuentra, bajo la montaña de “El Tobazo” el Laboratorio Subterráneo de Canfranc donde se estudia, entre otras cosas, cuál es la naturaleza del neutrino o si existe la materia oscura. El enlace al laboratorio es <a class="reference external" href="https://lsc-canfranc.es">éste</a>. Fíjate lo empinado de sus laderas al lado de la estación internacional de Canfranc, luego míralas en la <a class="reference external" href="http://notatherdesk.com/travel/exploring-canfranc-railway-station/">foto</a></p>
 <table class="colwidths-auto table">
@@ -1059,9 +1063,9 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
 </table>
 <p>También puedes visitar la página del <a class="reference external" href="http://www.meteogalicia.gal/web/index.action">tiempo</a> de Galicia y ver cómo dibujan las funciones escalares de la presión y las vectoriales de los vientos.</p>
 <p><strong>¡Esto es todo por ahora!</strong></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

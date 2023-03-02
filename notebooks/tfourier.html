@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Series de Fourier &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Teorema de Stockes y Teorema de Gauss" href="tcalvec_stockes_gauss.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -600,8 +600,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="series-de-fourier">
-<h1>Series de Fourier<a class="headerlink" href="#series-de-fourier" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="series-de-fourier">
+<h1>Series de Fourier<a class="headerlink" href="#series-de-fourier" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -610,13 +610,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Wed May 11 10:07:10 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:28:05 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Concepto de función par, impar y periódica.</p>
 <p>Concepto de base completa de funciones.</p>
 <p>Descomposición de una función periódica en series de Fourier.</p>
@@ -643,8 +643,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<section id="introduccion">
-<h3>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h3>
+<div class="section" id="introduccion">
+<h3>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h3>
 <p>Fourier fue un gran matemático Francés de la época Napoleónica que se dio cuenta que una función periódica podía descomponerse en una serie de sumas de senos y cosenos…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -659,12 +659,12 @@ title="Print to PDF"
 <img alt="../_images/tfourier_5_0.png" src="../_images/tfourier_5_0.png" />
 </div>
 </div>
-</section>
-</section>
-<section id="id1">
-<h2>Series de Fourier<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<section id="funciones-pares-impares-y-periodicas">
-<h3>Funciones pares, impares y periódicas.<a class="headerlink" href="#funciones-pares-impares-y-periodicas" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Series de Fourier<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="section" id="funciones-pares-impares-y-periodicas">
+<h3>Funciones pares, impares y periódicas.<a class="headerlink" href="#funciones-pares-impares-y-periodicas" title="Permalink to this heading">#</a></h3>
 <p>Decimos que una función <span class="math notranslate nohighlight">\(f(x)\)</span> es <strong>periódica</strong> con periodo <span class="math notranslate nohighlight">\(T\)</span> si: <span class="math notranslate nohighlight">\(f(x + T) = f(x)\)</span>.</p>
 <p>Por ejemplo, <span class="math notranslate nohighlight">\(f(x) = sin(x)\)</span> es una función periódica de periodo <span class="math notranslate nohighlight">\(T = 2\pi\)</span>, <span class="math notranslate nohighlight">\(\sin(2\pi + x) = \sin(x)\)</span></p>
 <p>Una función es par si <span class="math notranslate nohighlight">\(f(- x) = f(x)\)</span> e impar si <span class="math notranslate nohighlight">\(f(-x) = - f(x)\)</span></p>
@@ -707,9 +707,9 @@ h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\(h(x)\)</span> es par, <span class="math notranslate nohighlight">\(g(x)\)</span> es impar y <span class="math notranslate nohighlight">\(f(x) = h(x) + g(x)\)</span></p>
 <p><em>Ejemplo:</em> Convertir <span class="math notranslate nohighlight">\(f(x) = 0\)</span> si <span class="math notranslate nohighlight">\(x \le 0\)</span> y 1 si <span class="math notranslate nohighlight">\(x \gt 0\)</span> en una suma de función par e impar.</p>
-</section>
-<section id="funciones-ortogonales">
-<h3>Funciones ortogonales<a class="headerlink" href="#funciones-ortogonales" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="funciones-ortogonales">
+<h3>Funciones ortogonales<a class="headerlink" href="#funciones-ortogonales" title="Permalink to this heading">#</a></h3>
 <p>Las siguiente funciones, <span class="math notranslate nohighlight">\(\sin(nx), \, \cos(mx)\)</span> con <span class="math notranslate nohighlight">\(n, m = 1, 2, \dots \in \mathcal{N}\)</span> son “ortogonales”.</p>
 <p><em>Teorema:</em> Se cumple:</p>
 <ol class="simple">
@@ -794,9 +794,9 @@ f(x) = \sum_n a_n \, \Psi_n(x)
 a_n = \int_a^b f(x) \, \Psi_n(x) \mathrm{d}x
 \]</div>
 <p>esto es, podemos dar una función como una serie de funciones.</p>
-</section>
-<section id="id2">
-<h3>Series de Fourier<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="id2">
+<h3>Series de Fourier<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>El siguiente conjunto de funciones definidas es completo en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -954,9 +954,9 @@ S(x) = \frac{1}{2} + \sum_{k=0} \frac{2}{(2k+1) \pi} \sin (2k+1)x
 </div>
 </div>
 <p><em>Cuestión:</em> ¿Cuánto vale la serie de Fourier en <span class="math notranslate nohighlight">\(x=0\)</span>? ¿Y la función?</p>
-</section>
-<section id="series-periodicas-con-periodo-2l">
-<h3>Series periódicas con periodo <span class="math notranslate nohighlight">\(2L\)</span><a class="headerlink" href="#series-periodicas-con-periodo-2l" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="series-periodicas-con-periodo-2l">
+<h3>Series periódicas con periodo <span class="math notranslate nohighlight">\(2L\)</span><a class="headerlink" href="#series-periodicas-con-periodo-2l" title="Permalink to this heading">#</a></h3>
 <p>Sea ahora una función periódica con periodo <span class="math notranslate nohighlight">\([-L, L]\)</span>, la podemos dar como una serie de Fourier a partir del siguiente conjunto de funciones ortonormales.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -981,9 +981,9 @@ b_n = \frac{1}{L} \int_{-L}^{L} f(x) \, \sin \frac{n \pi x}{L} \, \mathrm{d}x
 S(x) = \frac{a_0}{2} + \sum_{n} a_n \cos \frac{n \pi x}{L} + \sum_{n} b_n \sin \frac{n \pi x}{L}
 \]</div>
 <p><em>Cuestión</em>: ¿Qué funciones y desarrollo obtienes con <span class="math notranslate nohighlight">\(L=\pi\)</span>?</p>
-</section>
-<section id="desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l">
-<h3>Desarrollo de Fourier para una función no periódica definida en un intervalo [0, L]<a class="headerlink" href="#desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l">
+<h3>Desarrollo de Fourier para una función no periódica definida en un intervalo [0, L]<a class="headerlink" href="#desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l" title="Permalink to this heading">#</a></h3>
 <p>¿Y si la función está definida solo en una región <span class="math notranslate nohighlight">\([0, L]\)</span>? Podemos extender la función a <span class="math notranslate nohighlight">\([-L, L]\)</span> por ejemplo <span class="math notranslate nohighlight">\(f(-x) = f(x)\)</span> haciéndola par, y calculado su serie de Fourier, y declarándola válida solo en el intervalo <span class="math notranslate nohighlight">\([0, L]\)</span></p>
 <p><em>Ejercicio:</em> Sea <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> definida en <span class="math notranslate nohighlight">\([0, 2]\)</span> dar su desarrollo en serie de Fourier.</p>
 <p>definimos <span class="math notranslate nohighlight">\(g(x) = x^2\)</span> en <span class="math notranslate nohighlight">\([-2, 2]\)</span></p>
@@ -1051,18 +1051,18 @@ c_0 = a_0/2, \; c_n = \frac{1}{2}(a_n - i b_n), \; c_{-n} = c^*_n = \frac{1}{2}(
 S(x) = \sum_{n = -\infty}^{\infty} c_n \, e^{inx}
 \]</div>
 <p><em>Pero ésta es otra historia y debe ser contada en otra ocasión</em></p>
-</section>
-<section id="aun-hay-mas">
-<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="aun-hay-mas">
+<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
 <p>Joseph Fourier fue un gran físico y matemático Francés que se dio cuenta que una función periódica podía descomponerse en una serie de sumas de senos y cosenos. Fourier participó en la famosa expedición “científica” de Napoleón a Egipto.</p>
 <a class="reference internal image-reference" href="../_images/Fourier.jpg"><img alt="../_images/Fourier.jpg" src="../_images/Fourier.jpg" style="width: 200px;" /></a>
 <p>Aquí tienes su <a class="reference external" href="https://es.wikipedia.org/wiki/Joseph_Fourier">entrada</a> en la Wikipedia.</p>
 <p>Por cierto, Dirichlet fue alumno suyo.</p>
 <p>En análisis en transformadas de Fourier es fundamental en Física cuántica, en Optica, y tiene aplicaciones fundamentales en propagación de señales y tratamiento de imágenes.</p>
 <p>¡Algunos de tus filtros de instagram son algoritmos que modifican las transformadas de Fourier de las imágenes!</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

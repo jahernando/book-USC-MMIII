@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Operador Nabla. Campos conservativos &#8212; Métodos Matemáticos III - USC</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,6 +33,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Integral de superficie" href="tcalvec_integral_superficie.html" />
     <link rel="prev" title="Teorema de Green" href="tcalvec_green.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -541,8 +541,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="operador-nabla-campos-conservativos">
-<h1>Operador Nabla. Campos conservativos<a class="headerlink" href="#operador-nabla-campos-conservativos" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="operador-nabla-campos-conservativos">
+<h1>Operador Nabla. Campos conservativos<a class="headerlink" href="#operador-nabla-campos-conservativos" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -551,13 +551,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Last version  Mon Apr 18 09:23:48 2022
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:13 2023
 </pre></div>
 </div>
 </div>
 </div>
-<section id="objectivos">
-<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this headline">#</a></h2>
+<div class="section" id="objectivos">
+<h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
 <p>Introducción del operador nabla, del gradiente, rotacional y divergencia de un campo.</p>
 <p>Interpretación del rotacional y la divergencia.</p>
 <p>Relaciones entre ellos.</p>
@@ -582,9 +582,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="operador-nabla">
-<h2>Operador nabla.<a class="headerlink" href="#operador-nabla" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="operador-nabla">
+<h2>Operador nabla.<a class="headerlink" href="#operador-nabla" title="Permalink to this heading">#</a></h2>
 <p>Definimos el operador nabla:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -719,9 +719,9 @@ F_x &amp; F_y &amp; F_z \\
 <p><span class="math notranslate nohighlight">\(\nabla^2 (fg) = f \nabla^2 g  + g \nabla^2 f - 2 (\nabla f) (\nabla g) \)</span></p>
 <p><span class="math notranslate nohighlight">\(\nabla (\nabla f \times \nabla g) = 0\)</span></p>
 <p><span class="math notranslate nohighlight">\(\nabla (f \nabla g - g \nabla f) = f \nabla^2 g - g \nabla^2 f\)</span></p>
-</section>
-<section id="campos-conservativos">
-<h2>Campos conservativos<a class="headerlink" href="#campos-conservativos" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="campos-conservativos">
+<h2>Campos conservativos<a class="headerlink" href="#campos-conservativos" title="Permalink to this heading">#</a></h2>
 <p>Decimos que un campo vectorial, <span class="math notranslate nohighlight">\({\bf F}\)</span>, es <strong>conservativo</strong> si para todas las trayectorias que unen dos puntos del dominio, <span class="math notranslate nohighlight">\(A, \, B\)</span>, la integral de campo a lo largo de cada una de ellas vale lo mismo.</p>
 <p>Sea don trayectorias, <span class="math notranslate nohighlight">\({\bf c}_1, \, {\bf c}_2\)</span>, que unen <span class="math notranslate nohighlight">\(A \to B\)</span>, si el campo <span class="math notranslate nohighlight">\({\bf F}\)</span> es conservativo se cumple:</p>
 <div class="math notranslate nohighlight">
@@ -878,8 +878,8 @@ Si un campo no tiene rotacional es convervativo. Y si es conservativo no tiene r
 = U({\bf c}(b)) - U({\bf c}(a)) = U(B) - U(A)
 \]</div>
 <p><em>Ejemplo</em>: La altura es un campo conservativo. Da igual que camino siguas para llegar a la cumbre de una montaña, puedes seguir caminos más fáciles o más arduos, la diferencia de altura respecto de dónde empezaste siempre será la misma.</p>
-<section id="aun-hay-mas">
-<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this headline">#</a></h3>
+<div class="section" id="aun-hay-mas">
+<h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
 <p>Muchas de estas cosas te sonarán por Física General.</p>
 <p>El potencial eléctrico, <span class="math notranslate nohighlight">\(V\)</span>, da lugar a un campo eléctrico, <span class="math notranslate nohighlight">\({\bf E} = - \nabla V\)</span>, que proviene del gradiente y cuyo rotacional es nulo, es por lo tanto un campo conservatico. La integral del campo entro dos puntos es simplemente la diferencia de potencial entre ellos.</p>
 <p>En Física la fuerza sobre un móvil viene del gradiente de una energía potencial, <span class="math notranslate nohighlight">\({\bf F} = - \nabla U\)</span>. De está relación se conserva la energía. Consideremos un móvil, de masa <span class="math notranslate nohighlight">\(m\)</span>, que sigue su trayectoria libre <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> en función del tiempo <span class="math notranslate nohighlight">\(t\)</span>. Su energía total es la energía cinética más la potencial:</p>
@@ -898,9 +898,9 @@ E(t) = \frac{1}{2} m \dot{{\bf c}}^2(t) + U({\bf c}(t))
 \[
 {\bf F} = - \nabla U = m \ddot{{\bf c}}
 \]</div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

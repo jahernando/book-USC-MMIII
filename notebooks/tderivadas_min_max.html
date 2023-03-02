@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Métodos Matemáticos III - USC
+                    Introducción
                 </a>
             </li>
         </ul>
@@ -673,7 +673,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:27:49 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Fri Mar  3 00:06:41 2023
 </pre></div>
 </div>
 </div>
@@ -731,7 +731,7 @@ x \in [x_0 - h, x_0 + h] \Rightarrow f(x) \ge f(x_0)
 x \in [x_0 - h, x_0 + h] \Rightarrow f(x) \le f(x_0)
 \]</div>
 <p><span class="math notranslate nohighlight">\(x_0\)</span> es un mínimo global si todos el valor de la función en todos los puntos del dominio es mayor que en <span class="math notranslate nohighlight">\(x_0\)</span>, y de forma similar para el máximo.</p>
-<p><em>Ejemplo</em>: La siguiente función real presenta un mínimo local en el <span class="math notranslate nohighlight">\(x_0 = -1\)</span>.</p>
+<p><em>Ejemplo</em>: La siguiente función real, <span class="math notranslate nohighlight">\(f(x) = x^2+2x-1\)</span>, presenta un mínimo local en el <span class="math notranslate nohighlight">\(x_0 = -1\)</span>.</p>
 <p>¿Recuerdas cómo calculábamos los mínimos o máximos? Ambos cumplían la condición de que su pendiente era nula y el signo de segunda derivada nos indicaba si era positiva que era un mínimo, y si era negativa, que era un máximo.</p>
 <p>Condición de extremos: <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span></p>
 <p>Codición de máximo: <span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span> y de mínimo <span class="math notranslate nohighlight">\(f''(x_0) &gt;0\)</span></p>
@@ -754,7 +754,7 @@ x \in [x_0 - h, x_0 + h] \Rightarrow f(x) \le f(x_0)
 \[
 f(x_0 + h) \simeq f(x_0) + f'(x_0) h + \frac{1}{2} f''(x_0) h^2
 \]</div>
-<p>donde <span class="math notranslate nohighlight">\(h\)</span> es un tamaño ‘pequeño’.</p>
+<p>donde <span class="math notranslate nohighlight">\(h\)</span> es un tamaño “pequeño”.</p>
 <p>Recuerda también que la condición suficiente para que una función real tenga desarrollo de Taylor de segundo orden en un valor <span class="math notranslate nohighlight">\(x_0\)</span> es que su derivada segunda en un entorno de ese valor sea continua.</p>
 <p>Interpretando <span class="math notranslate nohighlight">\(f'(x_0)\)</span> como la pendiente, vemos que para que la función no cambie de valor entorno a <span class="math notranslate nohighlight">\(x_0\)</span>, su pendiente tiene que ser nula.</p>
 <p>Y después, el segundo sumando, <span class="math notranslate nohighlight">\(\frac{1}{2} f''(x_0) h^2\)</span>, es positivo o negativo dependiendo del signo de la derivada segunda, <span class="math notranslate nohighlight">\(f''(x_0)\)</span>. De ahí la condición de mínimo o máximo.</p>
@@ -772,7 +772,7 @@ f(x_0 + h) \simeq f(x_0) + f'(x_0) h + \frac{1}{2} f''(x_0) h^2
 </div>
 <div class="section" id="desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares">
 <h2>Desarrollo de Taylor de segundo orden de funciones escalares<a class="headerlink" href="#desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares" title="Permalink to this heading">#</a></h2>
-<p>Sea una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, con derivadas segundas continuas en un punto interior, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, del dominio, se puede aproximar en un punto ‘próximo’, <span class="math notranslate nohighlight">\({\bf x}\)</span>, separado de <span class="math notranslate nohighlight">\({\bf x}_0\)</span> por un vector ‘pequeño’ <span class="math notranslate nohighlight">\({\bf v}\)</span>, por su <strong>desarrollo de Taylor de segundo orden</strong>:</p>
+<p>Sea una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, con derivadas segundas continuas en un punto interior, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, del dominio, la función se puede aproximar en un punto “próximo”, <span class="math notranslate nohighlight">\({\bf x}\)</span>, separado de <span class="math notranslate nohighlight">\({\bf x}_0\)</span> por un vector “pequeño” <span class="math notranslate nohighlight">\({\bf v}\)</span>, por su <strong>desarrollo de Taylor de segundo orden</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
 f({\bf x}_0 + {\bf v}) \simeq f({\bf x}_0) + \sum_{i=1}^n \frac{\partial f({\bf x}_0)}{\partial x_i} v_i + \frac{1}{2}\sum_{i, j = 1}^n \frac{\partial^2 f({\bf x}_0)}{ \partial x_i \partial x_j} v_i v_j
@@ -806,12 +806,11 @@ f({\bf x}_0) = 0
 \[
 \nabla f ({\bf x}) = (4 x , 8 y)  
 \]</div>
-<p>lo que nos da:</p>
+<p>Valorado en el origen es:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla f ({\bf x}_0) = (0, 0) 
 \]</div>
-<p>No hay pendientes en ese punto.</p>
 <p>La matriz hessiana es:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -852,7 +851,7 @@ f({\bf x}_0 + {\bf v}) = \frac{1}{2} (v_x, v_y) \, \left( \begin{array}{cc} 4 &a
 <h2>Mínimos y máximos de funciones escalares<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Como en una dimensión, llamaremos un punto <strong>extremo</strong> o <strong>crítico</strong>, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, de una función escalar diferenciable, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, a aquellos puntos del dominio cuyo gradiente sea nulo, <span class="math notranslate nohighlight">\(\nabla f ({\bf x}_0) = {\bf 0}\)</span>.</p>
 <p>En el ejemplo anterior, la función escalar, <span class="math notranslate nohighlight">\(f(x, y) = 2x^2 + 4y^2\)</span> tiene un extremo en <span class="math notranslate nohighlight">\((0, 0)\)</span>.</p>
-<p>Observa la gráfica y los conjuntos de nivel de la siguiente función, <span class="math notranslate nohighlight">\(f(x, y) = 2x^2 - 4y^2\)</span>. Puedes comprobar que el punto <span class="math notranslate nohighlight">\((0, 0)\)</span> es un extremo, tiene gradiente nulo (el gradiente es <span class="math notranslate nohighlight">\(\nabla f(x, y) = (4x, -8 y)\)</span>), sin embargo no es ni máximo ni mínimo, es un <strong>punto silla</strong>. Definimos como tal, al punto extremo a partir del que la función asciende en una dirección y desciende en otra.</p>
+<p>Observa la gráfica y los conjuntos de nivel de la siguiente función, <span class="math notranslate nohighlight">\(f(x, y) = 2x^2 - 4y^2\)</span>. Puedes comprobar que el punto <span class="math notranslate nohighlight">\((0, 0)\)</span> es un extremo, tiene gradiente nulo (el gradiente es <span class="math notranslate nohighlight">\(\nabla f(x, y) = (4x, -8 y)\)</span> ), sin embargo no es ni máximo ni mínimo, es un <strong>punto silla</strong>. Definimos como tal, al punto extremo a partir del que la función asciende en una dirección y desciende en otra.</p>
 <p><em>Explora</em> y modifica el vector <span class="math notranslate nohighlight">\({\bf v}\)</span> sobreimpuesto sobre los conjuntos de nivel y observa como dependiendo de la dirección de <span class="math notranslate nohighlight">\({\bf v}\)</span> la función finalmente asciende o desciende.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -981,13 +980,13 @@ Si es negativo, es un máximo, la función desciende siempre. Y si dependiendo d
 \frac{1}{2} {\bf v'}^T \, {\bf H}'({\bf x}_0) \, {\bf v}' =   \frac{1}{2} (v'_x, v'_y) \, \left( \begin{array}{cc} \lambda'_1 &amp; 0 \\ 0 &amp; \lambda'_2\end{array} \right) \, \left( \begin{array}{c} v'_x \\ v'_y \end{array} \right) = 
 \frac{1}{2} \left( \lambda'_1 v'^2_x + \lambda'_2 v'^2_y \right)
 \end{split}\]</div>
-<p>Y por lo tanto, si los dos autovectores de la Hessiana son positivos, <span class="math notranslate nohighlight">\(\lambda'_1 &gt; 0, \lambda'_2 &gt;0\)</span>, el punto extremo <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es mínimo; si los dos son negativos <span class="math notranslate nohighlight">\(\lambda'_1 &lt;0, \lambda'_2 &lt;0\)</span>, es un máximo, y si uno es positivo y otro negativo, es un punto silla.</p>
+<p>Y por lo tanto, si los dos autovalores de la Hessiana son positivos, <span class="math notranslate nohighlight">\(\lambda'_1 &gt; 0, \lambda'_2 &gt;0\)</span>, el punto extremo <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es mínimo; si los dos son negativos <span class="math notranslate nohighlight">\(\lambda'_1 &lt;0, \lambda'_2 &lt;0\)</span>, es un máximo, y si uno es positivo y otro negativo, es un punto silla.</p>
 <p>En el ejemplo anterior, la Hessiana era:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 {\bf H}(x, y) = \left( \begin{array}{cc} 6 &amp; -2 \\ -2 &amp; 6\end{array}\right)
 \end{split}\]</div>
-<p>Calculamos sus auto-valores:</p>
+<p>Calculamos sus autovalores:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left| \begin{array}{cc} (6-\lambda) &amp; -2 \\ -2 &amp; (6-\lambda) \end{array}\right| = (6-\lambda)^2 -4 = 0
@@ -1028,7 +1027,7 @@ Si es negativo, es un máximo, la función desciende siempre. Y si dependiendo d
 \[
 {\bf e}'_2 = \left( -\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right)
 \]</div>
-<p>En la siguiente celda dibujamos los conjuntos de nivel de la función y sobre el punto extremo, dibujamos los autovectores.</p>
+<p>En la siguiente celda dibujamos los conjuntos de nivel de la función y sobre el punto extremo dibujamos los autovectores.</p>
 <p><em>Cuestión</em>: ¿Puedes dar la relación que guardan los autovectores, los autovalores y los conjuntos de nivel del desarrollo de Taylor en torno a un extremo?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1061,7 +1060,7 @@ f(x'_0 + v'_x, \, y'_0 + v'_y) \simeq f(x'_0, y'_0) + \frac{1}{2}\left( \lambda'
 \[
 {\bf x} \; \mathrm{t.q.} \, \parallel {\bf x} - {\bf x}_0 \parallel  \lt \delta \, \Rightarrow f({\bf x}) \ge f({\bf x}_0)
 \]</div>
-<p>Y de forma similar, serrá un <strong>máximo local</strong> si:</p>
+<p>Y de forma similar, será un <strong>máximo local</strong> si:</p>
 <div class="math notranslate nohighlight">
 \[
 {\bf x} \; \mathrm{t.q.} \, \parallel {\bf x} - {\bf x}_0 \parallel \lt \delta \, \Rightarrow f({\bf x}) \le f({\bf x}_0)
@@ -1075,7 +1074,7 @@ f(x'_0 + v'_x, \, y'_0 + v'_y) \simeq f(x'_0, y'_0) + \frac{1}{2}\left( \lambda'
 <h2>Mínimos y máximos condicionados<a class="headerlink" href="#minimos-y-maximos-condicionados" title="Permalink to this heading">#</a></h2>
 <p>Considera el caso de que queremos calcular los extremos de una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, pero no en todo su dominio, si no en una parte del mismo. En este caso hablamos de <strong>extremos condicionados</strong>.</p>
 <p>Por ejemplo, sea la función: <span class="math notranslate nohighlight">\(f(x, y) = x^2 - y^2\)</span>, y queremos calcular sus extremos en la circunferencia de radio unidad, esto es, en los puntos que cumplen <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>.</p>
-<p>La siguiente celda te dibuja los conjuntos de nivel de la función y la circunferencia. Como puedes ver hemos parametrizado la circunferencia en función de <span class="math notranslate nohighlight">\(t\)</span> que toma los valores en <span class="math notranslate nohighlight">\([0, 2 \pi]\)</span>.</p>
+<p>La siguiente celda te dibuja los conjuntos de nivel de la función y la circunferencia. Como puedes ver hemos parametrizado la circunferencia en función de <span class="math notranslate nohighlight">\(t\)</span> que toma los valores en <span class="math notranslate nohighlight">\([0, 2 \pi)\)</span>.</p>
 <p><em>Cuestión</em>: ¿Puedes identificar los puntos extremos de la función a lo largo de la circunferencia?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1091,7 +1090,7 @@ f(x'_0 + v'_x, \, y'_0 + v'_y) \simeq f(x'_0, y'_0) + \frac{1}{2}\left( \lambda'
 <img alt="../_images/tderivadas_min_max_40_0.png" src="../_images/tderivadas_min_max_40_0.png" />
 </div>
 </div>
-<p>Vamos a dibujar sobre un determinado punto el gradiente de la función, que como sabemos nos indica la dirección en la que la función sufre el cambio máximo.</p>
+<p>Vamos a dibujar sobre un determinado punto el gradiente de la función, que como sabemos nos indica la dirección en la que la función experimenta el cambio máximo.</p>
 <div class="math notranslate nohighlight">
 \[
 f(x, y) = x^2 - y^2 \, \Rightarrow \nabla f(x, y) = (2x, 2y)
@@ -1164,7 +1163,7 @@ g(x, y) = x^2 + y^2 = c
 <p>La condición podemos darla por:</p>
 <div class="math notranslate nohighlight">
 \[
-g(x, y) = x^2 + y^2
+g(x, y) = x^2 + y^2 = 1
 \]</div>
 <p>La condición de Lagrange:</p>
 <div class="math notranslate nohighlight">
@@ -1181,7 +1180,7 @@ g(x, y) = x^2 + y^2
 <h2>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h2>
 <div class="section" id="joseph-louis-lagrange">
 <h3>Joseph Louis Lagrange<a class="headerlink" href="#joseph-louis-lagrange" title="Permalink to this heading">#</a></h3>
-<p>Lagrange fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Fue un hombre de su tiempo, italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela “École Polytechnique”, recién fundada por Napoleón. Le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
+<p>Lagrange fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Fue un hombre de su tiempo, un italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela “École Polytechnique”, recién fundada por Napoleón. Le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
 </div>
 <div class="section" id="principio-de-minima-accion">
 <h3>Principio de mínima acción<a class="headerlink" href="#principio-de-minima-accion" title="Permalink to this heading">#</a></h3>
@@ -1192,23 +1191,24 @@ g(x, y) = x^2 + y^2
 <h3>El método de mínimos cuadrados<a class="headerlink" href="#el-metodo-de-minimos-cuadrados" title="Permalink to this heading">#</a></h3>
 <p>Los mínimos y máximos juegan un papel fundamental también en la estimación de parámetros y observables.</p>
 <p>Seguramente has utilizado en técnicas experimental de laboratorio el método de los mínimos cuadrados para hacer el ajuste de unos datos a una línea recta.</p>
-<p>Como sabes la Naturaleza tiene un comportamiento probabilístico, y nuestras medidas estás sujetas <em>siempre</em> a las incertidumbres.</p>
+<p>Como sabes la Naturaleza tiene un comportamiento probabilístico y nuestras medidas estás sujetas <em>siempre</em> a las incertidumbres.</p>
 <p>En el método de mínimos cuadrados, se calcula la distancia (al cuadrado) de los valores medidos frente al valor de una función de hipótesis, por ejemplo la recta, que depende de diversos parámetros, (en el caso de la recta, los parámetros son la pendiente, <span class="math notranslate nohighlight">\(a\)</span>, y el umbral en el origen, <span class="math notranslate nohighlight">\(b\)</span>). Estimamos éstos parámetros y sus incertidumbres calculando el mínimo de la suma de las distancias al cuadrado. A esta función la llamamos, <span class="math notranslate nohighlight">\(\chi^2\)</span>, que en el caso de ajuste a una recta, es una función escalar de dos variables, <span class="math notranslate nohighlight">\(a, b\)</span>.</p>
-<p>Esto es determinamos los parámetros de nuestro modelo como aquellos que hacen que la suma las distancias al cuadrado de los datos con respecto al modelo sea la menor posible.</p>
+<p>Esto es, determinamos los parámetros de nuestro modelo como aquellos que hacen que la suma las distancias al cuadrado de los datos con respecto al modelo sea la menor posible.</p>
 <p>En el caso de la recta:</p>
-<p>Tenemos una muestra de datos <span class="math notranslate nohighlight">\(\{(x_i, y_u), \; i = 1, \dots, n\}\)</span>, con errores <span class="math notranslate nohighlight">\(\sigma_i = \sigma\)</span>.</p>
-<p>Se distribuyen a lo largo de una recta, que tiene dos parámetros, <span class="math notranslate nohighlight">\(a\)</span>, la pendiente y <span class="math notranslate nohighlight">\(b\)</span>, el umbral en el origen.</p>
+<p>Sea una muestra de datos <span class="math notranslate nohighlight">\(\{(x_i, y_u), \; i = 1, \dots, n\}\)</span>, con errores <span class="math notranslate nohighlight">\(\sigma_i = \sigma\)</span>,
+que  distribuyen a lo largo de una recta. Sabemos que ésta tiene dos parámetros, <span class="math notranslate nohighlight">\(a\)</span>, la pendiente y <span class="math notranslate nohighlight">\(b\)</span>, el umbral en el origen.</p>
 <div class="math notranslate nohighlight">
 \[
 y(x \, | \, a, b) = a \, x + b
 \]</div>
 <p>y construimos la función escalar <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> como:</p>
 <div class="math notranslate nohighlight">
-\[
-\chi2(a, b) = \sum_{i=1}^n \frac{(y_i - y(x_i | a, b))^2}{\sigma^2}   
-= \sum_{i=1}^n \frac{(y_i - a \, x_i - b)^2}{\sigma^2}
-\]</div>
-<p>Estimamos los parámetros <span class="math notranslate nohighlight">\(\hat{a}, \hat{b}\)</span>, como aquellos que minimizan la <span class="math notranslate nohighlight">\(\chi^2\)</span></p>
+\[\begin{split}
+\chi^2(a, b) = \frac{1}{n-2} \, \sum_{i=1}^n \frac{(y_i - y(x_i | a, b))^2}{\sigma^2}  \\ 
+= \frac{1}{n-2} \, \sum_{i=1}^n \frac{(y_i - a \, x_i - b)^2}{\sigma^2}
+\end{split}\]</div>
+<p>donde el término del denominador, <span class="math notranslate nohighlight">\(n-2\)</span>, corresponde a los grados de libertad que son el número de datos, <span class="math notranslate nohighlight">\(n\)</span>, menos el número de parámetros, 2 en este caso (por <span class="math notranslate nohighlight">\(a, b\)</span>).</p>
+<p>Y estimamos los parámetros <span class="math notranslate nohighlight">\(\hat{a}, \hat{b}\)</span>, como aquellos que minimizan la <span class="math notranslate nohighlight">\(\chi^2\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 (\hat{a}, \hat{b}) \;\;\; \mathrm{t.q.} \;\; \chi^2(\hat{a}, \hat{b}) = \mathrm{min}(\chi^2(a, b))
@@ -1259,18 +1259,13 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9640309887033567 b =  0.23189420901368357
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9797875858157097 b =  -0.22257891940239033
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_54_1.png" src="../_images/tderivadas_min_max_54_1.png" />
 </div>
 </div>
-<p>En la siguiente celda, dibujamos los conjuntos de nivel de la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> para los datos del experimento, <span class="math notranslate nohighlight">\(\{(x_i, y_i); \; i = 1, \dots, n \}\)</span>. Esto es:</p>
-<div class="math notranslate nohighlight">
-\[
-\chi^2(a, b) = \frac{1}{n-2}\sum_{i=1}^n \frac{(y_i - a x_i - b)^2}{\sigma^2}
-\]</div>
-<p>El divisor <span class="math notranslate nohighlight">\(n-2\)</span> nos da cuenta de los grados de libertad del sistema, el número de medidas, <span class="math notranslate nohighlight">\(n\)</span>, menos el número de parámetros a estimar que son dos: <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p>En la siguiente celda, dibujamos los conjuntos de nivel de la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span>.</p>
 <p>Puedes ver para este experimento que los valores estimados nos dan el mínimo de <span class="math notranslate nohighlight">\(\chi^2\)</span> y puedes ver también los conjuntos de nivel a distinto valores, que al ser próximos al mínimo deben ser elipses, y que nos dan una estimación de la incertidumbre de los parámetros <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>. El valor verdadero es el punto en negro, mientras que el estimado es el punto en rojo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1284,7 +1279,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.974174784940158
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.9347763567011252
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_56_1.png" src="../_images/tderivadas_min_max_56_1.png" />
@@ -1298,7 +1293,7 @@ y(x \, | \, a, b) = a \, x + b
 Una red está compuesta de neuronas que se disponen en capas. En la figura de la siguiente celda se muestra un esquema de una red neuronal. Cada neurona tienen un conjunto de entradas y una sola salida. Matemáticamente cada neurona es una función escalar, <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es el número de entradas. La última capa de la red suele ser una sola neurona y su salida es la respuesta de la red. Matemáticamente toda la red es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^N \to \mathrm{R}\)</span>, donde <span class="math notranslate nohighlight">\(N\)</span> es el número de entradas en la primera capa.</p>
 <p>En estos vídeos puedes encontrar una introducción sencillas a las redes neuronales <a class="reference external" href="https://www.youtube.com/watch?v=aircAruvnKk">[&gt;]</a> y a sus métodos de entrenamiento <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a></p>
 <p><strong>Esquema de una red neuronal</strong></p>
-<p>Las neuronas en la primera capa reciben los datos del mundo “exterior” y la neurona de la última capa da la respuest de la red.</p>
+<p>Las neuronas en la primera capa reciben los datos del mundo “exterior” y la neurona de la última capa da la respuesta de la red.</p>
 <a class="reference internal image-reference" href="../_images/NN.png"><img alt="../_images/NN.png" src="../_images/NN.png" style="width: 400px;" /></a>
 <p>Las capas intermedias las podemos considerar <em>ocultas</em>.</p>
 <p>La función escalar de la neurona es habitualmente una sigmoide.</p>
@@ -1325,27 +1320,31 @@ u( {\bf x} \, | \, {\bf a}, b ) = \frac{1}{1 + e^{-{\bf a x} - b}}
 <p><strong>¿Cómo funcionan las redes neuronales?</strong></p>
 <p>Mediante entrenamiento, esto es, minimizando una función escalar que llamamos error.</p>
 <p>Consideremos el caso de la red neuronal que distingue imágenes de perros y gatos.</p>
-<p>La imagen la podemos matematizar dándola como un conjunto de píxeles (como si la imagen fuera un mosaico y cada tesela un <em>pixel</em>), y el valor de cada pixel correspondería por ejemplo a un valor en la escala de grises si la imagen está en blanco y negro. Hemos convertido por lo tanto la imagen en un vector <span class="math notranslate nohighlight">\({\bf x}\)</span>, que será la entrada a nuestra red.</p>
+<p>La imagen la podemos matematizar dándola como un conjunto de píxeles (como si la imagen fuera un mosaico y cada tesela un <em>pixel</em>), y el valor de cada pixel correspondería por ejemplo a un valor en la escala de grises si la imagen está en blanco y negro. Hemos convertido por lo tanto la imagen en un vector, <span class="math notranslate nohighlight">\({\bf x}\)</span>, que será la entrada a nuestra red.</p>
 <p>La red tendra varias capas con diversas neuronas, por ejemplo <span class="math notranslate nohighlight">\(L\)</span> capas, con <span class="math notranslate nohighlight">\(K\)</span> neuronas en cada capa, y acabará con una neurona final. Ésta dará un valor entre <span class="math notranslate nohighlight">\([0, 1]\)</span>, el 0 corresponderá a la imagen de un gato y 1 a la del perro.</p>
-<p>La red neuronal es pues en sí misma una función escalar que a partir de la imagen inicial <span class="math notranslate nohighlight">\({\bf x}\)</span> nos da una sola respuesta <span class="math notranslate nohighlight">\(v({\bf x} | {\bf a}^{lk}, b^{lk})\)</span>, donde <span class="math notranslate nohighlight">\({\bf a}^{lk}, b^{lk}\)</span> son los parámetros de la neurona que está la capa <span class="math notranslate nohighlight">\(l\)</span> y en la posición <span class="math notranslate nohighlight">\(k\)</span> dentro de esa capa. La respuesta de la red neuronal es por lo tanto una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^N \to \mathrm{R}\)</span>, siendo <span class="math notranslate nohighlight">\(N\)</span> el número de pixels de nuestras imágenes.</p>
-<p>A partir de una muestra de imágenes de perros y gatos <span class="math notranslate nohighlight">\(\{ {\bf x}_i, \; i = 1, \dots, M\}\)</span>, donde <span class="math notranslate nohighlight">\(M\)</span> es un número muy grande, y de la respuesta correcta para cada imagen <span class="math notranslate nohighlight">\(\{ y_i, \; i = 1, \dots, M \}\)</span>, que serán 0 cuando la imagen sea de un gato y 1 de un perro, construimos la función error</p>
+<p>La red neuronal es pues en sí misma una función escalar que a partir de la imagen inicial <span class="math notranslate nohighlight">\({\bf x}\)</span> nos da una sola respuesta <span class="math notranslate nohighlight">\(y({\bf x} | {\bf a}^{lk}, b^{lk})\)</span>, donde <span class="math notranslate nohighlight">\({\bf a}^{lk}, b^{lk}\)</span> son los parámetros de la neurona que está la capa <span class="math notranslate nohighlight">\(l\)</span> y en la posición <span class="math notranslate nohighlight">\(k\)</span> dentro de esa capa. La respuesta de la red neuronal es por lo tanto una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^N \to \mathrm{R}\)</span>, siendo <span class="math notranslate nohighlight">\(N\)</span> el número de pixels de nuestras imágenes.</p>
+<p>Construimos una función error a partir de una muestra de imágenes de perros y gatos <span class="math notranslate nohighlight">\(\{ {\bf x}_i, \; i = 1, \dots, M\}\)</span>, donde <span class="math notranslate nohighlight">\(M\)</span> es un número muy grande, y de la respuesta correcta para cada imagen <span class="math notranslate nohighlight">\(\{ y_i, \; i = 1, \dots, M \}\)</span>, donde <span class="math notranslate nohighlight">\(y_i\)</span> será 0 cuando la imagen sea de un gato y 1 de un perro, con la siguiente expresión:</p>
 <div class="math notranslate nohighlight">
 \[
-E({\bf a}^{lk}, b^{lk}) = \sum_{i=1}^M (y_i - v({\bf x}_i | {\bf a}^{lk}, b^{lk}))^2
+E({\bf a}^{lk}, b^{lk}) = \frac{1}{M-Q} \, \sum_{i=1}^M (y_i - y({\bf x}_i | {\bf a}^{lk}, b^{lk}))^2
 \]</div>
-<p>La función error es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^L \to R\)</span>, donde <span class="math notranslate nohighlight">\(L\)</span> es la suma de los parámetros de todas las neuronas.</p>
+<p>La función error es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^Q \to R\)</span>, donde <span class="math notranslate nohighlight">\(Q\)</span> es el número total de parámetros de todas las neuronas.</p>
 <p>Date cuenta que en el caso de que la red acertase siempre, la función error valdría 0.</p>
 <p>En el método de mínimos cuadrados, estimamos los parámetros, <span class="math notranslate nohighlight">\((\hat{a}, \hat{b})\)</span> minimizando la función <span class="math notranslate nohighlight">\(\chi^2(a,b)\)</span>, ahora determinaremos los parámetros de la neuronas, minimizando la función error. Esto es, fijaremos los parámetros de las neuronas a aquellos con los que la red se equivoque lo menos posible en la muestra con la hemos entrenado.</p>
-<p>En el ejemplo del ajuste por mínimos cuadrados, la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> dependía de dos parámetros, y podíamos calcularlos analíticamente, pero ahora nuestra función error de la red <span class="math notranslate nohighlight">\(E({\bf a}^{lk}, b^{lk})\)</span> puede tener muchísimos.</p>
+<div class="math notranslate nohighlight">
+\[
+(\hat{\bf{a}}^{lk}, \hat{b}^{lk}) \;\;\; \mathrm{t.q.} \;\; E(\hat{\bf{a}}^{lk}, \hat{b}^{lk}) = \mathrm{min}(E({\bf a}^{lk}, b^{lk}))
+\]</div>
+<p>En el ejemplo del ajuste por mínimos cuadrados, la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> dependía de dos parámetros, y podíamos calcularlos analíticamente, pero ahora nuestra función error <span class="math notranslate nohighlight">\(E({\bf a}^{lk}, b^{lk})\)</span> tiene <span class="math notranslate nohighlight">\(Q\)</span> parámetros, que puede ser un número muy grande.</p>
 <p>Sería imposible calcular el mínimo analíticamente, pero los ingeniros, físicos y matemáticos de Google han sido capaces de desarrollar una serie de métodos computacionales muy potentes con los que estimar los parámetros de las neuronas minimizando la función error. ¡Y se basan en calcular <strong>grandientes</strong> y aplicar <strong>la regla de la cadena</strong>!</p>
 <p>Aquí hay un vídeo <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a> que lo explica.</p>
-<p>Una vez la red está “entrenada” o “ha aprendido” (esto es, hemos minimizado su función error), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, predicirá para nuestro asombro si son perros o gatos.</p>
+<p>Una vez la red está “entrenada” o “ha aprendido” (esto es, hemos minimizado su función error), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, predicirá para nuestro asombro si son perros o gatos. Sea ahora una imagen con vector <span class="math notranslate nohighlight">\({\bf x}\)</span>, la respuesta de la red vendrá dada por  <span class="math notranslate nohighlight">\(y({\bf x} \, | \, \hat{{\bf a}}^{lk}, \hat{b}^{lk})\)</span></p>
 <p><strong>¿Y ésto tiene que ver con la Física?</strong></p>
 <p>¡Mucho! En la actualidad pocos son los análisis en Física de Partículas, por ejemplo, donde no se utilice una red neuronal o un método similar.</p>
 <p>Se utilizan para identificar si una partícula es un electrón o un muón (su hermano más pesado). O si en una interacción hay un bosón de Higgs o no. Para decidir si una interacción es relevante o es del montón.</p>
 <p>Ya te puedes imaginar que las redes neuronales están detrás de algunas aplicaciones como Facebook, Instagram, Spotify, TikTok y de todos los genios matématicos que online intentan predecir tus gustos.</p>
 <p>Si quieres apreder algo más sobre la redes neuronales puedes leer este <a class="reference external" href="http://neuralnetworksanddeeplearning.com/index.html">libro online</a> y puedes experimental con el modulo <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> de Python.</p>
-<p>La siguiente imagen muestra las trazas de dos eventos de un detector que busca una nueva desintegración nuclear, que correspondería a la imagen de la izquierda, mientras que la de la derecha muestra un evento típico de contaminación o de fondo. ¿Ves las diferencia entre las dos? ¿Nos sería de ayuda un red neurnal para distinguir los dos tipos de eventos, para separar la señal del fondo?</p>
+<p>La siguiente imagen muestra las trazas de dos eventos de un detector que busca una nueva desintegración nuclear, que correspondería a la imagen de la izquierda, mientras que la de la derecha muestra un evento típico de contaminación o de fondo. ¿Ves las diferencia entre las dos? ¿Nos sería de ayuda un red neurpnal para distinguir los dos tipos de eventos, para separar la señal del fondo?</p>
 <a class="reference internal image-reference" href="../_images/NEXT_signal_bkg_mc_event.png"><img alt="../_images/NEXT_signal_bkg_mc_event.png" src="../_images/NEXT_signal_bkg_mc_event.png" style="width: 800px;" /></a>
 <p><strong>¡Esto es todo por ahora!</strong></p>
 </div>

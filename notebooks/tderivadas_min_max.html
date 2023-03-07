@@ -191,6 +191,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="tintegral_metodos.html">
+   Métodos de integración
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="tintegral_2d.html">
    Integrales en dos dimensiones
   </a>
@@ -505,6 +510,11 @@ title="Print to PDF"
      Clasificación de puntos extremos
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimos-y-maximos-para-funciones-escalares-de-varias-dimensiones">
+     minimos y máximos para funciones escalares de varias dimensiones
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -607,6 +617,11 @@ title="Print to PDF"
      Clasificación de puntos extremos
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimos-y-maximos-para-funciones-escalares-de-varias-dimensiones">
+     minimos y máximos para funciones escalares de varias dimensiones
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -673,7 +688,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Fri Mar  3 00:06:41 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar  7 10:34:47 2023
 </pre></div>
 </div>
 </div>
@@ -1053,7 +1068,9 @@ f(x'_0 + v'_x, \, y'_0 + v'_y) \simeq f(x'_0, y'_0) + \frac{1}{2}\left( \lambda'
 <p>Los conjuntos de nivel son <em>elipses</em> si es un mínimo o un máximo, o <em>hypérbolas</em> si es un punto silla, respecto sus ejes de simetría.</p>
 <p>Los autovalores nos cuantifican la curvatura en cada uno de los ejes de simetría. La curvatura es más acuciada conforme más grande es el autovalor.</p>
 <p>O también podemos asociarlos a los ejes de las elipses de los conjuntos de nivel. El eje de la elipse es mayor para autovalores menores.</p>
-<p>Generalicemos ahora para funciones escalares de varias dimensiones</p>
+</div>
+<div class="section" id="minimos-y-maximos-para-funciones-escalares-de-varias-dimensiones">
+<h3>minimos y máximos para funciones escalares de varias dimensiones<a class="headerlink" href="#minimos-y-maximos-para-funciones-escalares-de-varias-dimensiones" title="Permalink to this heading">#</a></h3>
 <p>Sea la función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, un punto <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es <strong>extremo</strong> o <strong>crítico</strong> si su gradiente es nulo, <span class="math notranslate nohighlight">\(\nabla f ({\bf x}_0) = {\bf 0}\)</span>.</p>
 <p>Decimos que un punto extremo es <strong>mínimo local</strong> si todos los puntos dentro de una bola de tamaño <span class="math notranslate nohighlight">\(\delta\)</span>, centrada en <span class="math notranslate nohighlight">\({\bf x}_0\)</span> tienen un valor de la función menor o igual al de <span class="math notranslate nohighlight">\({\bf x}_0\)</span></p>
 <div class="math notranslate nohighlight">
@@ -1122,7 +1139,7 @@ f(x, y) = x^2 - y^2 \, \Rightarrow \nabla f(x, y) = (2x, 2y)
 g(x, y) = x^2 + y^2 = c
 \]</div>
 <p>y sabemos que el gradiente de esta función siempre sera <em>ortogonal</em> al conjunto de nivel.</p>
-<p>Luego el punto extremo, <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> los dos gradientes, el de la función y el de la condición de conjunto de nivel, son proporcionales</p>
+<p>Luego el punto extremo, <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> los dos gradientes, el de la función y el de la condición de conjunto de nivel, deben ser paralelos, esto es proporcionales:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla f (x_0, y_0) = \lambda \nabla g(x_0, y_0)
@@ -1170,8 +1187,10 @@ g(x, y) = x^2 + y^2 = 1
 \[
 \nabla f (x_0, y_0) = \lambda \nabla g (x_0, y_0) \; \Rightarrow \, (2x_0, -2y_0) = \lambda (2x_0, 2y_0)
 \]</div>
-<p>De la primera condición <span class="math notranslate nohighlight">\(2 x_0 = \lambda 2 x_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(\lambda = 1\)</span>; pero para que se cumpla se segunda <span class="math notranslate nohighlight">\(-2 y_0 = \lambda 2 y_0\)</span>, si <span class="math notranslate nohighlight">\(\lambda = 1\)</span>, entonces <span class="math notranslate nohighlight">\(y_0 = 0\)</span>. Solo hay dos puntos en la circunferencia con <span class="math notranslate nohighlight">\(y_0 = 0\)</span>, son <span class="math notranslate nohighlight">\((-1, 0)\)</span> y <span class="math notranslate nohighlight">\((1, 0)\)</span>. En ambos se cumple la condición de Lagrange. Son por lo tanto extremos condicionados.</p>
-<p>De la segunda condición <span class="math notranslate nohighlight">\(2 y_0 = - \lambda 2 y_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(\lambda = -1\)</span>; pero para que se cumpla en este caso la primera, <span class="math notranslate nohighlight">\(2 x_0 = 2 \lambda x_0\)</span> con <span class="math notranslate nohighlight">\(\lambda = -1\)</span>, entonces <span class="math notranslate nohighlight">\(x_0 = 0\)</span>. Solo hay dos puntos en la circunferencia con <span class="math notranslate nohighlight">\(x_0 = 0\)</span> que son: <span class="math notranslate nohighlight">\((0, 1)\)</span> y <span class="math notranslate nohighlight">\((0, -1)\)</span>. Son también extremos condicionados</p>
+<p>De la primera condición <span class="math notranslate nohighlight">\(2 x_0 = \lambda 2 x_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(\lambda = 1\)</span>; pero para que se cumpla la segunda ecuación <span class="math notranslate nohighlight">\(-2 y_0 = \lambda 2 y_0\)</span>, como <span class="math notranslate nohighlight">\(\lambda = 1\)</span>, entonces <span class="math notranslate nohighlight">\(y_0 = 0\)</span>.</p>
+<p>Solo hay dos puntos en la circunferencia con <span class="math notranslate nohighlight">\(y_0 = 0\)</span>, son <span class="math notranslate nohighlight">\((-1, 0)\)</span> y <span class="math notranslate nohighlight">\((1, 0)\)</span>. En ambos se cumple la condición de Lagrange. Son por lo tanto extremos condicionados.</p>
+<p>De la segunda condición <span class="math notranslate nohighlight">\(2 y_0 = - \lambda 2 y_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(\lambda = -1\)</span>; pero para que se cumpla en este caso la primera, <span class="math notranslate nohighlight">\(2 x_0 = 2 \lambda x_0\)</span>, como <span class="math notranslate nohighlight">\(\lambda = -1\)</span>, entonces <span class="math notranslate nohighlight">\(x_0 = 0\)</span>.</p>
+<p>Solo hay dos puntos en la circunferencia con <span class="math notranslate nohighlight">\(x_0 = 0\)</span> que son: <span class="math notranslate nohighlight">\((0, 1)\)</span> y <span class="math notranslate nohighlight">\((0, -1)\)</span>. Son también extremos condicionados</p>
 <p>La función en <span class="math notranslate nohighlight">\((-1, 0)\)</span> y <span class="math notranslate nohighlight">\((1, 0)\)</span> vale <span class="math notranslate nohighlight">\(1\)</span>. Mientras que en <span class="math notranslate nohighlight">\((0, 1)\)</span> y <span class="math notranslate nohighlight">\((0, -1)\)</span> vale <span class="math notranslate nohighlight">\(-1\)</span>. Los dos primeros son máximos condicionados y los dos últimos mínimos condicionados.</p>
 <p><em>Verifica</em>: que es correcto en la celda anterior, colocando <span class="math notranslate nohighlight">\(t = 0, \pi/2, \pi, 3 \pi/2\)</span>, y observa como los gradientes se alinean y coinciden con los valores máximos y mínimos que puede tomar la función en la circunferencia.</p>
 </div>
@@ -1259,7 +1278,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9797875858157097 b =  -0.22257891940239033
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.7353885047201039 b =  0.9274480137758941
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_54_1.png" src="../_images/tderivadas_min_max_54_1.png" />
@@ -1279,7 +1298,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.9347763567011252
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.3810103157414145
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_56_1.png" src="../_images/tderivadas_min_max_56_1.png" />

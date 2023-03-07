@@ -688,7 +688,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar  7 10:34:47 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar  7 10:37:16 2023
 </pre></div>
 </div>
 </div>
@@ -1215,7 +1215,7 @@ g(x, y) = x^2 + y^2 = 1
 <p>Esto es, determinamos los parámetros de nuestro modelo como aquellos que hacen que la suma las distancias al cuadrado de los datos con respecto al modelo sea la menor posible.</p>
 <p>En el caso de la recta:</p>
 <p>Sea una muestra de datos <span class="math notranslate nohighlight">\(\{(x_i, y_u), \; i = 1, \dots, n\}\)</span>, con errores <span class="math notranslate nohighlight">\(\sigma_i = \sigma\)</span>,
-que  distribuyen a lo largo de una recta. Sabemos que ésta tiene dos parámetros, <span class="math notranslate nohighlight">\(a\)</span>, la pendiente y <span class="math notranslate nohighlight">\(b\)</span>, el umbral en el origen.</p>
+que se distribuyen a lo largo de una recta. Sabemos que ésta tiene dos parámetros, <span class="math notranslate nohighlight">\(a\)</span>, la pendiente y <span class="math notranslate nohighlight">\(b\)</span>, el umbral en el origen.</p>
 <div class="math notranslate nohighlight">
 \[
 y(x \, | \, a, b) = a \, x + b
@@ -1278,7 +1278,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.7353885047201039 b =  0.9274480137758941
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9391526456111647 b =  0.1043685684443519
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_54_1.png" src="../_images/tderivadas_min_max_54_1.png" />
@@ -1298,7 +1298,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.3810103157414145
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.22479275139879606
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_56_1.png" src="../_images/tderivadas_min_max_56_1.png" />
@@ -1349,7 +1349,7 @@ E({\bf a}^{lk}, b^{lk}) = \frac{1}{M-Q} \, \sum_{i=1}^M (y_i - y({\bf x}_i | {\b
 \]</div>
 <p>La función error es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^Q \to R\)</span>, donde <span class="math notranslate nohighlight">\(Q\)</span> es el número total de parámetros de todas las neuronas.</p>
 <p>Date cuenta que en el caso de que la red acertase siempre, la función error valdría 0.</p>
-<p>En el método de mínimos cuadrados, estimamos los parámetros, <span class="math notranslate nohighlight">\((\hat{a}, \hat{b})\)</span> minimizando la función <span class="math notranslate nohighlight">\(\chi^2(a,b)\)</span>, ahora determinaremos los parámetros de la neuronas, minimizando la función error. Esto es, fijaremos los parámetros de las neuronas a aquellos con los que la red se equivoque lo menos posible en la muestra con la hemos entrenado.</p>
+<p>En el método de mínimos cuadrados, estimamos los parámetros, <span class="math notranslate nohighlight">\((\hat{a}, \hat{b})\)</span> minimizando la función <span class="math notranslate nohighlight">\(\chi^2(a,b)\)</span>, ahora determinaremos los parámetros de la neuronas, minimizando la función error. Esto es, fijaremos los parámetros de las neuronas a aquellos con los que la red se equivoque lo menos posible en la muestra con la que la hemos entrenado.</p>
 <div class="math notranslate nohighlight">
 \[
 (\hat{\bf{a}}^{lk}, \hat{b}^{lk}) \;\;\; \mathrm{t.q.} \;\; E(\hat{\bf{a}}^{lk}, \hat{b}^{lk}) = \mathrm{min}(E({\bf a}^{lk}, b^{lk}))

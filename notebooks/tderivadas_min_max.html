@@ -688,7 +688,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar  7 10:37:16 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 10:45:28 2023
 </pre></div>
 </div>
 </div>
@@ -1117,14 +1117,14 @@ f(x, y) = x^2 - y^2 \, \Rightarrow \nabla f(x, y) = (2x, 2y)
 <p><em>Considera</em> ahora el valor <span class="math notranslate nohighlight">\(t  = \pi\)</span>, esto es el punto <span class="math notranslate nohighlight">\((-1, 0)\)</span>. El gradiente ahí es radial, si queremos permanecer en la circunferencia, entonces ya no hay ninguna dirección que nos permita hacerlo y que a su vez nos permita aumentar el valor de la función. Hemos alcazado el máximo condicionado de la función.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span>  <span class="o">=</span> <span class="mf">1.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span>  <span class="o">=</span> <span class="mf">4.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span>
 <span class="n">fpx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span>  <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
 <span class="n">fpy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span>
 <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">xt</span><span class="p">(</span><span class="n">t0</span><span class="p">),</span> <span class="n">yt</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">line2d</span><span class="p">(</span><span class="n">xt</span><span class="p">,</span> <span class="n">yt</span><span class="p">,</span> <span class="n">trange</span><span class="o">=</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">newfig</span> <span class="o">=</span> <span class="kc">False</span><span class="p">);</span>
-<span class="n">gf</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">fpx</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">fpy</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span> <span class="c1"># nabla f</span>
+<span class="n">gf</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">fpx</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">fpy</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">);</span> <span class="c1"># nabla f</span>
 </pre></div>
 </div>
 </div>
@@ -1147,7 +1147,7 @@ g(x, y) = x^2 + y^2 = c
 <p>donde <span class="math notranslate nohighlight">\(\lambda\)</span> es un valor de proporcionalidad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span>  <span class="o">=</span> <span class="mf">3.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span>  <span class="o">=</span> <span class="mf">6.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span>
 <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">xt</span><span class="p">(</span><span class="n">t0</span><span class="p">),</span> <span class="n">yt</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span>
 <span class="n">g</span>   <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
 <span class="n">gpx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
@@ -1264,7 +1264,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atrue</span><span class="p">,</span> <span class="n">btrue</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">npoints</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">8</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atrue</span><span class="p">,</span> <span class="n">btrue</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">npoints</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">100</span>
 <span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span>     <span class="o">=</span> <span class="n">experiment</span><span class="p">(</span><span class="n">atrue</span><span class="p">,</span> <span class="n">btrue</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">npoints</span><span class="p">,</span> <span class="n">xrange</span> <span class="o">=</span> <span class="n">xrange</span><span class="p">)</span>
 <span class="n">ahat</span><span class="p">,</span> <span class="n">bhat</span> <span class="o">=</span> <span class="n">lsq_fit</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span> 
@@ -1278,7 +1278,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.9391526456111647 b =  0.1043685684443519
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  1.0082801354029087 b =  -0.07869700173273128
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_54_1.png" src="../_images/tderivadas_min_max_54_1.png" />
@@ -1298,7 +1298,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  0.22479275139879606
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  1.0244746224995507
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_56_1.png" src="../_images/tderivadas_min_max_56_1.png" />

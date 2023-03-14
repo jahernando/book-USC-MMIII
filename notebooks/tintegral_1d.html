@@ -586,7 +586,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar  7 00:33:38 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 12:17:31 2023
 </pre></div>
 </div>
 </div>
@@ -635,17 +635,17 @@ title="Print to PDF"
 <img alt="../_images/tintegral_1d_5_0.png" src="../_images/tintegral_1d_5_0.png" />
 </div>
 </div>
-<p>Vamos a definir primero qué es una partición de un intervalo</p>
+<p>Vamos a definir primero qué es una partición de un intervalo.</p>
 <div class="section" id="particion">
 <h3>Partición<a class="headerlink" href="#particion" title="Permalink to this heading">#</a></h3>
-<p>Una partición, <span class="math notranslate nohighlight">\(P\)</span> es un conjunto finito, <span class="math notranslate nohighlight">\(x_0, \; i = 0, \dots, n\)</span>, de puntos consecutivos en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, de tal forma que <span class="math notranslate nohighlight">\(x_0 = a, \; x_n = b\)</span> y <span class="math notranslate nohighlight">\(x_i &lt; x_{i +1} \; \forall i\)</span></p>
+<p>Una partición, <span class="math notranslate nohighlight">\(P\)</span> es un conjunto finito, <span class="math notranslate nohighlight">\(\{x_i; \; i = 0, \dots, n\}\)</span>, de puntos consecutivos en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, de tal forma que <span class="math notranslate nohighlight">\(x_0 = a, \; x_n = b\)</span> y <span class="math notranslate nohighlight">\(x_i &lt; x_{i +1} \; \forall i\)</span></p>
 <p>El tamaño o  norma, <span class="math notranslate nohighlight">\(\| P \|\)</span>, de una partición será el tamaño del mayor de sus subintervalos, <span class="math notranslate nohighlight">\(\mathrm{máx}\{x_{i} - x_{i-1}; \; i = 1, \dots, n \}\)</span></p>
 <p>Una partición es más pequeña o más fina que otra si su norma es más pequeña.</p>
-<p>Una partición es regular si <span class="math notranslate nohighlight">\(\Delta x_i = \delta, \; i = 1, \dots, n\)</span></p>
+<p>Una partición es regular si <span class="math notranslate nohighlight">\(\Delta x_i = \delta, \; i = 1, \dots, n\)</span>.</p>
 </div>
 <div class="section" id="suma-de-riemann">
 <h3>Suma de Riemann<a class="headerlink" href="#suma-de-riemann" title="Permalink to this heading">#</a></h3>
-<p>Sea <span class="math notranslate nohighlight">\(P\)</span> una partición del intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, y <span class="math notranslate nohighlight">\(t_i\)</span> un punto en el subintervalo <span class="math notranslate nohighlight">\([x_{i-1}, x_i]\)</span> y <span class="math notranslate nohighlight">\(\Delta x_i = x_{i} - x_{i-1}\)</span> con <span class="math notranslate nohighlight">\(i = 0, \dots, n\)</span>, y <span class="math notranslate nohighlight">\(f(x)\)</span> una función, <span class="math notranslate nohighlight">\(\mathcal{R} \to \mathcal{R}\)</span>; llamamos suma de Rienmman a la cantidad:</p>
+<p>Sea <span class="math notranslate nohighlight">\(P\)</span> una partición del intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, y <span class="math notranslate nohighlight">\(t_i\)</span> un punto en el subintervalo <span class="math notranslate nohighlight">\([x_{i-1}, x_i]\)</span> y <span class="math notranslate nohighlight">\(\Delta x_i = x_{i} - x_{i-1}\)</span> con <span class="math notranslate nohighlight">\(i = 1, \dots, n\)</span>, y <span class="math notranslate nohighlight">\(f(x)\)</span> una función, <span class="math notranslate nohighlight">\(\mathcal{R} \to \mathcal{R}\)</span>; llamamos suma de Rienmman a la cantidad:</p>
 <div class="math notranslate nohighlight">
 \[
 \mathcal{S}(f, P) = \sum_{i=1}^n f(t_i) \, \Delta x_i
@@ -668,13 +668,13 @@ title="Print to PDF"
 <p><em>Explora:</em> Modifica en la siguiente celda la función, el intervalo, y especialmente el número de subintervalos de la partición regular.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rsum</span> <span class="o">=</span> <span class="n">riemann_sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rsum</span> <span class="o">=</span> <span class="n">riemann_sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Riemann Sum </span><span class="si">{:6.5f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rsum</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 1.99999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 1.99954
 </pre></div>
 </div>
 <img alt="../_images/tintegral_1d_10_1.png" src="../_images/tintegral_1d_10_1.png" />
@@ -744,7 +744,7 @@ F'(c) = \lim_{h\to0} \frac{F(c+h)-F(c)}{h}
 <p>En este caso, donde <span class="math notranslate nohighlight">\(h\)</span> es pequeño.</p>
 <div class="math notranslate nohighlight">
 \[
-F(c+h)-F(c)  = \int_a^{c+h} f(x) \; \mathrm{d}x - \int_a^{c} f(x) \; \mathrm{d}x \simeq f(t) \, h
+F(c+h)-F(c)  = \int_a^{c+h} f(x) \; \mathrm{d}x - \int_a^{c} f(x) \; \mathrm{d}x 
 = \int_c^{c+h} f(x) \; \mathrm{d}x \simeq f(t) \, h
 \]</div>
 <p>Si consideramos <span class="math notranslate nohighlight">\(h\)</span> suficientemente pequeño, damos la integral como la suma de Riemann en un intervalo <span class="math notranslate nohighlight">\([c, c+h]\)</span> con punto aletaorio <span class="math notranslate nohighlight">\(t\)</span>. Al hacer <span class="math notranslate nohighlight">\(h \to 0, \; t \to c\)</span>, y:</p>
@@ -757,7 +757,7 @@ F'(c) = f(c)
 <h3>Segundo teorema fundamental del cálculo integral<a class="headerlink" href="#segundo-teorema-fundamental-del-calculo-integral" title="Permalink to this heading">#</a></h3>
 <p>Una función <span class="math notranslate nohighlight">\(F(x)\)</span> se llama <em>primitiva</em> de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un intervalo abierto <span class="math notranslate nohighlight">\((a,b)\)</span> si <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> para todo <span class="math notranslate nohighlight">\(x \in (a,b)\)</span>.</p>
 <p>Dos primitivas de una funci’on solo pueden diferir en una constante: <span class="math notranslate nohighlight">\(P(x) = F(x) + C\)</span></p>
-<p><strong>Teorema:</strong> Sea <span class="math notranslate nohighlight">\(f(x)\)</span> integrable Riemann en <span class="math notranslate nohighlight">\([a,b]\)</span>, sea <span class="math notranslate nohighlight">\(P(x)\)</span> una función definida en <span class="math notranslate nohighlight">\((a,b)\)</span>, tal que exista la derivada <span class="math notranslate nohighlight">\(P'(x)\)</span> en <span class="math notranslate nohighlight">\((a,b)\)</span> y cuyo valor sea <span class="math notranslate nohighlight">\(P'(x) = f(x)\)</span>, se cumple:</p>
+<p><strong>Teorema:</strong> Sea <span class="math notranslate nohighlight">\(f(x)\)</span> integrable Riemann en <span class="math notranslate nohighlight">\([a,b]\)</span>, sea <span class="math notranslate nohighlight">\(P(x)\)</span> una función definida en <span class="math notranslate nohighlight">\([a,b]\)</span>, tal que exista la derivada <span class="math notranslate nohighlight">\(P'(x)\)</span> en <span class="math notranslate nohighlight">\((a,b)\)</span> y cuyo valor sea <span class="math notranslate nohighlight">\(P'(x) = f(x)\)</span>, se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_a^b f(x) \, \mathrm{d}x = \int_a^b P'(x) \;\mathrm{d}x = P(b) - P(a)

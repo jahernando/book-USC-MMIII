@@ -717,7 +717,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar  7 00:33:41 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 12:17:34 2023
 </pre></div>
 </div>
 </div>
@@ -859,7 +859,7 @@ f(g(x)) \, g'(x) = \frac{1}{x\log x}
 <p>De forma equivalente podemos hacer el siguiente cambio de variable:</p>
 <div class="math notranslate nohighlight">
 \[
-u = \log x, \Rightarrow u' \, \mathrm{d}u = \frac{1}{x} \, \mathrm{d}x
+u = \log x, \Rightarrow  \mathrm{d}u = \frac{1}{x} \, \mathrm{d}x
 \]</div>
 <p>Por lo tanto</p>
 <div class="math notranslate nohighlight">
@@ -901,6 +901,7 @@ Q_m(x) = x^m + b_{m-1} x^{m-1} + \dots + b_{0}
 <li><p>descomponer la razón en suma de razones más sencillas,</p></li>
 <li><p>integrar cada razón sencilla cuyas integrales están tabuladas.</p></li>
 </ol>
+<p><em>Cuestión:</em> En el caso de que la razón entre los polinomios <span class="math notranslate nohighlight">\(n \ge m\)</span>, ¿cómo harías la integral?</p>
 <div class="section" id="descomposicion-de-polinomios">
 <h3>Descomposición de polinomios<a class="headerlink" href="#descomposicion-de-polinomios" title="Permalink to this heading">#</a></h3>
 <p>El polinomio del denominador se puede descomponer en el producto de polinomios:</p>
@@ -935,7 +936,7 @@ Q_3(x) = (x+1) \, (x^2+x+1)
 <p>Dada la descomposición de <span class="math notranslate nohighlight">\(Q_m(x)\)</span>, la razón de polinomios puede expresarse como suma de fracciones más simples de polinomios:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\frac{P_n(x)}{Q_m(x)} = \sum_{i=1}^p \frac{A^i_1}{(1-\alpha_i)} + \frac{A^i_2}{(1-\alpha_i)^2} + \dots + \frac{A^i_{n_i}}{(1-\alpha_i)^{n_i}}  \\
+\frac{P_n(x)}{Q_m(x)} = \sum_{i=1}^p \frac{A^i_1}{(x-\alpha_i)} + \frac{A^i_2}{(x-\alpha_i)^2} + \dots + \frac{A^i_{n_i}}{(x-\alpha_i)^{n_i}}  \\
 + \sum_{j = 1}^{q} \frac{B^j_1 x + C^j_1}{(x^2 + \beta_j x + \gamma_j)} + \frac{B^j_2 x + C^j_2}{(x^2 + \beta_j x + \gamma_j)^2} + \dots + \frac{B^j_{m_j} x + C^j_{m_j}}{(x^2 + \beta_j x + \gamma_j)^{m_j}}
 \end{split}\]</div>
 <p><em>Ejemplo:</em> Expresa la siguiente razón como suma de fracciones simples:</p>
@@ -977,7 +978,7 @@ A+B = 3, \, A+B+C = 3, A+C = 1
 <p>Para las raices reales con <span class="math notranslate nohighlight">\(n=1\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-\int \frac{A}{(1-\alpha)} \, \mathrm{d}x = A \, \log(x-\alpha)
+\int \frac{A}{(x-\alpha)} \, \mathrm{d}x = A \, \log(x-\alpha)
 \]</div>
 <p>y para <span class="math notranslate nohighlight">\(n &gt;1\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -1075,7 +1076,7 @@ A+B = 3, \, A+B+C = 3, A+C = 1
  \cos^2 x = \frac{1+\cos 2x}{2}, \;  \sin^2 x = \frac{1-\cos 2x}{2}
 \]</div>
 <ul class="simple">
-<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es impar, <span class="math notranslate nohighlight">\(2p = n-1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \cos x, \; \mathrm{d}u = - \sin x \, \mathrm{d}x\)</span>:</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es impar, <span class="math notranslate nohighlight">\(2p = n+1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \cos x, \; \mathrm{d}u = - \sin x \, \mathrm{d}x\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1083,7 +1084,7 @@ A+B = 3, \, A+B+C = 3, A+C = 1
  = \int - (1-u^2)^p u^m \, \mathrm{d}u
  \]</div>
 <ul class="simple">
-<li><p>si <span class="math notranslate nohighlight">\(m\)</span> es impar, <span class="math notranslate nohighlight">\(2q = m-1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \sin x, \, \mathrm{d}u = \cos x \, \mathrm{dx}\)</span>:</p></li>
+<li><p>si <span class="math notranslate nohighlight">\(m\)</span> es impar, <span class="math notranslate nohighlight">\(2q = m+1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \sin x, \, \mathrm{d}u = \cos x \, \mathrm{dx}\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1096,9 +1097,9 @@ A+B = 3, \, A+B+C = 3, A+C = 1
 <p>Aplicaremos los relaciones trigonométricas:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-2 \sin ax \, \sin bx = \cos (a-b) x - \cos (a+b) x \\
-2 \sin ax \, \cos bx = \sin (a-b) x + \sin (a+b) x \\
-2 \cos ax \, \cos bx = \cos (a-b) x + \cos (a+b) x
+\cos ax \, \cos bx = \frac{\cos (a-b) \, x + \cos (a+b) \, x}{2} \\
+\sin ax \, \sin bx = \frac{\cos (a-b) \, x - \cos (a+b) \, x}{2} \\
+\sin ax \, \cos bx = \frac{\sin (a-b) \, x + \sin (a+b) \, x}{2}
 \end{split}\]</div>
 </div>
 <div class="section" id="integrales-racionales-con-cos-x-o-sin-x">
@@ -1141,8 +1142,8 @@ u = \tan \frac{x}{2}, \; \mathrm{d}x = \frac{2}{1+u^2} \, \mathrm{d}u
 <h2>Integrales impropias<a class="headerlink" href="#integrales-impropias" title="Permalink to this heading">#</a></h2>
 <p>Llamamos integrales impropias aquellas en las que:</p>
 <ul class="simple">
-<li><p>uno o los dos límites de integración son <span class="math notranslate nohighlight">\(\pm \infty\)</span></p></li>
-<li><p>la función a integrar no está acotada en alguno de los valores del intervalo de integración</p></li>
+<li><p>uno o los dos límites de integración son <span class="math notranslate nohighlight">\(\pm \infty\)</span>,</p></li>
+<li><p>la función a integrar no está acotada en alguno de los valores del intervalo de integración.</p></li>
 </ul>
 <div class="section" id="limites-de-integracion-en-el-infinito">
 <h3>Límites de integración en el infinito<a class="headerlink" href="#limites-de-integracion-en-el-infinito" title="Permalink to this heading">#</a></h3>

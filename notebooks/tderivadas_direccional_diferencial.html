@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,12 +53,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Gradiente, matriz jacobiana, funciones diferenciables" href="tderivadas_gradiante_jacobiana.html" />
     <link rel="prev" title="Parametrización de lineas y de superficies" href="tderivadas_parametrizacion_lineas_superficies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="es">
     
 
     <!-- Google Analytics -->
@@ -586,7 +587,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:25 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:08:06 2023
 </pre></div>
 </div>
 </div>
@@ -601,7 +602,7 @@ title="Print to PDF"
 </ul>
 <p>Estudiar la derivada direccional en un plano.</p>
 <p>Remarcar que en funciones escalares y vectorales para dar la derivada necesitamos un punto y una dirección de desplazamiento.</p>
-<p>Recordaremos que son las funciones “suaves” y la relación del desarrollo de Taylor.</p>
+<p>Recordaremos que son las funciones «suaves» y la relación del desarrollo de Taylor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># general imports</span>
@@ -626,7 +627,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="derivada-direccional">
 <h2>Derivada direccional<a class="headerlink" href="#derivada-direccional" title="Permalink to this heading">#</a></h2>
-<p>En funciones de una dimensión, <span class="math notranslate nohighlight">\(f(x)\)</span>, la derivada estaba asociada la la “pendiente” de la función en un punto.</p>
+<p>En funciones de una dimensión, <span class="math notranslate nohighlight">\(f(x)\)</span>, la derivada estaba asociada la la «pendiente» de la función en un punto.</p>
 <p>La definición de derivada de una función real en un punto <span class="math notranslate nohighlight">\(x\)</span> es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -917,7 +918,7 @@ x+y &amp; \quad \mbox{si $x=0$ o $y=0$} \\
 \end{array}
 \right.
 \end{split}\]</div>
-<p><em>Ejercicio</em>: comprueba que en el origen, esta función es continua, tiene derivadas parciales y todas las direccionales, pero su gráfica es endemoniada, no es en absoluto “suave”.</p>
+<p><em>Ejercicio</em>: comprueba que en el origen, esta función es continua, tiene derivadas parciales y todas las direccionales, pero su gráfica es endemoniada, no es en absoluto «suave».</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
@@ -941,9 +942,9 @@ x+y &amp; \quad \mbox{si $x=0$ o $y=0$} \\
 </div>
 <div class="section" id="funciones-diferenciables">
 <h2>Funciones diferenciables<a class="headerlink" href="#funciones-diferenciables" title="Permalink to this heading">#</a></h2>
-<p>En funciones reales en 1D, decíamos que una función era diferenciable si era <strong>“suave”</strong>: si era continua, no tenía ni dobleces, ni quiebros.</p>
+<p>En funciones reales en 1D, decíamos que una función era diferenciable si era <strong>«suave»</strong>: si era continua, no tenía ni dobleces, ni quiebros.</p>
 <p>En otras palabras, era diferenciable si admitía el <strong>desarrollo de Taylor</strong>.</p>
-<p>En primer orden, el desarrollo de Taylor de en una función real de 1D nos permitía aproximar, en un valor <span class="math notranslate nohighlight">\(x\)</span> “cercano” a <span class="math notranslate nohighlight">\(x_0\)</span> la función por una recta tangente con pendiente <span class="math notranslate nohighlight">\(f'(x_0)\)</span>, la derivada en <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
+<p>En primer orden, el desarrollo de Taylor de en una función real de 1D nos permitía aproximar, en un valor <span class="math notranslate nohighlight">\(x\)</span> «cercano» a <span class="math notranslate nohighlight">\(x_0\)</span> la función por una recta tangente con pendiente <span class="math notranslate nohighlight">\(f'(x_0)\)</span>, la derivada en <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 f(x) \approx f(x_0) + f'(x_0) \, (x - x_0) 
@@ -955,8 +956,8 @@ y(x) = y_0 + a \, (x-x_0)
 \]</div>
 <p>La derivada es la pendiente de la función en un punto.</p>
 <p>En la siguiente figura hemos dibujado la función <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> y el desarrollo de Taylor en el punto <span class="math notranslate nohighlight">\(x_0\)</span>. Puedes observar que en una pequeña región la recta y la función se superponen. <em>Explora</em> cambiando el valor de <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
-<p>Es claro que <span class="math notranslate nohighlight">\(f(x)\)</span> es “suave”.</p>
-<p><em>Cuestión</em>: Invéntante una función de 1D que no sea “suave”, no sea diferenciable.</p>
+<p>Es claro que <span class="math notranslate nohighlight">\(f(x)\)</span> es «suave».</p>
+<p><em>Cuestión</em>: Invéntante una función de 1D que no sea «suave», no sea diferenciable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span>  <span class="mf">0.</span>
@@ -973,13 +974,13 @@ y(x) = y_0 + a \, (x-x_0)
 <img alt="../_images/tderivadas_direccional_diferencial_34_0.png" src="../_images/tderivadas_direccional_diferencial_34_0.png" />
 </div>
 </div>
-<p>Consideremos ahora una función escalar de dos dimensiones, diremos que es “suave” si su gráfica es continua (no está quebrada), no tiene dobleces, ni picos.</p>
-<p>Observa la gráfica de este función, ¿consideras que es “suave”? ¿está rasgada, tiene dobleces, picos?</p>
+<p>Consideremos ahora una función escalar de dos dimensiones, diremos que es «suave» si su gráfica es continua (no está quebrada), no tiene dobleces, ni picos.</p>
+<p>Observa la gráfica de este función, ¿consideras que es «suave»? ¿está rasgada, tiene dobleces, picos?</p>
 <div class="math notranslate nohighlight">
 \[
 f(x, y) = 9 - x^2 - y^2
 \]</div>
-<p>Ciertamente es “suave”</p>
+<p>Ciertamente es «suave»</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mi">9</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
@@ -992,7 +993,7 @@ f(x, y) = 9 - x^2 - y^2
 </div>
 </div>
 <p>Las funciones escalares de dos dimensiones serán diferenciables si podemos hacer su desarrollo de Taylor de primer orden.</p>
-<p>Que en este caso significa que en una región “pequeña”, en un punto <span class="math notranslate nohighlight">\((x, y)\)</span> “próximo” al punto <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>, la gráfica de la función puede aproximarse por <strong>un plano tangente</strong>, cuya pendiente en la dirección <span class="math notranslate nohighlight">\(x\)</span> correspondera a su derivada parcial en <span class="math notranslate nohighlight">\(x\)</span> en ese punto, <span class="math notranslate nohighlight">\(f'_x(x_0, y_0)\)</span> y la pendiente en la dirección <span class="math notranslate nohighlight">\(y\)</span>, a la derivada parcial en <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(f'_y (x_0, y_0)\)</span>.</p>
+<p>Que en este caso significa que en una región «pequeña», en un punto <span class="math notranslate nohighlight">\((x, y)\)</span> «próximo» al punto <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>, la gráfica de la función puede aproximarse por <strong>un plano tangente</strong>, cuya pendiente en la dirección <span class="math notranslate nohighlight">\(x\)</span> correspondera a su derivada parcial en <span class="math notranslate nohighlight">\(x\)</span> en ese punto, <span class="math notranslate nohighlight">\(f'_x(x_0, y_0)\)</span> y la pendiente en la dirección <span class="math notranslate nohighlight">\(y\)</span>, a la derivada parcial en <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(f'_y (x_0, y_0)\)</span>.</p>
 <p>El desarrollo de Taylor de primer orden será:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1058,7 +1059,7 @@ f'_x(x, y) = -1, \;\, f'_y(x, y) = 1
 <p><em>Cuestión</em> ¿Y en cualquier otro punto?</p>
 <p><em>Las derivadas direccionales de una función diferenciables tienen una expresión sencilla.</em></p>
 <p>Consideremos nuevamente una función <span class="math notranslate nohighlight">\(f(x, y)\)</span> diferenciable en <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>.</p>
-<p>Reescribimos ahora el punto próximo <span class="math notranslate nohighlight">\((x, y)\)</span> por <span class="math notranslate nohighlight">\((x_0, y_0) + (v_x, v_y)\)</span>, donde <span class="math notranslate nohighlight">\((v_x, v_y)\)</span> es un vector “pequeño”.</p>
+<p>Reescribimos ahora el punto próximo <span class="math notranslate nohighlight">\((x, y)\)</span> por <span class="math notranslate nohighlight">\((x_0, y_0) + (v_x, v_y)\)</span>, donde <span class="math notranslate nohighlight">\((v_x, v_y)\)</span> es un vector «pequeño».</p>
 <div class="math notranslate nohighlight">
 \[
 (x, y) = (x_0, y_0) + (v_x, v_y)
@@ -1100,7 +1101,7 @@ f'_x(1, 1) = -2, \; f'_y(1, 1) = -2
 f'((1, 1); \, (1, 1)) = -4
 \]</div>
 <p>Para funciones escalares genéricas en <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>.</p>
-<p>Sea <span class="math notranslate nohighlight">\(f({\bf x})\)</span> una función escalar de <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, la función será diferenciable en <span class="math notranslate nohighlight">\({\bf x}_0\)</span> si en un punto “próximo”, <span class="math notranslate nohighlight">\({\bf x}\)</span>, dado por un vector “pequeño”, <span class="math notranslate nohighlight">\({\bf v}\)</span>, mediante <span class="math notranslate nohighlight">\({\bf x} = {\bf x}_0 + {\bf v}\)</span> podemos aproximarla:</p>
+<p>Sea <span class="math notranslate nohighlight">\(f({\bf x})\)</span> una función escalar de <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, la función será diferenciable en <span class="math notranslate nohighlight">\({\bf x}_0\)</span> si en un punto «próximo», <span class="math notranslate nohighlight">\({\bf x}\)</span>, dado por un vector «pequeño», <span class="math notranslate nohighlight">\({\bf v}\)</span>, mediante <span class="math notranslate nohighlight">\({\bf x} = {\bf x}_0 + {\bf v}\)</span> podemos aproximarla:</p>
 <div class="math notranslate nohighlight">
 \[
 f({\bf x}) \approx f({\bf x}_0) + \sum_{i = 1, n} f'_{i}({\bf x}_0) v_i 
@@ -1183,16 +1184,16 @@ f'({\bf x}; {\bf v}) = \lim_{h \to 0} \frac{({\bf x}+h{\bf v})({\bf x}+h{\bf v})
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tderivadas_parametrizacion_lineas_superficies.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tderivadas_parametrizacion_lineas_superficies.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Parametrización de lineas y de superficies</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tderivadas_gradiante_jacobiana.html" title="next page">
+    <a class='right-next' id="next-link" href="tderivadas_gradiante_jacobiana.html" title="siguiente página">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Gradiente, matriz jacobiana, funciones diferenciables</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -1204,9 +1205,8 @@ f'({\bf x}; {\bf v}) = \lim_{h \to 0} \frac{({\bf x}+h{\bf v})({\bf x}+h{\bf v})
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By José Ángel Hernando Morata<br/>
+    By J. Ángel Hernando Morata<br/>
   
-      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
 </p>
         </footer>
     </div>

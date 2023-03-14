@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,12 +53,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Límite y continuidad de funciones escalares y vectoriales" href="tderivadas_limites_continuidad.html" />
     <link rel="prev" title="Cuestiones iniciales" href="tderivadas_introduccion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="es">
     
 
     <!-- Google Analytics -->
@@ -600,7 +601,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:31 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:08:12 2023
 </pre></div>
 </div>
 </div>
@@ -701,7 +702,7 @@ V(x, y) = k \frac{q}{\sqrt{x^2 + y^2}}
 \{(x, \, y, \, f(x, y)), \; \forall \;(x, \, y) \, \in \, \mathcal{D}\}
 \]</div>
 <p>En el caso anterior, la gráfica de la función <span class="math notranslate nohighlight">\(f(x, y)\)</span> son los puntos <span class="math notranslate nohighlight">\((x, y, z = f(x, y))\)</span>.</p>
-<p>¡Los humanos somos algo limitados solo podemos ‘ver’ las gráficas de las funciones escalares de dos dimensiones!</p>
+<p>¡Los humanos somos algo limitados solo podemos “ver” las gráficas de las funciones escalares de dos dimensiones!</p>
 </div>
 <div class="section" id="conjuntos-de-nivel">
 <h3>Conjuntos de nivel<a class="headerlink" href="#conjuntos-de-nivel" title="Permalink to this heading">#</a></h3>
@@ -910,7 +911,7 @@ y = \pm x
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2700/3657187204.py:4: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2319/3657187204.py:4: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
   fig.colorbar(sf); plt.axis(&#39;equal&#39;); plt.tight_layout();
 </pre></div>
 </div>
@@ -967,7 +968,7 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
 <div class="section" id="como-dibujar-un-campo-vectorial">
 <h3>¿Cómo dibujar un campo vectorial?<a class="headerlink" href="#como-dibujar-un-campo-vectorial" title="Permalink to this heading">#</a></h3>
 <p>En realidad no podemos dibujar adecuadamente un campo vectorial.</p>
-<p>No obstante podemos ‘visualizar’ un campo vectorial colocando sobre el espacio inicial unos vectorcitos o flechas, que por su tamaño, grosor o color nos digan en qué dirección va el campo y cuál es su módulo. ¡Aunque sólo podemos hacerlo en <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> y <em>malamente</em> en <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>!</p>
+<p>No obstante podemos “visualizar” un campo vectorial colocando sobre el espacio inicial unos vectorcitos o flechas, que por su tamaño, grosor o color nos digan en qué dirección va el campo y cuál es su módulo. ¡Aunque sólo podemos hacerlo en <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> y <em>malamente</em> en <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>!</p>
 <p>La siguiente figura intenta visualizar el campo eléctrico en dos dimensiones de una carga.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1053,7 +1054,7 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
 <div class="section" id="aun-hay-mas">
 <h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
 <p>El concepto de conjunto de nivel es bastante común, seguramente conoces los mapas de nivel que representan una zona topográfica a partir de sus curvas de nivel. Cuando las líneas están muy juntas significa que la pendiente sube abruptamente, mientras que cuando están muy separadas indica que la pendiente es muy suave, un falso llano.</p>
-<p>La imagen muestra el mapa topográfico de la zona de Canfranc, en el Pirineo, donde se encuentra, bajo la montaña de “El Tobazo” el Laboratorio Subterráneo de Canfranc donde se estudia, entre otras cosas, cuál es la naturaleza del neutrino o si existe la materia oscura. El enlace al laboratorio es <a class="reference external" href="https://lsc-canfranc.es">éste</a>. Fíjate lo empinado de sus laderas al lado de la estación internacional de Canfranc, luego míralas en la <a class="reference external" href="http://notatherdesk.com/travel/exploring-canfranc-railway-station/">foto</a></p>
+<p>La imagen muestra el mapa topográfico de la zona de Canfranc, en el Pirineo, donde se encuentra, bajo la montaña de «El Tobazo» el Laboratorio Subterráneo de Canfranc donde se estudia, entre otras cosas, cuál es la naturaleza del neutrino o si existe la materia oscura. El enlace al laboratorio es <a class="reference external" href="https://lsc-canfranc.es">éste</a>. Fíjate lo empinado de sus laderas al lado de la estación internacional de Canfranc, luego míralas en la <a class="reference external" href="http://notatherdesk.com/travel/exploring-canfranc-railway-station/">foto</a></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p></p></th>
@@ -1099,16 +1100,16 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tderivadas_introduccion.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tderivadas_introduccion.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Cuestiones iniciales</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tderivadas_limites_continuidad.html" title="next page">
+    <a class='right-next' id="next-link" href="tderivadas_limites_continuidad.html" title="siguiente página">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Límite y continuidad de funciones escalares y vectoriales</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -1120,9 +1121,8 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By José Ángel Hernando Morata<br/>
+    By J. Ángel Hernando Morata<br/>
   
-      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
 </p>
         </footer>
     </div>

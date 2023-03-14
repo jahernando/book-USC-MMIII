@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,12 +53,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Parametrización de lineas y de superficies" href="tderivadas_parametrizacion_lineas_superficies.html" />
     <link rel="prev" title="Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales." href="tderivadas_funcion_escalar_vectorial.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="es">
     
 
     <!-- Google Analytics -->
@@ -566,7 +567,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:27:45 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:26 2023
 </pre></div>
 </div>
 </div>
@@ -646,7 +647,7 @@ title="Print to PDF"
 </div>
 </div>
 <p>Vamos a revisar la definición de límite de una dimensión.</p>
-<p>Para una función <span class="math notranslate nohighlight">\(f(x)\)</span> decíamos que existía el límite en un punto <span class="math notranslate nohighlight">\(x_{0}\)</span> del dominio o de la frontera de éste, si al aproximarnos a él, la función “se aproximaba a un valor <span class="math notranslate nohighlight">\(b\)</span>”.</p>
+<p>Para una función <span class="math notranslate nohighlight">\(f(x)\)</span> decíamos que existía el límite en un punto <span class="math notranslate nohighlight">\(x_{0}\)</span> del dominio o de la frontera de éste, si al aproximarnos a él, la función «se aproximaba a un valor <span class="math notranslate nohighlight">\(b\)</span>».</p>
 <p>Matemáticamente, poníamos una condición.</p>
 <p>Decíamos que <span class="math notranslate nohighlight">\(b\)</span> era el límite de <span class="math notranslate nohighlight">\(f(x)\)</span> en <span class="math notranslate nohighlight">\(x_0\)</span>, si siempre podíamos encontrar un intervalo de tamaño <span class="math notranslate nohighlight">\(\delta\)</span> alrededor de <span class="math notranslate nohighlight">\(x_0\)</span>, de tal forma, que el valor de la función en los puntos de ese intervalo, estaba tan próximos al valor <span class="math notranslate nohighlight">\(b\)</span> como quisiéramos, dada por una distancia <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <p>Es más fácil darlo en notación matemática:</p>
@@ -731,7 +732,7 @@ f(x, y) = \frac{\sin \sqrt{x^2 + y^2}}{ \sqrt{x^2 + y^2}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2716/2511310414.py:8: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2335/2511310414.py:8: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
   ax.set_xlabel(&#39;x&#39;); ax.set_ylabel(&#39;y&#39;); fig.colorbar(sf);
 </pre></div>
 </div>
@@ -740,7 +741,7 @@ f(x, y) = \frac{\sin \sqrt{x^2 + y^2}}{ \sqrt{x^2 + y^2}}
 </div>
 <p>Para calcular los límites utilizaremos una aproximación.</p>
 <p>Calcularemos los límites en un punto aproximándones a él por todas las rectas posibles.</p>
-<p>Si el valor del límite que encontremos es el mismo y no depende de la recta, podremos afirmar: <em>“si existe el límite, éste debe ser su valor”.</em></p>
+<p>Si el valor del límite que encontremos es el mismo y no depende de la recta, podremos afirmar: <em>«si existe el límite, éste debe ser su valor».</em></p>
 <p><strong>Ejemplo</strong>: Calcula el límite en el origen de la función escalar:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -973,16 +974,16 @@ iv) \;\; \lim_{{\bf x} \to {\bf a}} \| {\bf f}({\bf x}) \| = \| {\bf b} \|
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tderivadas_funcion_escalar_vectorial.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tderivadas_funcion_escalar_vectorial.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Funciones escalares, gráficas, conjuntos de nivel y funciones vectoriales.</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tderivadas_parametrizacion_lineas_superficies.html" title="next page">
+    <a class='right-next' id="next-link" href="tderivadas_parametrizacion_lineas_superficies.html" title="siguiente página">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Parametrización de lineas y de superficies</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -994,9 +995,8 @@ iv) \;\; \lim_{{\bf x} \to {\bf a}} \| {\bf f}({\bf x}) \| = \| {\bf b} \|
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By José Ángel Hernando Morata<br/>
+    By J. Ángel Hernando Morata<br/>
   
-      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
 </p>
         </footer>
     </div>

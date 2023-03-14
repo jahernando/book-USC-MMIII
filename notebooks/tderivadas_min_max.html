@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,12 +53,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Integrales en una dimensión" href="tintegral_1d.html" />
     <link rel="prev" title="Cambio de coordenadas y regla de la cadena" href="tderivadas_coordenadas_cadena.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="es">
     
 
     <!-- Google Analytics -->
@@ -688,7 +689,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 10:45:28 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:30 2023
 </pre></div>
 </div>
 </div>
@@ -769,7 +770,7 @@ x \in [x_0 - h, x_0 + h] \Rightarrow f(x) \le f(x_0)
 \[
 f(x_0 + h) \simeq f(x_0) + f'(x_0) h + \frac{1}{2} f''(x_0) h^2
 \]</div>
-<p>donde <span class="math notranslate nohighlight">\(h\)</span> es un tamaño “pequeño”.</p>
+<p>donde <span class="math notranslate nohighlight">\(h\)</span> es un tamaño «pequeño».</p>
 <p>Recuerda también que la condición suficiente para que una función real tenga desarrollo de Taylor de segundo orden en un valor <span class="math notranslate nohighlight">\(x_0\)</span> es que su derivada segunda en un entorno de ese valor sea continua.</p>
 <p>Interpretando <span class="math notranslate nohighlight">\(f'(x_0)\)</span> como la pendiente, vemos que para que la función no cambie de valor entorno a <span class="math notranslate nohighlight">\(x_0\)</span>, su pendiente tiene que ser nula.</p>
 <p>Y después, el segundo sumando, <span class="math notranslate nohighlight">\(\frac{1}{2} f''(x_0) h^2\)</span>, es positivo o negativo dependiendo del signo de la derivada segunda, <span class="math notranslate nohighlight">\(f''(x_0)\)</span>. De ahí la condición de mínimo o máximo.</p>
@@ -787,7 +788,7 @@ f(x_0 + h) \simeq f(x_0) + f'(x_0) h + \frac{1}{2} f''(x_0) h^2
 </div>
 <div class="section" id="desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares">
 <h2>Desarrollo de Taylor de segundo orden de funciones escalares<a class="headerlink" href="#desarrollo-de-taylor-de-segundo-orden-de-funciones-escalares" title="Permalink to this heading">#</a></h2>
-<p>Sea una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, con derivadas segundas continuas en un punto interior, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, del dominio, la función se puede aproximar en un punto “próximo”, <span class="math notranslate nohighlight">\({\bf x}\)</span>, separado de <span class="math notranslate nohighlight">\({\bf x}_0\)</span> por un vector “pequeño” <span class="math notranslate nohighlight">\({\bf v}\)</span>, por su <strong>desarrollo de Taylor de segundo orden</strong>:</p>
+<p>Sea una función escalar, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, de <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, con derivadas segundas continuas en un punto interior, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, del dominio, la función se puede aproximar en un punto «próximo», <span class="math notranslate nohighlight">\({\bf x}\)</span>, separado de <span class="math notranslate nohighlight">\({\bf x}_0\)</span> por un vector «pequeño» <span class="math notranslate nohighlight">\({\bf v}\)</span>, por su <strong>desarrollo de Taylor de segundo orden</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
 f({\bf x}_0 + {\bf v}) \simeq f({\bf x}_0) + \sum_{i=1}^n \frac{\partial f({\bf x}_0)}{\partial x_i} v_i + \frac{1}{2}\sum_{i, j = 1}^n \frac{\partial^2 f({\bf x}_0)}{ \partial x_i \partial x_j} v_i v_j
@@ -1199,7 +1200,7 @@ g(x, y) = x^2 + y^2 = 1
 <h2>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h2>
 <div class="section" id="joseph-louis-lagrange">
 <h3>Joseph Louis Lagrange<a class="headerlink" href="#joseph-louis-lagrange" title="Permalink to this heading">#</a></h3>
-<p>Lagrange fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Fue un hombre de su tiempo, un italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela “École Polytechnique”, recién fundada por Napoleón. Le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
+<p>Lagrange fue uno de los grandes matématicos y físicos del siglo XVIII y principios del XIX. Fue un hombre de su tiempo, un italiano del norte que recorrió la Europa de su época, y que fue profesor en la gran escuela «École Polytechnique», recién fundada por Napoleón. Le debemos muchas contribuciones, entre ellas las reformulación de la mecánica Newtoniana. Aquí tienes su entrada en la wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">J. L. Lagrange</a></p>
 </div>
 <div class="section" id="principio-de-minima-accion">
 <h3>Principio de mínima acción<a class="headerlink" href="#principio-de-minima-accion" title="Permalink to this heading">#</a></h3>
@@ -1278,7 +1279,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  1.0082801354029087 b =  -0.07869700173273128
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =  0.8926800791262874 b =  0.4062133553486462
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_54_1.png" src="../_images/tderivadas_min_max_54_1.png" />
@@ -1298,7 +1299,7 @@ y(x \, | \, a, b) = a \, x + b
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  1.0244746224995507
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq  1.1326464585312217
 </pre></div>
 </div>
 <img alt="../_images/tderivadas_min_max_56_1.png" src="../_images/tderivadas_min_max_56_1.png" />
@@ -1312,7 +1313,7 @@ y(x \, | \, a, b) = a \, x + b
 Una red está compuesta de neuronas que se disponen en capas. En la figura de la siguiente celda se muestra un esquema de una red neuronal. Cada neurona tienen un conjunto de entradas y una sola salida. Matemáticamente cada neurona es una función escalar, <span class="math notranslate nohighlight">\(\mathrm{R}^n \to \mathrm{R}\)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es el número de entradas. La última capa de la red suele ser una sola neurona y su salida es la respuesta de la red. Matemáticamente toda la red es una función escalar <span class="math notranslate nohighlight">\(\mathrm{R}^N \to \mathrm{R}\)</span>, donde <span class="math notranslate nohighlight">\(N\)</span> es el número de entradas en la primera capa.</p>
 <p>En estos vídeos puedes encontrar una introducción sencillas a las redes neuronales <a class="reference external" href="https://www.youtube.com/watch?v=aircAruvnKk">[&gt;]</a> y a sus métodos de entrenamiento <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a></p>
 <p><strong>Esquema de una red neuronal</strong></p>
-<p>Las neuronas en la primera capa reciben los datos del mundo “exterior” y la neurona de la última capa da la respuesta de la red.</p>
+<p>Las neuronas en la primera capa reciben los datos del mundo «exterior» y la neurona de la última capa da la respuesta de la red.</p>
 <a class="reference internal image-reference" href="../_images/NN.png"><img alt="../_images/NN.png" src="../_images/NN.png" style="width: 400px;" /></a>
 <p>Las capas intermedias las podemos considerar <em>ocultas</em>.</p>
 <p>La función escalar de la neurona es habitualmente una sigmoide.</p>
@@ -1357,7 +1358,7 @@ E({\bf a}^{lk}, b^{lk}) = \frac{1}{M-Q} \, \sum_{i=1}^M (y_i - y({\bf x}_i | {\b
 <p>En el ejemplo del ajuste por mínimos cuadrados, la función <span class="math notranslate nohighlight">\(\chi^2(a, b)\)</span> dependía de dos parámetros, y podíamos calcularlos analíticamente, pero ahora nuestra función error <span class="math notranslate nohighlight">\(E({\bf a}^{lk}, b^{lk})\)</span> tiene <span class="math notranslate nohighlight">\(Q\)</span> parámetros, que puede ser un número muy grande.</p>
 <p>Sería imposible calcular el mínimo analíticamente, pero los ingeniros, físicos y matemáticos de Google han sido capaces de desarrollar una serie de métodos computacionales muy potentes con los que estimar los parámetros de las neuronas minimizando la función error. ¡Y se basan en calcular <strong>grandientes</strong> y aplicar <strong>la regla de la cadena</strong>!</p>
 <p>Aquí hay un vídeo <a class="reference external" href="https://www.youtube.com/watch?v=IHZwWFHWa-w">[&gt;]</a> que lo explica.</p>
-<p>Una vez la red está “entrenada” o “ha aprendido” (esto es, hemos minimizado su función error), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, predicirá para nuestro asombro si son perros o gatos. Sea ahora una imagen con vector <span class="math notranslate nohighlight">\({\bf x}\)</span>, la respuesta de la red vendrá dada por  <span class="math notranslate nohighlight">\(y({\bf x} \, | \, \hat{{\bf a}}^{lk}, \hat{b}^{lk})\)</span></p>
+<p>Una vez la red está «entrenada» o «ha aprendido» (esto es, hemos minimizado su función error), le podemos mostrar otras fotos de gatos y perros y para cada una de ellas, predicirá para nuestro asombro si son perros o gatos. Sea ahora una imagen con vector <span class="math notranslate nohighlight">\({\bf x}\)</span>, la respuesta de la red vendrá dada por  <span class="math notranslate nohighlight">\(y({\bf x} \, | \, \hat{{\bf a}}^{lk}, \hat{b}^{lk})\)</span></p>
 <p><strong>¿Y ésto tiene que ver con la Física?</strong></p>
 <p>¡Mucho! En la actualidad pocos son los análisis en Física de Partículas, por ejemplo, donde no se utilice una red neuronal o un método similar.</p>
 <p>Se utilizan para identificar si una partícula es un electrón o un muón (su hermano más pesado). O si en una interacción hay un bosón de Higgs o no. Para decidir si una interacción es relevante o es del montón.</p>
@@ -1549,16 +1550,16 @@ autovector 2 : [1.23404266e-05 1.00000000e+00]
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tderivadas_coordenadas_cadena.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tderivadas_coordenadas_cadena.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Cambio de coordenadas y regla de la cadena</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tintegral_1d.html" title="next page">
+    <a class='right-next' id="next-link" href="tintegral_1d.html" title="siguiente página">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Integrales en una dimensión</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -1570,9 +1571,8 @@ autovector 2 : [1.23404266e-05 1.00000000e+00]
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By José Ángel Hernando Morata<br/>
+    By J. Ángel Hernando Morata<br/>
   
-      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
 </p>
         </footer>
     </div>

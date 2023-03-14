@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,11 +53,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="prev" title="Teorema de Stockes y Teorema de Gauss" href="tcalvec_stockes_gauss.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="es">
     
 
     <!-- Google Analytics -->
@@ -615,7 +616,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar  2 20:28:05 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:39 2023
 </pre></div>
 </div>
 </div>
@@ -715,7 +716,7 @@ h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
 </div>
 <div class="section" id="funciones-ortogonales">
 <h3>Funciones ortogonales<a class="headerlink" href="#funciones-ortogonales" title="Permalink to this heading">#</a></h3>
-<p>Las siguiente funciones, <span class="math notranslate nohighlight">\(\sin(nx), \, \cos(mx)\)</span> con <span class="math notranslate nohighlight">\(n, m = 1, 2, \dots \in \mathcal{N}\)</span> son “ortogonales”.</p>
+<p>Las siguiente funciones, <span class="math notranslate nohighlight">\(\sin(nx), \, \cos(mx)\)</span> con <span class="math notranslate nohighlight">\(n, m = 1, 2, \dots \in \mathcal{N}\)</span> son «ortogonales».</p>
 <p><em>Teorema:</em> Se cumple:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\int_{-\pi}^{\pi} \sin(nx) \cos (mx) \mathrm{d}x = 0\)</span></p></li>
@@ -788,7 +789,7 @@ h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
 \[
 \int_a^b f^2(x) \, \mathrm{d}x = \int_a^b g^2(x) \, \mathrm{d}x = 1
 \]</div>
-<p>Decimos que un conjunto numerable <span class="math notranslate nohighlight">\(\{\Psi_n(x)\}\)</span> con <span class="math notranslate nohighlight">\(n \in \mathcal{N}\)</span> es completo en un intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, si son funciones ortonormales que permiten que “toda” función <span class="math notranslate nohighlight">\(f(x)\)</span> pueda expresarse como:</p>
+<p>Decimos que un conjunto numerable <span class="math notranslate nohighlight">\(\{\Psi_n(x)\}\)</span> con <span class="math notranslate nohighlight">\(n \in \mathcal{N}\)</span> es completo en un intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, si son funciones ortonormales que permiten que «toda» función <span class="math notranslate nohighlight">\(f(x)\)</span> pueda expresarse como:</p>
 <div class="math notranslate nohighlight">
 \[
 f(x) = \sum_n a_n \, \Psi_n(x)
@@ -1059,7 +1060,7 @@ S(x) = \sum_{n = -\infty}^{\infty} c_n \, e^{inx}
 </div>
 <div class="section" id="aun-hay-mas">
 <h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
-<p>Joseph Fourier fue un gran físico y matemático Francés que se dio cuenta que una función periódica podía descomponerse en una serie de sumas de senos y cosenos. Fourier participó en la famosa expedición “científica” de Napoleón a Egipto.</p>
+<p>Joseph Fourier fue un gran físico y matemático Francés que se dio cuenta que una función periódica podía descomponerse en una serie de sumas de senos y cosenos. Fourier participó en la famosa expedición «científica» de Napoleón a Egipto.</p>
 <a class="reference internal image-reference" href="../_images/Fourier.jpg"><img alt="../_images/Fourier.jpg" src="../_images/Fourier.jpg" style="width: 200px;" /></a>
 <p>Aquí tienes su <a class="reference external" href="https://es.wikipedia.org/wiki/Joseph_Fourier">entrada</a> en la Wikipedia.</p>
 <p>Por cierto, Dirichlet fue alumno suyo.</p>
@@ -1096,10 +1097,10 @@ S(x) = \sum_{n = -\infty}^{\infty} c_n \, e^{inx}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tcalvec_stockes_gauss.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tcalvec_stockes_gauss.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Teorema de Stockes y Teorema de Gauss</p>
         </div>
     </a>
@@ -1110,9 +1111,8 @@ S(x) = \sum_{n = -\infty}^{\infty} c_n \, e^{inx}
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By José Ángel Hernando Morata<br/>
+    By J. Ángel Hernando Morata<br/>
   
-      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
 </p>
         </footer>
     </div>

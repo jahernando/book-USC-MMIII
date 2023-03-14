@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,12 +53,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Mínimos y máximos de funciones escalares" href="tderivadas_min_max.html" />
     <link rel="prev" title="Gradiente, matriz jacobiana, funciones diferenciables" href="tderivadas_gradiante_jacobiana.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="es">
     
 
     <!-- Google Analytics -->
@@ -590,7 +591,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Thu Mar  2 20:27:20 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:08:00 2023
 </pre></div>
 </div>
 </div>
@@ -864,13 +865,13 @@ h(x,y,z)  = (x^2y)^2+(y^2)^2-e^{-xz}
 \[
 \nabla f \left({\bf r}(t_0) \right) \, {\bf r}'(t_0) = 0
 \]</div>
-<p>Que corresponde a dos vectores ortogonales. El primero es el gradiente de <span class="math notranslate nohighlight">\(f(x, y, z)\)</span> en <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span>, esto es, <span class="math notranslate nohighlight">\(\nabla f(x_0, y_0, z_0)\)</span>. El segundo es el vector “velocidad” de la trayectoria en <span class="math notranslate nohighlight">\(t_0\)</span>.</p>
+<p>Que corresponde a dos vectores ortogonales. El primero es el gradiente de <span class="math notranslate nohighlight">\(f(x, y, z)\)</span> en <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span>, esto es, <span class="math notranslate nohighlight">\(\nabla f(x_0, y_0, z_0)\)</span>. El segundo es el vector «velocidad» de la trayectoria en <span class="math notranslate nohighlight">\(t_0\)</span>.</p>
 <p>En un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>, dado un punto <span class="math notranslate nohighlight">\({\bf x}_0 = (x_0, y_0, z_0)\)</span> y vector <span class="math notranslate nohighlight">\({\bf n}\)</span>. Podemos dar la ecuación del plano normal a <span class="math notranslate nohighlight">\({\bf n}\)</span>, que pasa por <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, como aquellos puntos, <span class="math notranslate nohighlight">\({\bf x} = (x, y, z)\)</span> cuyo vector, <span class="math notranslate nohighlight">\({\bf x} - {\bf x}_0\)</span>, <span class="math notranslate nohighlight">\((x - x_0, y - y_0, z - z_0)\)</span>, es ortogonal a <span class="math notranslate nohighlight">\({\bf n}\)</span>, esto es:</p>
 <div class="math notranslate nohighlight">
 \[
 ({\bf x} - {\bf x}_0) \, {\bf n} = 0
 \]</div>
-<p>Si nos fijamos en el caso anterior, la ‘velocidad’ de la trayectoria, <span class="math notranslate nohighlight">\({\bf r}'(t_0)\)</span>, debe estar contenida entonces en el plano definido por el punto <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span> y el vector <span class="math notranslate nohighlight">\(\nabla f(x_0, y_0, z_0)\)</span>.</p>
+<p>Si nos fijamos en el caso anterior, la “velocidad” de la trayectoria, <span class="math notranslate nohighlight">\({\bf r}'(t_0)\)</span>, debe estar contenida entonces en el plano definido por el punto <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span> y el vector <span class="math notranslate nohighlight">\(\nabla f(x_0, y_0, z_0)\)</span>.</p>
 <p>Ese plano, que es el plano tangente a al conjunto de nivel <span class="math notranslate nohighlight">\(f(x, y, z) = c\)</span> en <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span>, viene dado por la ecuación:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -882,7 +883,7 @@ f'_x(x_0, y_0, z_0) \, (x - x_0) \, + \, f'_y(x_0, y_0, z_0) \, (y - y_0) + \, f
 \]</div>
 <p>Date cuenta que esta forma de dar el plano, solo sirve para funciones, <span class="math notranslate nohighlight">\(f(x, y, z)\)</span>, cuyo gradiente en un punto, <span class="math notranslate nohighlight">\(\nabla f(x_0, y_0, z_0)\)</span>, sea distinto de cero.</p>
 <p>La siguiente celda muestra el plano tangente en un punto al conjunto de nivel de la función <span class="math notranslate nohighlight">\(f(x, y, z) = x^2 + y^2 + z^2\)</span> de valor <span class="math notranslate nohighlight">\(c=1\)</span>, que corresponde a la esfera de radio unidad.</p>
-<p>También se muestra el gradiente de la función en el punto de la esfera dado por <span class="math notranslate nohighlight">\(\theta = \pi/4, \; \phi = 3\pi/2\)</span>, y dos trayectorias dentro de la esfera, una vertical, un meridiano, y otra horizontal, un paralelo, que pasan por ese punto. Puedes ver también los vectores “velocidad” de esas trayectorias, que están, claro, dentro del plano.</p>
+<p>También se muestra el gradiente de la función en el punto de la esfera dado por <span class="math notranslate nohighlight">\(\theta = \pi/4, \; \phi = 3\pi/2\)</span>, y dos trayectorias dentro de la esfera, una vertical, un meridiano, y otra horizontal, un paralelo, que pasan por ese punto. Puedes ver también los vectores «velocidad» de esas trayectorias, que están, claro, dentro del plano.</p>
 <p><em>Explora</em> y cambia el punto de la esfera.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1005,16 +1006,16 @@ z = y + \sqrt{2}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tderivadas_gradiante_jacobiana.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tderivadas_gradiante_jacobiana.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Gradiente, matriz jacobiana, funciones diferenciables</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tderivadas_min_max.html" title="next page">
+    <a class='right-next' id="next-link" href="tderivadas_min_max.html" title="siguiente página">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Mínimos y máximos de funciones escalares</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -1026,9 +1027,8 @@ z = y + \sqrt{2}
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By José Ángel Hernando Morata<br/>
+    By J. Ángel Hernando Morata<br/>
   
-      &copy; Copyright USC - J.A. Hernando - 2023.<br/>
 </p>
         </footer>
     </div>

@@ -718,7 +718,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:55 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar 16 10:43:31 2023
 </pre></div>
 </div>
 </div>
@@ -759,10 +759,10 @@ title="Print to PDF"
 </div>
 <div class="section" id="integrales-inmediatas">
 <h2>Integrales inmediatas<a class="headerlink" href="#integrales-inmediatas" title="Permalink to this heading">#</a></h2>
-<p>Alguna integrales son inmediatas gracias al 1er teorema del cálculo integral que nos dice que si <span class="math notranslate nohighlight">\(f(x)\)</span> es una función continua en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span></p>
+<p>Alguna integrales son inmediatas gracias al 1er teorema del cálculo integral que nos dice que si <span class="math notranslate nohighlight">\(f(x)\)</span> es una función continua.</p>
 <div class="math notranslate nohighlight">
 \[
-F(x) = \int_a^b f(x) \, \mathrm{d}x \;\; \Rightarrow \;\; F'(x) = f(x)
+F(x) = \int_a^x f(x) \, \mathrm{d}x \;\; \Rightarrow \;\; F'(x) = f(x)
 \]</div>
 <p>Integrales inmediatas triviales</p>
 <div class="math notranslate nohighlight">
@@ -904,7 +904,7 @@ Q_m(x) = x^m + b_{m-1} x^{m-1} + \dots + b_{0}
 <li><p>descomponer la razón en suma de razones más sencillas,</p></li>
 <li><p>integrar cada razón sencilla cuyas integrales están tabuladas.</p></li>
 </ol>
-<p><em>Cuestión:</em> En el caso de que la razón entre los polinomios <span class="math notranslate nohighlight">\(n \ge m\)</span>, ¿cómo harías la integral?</p>
+<p><em>Cuestión:</em> En el caso de que la razón entre los polinomios sea <span class="math notranslate nohighlight">\(n \ge m\)</span>, ¿cómo harías la integral?</p>
 <div class="section" id="descomposicion-de-polinomios">
 <h3>Descomposición de polinomios<a class="headerlink" href="#descomposicion-de-polinomios" title="Permalink to this heading">#</a></h3>
 <p>El polinomio del denominador se puede descomponer en el producto de polinomios:</p>
@@ -914,7 +914,7 @@ Q_m(x) = (x-\alpha_1)^{n_1} \dots (x-\alpha_p)^{n_p} \; (x^2+\beta_1x+\gamma_1)^
 \]</div>
 <p>donde las <span class="math notranslate nohighlight">\(\alpha_i\)</span> son las <span class="math notranslate nohighlight">\(p\)</span> raices reales, <span class="math notranslate nohighlight">\(i=1, \dots, p\)</span>, cada una de ellas con multiplicidad <span class="math notranslate nohighlight">\(n_i\)</span>.</p>
 <p>y las <span class="math notranslate nohighlight">\(\beta_i, \gamma_i\)</span> son los valores reales que corresponden a las <span class="math notranslate nohighlight">\(q\)</span> raices imaginarias, <span class="math notranslate nohighlight">\(i=1, \dots, q\)</span>, que cumplen, <span class="math notranslate nohighlight">\(\beta^2_i - 4 \gamma_i \lt 0\)</span>, y que cada una aparece con multiplicidad <span class="math notranslate nohighlight">\(m_i\)</span>.</p>
-<p><em>Ejemplo:</em> Descompón el polinomio: <span class="math notranslate nohighlight">\(Q_3(x) = x^3 + 2x^2 +2x +1\)</span></p>
+<p><em>Ejemplo:</em> Descomponer el polinomio: <span class="math notranslate nohighlight">\(Q_3(x) = x^3 + 2x^2 +2x +1\)</span></p>
 <p>Podemos comprobar que una raiz es <span class="math notranslate nohighlight">\(\alpha = -1, \; Q(-1) = -1 + 2 -2 + 1 = 0.\)</span></p>
 <p>Luego el polinomio queda:</p>
 <div class="math notranslate nohighlight">
@@ -1079,7 +1079,7 @@ A+B = 3, \, A+B+C = 3, A+C = 1
  \cos^2 x = \frac{1+\cos 2x}{2}, \;  \sin^2 x = \frac{1-\cos 2x}{2}
 \]</div>
 <ul class="simple">
-<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es impar, <span class="math notranslate nohighlight">\(2p = n+1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \cos x, \; \mathrm{d}u = - \sin x \, \mathrm{d}x\)</span>:</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es impar, <span class="math notranslate nohighlight">\(n = 2p+1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \cos x, \; \mathrm{d}u = - \sin x \, \mathrm{d}x\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1087,7 +1087,7 @@ A+B = 3, \, A+B+C = 3, A+C = 1
  = \int - (1-u^2)^p u^m \, \mathrm{d}u
  \]</div>
 <ul class="simple">
-<li><p>si <span class="math notranslate nohighlight">\(m\)</span> es impar, <span class="math notranslate nohighlight">\(2q = m+1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \sin x, \, \mathrm{d}u = \cos x \, \mathrm{dx}\)</span>:</p></li>
+<li><p>si <span class="math notranslate nohighlight">\(m\)</span> es impar, <span class="math notranslate nohighlight">\(m = 2q+1\)</span>, hacemos el cambio <span class="math notranslate nohighlight">\(u = \sin x, \, \mathrm{d}u = \cos x \, \mathrm{dx}\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[

@@ -587,16 +587,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:44 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar 16 10:43:23 2023
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="objectivos">
 <h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
-<p>Introducir el concepto de suma de Riemman</p>
+<p>Introducir el concepto de suma de Riemann.</p>
 <p>Mostrar algunos ejemplos</p>
-<p>Recordad los métodos de Integración</p>
+<p>Recordar los métodos de integración</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># general imports</span>
@@ -646,7 +646,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="suma-de-riemann">
 <h3>Suma de Riemann<a class="headerlink" href="#suma-de-riemann" title="Permalink to this heading">#</a></h3>
-<p>Sea <span class="math notranslate nohighlight">\(P\)</span> una partición del intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, y <span class="math notranslate nohighlight">\(t_i\)</span> un punto en el subintervalo <span class="math notranslate nohighlight">\([x_{i-1}, x_i]\)</span> y <span class="math notranslate nohighlight">\(\Delta x_i = x_{i} - x_{i-1}\)</span> con <span class="math notranslate nohighlight">\(i = 1, \dots, n\)</span>, y <span class="math notranslate nohighlight">\(f(x)\)</span> una función, <span class="math notranslate nohighlight">\(\mathcal{R} \to \mathcal{R}\)</span>; llamamos suma de Rienmman a la cantidad:</p>
+<p>Sea <span class="math notranslate nohighlight">\(P\)</span> una partición del intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, y <span class="math notranslate nohighlight">\(t_i\)</span> un punto en el subintervalo <span class="math notranslate nohighlight">\([x_{i-1}, x_i]\)</span> y <span class="math notranslate nohighlight">\(\Delta x_i = x_{i} - x_{i-1}\)</span> con <span class="math notranslate nohighlight">\(i = 1, \dots, n\)</span>, y <span class="math notranslate nohighlight">\(f(x)\)</span> una función, <span class="math notranslate nohighlight">\(\mathcal{R} \to \mathcal{R}\)</span>; llamamos suma de Riemann a la cantidad:</p>
 <div class="math notranslate nohighlight">
 \[
 \mathcal{S}(f, P) = \sum_{i=1}^n f(t_i) \, \Delta x_i
@@ -669,19 +669,19 @@ title="Print to PDF"
 <p><em>Explora:</em> Modifica en la siguiente celda la función, el intervalo, y especialmente el número de subintervalos de la partición regular.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rsum</span> <span class="o">=</span> <span class="n">riemann_sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rsum</span> <span class="o">=</span> <span class="n">riemann_sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span> <span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Riemann Sum </span><span class="si">{:6.5f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rsum</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 1.99937
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Riemann Sum 1.99936
 </pre></div>
 </div>
 <img alt="../_images/tintegral_1d_10_1.png" src="../_images/tintegral_1d_10_1.png" />
 </div>
 </div>
-<p>En la siguiente celda estudiamos la evolución de la suma de Riemman para particiones regulares cada vez más finas.</p>
+<p>En la siguiente celda estudiamos la evolución de la suma de Riemann para particiones regulares cada vez más finas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fun</span>   <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -696,7 +696,7 @@ title="Print to PDF"
 <img alt="../_images/tintegral_1d_12_0.png" src="../_images/tintegral_1d_12_0.png" />
 </div>
 </div>
-<p>Comprobamos que la suma de Riemann para particiones cada vez más finas converte a un determinado valor <span class="math notranslate nohighlight">\(S\)</span></p>
+<p>Comprobamos que la suma de Riemann para particiones cada vez más finas converge a un determinado valor <span class="math notranslate nohighlight">\(S\)</span>.</p>
 </div>
 <div class="section" id="integral-de-riemman">
 <h3>Integral de Riemman<a class="headerlink" href="#integral-de-riemman" title="Permalink to this heading">#</a></h3>

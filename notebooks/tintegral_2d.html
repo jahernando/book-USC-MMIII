@@ -611,7 +611,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:46 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Thu Mar 16 10:43:25 2023
 </pre></div>
 </div>
 </div>
@@ -666,7 +666,7 @@ title="Print to PDF"
 <div class="section" id="recordatorio-de-la-suma-de-riemann">
 <h3>Recordatorio de la Suma De Riemann<a class="headerlink" href="#recordatorio-de-la-suma-de-riemann" title="Permalink to this heading">#</a></h3>
 <p>Para calcular el <em>área</em> bajo una curva de una función real, <span class="math notranslate nohighlight">\(f(x)\)</span>, y el eje <span class="math notranslate nohighlight">\(y=0\)</span> en un intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, habíamos introducido la integral de una dimensión.</p>
-<p>Que la defininmos a partir de la <strong>suma de Riemann</strong>. Dada la partición de un intervalo , y una función, acotada y continua en dicho intervalo, dábamos la suma de Riemman como:</p>
+<p>Que la defininmos a partir de la <strong>suma de Riemann</strong>. Dada la partición de un intervalo , y una función, acotada y continua en dicho intervalo, dábamos la suma de Riemann como:</p>
 <div class="math notranslate nohighlight">
 \[
 \mathcal{S}(f, \mathcal{P}) = \sum_{i=1, n} f(x'_i) (x_i - x_{i-1})  
@@ -684,7 +684,7 @@ title="Print to PDF"
 \mathcal{L}(f, \mathcal{P}) = \sum_{i=1, n} f(x'_i) (x_i - x_{i-1})  
 \]</div>
 <p>donde ahora <span class="math notranslate nohighlight">\(x'_i\)</span> es el valor del intervalo <span class="math notranslate nohighlight">\([x_i, x_{i-1}]\)</span> donde la función <span class="math notranslate nohighlight">\(f(x)\)</span> es <em>mínima</em>.</p>
-<p>La función tenía integral en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> si para particiones cada ver más finas, las tres sumas de Riemann convergían a un determinado valor, integral.</p>
+<p>La función tenía integral en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> si para particiones cada ver más finas, las tres sumas de Riemann convergían a un determinado valor, la integral.</p>
 <div class="math notranslate nohighlight">
 \[
 \int_a^b \, f(x) \, \mathrm{d}x
@@ -890,7 +890,7 @@ title="Print to PDF"
 \[
 \int \int_{R} f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_0^1 \left[ \int_0^x f(x, y) \, \mathrm{d}y \right] \mathrm{d}x
 \]</div>
-<p>Las dos variables ya no son independientes, con esta definición, la variable <span class="math notranslate nohighlight">\(y\)</span>, depende de la <span class="math notranslate nohighlight">\(x\)</span>. Fijado un valor de <span class="math notranslate nohighlight">\(x\)</span>, el intervalo de integración para la <span class="math notranslate nohighlight">\(y\)</span> es <span class="math notranslate nohighlight">\([0, x]\)</span>.</p>
+<p>Las dos variables ya no son independientes, con esta definición la variable <span class="math notranslate nohighlight">\(y\)</span> depende de la <span class="math notranslate nohighlight">\(x\)</span>. Fijado un valor de <span class="math notranslate nohighlight">\(x\)</span>, el intervalo de integración para la <span class="math notranslate nohighlight">\(y\)</span> es <span class="math notranslate nohighlight">\([0, x]\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fx</span>  <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span>
@@ -955,7 +955,7 @@ title="Print to PDF"
 \[
 \{ c \le y \le d, \;\; \xi_0(y) \le x \le \xi_1(y) \}
 \]</div>
-<p>Algunas regiones admites definirlas de los dos tipos.</p>
+<p>Algunas regiones admiten los dos tipos de definiciones.</p>
 <p>Si la región, <span class="math notranslate nohighlight">\(R\)</span>, es de tipo I, la integral queda:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -971,10 +971,11 @@ title="Print to PDF"
 \[
 \phi_0(x) = 0, \;\; \phi_1(x) = x
 \]</div>
-<p>definido como tipo II:
-$<span class="math notranslate nohighlight">\(
+<p>definido como tipo II:</p>
+<div class="math notranslate nohighlight">
+\[
 \xi_0(y) = y, \;\; \xi_1(y) = 1
-\)</span>$</p>
+\]</div>
 <p><em>Ejercicio</em>: Calcula la integral <span class="math notranslate nohighlight">\(f(x, y) = y \)</span>, en el triángulo, <span class="math notranslate nohighlight">\(\{0 \le x \le 1,  \; 0 \le y \le x \}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1022,7 +1023,7 @@ $<span class="math notranslate nohighlight">\(
 <div class="math notranslate nohighlight">
 \[
 \int_0^a \left. \sqrt{a^2 - y^2} \, x  \right|_0^{\sqrt{a^2-y^2}} \mathrm{d}y = 
-\int_0^a a^2 - y^2 \mathrm{d}y = \left. a^2 y - \frac{y^3}{3} \right|_0^a = \frac{2 a^3}{3}
+\int_0^a (a^2 - y^2) \, \mathrm{d}y = \left. a^2 y - \frac{y^3}{3} \right|_0^a = \frac{2 a^3}{3}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1042,7 +1043,7 @@ $<span class="math notranslate nohighlight">\(
 <div class="section" id="cambio-de-variables-jacobiano">
 <h2>Cambio de variables. Jacobiano<a class="headerlink" href="#cambio-de-variables-jacobiano" title="Permalink to this heading">#</a></h2>
 <p>En el caso anterior puede ser más conveniente realizar la integral en coordenadas polares. ¿Cómo se integra tras cambiar de coordenadas?</p>
-<p>Observa en las figuras siguientes como la región de una sección del anillo de radio <span class="math notranslate nohighlight">\([0.5, 1.]\)</span> y ángulo <span class="math notranslate nohighlight">\([0, \pi/2]\)</span> es una región rectangular en <span class="math notranslate nohighlight">\((r, \phi)\)</span>.</p>
+<p>Observa en las figuras siguientes como la región de una sección del anillo de radio <span class="math notranslate nohighlight">\([0.5, 1]\)</span> y ángulo <span class="math notranslate nohighlight">\([0, \pi/2]\)</span> es una región rectangular en <span class="math notranslate nohighlight">\((r, \phi)\)</span>.</p>
 <p>Sin embargo las particiones rectángulares en <span class="math notranslate nohighlight">\((r, \phi)\)</span> se transforman en polígonos en el plano <span class="math notranslate nohighlight">\((x, y)\)</span>.</p>
 <p>Para la integrar necesitamos calcular el volumen de los prismas de la summa de Riemann cuya base son esos polígonos (que al hacer las particiones más pequeñas se convierten el paralelogramos), cuya área viene dada por los dos vectores que definen sus lados.</p>
 <p>En las siguientes celdas te mostramos como se transforman los vectores en las particiones al hacer el cambio de coordenadas.</p>
@@ -1089,8 +1090,8 @@ $<span class="math notranslate nohighlight">\(
 <img alt="../_images/tintegral_2d_48_0.png" src="../_images/tintegral_2d_48_0.png" />
 </div>
 </div>
-<p>El área de cada uno de las regiones en el plano <span class="math notranslate nohighlight">\((x, y)\)</span> viene dado por el producto escalar de los vectores de sus lados.</p>
-<p>Consideremos un cambio de variables <span class="math notranslate nohighlight">\((u, v) \to (x, y)\)</span>. El vector entre <span class="math notranslate nohighlight">\((u_0, v_0)\)</span> y <span class="math notranslate nohighlight">\((u_0 + \Delta u, v_0)\)</span> (uno de los lados de los rectángulos en <span class="math notranslate nohighlight">\((u, v)\)</span>), se transforma en el vector (que corresponde con uno de los lados del polígono en <span class="math notranslate nohighlight">\((x,y)\)</span>):</p>
+<p>El área de cada uno de las regiones en el plano <span class="math notranslate nohighlight">\((x, y)\)</span> viene dado por el producto vectorial de los vectores de sus lados.</p>
+<p>Consideremos un cambio de variables <span class="math notranslate nohighlight">\((u, v) \to (x, y)\)</span>. El vector entre <span class="math notranslate nohighlight">\((u_0, v_0)\)</span> y <span class="math notranslate nohighlight">\((u_0 + \Delta u, v_0)\)</span> - uno de los lados de los rectángulos en <span class="math notranslate nohighlight">\((u, v)\)</span>-, se transforma en el vector similar que corresponde a uno de los lados del polígono en <span class="math notranslate nohighlight">\((x,y)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \left (x(u_0+\Delta u, v_0) - x(u_0, v_0), \;\; y(u_0+\Delta u, v_0) - y(u_0, v_0)\right)
@@ -1101,32 +1102,6 @@ $<span class="math notranslate nohighlight">\(
 \left(\frac{\partial x}{\partial u}(u_0, v_0) \, \Delta u, \;\; \frac{\partial y}{\partial u} (u_0, v_0) \, \Delta u \right)
 \]</div>
 <p>De igual forma, el vector <span class="math notranslate nohighlight">\((u_0, v_0 + \Delta v) - (u_0, v_0)\)</span>, el otro lado del rectángulo en <span class="math notranslate nohighlight">\((u, v)\)</span>, se transforma en el vector, el otro lado en <span class="math notranslate nohighlight">\((x, y)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\left(\frac{\partial x}{\partial v}(u_0, v_0) \, \Delta v, \;\; \frac{\partial y}{\partial v} (u_0, v_0) \, \Delta v \right)
-\]</div>
-<p>El área de cada uno de las regiones en el plano <span class="math notranslate nohighlight">\((x, y)\)</span> viene dado por el producto escalar de los vectores de sus lados.</p>
-<p>Consideremos un cambio de variables <span class="math notranslate nohighlight">\((u, v) \to (x, y)\)</span>.</p>
-<p>El vector entre <span class="math notranslate nohighlight">\((u_0, v_0)\)</span> y <span class="math notranslate nohighlight">\((u_0 + \Delta u, v_0)\)</span> (uno de los lados de los rectángulos en <span class="math notranslate nohighlight">\((u, v)\)</span>), se transforma en el vector (que corresponde con uno de los lados del polígono en <span class="math notranslate nohighlight">\((x,y)\)</span>):</p>
-<p>Al ser al cambio diferenciable, el punto queda:</p>
-<div class="math notranslate nohighlight">
-\[
-\left (x(u_0+\Delta u, v_0) , \;\; y(u_0+\Delta u, v_0) \,\right) = 
-\left (x(u_0, v_0) + \frac{\partial x}{\partial u}(u_0, v_0) \, \Delta u,
-\;\; y(u_0, v_0) + \frac{\partial y}{\partial u} (u_0, v_0) \, \Delta u \right)
-\]</div>
-<p>Y el vector:</p>
-<div class="math notranslate nohighlight">
-\[
-\left (x(u_0+\Delta u, v_0) , \;\; y(u_0+\Delta u, v_0) \,\right) - (x (u_0, v_0), y (x_0, v_0) \, ) = 
-\left(\frac{\partial x}{\partial u}(u_0, v_0) \, \Delta u, \;\; \frac{\partial y}{\partial u} (u_0, v_0) \, \Delta u \right)
-\]</div>
-<p>El vector el vector <span class="math notranslate nohighlight">\((u_0 + \Delta u, v_0 + \Delta v) - (u_0, v_0)\)</span>, se transforma en cartesianas:</p>
-<div class="math notranslate nohighlight">
-\[
-\left(\frac{\partial x}{\partial u}(u_0, v_0) \, \Delta u, \;\; \frac{\partial y}{\partial u} (u_0, v_0) \, \Delta u \right)
-\]</div>
-<p>De igual forma, el vector <span class="math notranslate nohighlight">\((u_0, v_0 + \Delta v) - (u_0, v_0)\)</span>, el otro lado del rectángulo en <span class="math notranslate nohighlight">\((u, v)\)</span>, se transforma en el vector, el otro lado en <span class="math notranslate nohighlight">\((x, y)\)</span>, en cartesianas:</p>
 <div class="math notranslate nohighlight">
 \[
 \left(\frac{\partial x}{\partial v}(u_0, v_0) \, \Delta v, \;\; \frac{\partial y}{\partial v} (u_0, v_0) \, \Delta v \right)
@@ -1152,11 +1127,11 @@ J = \left| \begin{array}{cc} \frac{\partial x}{\partial u} &amp; \frac{\partial 
 \end{array} \right|
 \end{split}\]</div>
 <p>Es el determinante de la matriz jacobiana, o jacobiano.</p>
-<p>Como el diferencial de área siempre tiene que ser positivo, tomaremos el valor absoluto del jacobiano.</p>
+<p>Como el diferencial de área siempre tiene que ser positivo, ¡tomaremos el valor absoluto del jacobiano!</p>
 <p>Así, cuando cambiamos de coordenadas</p>
 <div class="math notranslate nohighlight">
 \[
-\int_R f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_{R'} f(u, v) \, |J| \mathrm{d}u \mathrm{d} v
+\int_R f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_{R'} f(u, v) \, |J| \, \mathrm{d}u \mathrm{d} v
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\(R'\)</span> es la región definida en el espacio (<span class="math notranslate nohighlight">\(u, v\)</span>), <span class="math notranslate nohighlight">\(f(u, v) = f(x(u, v), y(u, v)) \)</span> es la función en las nuevas coordenadas, y finalmente, el diferencial de área viene dado por:</p>
 <div class="math notranslate nohighlight">
@@ -1176,10 +1151,10 @@ J = \left| \begin{array}{cc} \frac{\partial x}{\partial u} &amp; \frac{\partial 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tintegral_2d_56_0.png" src="../_images/tintegral_2d_56_0.png" />
+<img alt="../_images/tintegral_2d_54_0.png" src="../_images/tintegral_2d_54_0.png" />
 </div>
 </div>
-<p>El cambio en Polares es:</p>
+<p>El cambio en polares es:</p>
 <div class="math notranslate nohighlight">
 \[
 x(r, \phi) = r \cos \phi, \;\; y(r, \phi) = r \sin \phi
@@ -1201,15 +1176,16 @@ r \mathrm{d}\phi \mathrm{d} r
 \{ a \le r \le b, \; 0 \le \phi \le \pi/2\}
 \]</div>
 <p>El jacobiano del cambio de coordenadas, que calculamos antes, es: <span class="math notranslate nohighlight">\(J = r\)</span></p>
-<p>para <span class="math notranslate nohighlight">\(f(x, y) = 1\)</span> la integral es:
-$<span class="math notranslate nohighlight">\(
+<p>para <span class="math notranslate nohighlight">\(f(x, y) = 1\)</span> la integral es:</p>
+<div class="math notranslate nohighlight">
+\[
 \int_a^b \int_0^{\pi/2} r \mathrm{d}r \mathrm{d}\phi = \left. \frac{r^2}{2} \right|_a^b \phi \big|_0^{\pi/2} = \frac{\pi}{4} (b^2 -a^2) 
-\)</span>$</p>
+\]</div>
 <p>que es equivalente al área de un cuarto del anillo.</p>
 <p>La función, <span class="math notranslate nohighlight">\(f(x, y) = \log(x^2 + y^2)\)</span>, en polares es <span class="math notranslate nohighlight">\(f(r, \phi) = 2 \log r\)</span>. La integral en la sección del anillo</p>
 <div class="math notranslate nohighlight">
 \[
-\int_a^b \int_0^{\pi/2}  2 \log r \, r \mathrm{d}r \mathrm{d}\phi 
+\int_a^b \int_0^{\pi/2}  (2 \log r) \, r \mathrm{d}r \mathrm{d}\phi 
 \]</div>
 <p>La integral en <span class="math notranslate nohighlight">\(\phi\)</span>, es simplemente <span class="math notranslate nohighlight">\(\pi/2\)</span></p>
 <p>La integral en <span class="math notranslate nohighlight">\(r\)</span> se resuelve por partes:</p>
@@ -1236,7 +1212,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/tintegral_2d_62_0.png" src="../_images/tintegral_2d_62_0.png" />
+<img alt="../_images/tintegral_2d_60_0.png" src="../_images/tintegral_2d_60_0.png" />
 </div>
 </div>
 </div>

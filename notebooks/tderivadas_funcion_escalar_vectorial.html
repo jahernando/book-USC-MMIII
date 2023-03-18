@@ -601,7 +601,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:08:12 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Sat Mar 18 10:55:29 2023
 </pre></div>
 </div>
 </div>
@@ -819,9 +819,8 @@ x^{2} + y^{2} = c
 \[
 \frac{x^2}{c \, a^2} + \frac{y^2}{c \, b^2} = 1
 \]</div>
-<p>cuando <span class="math notranslate nohighlight">\(a = b\)</span>, son circunferencias.
-Y para <span class="math notranslate nohighlight">\(c = 0\)</span>? el conjunto de nivel es el origen <span class="math notranslate nohighlight">\((0, 0)\)</span>.</p>
-<p><em>Ejercicio</em>: Considera ahora la función escalar <span class="math notranslate nohighlight">\(f(x, y) = x^2 - y^2\)</span>. Estudia su dominio, dibuja sus gráfica y sus conjuntos de nivel. ¿qué figura geométrica son?</p>
+<p>cuando <span class="math notranslate nohighlight">\(a = b\)</span>, son circunferencias, y cuando <span class="math notranslate nohighlight">\(c = 0\)</span>? el conjunto de nivel es el origen <span class="math notranslate nohighlight">\((0, 0)\)</span>.</p>
+<p><em>Ejercicio</em>: Considera ahora la función escalar <span class="math notranslate nohighlight">\(f(x, y) = x^2 - y^2\)</span>. Estudia su dominio, dibuja sus gráfica y sus conjuntos de nivel. ¿Qué figura geométrica son?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -852,7 +851,7 @@ Y para <span class="math notranslate nohighlight">\(c = 0\)</span>? el conjunto 
 <img alt="../_images/tderivadas_funcion_escalar_vectorial_24_0.png" src="../_images/tderivadas_funcion_escalar_vectorial_24_0.png" />
 </div>
 </div>
-<p><em>Solución</em>: los cojuntos de nivel son hipérbolas:</p>
+<p><em>Solución</em>: los conjuntos de nivel son hipérbolas:</p>
 <div class="math notranslate nohighlight">
 \[
 x^2 - y^2 = c
@@ -862,7 +861,7 @@ x^2 - y^2 = c
 \[
 y = \pm x
 \]</div>
-<p><em>Ejercicio</em>: Dibuja la gráfica del potencial de un dipolo eléctrico, centrado en origen, cuyas cargas, <span class="math notranslate nohighlight">\(q\)</span> están separadas una distancia <span class="math notranslate nohighlight">\(d\)</span>. Considera por simplicidad <span class="math notranslate nohighlight">\(k=1, q = \pm 1\)</span>, <span class="math notranslate nohighlight">\(d = 2\)</span>.</p>
+<p><em>Ejercicio</em>: Dibuja la gráfica del potencial de un dipolo eléctrico, centrado en origen, cuyas cargas, <span class="math notranslate nohighlight">\(q\)</span>, están separadas una distancia <span class="math notranslate nohighlight">\(d\)</span>. Considera por simplicidad <span class="math notranslate nohighlight">\(k=1, q = \pm 1\)</span>, <span class="math notranslate nohighlight">\(d = 2\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dipole_potential</span><span class="p">():</span>
@@ -911,7 +910,7 @@ y = \pm x
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2319/3657187204.py:4: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_88593/3657187204.py:4: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
   fig.colorbar(sf); plt.axis(&#39;equal&#39;); plt.tight_layout();
 </pre></div>
 </div>
@@ -969,7 +968,7 @@ E_z ( x, y, z) =  k \frac{q}{(x^2+y^2+z^2)} \; \frac{z}{\sqrt{x^2 + y^2 + z^2}}
 <h3>¿Cómo dibujar un campo vectorial?<a class="headerlink" href="#como-dibujar-un-campo-vectorial" title="Permalink to this heading">#</a></h3>
 <p>En realidad no podemos dibujar adecuadamente un campo vectorial.</p>
 <p>No obstante podemos “visualizar” un campo vectorial colocando sobre el espacio inicial unos vectorcitos o flechas, que por su tamaño, grosor o color nos digan en qué dirección va el campo y cuál es su módulo. ¡Aunque sólo podemos hacerlo en <span class="math notranslate nohighlight">\(\mathrm{R}^2\)</span> y <em>malamente</em> en <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>!</p>
-<p>La siguiente figura intenta visualizar el campo eléctrico en dos dimensiones de una carga.</p>
+<p>La siguiente figura intenta visualizar el campo eléctrico de una carga en dos dimensiones.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">charge_electric_field</span><span class="p">():</span>

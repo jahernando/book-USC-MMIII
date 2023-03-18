@@ -577,7 +577,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:19 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Mar 18 10:55:36 2023
 </pre></div>
 </div>
 </div>
@@ -634,7 +634,7 @@ f((x_0, y_0) + (v_x, v_y)) \simeq f(x_0, y_0) + \left(f'_x(x_0, y_0), \, f'_y (x
 \[
 \left(f'_x(x_0, y_0), \, f'_y (x_0, y_0) \right) \, (v_x, v_y)
 \]</div>
-<p>Es el producto vectorial entre <span class="math notranslate nohighlight">\((v_x, v_y)\)</span>, el vector desplazamiento; y otro vector, el <strong>gradiente</strong>, <span class="math notranslate nohighlight">\(\nabla f (x_0, y_0)\)</span>,  cuyas componentes son las derivadas parciales:</p>
+<p>Es el producto escalar entre <span class="math notranslate nohighlight">\((v_x, v_y)\)</span>, el vector desplazamiento; y otro vector, el <strong>gradiente</strong>, <span class="math notranslate nohighlight">\(\nabla f (x_0, y_0)\)</span>,  cuyas componentes son las derivadas parciales:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla f(x_0, y_0) = \left(f'_x(x_0, y_0), \, f'_y (x_0, y_0) \right) = \left( \frac{\partial f(x_0, y_0)}{\partial x}, \frac{\partial f (x_0, y_0)}{\partial y} \right)
@@ -857,7 +857,7 @@ f({\bf x}_0 + {\bf v}) \approx f({\bf x}_0) + \nabla f ({\bf x}_0) \, {\bf v}
 </div>
 <div class="section" id="funcion-diferenciable">
 <h2>Función diferenciable<a class="headerlink" href="#funcion-diferenciable" title="Permalink to this heading">#</a></h2>
-<p>Hemos visto como son las funciones, diferenciable, pero ¿cómo las definimos matemáticamente? ¿cuándo una función será diferenciable?</p>
+<p>Hemos visto como son las funciones diferenciables, pero ¿cómo las definimos matemáticamente? ¿cuándo una función será diferenciable?</p>
 <p>Sea <span class="math notranslate nohighlight">\({\bf f}: D \subset \mathbf{R}^n \to \mathbf{R}^m\)</span>, decimos que la función es <strong>diferenciable</strong> en un punto <span class="math notranslate nohighlight">\({\bf x}\)</span> interior a <span class="math notranslate nohighlight">\(D\)</span> si en una bola centrada en <span class="math notranslate nohighlight">\({\bf x}\)</span> de radio <span class="math notranslate nohighlight">\(r\)</span> y para los vectores que cumplen <span class="math notranslate nohighlight">\(\| {\bf v} \| &lt; r\)</span>,  existe una <em>transformación lineal</em> <span class="math notranslate nohighlight">\({\bf T_x}: \mathbf{R}^n \to \mathbf{R}^m\)</span> y una <em>función error</em>, <span class="math notranslate nohighlight">\({\bf E}:\mathbf{R}^n \to \mathbf{R}^m\)</span>,  <span class="math notranslate nohighlight">\({\bf E}({\bf x},{\bf v})\)</span>, tales que:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -965,10 +965,11 @@ iv) \;\;\; f ({\bf x})/g ({\bf x}); \;\;\; {\text si } \; g({\bf x}) \not= 0\;\;
 \[
 f({\bf x} + {\bf v}) - f({\bf x}) - \nabla f({\bf x}) {\bf v} = {\bf E}({\bf x}, {\bf v})
 \]</div>
-<p>y que
-$<span class="math notranslate nohighlight">\(
+<p>y que</p>
+<div class="math notranslate nohighlight">
+\[
 \lim_{{\bf v} \to {\bf 0}} {\bf E}({\bf x}, {\bf v}) = 0
-\)</span>$</p>
+\]</div>
 <p>Sea el vector <span class="math notranslate nohighlight">\({\bf v}\)</span> con norma <span class="math notranslate nohighlight">\(\lambda\)</span> y vector unitario <span class="math notranslate nohighlight">\({\bf u}\)</span>. Construimos <span class="math notranslate nohighlight">\(n+1\)</span> vectores <span class="math notranslate nohighlight">\({\bf v}_i\)</span>, que van incorporando sucesivamente cada coordenada de <span class="math notranslate nohighlight">\({\bf v}\)</span>, empezando por <span class="math notranslate nohighlight">\({\bf v}_0 = {\bf 0}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -978,10 +979,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 {\bf v}_0 =  {\bf 0} , \; {\bf v}_k  = \sum_{i=1}^k \lambda u_k; \;\; k=1,\dots,n; \; {\bf v}_n = {\bf v}
 \]</div>
-<p>Consideramos, por comodidad, los vectores:
-$<span class="math notranslate nohighlight">\(
+<p>Consideramos, por comodidad, los vectores:</p>
+<div class="math notranslate nohighlight">
+\[
 {\bf b}_k =  {\bf x} + {\bf v}_k, \; {\bf b}_k = {\bf b}_{k-1} + \lambda u_k {\bf e}_k, \; k = 1, \dots, n
-\)</span>$</p>
+\]</div>
 <p>Reescribimos la parte izquierda de la igualdad con una suma telescópica:</p>
 <div class="math notranslate nohighlight">
 \[

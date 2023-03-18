@@ -492,6 +492,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limites">
+   Límites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continuidad">
    Continuidad
   </a>
@@ -538,6 +543,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limites">
+   Límites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continuidad">
    Continuidad
   </a>
@@ -567,7 +577,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:26 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Mar 18 10:55:44 2023
 </pre></div>
 </div>
 </div>
@@ -604,7 +614,7 @@ title="Print to PDF"
 <p>En un espacio real de n-dimensiones, <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, <span class="math notranslate nohighlight">\(n &gt;1\)</span>, la distancia euclídea entre dos puntos, <span class="math notranslate nohighlight">\({\bf x}\)</span> y <span class="math notranslate nohighlight">\({\bf x}_0\)</span> es la norma del vector <span class="math notranslate nohighlight">\({\bf x}- {\bf x}_0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-|| {\bf x} - {\bf x}_0 || = \sqrt{\sum_{i=1, n}(x_i - x_{0i})^2}
+|| {\bf x} - {\bf x}_0 || = \sqrt{\sum_{i=1}^{n}(x_i - x_{0i})^2}
 \]</div>
 <p>Por ejemplo, en dos dimensiones, la distancia entre dos puntos: <span class="math notranslate nohighlight">\((x, y)\)</span> y <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> es :</p>
 <div class="math notranslate nohighlight">
@@ -621,7 +631,7 @@ title="Print to PDF"
 <p>Puedes imaginarte que en dos dimensiones, una bola es un disco. Si es cerrada incluye los puntos en la circunferencia de su frontera, si es abierta, no la incluye.</p>
 <p><em>Cuestión:</em> ¿qué forma geométrica tiene una bola en tres dimensiones? ¿y en <span class="math notranslate nohighlight">\(n\)</span>-dimensiones?</p>
 <p>Algunas definiciones más:</p>
-<p>Decimos que un punto es <em>interior</em> a un conjunto <span class="math notranslate nohighlight">\(S\)</span>, si podemos centrar sobre él una bola, cuyos puntos pertenezcan todos al conjunto. Y <em>frontera</em>, si todas las bolas que centramos en él, tienen siempre puntos del conjunto y puntos que no lo son.</p>
+<p>Decimos que un punto es <em>interior</em> a un conjunto <span class="math notranslate nohighlight">\(S\)</span>, si podemos centrar sobre él una bola cuyos puntos pertenezcan todos al conjunto. Y <em>frontera</em>, si todas las bolas que centramos en él, tienen siempre puntos del conjunto y puntos que no lo son.</p>
 <p><strong>Cuestión</strong>: Considera una bola cerrada en un espacio 2D. ¿Los puntos de la circunferencia que limita el disco son interiores o frontera?</p>
 <p><strong>Ejercicio</strong>: ¿Puedes demostrar que todos los puntos de una bola abierta en un espacio 2D son interiores? Fíjate en la celda siguiente.</p>
 <div class="cell docutils container">
@@ -646,6 +656,10 @@ title="Print to PDF"
 <img alt="../_images/tderivadas_limites_continuidad_8_0.png" src="../_images/tderivadas_limites_continuidad_8_0.png" />
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="limites">
+<h2>Límites<a class="headerlink" href="#limites" title="Permalink to this heading">#</a></h2>
 <p>Vamos a revisar la definición de límite de una dimensión.</p>
 <p>Para una función <span class="math notranslate nohighlight">\(f(x)\)</span> decíamos que existía el límite en un punto <span class="math notranslate nohighlight">\(x_{0}\)</span> del dominio o de la frontera de éste, si al aproximarnos a él, la función «se aproximaba a un valor <span class="math notranslate nohighlight">\(b\)</span>».</p>
 <p>Matemáticamente, poníamos una condición.</p>
@@ -654,7 +668,7 @@ title="Print to PDF"
 <p>Existe el límite de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en <span class="math notranslate nohighlight">\(x_0\)</span> y vale <span class="math notranslate nohighlight">\(b\)</span>, si:</p>
 <div class="math notranslate nohighlight">
 \[
-\forall \epsilon &gt;0, \; \exists \delta &gt;0, \; \mathrm{t.q.} \;| x- x_0| &lt; \delta \, \Rightarrow \, | f(x) - b| &lt; \epsilon
+\forall \epsilon &gt;0, \; \exists \, \delta &gt;0, \; \mathrm{t.q.} \;| x- x_0| &lt; \delta \, \Rightarrow \, | f(x) - b| &lt; \epsilon
 \]</div>
 <p>La siguiente gráfica corresponde a la función:</p>
 <div class="math notranslate nohighlight">
@@ -679,14 +693,14 @@ f(x) = \frac{\sin x}{x}
 <p>Decimos que una función escalar <span class="math notranslate nohighlight">\(f({\bf x}\)</span>) tiene límite en un punto, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, de su dominio o frontera del mismo y vale <span class="math notranslate nohighlight">\(b\)</span>, si:</p>
 <div class="math notranslate nohighlight">
 \[
-\forall \epsilon &gt;0, \; \exists \delta &gt;0, \; \mathrm{t.q.} \; \| {\bf x}- {\bf x}_0 \| &lt; \delta \, \Rightarrow \, | f({\bf x}) - b | &lt; \epsilon
+\forall \epsilon &gt;0, \; \exists \, \delta &gt;0, \; \mathrm{t.q.} \; \| {\bf x}- {\bf x}_0 \| &lt; \delta \, \Rightarrow \, | f({\bf x}) - b | &lt; \epsilon
 \]</div>
 <p>El valor de la función, <span class="math notranslate nohighlight">\(f({\bf x})\)</span>, en los puntos, <span class="math notranslate nohighlight">\({\bf x}\)</span> de una bola de tamaño <span class="math notranslate nohighlight">\(\delta\)</span> y centrada en <span class="math notranslate nohighlight">\({\bf x}_0\)</span> están dentro de un intervalo de tamaño <span class="math notranslate nohighlight">\(\epsilon\)</span> centrado en <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <p>Y de forma similar para una función vectorial.</p>
 <p>Decimos que una función vectorial <span class="math notranslate nohighlight">\({\bf f}({\bf x}\)</span>) tiene límite en un punto, <span class="math notranslate nohighlight">\({\bf x}_0\)</span>, de su dominio o frontera del mismo y vale <span class="math notranslate nohighlight">\({\bf b}\)</span>, si:</p>
 <div class="math notranslate nohighlight">
 \[
-\forall \epsilon &gt;0, \; \exists \delta &gt;0, \; \mathrm{t.q.} \; \| {\bf x}- {\bf x}_0 \| &lt; \delta \, \Rightarrow \, \| {\bf f}({\bf x}) - {\bf b} \| &lt; \epsilon
+\forall \epsilon &gt;0, \; \exists \, \delta &gt;0, \; \mathrm{t.q.} \; \| {\bf x}- {\bf x}_0 \| &lt; \delta \, \Rightarrow \, \| {\bf f}({\bf x}) - {\bf b} \| &lt; \epsilon
 \]</div>
 <p>El valor de la función, <span class="math notranslate nohighlight">\({\bf f}({\bf x})\)</span>, en los puntos, <span class="math notranslate nohighlight">\({\bf x}\)</span> de una bola de tamaño <span class="math notranslate nohighlight">\(\delta\)</span> y centrada en <span class="math notranslate nohighlight">\({\bf x}_0\)</span> están dentro de una bola de radio <span class="math notranslate nohighlight">\(\epsilon\)</span> centrada en <span class="math notranslate nohighlight">\({\bf b}\)</span>.</p>
 <p>Observa ahora la gráfica de la función escalar:</p>
@@ -696,7 +710,7 @@ f(x, y) = \frac{\sin \sqrt{x^2 + y^2}}{ \sqrt{x^2 + y^2}}
 \]</div>
 <p>Ves que nuevamente tiene límite en el origen y que vale 1.</p>
 <p>Calcularlo no obstante es más complicado. Hay que recurrir a la definición de límite.</p>
-<p>Dado un tamaño <span class="math notranslate nohighlight">\(\epsilon\)</span> hay que encontrar un disco de radio <span class="math notranslate nohighlight">\(\delta\)</span> centrado en el origen, de tal forma que para los puntos del disco, el valor de la función esté a una distancia menor de <span class="math notranslate nohighlight">\(\epsilon\)</span> del límite, de uno en este caso.</p>
+<p>Dado un tamaño <span class="math notranslate nohighlight">\(\epsilon\)</span> hay que encontrar un disco de radio <span class="math notranslate nohighlight">\(\delta\)</span> centrado en el origen, de tal forma que para los puntos del disco, el valor de la función esté a una distancia menor de <span class="math notranslate nohighlight">\(\epsilon\)</span> del límite, de 1 en este caso.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rs</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1e-10</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -732,7 +746,7 @@ f(x, y) = \frac{\sin \sqrt{x^2 + y^2}}{ \sqrt{x^2 + y^2}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2335/2511310414.py:8: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_88624/2511310414.py:8: MatplotlibDeprecationWarning: Starting from Matplotlib 3.6, colorbar() will steal space from the mappable&#39;s axes, rather than from the current axes, to place the colorbar.  To silence this warning, explicitly pass the &#39;ax&#39; argument to colorbar().
   ax.set_xlabel(&#39;x&#39;); ax.set_ylabel(&#39;y&#39;); fig.colorbar(sf);
 </pre></div>
 </div>
@@ -766,7 +780,7 @@ f(x, y) = \frac{\sin(x^2 + y^2)}{x^2 + y^2}
 <img alt="../_images/tderivadas_limites_continuidad_21_0.png" src="../_images/tderivadas_limites_continuidad_21_0.png" />
 </div>
 </div>
-<p>Calculamos ahora el límite en el origen aproximandonos por todas la rectas que pasasn por el origen, que podemos dar en:</p>
+<p>Calculamos ahora el límite en el origen aproximandonos por todas la rectas que pasan por el origen, que podemos dar en:</p>
 <ul class="simple">
 <li><p>cartesianas:</p></li>
 </ul>
@@ -796,7 +810,7 @@ x = r \cos \phi; \; y = r \sin \phi
 \[
 \lim_{r \to 0 }\frac{\sin r}{ r} = 1
 \]</div>
-<p>Si existe el límite es 1</p>
+<p>Si existe el límite es 1.</p>
 <p><strong>Ejercicio</strong>: Calcular si existe el límite en el origen de la función:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -837,7 +851,7 @@ f(x, y) = \frac{x y}{x^2 + y^2}
 <img alt="../_images/tderivadas_limites_continuidad_27_0.png" src="../_images/tderivadas_limites_continuidad_27_0.png" />
 </div>
 </div>
-<p><em>solución</em></p>
+<p><em>solución</em>:</p>
 <p>i) si estudiamos el límite a lo largo de la recta <span class="math notranslate nohighlight">\(y = ax\)</span> y tomamos el límite <span class="math notranslate nohighlight">\(x \to 0\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -860,10 +874,11 @@ Si <span class="math notranslate nohighlight">\(a = \pm 1\)</span>, el limite va
 \[
 y = y_0 + a (x -x_0)
 \]</div>
-<p>En polares:
-$<span class="math notranslate nohighlight">\(
+<p>En polares:</p>
+<div class="math notranslate nohighlight">
+\[
 x = x_0 + r \cos \phi, \;\;\; y = y_0 + r \sin \phi
-\)</span>$</p>
+\]</div>
 <p><strong>Teorema</strong></p>
 <p>Sean dos funciones <span class="math notranslate nohighlight">\({\bf f}:S \subset \mathrm{R}^n \to \mathrm{R}^m\)</span> y <span class="math notranslate nohighlight">\({\bf g}:S \subset \mathrm{R}^n \to \mathrm{R}^m\)</span>, y <span class="math notranslate nohighlight">\(\lambda\)</span> un número real, si existen el <span class="math notranslate nohighlight">\(\lim_{{\bf x} \to {\bf a}} {\bf f}({\bf x}) = {\bf b}\)</span> y el <span class="math notranslate nohighlight">\(\lim_{{\bf x}\to {\bf a}} {\bf g}({\bf x}) = {\bf c}\)</span> se cumple:</p>
 <div class="math notranslate nohighlight">
@@ -893,7 +908,6 @@ iv) \;\; \lim_{{\bf x} \to {\bf a}} \| {\bf f}({\bf x}) \| = \| {\bf b} \|
 \]</div>
 <p>¿Tiene límite en el origen?</p>
 </div>
-</div>
 <div class="section" id="continuidad">
 <h2>Continuidad<a class="headerlink" href="#continuidad" title="Permalink to this heading">#</a></h2>
 <p>En funciones de una dimensión, decíamos que la función era continua en un punto, <span class="math notranslate nohighlight">\(x_0\)</span>, si pertenecía a su dominio, y el valor de la función en ese punto, <span class="math notranslate nohighlight">\(f(x_0)\)</span>, coincide con el límite <span class="math notranslate nohighlight">\(\lim_{x \to x_0} f(x) = f(x_0)\)</span></p>
@@ -908,7 +922,7 @@ iv) \;\; \lim_{{\bf x} \to {\bf a}} \| {\bf f}({\bf x}) \| = \| {\bf b} \|
 \lim_{{\bf x} \to {\bf x}_0} {\bf f} (x) = {\bf f}({\bf x}_0)
 \]</div>
 <p><strong>Teorema</strong></p>
-<p>Sean dos funciones <span class="math notranslate nohighlight">\({\bf f}:S \subset \mathrm{R}^n \to \mathrm{R^m}\)</span> y <span class="math notranslate nohighlight">\({\bf g}:S \subset \mathrm{R}^n \to \mathrm{R^m}\)</span>, y <span class="math notranslate nohighlight">\(\lambda\)</span> un número real, si <span class="math notranslate nohighlight">\({\bf f(x),g(x)}\)</span> son continuas en un punto <span class="math notranslate nohighlight">\({\bf a}\)</span>, se cumple que las siguientes funciones también son continuas en <span class="math notranslate nohighlight">\({\bf a}\)</span>:</p>
+<p>Sean dos funciones <span class="math notranslate nohighlight">\({\bf f}:S \subset \mathrm{R}^n \to \mathrm{R^m}\)</span> y <span class="math notranslate nohighlight">\({\bf g}:S \subset \mathrm{R}^n \to \mathrm{R^m}\)</span>, y <span class="math notranslate nohighlight">\(\lambda\)</span> un número real, si <span class="math notranslate nohighlight">\({\bf f(x), \, g(x)}\)</span> son continuas en un punto <span class="math notranslate nohighlight">\({\bf a}\)</span>, se cumple que las siguientes funciones también son continuas en <span class="math notranslate nohighlight">\({\bf a}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ i) \; {\bf f(x)}  + {\bf g(x)} \]</div>
 <div class="math notranslate nohighlight">
@@ -926,7 +940,7 @@ iv) \;\; \lim_{{\bf x} \to {\bf a}} \| {\bf f}({\bf x}) \| = \| {\bf b} \|
 <p><strong>teorema</strong></p>
 <p>Sea <span class="math notranslate nohighlight">\({\bf g}: A \subset \mathrm{R}^n \to \mathrm{R}^m\)</span> y <span class="math notranslate nohighlight">\({\bf f}:B \subset \mathrm{R}^m \to \mathrm{R}^p\)</span>, donde suponemos que el rango de <span class="math notranslate nohighlight">\({\bf g}\)</span> está en el dominio de <span class="math notranslate nohighlight">\({\bf f}\)</span>, B. Si <span class="math notranslate nohighlight">\({\bf g(x)}\)</span> es continua en <span class="math notranslate nohighlight">\({\bf a}\)</span> y <span class="math notranslate nohighlight">\({\bf f(y)}\)</span> lo es en <span class="math notranslate nohighlight">\({\bf g(a)}\)</span>, entonces la función compuesta <span class="math notranslate nohighlight">\({\bf  f \circ g}: A \subset \mathbf{R}^n \to \mathbf{R}^p\)</span> es continua en <span class="math notranslate nohighlight">\({\bf a}\)</span>.</p>
 <p><em>demostracion:</em></p>
-<p>Al ser <span class="math notranslate nohighlight">\({\bf g}, {\bf f}\)</span> continuas en <span class="math notranslate nohighlight">\({\bf a}\)</span> y <span class="math notranslate nohighlight">\({\bf g(a)}\)</span>, tenemos que <span class="math notranslate nohighlight">\(\forall \, \epsilon &gt;0\)</span> y <span class="math notranslate nohighlight">\(\epsilon' &gt;0\)</span> existen <span class="math notranslate nohighlight">\(\delta &gt;0\)</span> y <span class="math notranslate nohighlight">\(\delta'&gt;0\)</span> y se cumple:</p>
+<p>Al ser <span class="math notranslate nohighlight">\({\bf g}, \, {\bf f}\)</span> continuas en <span class="math notranslate nohighlight">\({\bf a}\)</span> y <span class="math notranslate nohighlight">\({\bf g(a)}\)</span>, tenemos que <span class="math notranslate nohighlight">\(\forall \, \epsilon &gt;0\)</span> y <span class="math notranslate nohighlight">\(\epsilon' &gt;0\)</span> existen <span class="math notranslate nohighlight">\(\delta &gt;0\)</span> y <span class="math notranslate nohighlight">\(\delta'&gt;0\)</span> y se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
 \| {\bf x} - {\bf a} \| &lt; \delta \Rightarrow \| {\bf g(x)}-{\bf g(a)} \| &lt; \epsilon' 

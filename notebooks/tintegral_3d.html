@@ -557,7 +557,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:52 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Mar 18 10:56:06 2023
 </pre></div>
 </div>
 </div>
@@ -798,13 +798,14 @@ El intervalo en <span class="math notranslate nohighlight">\(x\)</span> en <span
 <div class="math notranslate nohighlight">
 \[
 \int_{V} f(x, y, z) \, \mathrm{d}x \mathrm{d}y \mathrm{d}z 
-= \int_{V'} f(u, v, w) \, |J| \mathrm{d}u \mathrm{d}v \mathrm{d}w 
+= \int_{V'} f(u, v, w) \, |J| \, \mathrm{d}u \mathrm{d}v \mathrm{d}w 
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\(V'\)</span> es el volumen y <span class="math notranslate nohighlight">\(f(u, v, w)\)</span> la función en las nuevas variables.</p>
-<p>Mientras que el elemento diferencial de volumen
-$<span class="math notranslate nohighlight">\(
-\mathrm{d}x \mathrm{d}y \mathrm{d}z \to |J| \mathrm{d}u \mathrm{d}v \mathrm{d}w 
-\)</span>$</p>
+<p>Mientras que el elemento diferencial de volumen:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}x \mathrm{d}y \mathrm{d}z \to |J| \, \mathrm{d}u \mathrm{d}v \mathrm{d}w 
+\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(|J|\)</span> es el valor absoluto del jacobiano, el determinante de la matriz jacobiana del cambio de variables:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -831,10 +832,11 @@ x(r, \phi, z) = r \cos \phi, \; y(r, \phi, z) = r \sin \phi, \; z(r, \phi, z) = 
 \end{array} \right)
 \end{split}\]</div>
 <p>Y el Jacobiano, <span class="math notranslate nohighlight">\(J = r\)</span></p>
-<p>Luego:
-$<span class="math notranslate nohighlight">\(
+<p>Luego:</p>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{d}x \mathrm{d}y \mathrm{d}z \to r \, \mathrm{d}r \mathrm{d}\phi \mathrm{d}z
-\)</span>$</p>
+\]</div>
 <p><em>Ejercicio</em>: Calcula nuevamente la integral de <span class="math notranslate nohighlight">\(f(x, y, z) = x\)</span> en el volumen anterior en coordenadas cilíndricas.</p>
 <p>El volumen podemos definirlo como en cilíndricas como:</p>
 <div class="math notranslate nohighlight">
@@ -884,7 +886,7 @@ J = \cos \theta \left( -r^2 \sin^2 \phi \sin \theta \cos \theta - r^2 \cos^2 \ph
 \]</div>
 <p>La siguiente figura muestra el elemento diferencial de volumen en coordenadas esféricas.</p>
 <a class="reference internal image-reference" href="../_images/dv_esfericas.png"><img alt="../_images/dv_esfericas.png" src="../_images/dv_esfericas.png" style="width: 350px;" /></a>
-<p>Los lados del elemento diferencial son, <span class="math notranslate nohighlight">\(\mathrm{d}r\)</span>, <span class="math notranslate nohighlight">\(r\mathrm{d}\theta\)</span>, y <span class="math notranslate nohighlight">\(r \sin \theta \mathrm{d}\phi\)</span>.</p>
+<p>Los lados del elemento diferencial son: <span class="math notranslate nohighlight">\(\mathrm{d}r\)</span>, <span class="math notranslate nohighlight">\(r\mathrm{d}\theta\)</span>, y <span class="math notranslate nohighlight">\(r \sin \theta \mathrm{d}\phi\)</span>.</p>
 <p><em>Ejercicio</em>: Calcula la integral de <span class="math notranslate nohighlight">\(f(x, y, z) = e ^{(x^2 + y^2 + z^2)^{3/2}}\)</span> en la esfera de radio unidad.</p>
 <p>La definición de la esfera de radio unidad:</p>
 <div class="math notranslate nohighlight">

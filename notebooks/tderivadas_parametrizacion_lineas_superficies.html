@@ -567,7 +567,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:36 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Sat Mar 18 10:55:54 2023
 </pre></div>
 </div>
 </div>
@@ -709,7 +709,7 @@ y(t) = r \, (1 - \cos(v_x t/r))
 <img alt="../_images/tderivadas_parametrizacion_lineas_superficies_15_0.png" src="../_images/tderivadas_parametrizacion_lineas_superficies_15_0.png" />
 </div>
 </div>
-<p>Considera ahora que queremos calcular la longitud la longitud de la circunferencia a partir de esos segmentos. ¿Sabrías hacerlo? Bastaría con calcular la longitud de cada uno de esos segmentos y luego sumarlos.</p>
+<p>Considera ahora que queremos calcular la longitud de la circunferencia a partir de esos segmentos. ¿Sabrías hacerlo? Bastaría con calcular la longitud de cada uno de esos segmentos y luego sumarlos.</p>
 <p>Es lo que hacemos en la siguiente celda. El error que cometemos en la determinación de la longitud depende del número de puntos con los que dibujemos la circunferencia. A mayor número de puntos, menor error.</p>
 <p><strong>Explora</strong>: cuántos puntos hacen falta hasta tener un error menor de 1 por cien mil.</p>
 <div class="cell docutils container">
@@ -761,13 +761,13 @@ y(t_0 + \Delta t)  = y(t_0) + r  \cos  t_0  \; \Delta t
 \[
 \Delta r = \sqrt{r^2  \sin^2 t_0 + r^2 \cos^2 t_0} \, \Delta t = r \, \Delta t
 \]</div>
-<p>Si la diferencia de intervalos temporales es infinitisemal, <span class="math notranslate nohighlight">\(\Delta t \rightarrow \mathrm{d} t\)</span>, la suma de todos los segmentos, <span class="math notranslate nohighlight">\(s\)</span>, se convierte en la integral en <span class="math notranslate nohighlight">\(t\)</span> entre los extremos de su intervalo <span class="math notranslate nohighlight">\([0, 2 \pi)\)</span>.</p>
+<p>Si la diferencia de intervalos temporales es infinitesimal, <span class="math notranslate nohighlight">\(\Delta t \rightarrow \mathrm{d} t\)</span>, la suma de todos los segmentos, <span class="math notranslate nohighlight">\(s\)</span>, se convierte en la integral en <span class="math notranslate nohighlight">\(t\)</span> entre los extremos de su intervalo <span class="math notranslate nohighlight">\([0, 2 \pi)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 s = \int_{0}^{2 \pi} r \mathrm{d}t = r \, t \, \big|_{0}^{2 \pi} = 2 \pi r 
 \]</div>
 <p>Y obtenemos la longitud de una circunferencia, <span class="math notranslate nohighlight">\(2 \pi r\)</span>.</p>
-<p>Sea entonces una línea <span class="math notranslate nohighlight">\({\bf r}(t)\)</span> en un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, parametrizada en función de una variable real <span class="math notranslate nohighlight">\(t\)</span> que toma valores en el intervalo <span class="math notranslate nohighlight">\([t_0, t_e]\)</span>, podemos dar su longitud, su <strong>longitud de arco</strong>, <span class="math notranslate nohighlight">\(s\)</span>, mediante la integral en una dimensión:</p>
+<p>Sea entonces una línea <span class="math notranslate nohighlight">\({\bf r}(t)\)</span> en un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, parametrizada en función de una variable real <span class="math notranslate nohighlight">\(t\)</span> que toma valores en el intervalo <span class="math notranslate nohighlight">\([t_0, t_e]\)</span>, podemos dar su <strong>longitud de arco</strong>, <span class="math notranslate nohighlight">\(s\)</span>, mediante la integral en una dimensión:</p>
 <div class="math notranslate nohighlight">
 \[
 s = \int_{t_0}^{t_e} || {\bf r}' (t) || \, \mathrm{d}t
@@ -887,7 +887,7 @@ z(\theta, \phi)  = r \, \cos \theta \\
 <p>Supongo que sabes que una partícula cargada cuando entra normal a un campo magnético uniforme describe una hélice, como la que hemos dibujado antes.</p>
 <p>En física de partículas, la hélice juega un papel fundamental.</p>
 <p>Fíjate en esta imagen de “una” colisión de protones en el detector <a class="reference external" href="https://atlas.cern">ATLAS</a>, donde están reconstruidas las trayectorias de distintas partículas.</p>
-<p>Las partículas están dentro de un campo magnético uniforme, de ahí que describan hélices. Con distinta carga las hélices giran en sentidos opuestos. No ves hélices porque se trata de la proyección sobre el plano <span class="math notranslate nohighlight">\((x, y)\)</span> y porque no llegan a dar un giro completo. Las partículas más energéticas tienen una hélice muy abierta y menos energéticas, más cerrada.</p>
+<p>Las partículas están dentro de un campo magnético uniforme, de ahí que describan hélices. Con distinta carga las hélices giran en sentidos opuestos. No ves hélices porque se trata de la proyección sobre el plano <span class="math notranslate nohighlight">\((x, y)\)</span> y porque no llegan a dar un giro completo. Las partículas más energéticas tienen una hélice muy abierta y las menos energéticas, más cerrada.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p></p></th>
@@ -900,7 +900,7 @@ z(\theta, \phi)  = r \, \cos \theta \\
 </tr>
 </tbody>
 </table>
-<p>La imagen corresponde a uno de los primeros sucesos con un Higgs que tomó detector ATLAS en junio del 2012, donde el bosón de Higgs se desintegra a dos muones (en rojo) y dos electrones (en verde). Por supuesto. Hay muchas más particulas que las que vienen del Higgs.</p>
+<p>La imagen corresponde a uno de los primeros sucesos con un Higgs que tomó el detector ATLAS en junio del 2012, donde el bosón de Higgs se desintegra a dos muones (en rojo) y dos electrones (en verde). Por supuesto. Hay muchas más particulas que las que vienen del Higgs.</p>
 <p><strong>¡Esto es todo por ahora!</strong></p>
 </div>
 </div>

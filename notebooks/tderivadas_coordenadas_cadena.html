@@ -591,7 +591,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:08:00 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Sat Mar 18 10:55:20 2023
 </pre></div>
 </div>
 </div>
@@ -656,7 +656,7 @@ V(r) = k \frac{q}{r}
 <img alt="../_images/tderivadas_coordenadas_cadena_6_0.png" src="../_images/tderivadas_coordenadas_cadena_6_0.png" />
 </div>
 </div>
-<p>Podemos dar todos los puntos, <span class="math notranslate nohighlight">\((x, y, y)\)</span>, de un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span> en <em>coordenadas cilíndricas</em>, donde expresamos las coordenadas <span class="math notranslate nohighlight">\((x, y)\)</span> por, <span class="math notranslate nohighlight">\((r, \phi)\)</span> donde <span class="math notranslate nohighlight">\(r\)</span> es la distancia al origen y <span class="math notranslate nohighlight">\(\phi\)</span> el ángulo con el eje <span class="math notranslate nohighlight">\(x\)</span>. Mientras que mantenemos la coordenada <span class="math notranslate nohighlight">\(z\)</span>. Esto es:</p>
+<p>Podemos dar todos los puntos, <span class="math notranslate nohighlight">\((x, y, z)\)</span>, de un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span> en <em>coordenadas cilíndricas</em>, donde expresamos las coordenadas <span class="math notranslate nohighlight">\((x, y)\)</span> por, <span class="math notranslate nohighlight">\((r, \phi)\)</span> donde <span class="math notranslate nohighlight">\(r\)</span> es la distancia al origen y <span class="math notranslate nohighlight">\(\phi\)</span> el ángulo con el eje <span class="math notranslate nohighlight">\(x\)</span>. Mientras que mantenemos la coordenada <span class="math notranslate nohighlight">\(z\)</span>. Esto es:</p>
 <div class="math notranslate nohighlight">
 \[
 (r, \phi, z) \to (x, y, z)
@@ -680,7 +680,7 @@ r = \sqrt{x^2 + y^2}, \, \cos \phi =  \frac{x}{\sqrt{x^2 + y^2}}, \;\, z = z
 \[
 \sigma(\theta, \phi) = (r \cos \phi \sin \theta, \; r \sin \phi \sin \theta, \; r \cos \theta)
 \]</div>
-<p>Considerando ahora todas las posibles esferas, esto es variando <span class="math notranslate nohighlight">\(r\)</span> de <span class="math notranslate nohighlight">\([0, \infty)\)</span> podemos cubrid de nuevo todo el espacio tri-dimensional, <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span></p>
+<p>Considerando ahora todas las posibles esferas, esto es variando <span class="math notranslate nohighlight">\(r\)</span> de <span class="math notranslate nohighlight">\([0, \infty)\)</span> podemos cubrir de nuevo todo el espacio tri-dimensional, <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta_range</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span>    <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">20</span>
@@ -751,7 +751,7 @@ r = \sqrt{x^2 + y^2 + z^2}, \;\, \cos \phi = \frac{x}{\sqrt{x^2 + y^2}}, \;\, \c
 </div>
 <div class="section" id="la-regla-de-la-cadena">
 <h2>La regla de la cadena<a class="headerlink" href="#la-regla-de-la-cadena" title="Permalink to this heading">#</a></h2>
-<p>En determinados casos tenemos una función vectorial, <span class="math notranslate nohighlight">\({\bf f}({\bf x})\)</span>,  de <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>, de la que conocemos su derivada, <span class="math notranslate nohighlight">\({\bf Df}({\bf x})\)</span>, y nos preguntamos cual será su derivada en coordenadas cilíndricas o esféricas.</p>
+<p>En determinados casos tenemos una función vectorial, <span class="math notranslate nohighlight">\({\bf f}({\bf x})\)</span>,  de <span class="math notranslate nohighlight">\(\mathrm{R}^3\)</span>, de la que conocemos su derivada, <span class="math notranslate nohighlight">\({\bf Df}({\bf x})\)</span>, y nos preguntamos cuál será su derivada en coordenadas cilíndricas o esféricas.</p>
 <p>¿Existe una relación sencilla entre la derivada de la función en las nuevas coordenadas y la derivada en cartesianas?</p>
 <p>La respuesta es la regla de la cadena, que nos dice, que la nueva derivada es el producto de la derivada de la primera función y la derivada, la matriz jacobiana, del cambio de variables:</p>
 <p>Sea <span class="math notranslate nohighlight">\({\bf f}({\bf x)}\)</span> con derivada, <span class="math notranslate nohighlight">\({\bf Df}({\bf x})\)</span> en cartesianas y <span class="math notranslate nohighlight">\({\bf x}({\bf u})\)</span> un cambio de coordenadas, con matriz jacobiana, <span class="math notranslate nohighlight">\({\bf Dx}({\bf u})\)</span>. La función compuesta, <span class="math notranslate nohighlight">\({\bf h} ({\bf u}) = {\bf f} \circ { \bf x}({\bf u}) = {\bf f}\left({\bf x}({\bf u}) \right)\)</span>, tiene como derivada:</p>

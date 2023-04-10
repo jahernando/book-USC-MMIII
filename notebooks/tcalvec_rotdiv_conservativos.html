@@ -557,7 +557,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:07:54 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:09 2023
 </pre></div>
 </div>
 </div>
@@ -617,7 +617,7 @@ title="Print to PDF"
 \nabla \times {\bf F} = \left| \begin{array}{ccc} {\bf i} &amp; {\bf j} &amp; {\bf k} \\
 \frac{\partial}{ \partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
 F_x &amp; F_y &amp; F_z \\
- \end{array} \right| 
+ \end{array} \right| \\
  = \left(\frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z}, \,  \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x}, \, \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}\right) 
 \end{split}\]</div>
 <p><em>Ejercicio</em>: Calcula el rotacional y la divergencia de los siguientes campos vectoriales: <span class="math notranslate nohighlight">\({\bf F}(x, y) = (\pm x, \pm y)\)</span> y <span class="math notranslate nohighlight">\({\bf F}(x, y) = (\pm y, \pm x)\)</span>.</p>
@@ -729,7 +729,7 @@ F_x &amp; F_y &amp; F_z \\
 <div class="section" id="campos-conservativos">
 <h2>Campos conservativos<a class="headerlink" href="#campos-conservativos" title="Permalink to this heading">#</a></h2>
 <p>Decimos que un campo vectorial, <span class="math notranslate nohighlight">\({\bf F}\)</span>, es <strong>conservativo</strong> si para todas las trayectorias que unen dos puntos del dominio, <span class="math notranslate nohighlight">\(A, \, B\)</span>, la integral de campo a lo largo de cada una de ellas vale lo mismo.</p>
-<p>Sea don trayectorias, <span class="math notranslate nohighlight">\({\bf c}_1, \, {\bf c}_2\)</span>, que unen <span class="math notranslate nohighlight">\(A \to B\)</span>, si el campo <span class="math notranslate nohighlight">\({\bf F}\)</span> es conservativo se cumple:</p>
+<p>Sean dos trayectorias, <span class="math notranslate nohighlight">\({\bf c}_1, \, {\bf c}_2\)</span>, que unen <span class="math notranslate nohighlight">\(A \to B\)</span>, si el campo <span class="math notranslate nohighlight">\({\bf F}\)</span> es conservativo se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{{\bf c}_1} {\bf F} \, \mathrm{d}{\bf s} = \int_{{\bf c}_2} {\bf F} \, \mathrm{d}{\bf s}
@@ -800,11 +800,11 @@ U(x, y) = \int_{x_0}^x F_x(x, y) \, \mathrm{d}x + g(y)
 <p>donde <span class="math notranslate nohighlight">\(g(y)\)</span> es una función de <span class="math notranslate nohighlight">\(y\)</span>. Se cumple: <span class="math notranslate nohighlight">\( F_x = \frac{\partial U}{\partial x}\)</span></p>
 <p><span class="math notranslate nohighlight">\(F_y\)</span> debe ser:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 F_y(x, y) = \frac{\partial U(x, y)}{\partial y} 
-= \frac{\partial }{\partial y} \left( \int_{x_0}^x F_x(x, y) \, \mathrm{d}x + g(y) \right) 
+= \frac{\partial }{\partial y} \left( \int_{x_0}^x F_x(x, y) \, \mathrm{d}x + g(y) \right) \\
 = \int_{x_0}^x \frac{\partial F_x(x, y) }{\partial y} \, \mathrm{d}x + \frac{\mathrm{d} g(y)}{\mathrm{d}y}  
-\]</div>
+\end{split}\]</div>
 <p>Luego:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -864,7 +864,7 @@ U(x, y) = x^2y + x y^3 + y^2 +C
 </div>
 <p>Esto es, un campo convervativo proviene, o puede expresarse, como el gradiente de un campo escalar.
 Si un campo no tiene rotacional es convervativo. Y si es conservativo no tiene rotacional.</p>
-<p>Observa el dibujo de Escher. ¡Debe ser una ilusión óptica! porque las escaleras siguen el gradiente de su altura, y por lo tanto al circular a lo largo como la pista cerrada que forman no puede tener rotacional.</p>
+<p>Observa el dibujo de Escher ¡debe ser una ilusión óptica! porque las escaleras siguen el gradiente de su altura, y por lo tanto al circular a lo largo como la pista cerrada que forman no puede tener rotacional.</p>
 <a class="reference internal image-reference" href="../_images/escher_stairs.jpg"><img alt="../_images/escher_stairs.jpg" src="../_images/escher_stairs.jpg" style="width: 300px;" /></a>
 <p><em>Teorema</em>: Sea <span class="math notranslate nohighlight">\(U(x, y)\)</span> un campo escalar con derivadas segundas continuas, entonces la integral de su gradiente, <span class="math notranslate nohighlight">\(\nabla U\)</span>, a lo largo de una trayectoria, <span class="math notranslate nohighlight">\({\bf c}\)</span>, que une dos puntos, <span class="math notranslate nohighlight">\(A, \, B\)</span> es la diferencia de <span class="math notranslate nohighlight">\(U\)</span> en <span class="math notranslate nohighlight">\(B\)</span> y <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -879,15 +879,15 @@ Si un campo no tiene rotacional es convervativo. Y si es conservativo no tiene r
 \]</div>
 <p>Por la regla de la cadena:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 = \int_a^b \frac{\mathrm{d} U({\bf c}(t))}{\mathrm{d}t} \, \mathrm{d}t = U({\bf c}(t)) \, \Big|_a^b 
-= U({\bf c}(b)) - U({\bf c}(a)) = U(B) - U(A)
-\]</div>
+= U({\bf c}(b)) - U({\bf c}(a))  \\ = U(B) - U(A)
+\end{split}\]</div>
 <p><em>Ejemplo</em>: La altura es un campo conservativo. Da igual que camino siguas para llegar a la cumbre de una montaña, puedes seguir caminos más fáciles o más arduos, la diferencia de altura respecto de dónde empezaste siempre será la misma.</p>
 <div class="section" id="aun-hay-mas">
 <h3>¡Aún hay más!<a class="headerlink" href="#aun-hay-mas" title="Permalink to this heading">#</a></h3>
 <p>Muchas de estas cosas te sonarán por Física General.</p>
-<p>El potencial eléctrico, <span class="math notranslate nohighlight">\(V\)</span>, da lugar a un campo eléctrico, <span class="math notranslate nohighlight">\({\bf E} = - \nabla V\)</span>, que proviene del gradiente y cuyo rotacional es nulo, es por lo tanto un campo conservatico. La integral del campo entro dos puntos es simplemente la diferencia de potencial entre ellos.</p>
+<p>El potencial eléctrico, <span class="math notranslate nohighlight">\(V\)</span>, da lugar a un campo eléctrico, <span class="math notranslate nohighlight">\({\bf E} = - \nabla V\)</span>, que proviene del gradiente y cuyo rotacional es nulo, es por lo tanto un campo conservativo. La integral del campo entro dos puntos es simplemente la diferencia de potencial entre ellos.</p>
 <p>En Física la fuerza sobre un móvil viene del gradiente de una energía potencial, <span class="math notranslate nohighlight">\({\bf F} = - \nabla U\)</span>. De está relación se conserva la energía. Consideremos un móvil, de masa <span class="math notranslate nohighlight">\(m\)</span>, que sigue su trayectoria libre <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> en función del tiempo <span class="math notranslate nohighlight">\(t\)</span>. Su energía total es la energía cinética más la potencial:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -904,6 +904,7 @@ E(t) = \frac{1}{2} m \dot{{\bf c}}^2(t) + U({\bf c}(t))
 \[
 {\bf F} = - \nabla U = m \ddot{{\bf c}}
 \]</div>
+<p>que es la primera ley de Newton.</p>
 </div>
 </div>
 </div>

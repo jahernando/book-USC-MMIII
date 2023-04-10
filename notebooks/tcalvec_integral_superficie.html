@@ -488,13 +488,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#revision-de-parametrizacion-de-superficies">
      Revisión de parametrización de superficies.
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametrizacion-de-la-superficie-de-una-grafica">
-       Parametrización de la superficie de una gráfica.
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametrizacion-de-la-superficie-de-una-grafica">
+     Parametrización de la superficie de una gráfica.
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integral-de-una-funcion-escalar-en-una-superfice">
@@ -541,13 +539,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#revision-de-parametrizacion-de-superficies">
      Revisión de parametrización de superficies.
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametrizacion-de-la-superficie-de-una-grafica">
-       Parametrización de la superficie de una gráfica.
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametrizacion-de-la-superficie-de-una-grafica">
+     Parametrización de la superficie de una gráfica.
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integral-de-una-funcion-escalar-en-una-superfice">
@@ -581,14 +577,14 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:07:50 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:06 2023
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="objectivos">
 <h2>Objectivos<a class="headerlink" href="#objectivos" title="Permalink to this heading">#</a></h2>
-<p>Revisar la parametrización de superficies</p>
+<p>Revisar la parametrización de superficies.</p>
 <p>Definir la integral de una función escalar y vectorial en una superficie.</p>
 <p>Mostrar algunos ejemplos sencillos.</p>
 <div class="cell docutils container">
@@ -703,24 +699,20 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span>          <span class="o">=</span> <span class="mf">1.</span>
 <span class="n">phirange</span>   <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
 <span class="n">thetarange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span>   <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span> 
-<span class="n">phii</span><span class="p">,</span> <span class="n">thetaj</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span> <span class="c1"># 20, 14</span>
+<span class="n">phii</span><span class="p">,</span> <span class="n">thetaj</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">14</span> <span class="c1"># 20, 14</span>
 <span class="n">f0</span>         <span class="o">=</span>  <span class="mf">0.85</span>
 <span class="n">xfun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">phi</span><span class="p">,</span> <span class="n">theta</span> <span class="p">:</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
 <span class="n">yfun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">phi</span><span class="p">,</span> <span class="n">theta</span> <span class="p">:</span> <span class="n">f0</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
 <span class="n">zfun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">phi</span><span class="p">,</span> <span class="n">theta</span> <span class="p">:</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">wfsurface</span><span class="p">(</span><span class="n">xfun</span><span class="p">,</span> <span class="n">yfun</span><span class="p">,</span> <span class="n">zfun</span><span class="p">,</span> <span class="n">phirange</span><span class="p">,</span> <span class="n">thetarange</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">);</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">wfmasterlines</span><span class="p">(</span><span class="n">xfun</span><span class="p">,</span> <span class="n">yfun</span><span class="p">,</span> <span class="n">zfun</span><span class="p">,</span> <span class="n">phirange</span><span class="p">,</span> <span class="n">thetarange</span><span class="p">,</span> <span class="n">ui</span> <span class="o">=</span> <span class="n">phii</span><span class="p">,</span> <span class="n">vj</span> <span class="o">=</span> <span class="n">thetaj</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">auto_scale_xyz</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="c1">#plt.gca().set_aspect(&#39;equal&#39;,&#39;box&#39;)</span>
+<span class="c1">#plt.gca(projection=&#39;3d&#39;).auto_scale_xyz((-1, 1), (-1, 1), (-1, 1))</span>
+<span class="c1">#plt.set_aspect(&#39;equal&#39;,&#39;box&#39;)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/56/_pmdccc97ljb_l3v3s6gkrxm0000gn/T/ipykernel_2284/3476961022.py:11: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  plt.gca(projection=&#39;3d&#39;).auto_scale_xyz((-1, 1), (-1, 1), (-1, 1))
-</pre></div>
-</div>
-<img alt="../_images/tcalvec_integral_superficie_13_1.png" src="../_images/tcalvec_integral_superficie_13_1.png" />
+<img alt="../_images/tcalvec_integral_superficie_13_0.png" src="../_images/tcalvec_integral_superficie_13_0.png" />
 </div>
 </div>
 <p>En un punto <span class="math notranslate nohighlight">\((u, v)\)</span> podemos obtenemos los vectores tangentes a las líneas en ese punto.</p>
@@ -732,8 +724,8 @@ title="Print to PDF"
 <p>que están asociados a lo diferencial vectorial de arco de cada línea maestra:</p>
 <div class="math notranslate nohighlight">
 \[
-{\bf t}_u  \mathrm{d}u,  \;
-{\bf t}_v  \mathrm{d}v 
+{\bf t}_u  \, \mathrm{d}u,  \;
+{\bf t}_v  \, \mathrm{d}v 
 \]</div>
 <p>El vector normal a los dos vendrá dado por:</p>
 <div class="math notranslate nohighlight">
@@ -805,20 +797,20 @@ title="Print to PDF"
 <img alt="../_images/tcalvec_integral_superficie_20_0.png" src="../_images/tcalvec_integral_superficie_20_0.png" />
 </div>
 </div>
-<p>Si consideramos ahora en un punto <span class="math notranslate nohighlight">\((u, v)\)</span> los elementos diferenciales de arco en las dos líneas maestras:</p>
+<p>Si consideramos ahora en un punto <span class="math notranslate nohighlight">\((u, v)\)</span> los elementos diferenciales de arco en las dos líneas maestras son:</p>
 <div class="math notranslate nohighlight">
 \[
-{\bf t}_u \mathrm{d}u, \; {\bf t}_v \mathrm{d}v
+{\bf t}_u \, \mathrm{d}u, \; {\bf t}_v \, \mathrm{d}v
 \]</div>
-<p>El elemento diferencial de área que sustentan es:</p>
+<p>y el elemento diferencial de área que sustentan es:</p>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{d} \sigma = |{\bf n}| \mathrm{d}u \mathrm{d}v = | {\bf t}_u \times {\bf t}_v | \mathrm{d}u \mathrm{d}v
+\mathrm{d} \sigma = |{\bf n}| \, \mathrm{d}u \mathrm{d}v = | {\bf t}_u \times {\bf t}_v | \, \mathrm{d}u \mathrm{d}v
 \]</div>
 <p>Entonces, para obtener el área de una superficie parametrizada <span class="math notranslate nohighlight">\(\sigma (u, v)\)</span> donde <span class="math notranslate nohighlight">\((u, v)\)</span> están definidas en una región <span class="math notranslate nohighlight">\(R\)</span>, calculamos:</p>
 <div class="math notranslate nohighlight">
 \[
-S = \int_{\sigma} \mathrm{d}\sigma = \int_{R} |{\bf n} | \mathrm{d}u \mathrm{d}v = \int_{R} |{\bf t}_u \times {\bf t}_v | \mathrm{d}u \mathrm{d}v
+S = \int_{\sigma} \mathrm{d}\sigma = \int_{R} |{\bf n} | \, \mathrm{d}u \mathrm{d}v = \int_{R} |{\bf t}_u \times {\bf t}_v | \, \mathrm{d}u \mathrm{d}v
 \]</div>
 <p><em>Ejemplo</em>: Calcula el área de una esfera de radio <span class="math notranslate nohighlight">\(r\)</span>.</p>
 <p>La superficie parametrizada es:</p>
@@ -854,14 +846,15 @@ r \cos \theta \cos \phi &amp;  r \cos \theta \sin \phi &amp; - r \sin \theta \\ 
 <p>El área de la superficie es:</p>
 <div class="math notranslate nohighlight">
 \[
-S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \mathrm{d} u \mathrm{d}v  = \int_0^\pi \int_0^{2\pi} r^2 \sin \theta \, \mathrm{d}\phi \mathrm{d} \theta
+S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \, \mathrm{d} u \mathrm{d}v  = \int_0^\pi \int_0^{2\pi} r^2 \sin \theta \, \mathrm{d}\phi \mathrm{d} \theta
 \]</div>
 <div class="math notranslate nohighlight">
 \[
 = r^2 \, \phi \Big|_0^{2 \pi} \, (-\cos \theta)\Big|_0^{\pi} = 4 \pi r^2
 \]</div>
+</div>
 <div class="section" id="parametrizacion-de-la-superficie-de-una-grafica">
-<h4>Parametrización de la superficie de una gráfica.<a class="headerlink" href="#parametrizacion-de-la-superficie-de-una-grafica" title="Permalink to this heading">#</a></h4>
+<h3>Parametrización de la superficie de una gráfica.<a class="headerlink" href="#parametrizacion-de-la-superficie-de-una-grafica" title="Permalink to this heading">#</a></h3>
 <p>Podemos considerar la gráfica de una función <span class="math notranslate nohighlight">\(f(x, y)\)</span> definida en una reción <span class="math notranslate nohighlight">\(R\)</span> como la parametrización de una superficie con <span class="math notranslate nohighlight">\((x, y)\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -897,7 +890,7 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \mathrm{d} u \mathrm{d}v  
 \mathrm{d} \sigma =
 \sqrt{1 + \left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y} \right)^2} \, \mathrm{d}x \mathrm{d}y
 \]</div>
-<p>Mientras que el área de los rectángulos en <span class="math notranslate nohighlight">\((x, y) \)</span>que los sustentan es:
+<p>Mientras que el área de los rectángulos en <span class="math notranslate nohighlight">\((x, y) \)</span> que los sustentan es
 <span class="math notranslate nohighlight">\(
 \mathrm{d}x\mathrm{d}y
 \)</span></p>
@@ -949,7 +942,6 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \mathrm{d} u \mathrm{d}v  
 </pre></div>
 </div>
 <img alt="../_images/tcalvec_integral_superficie_32_1.png" src="../_images/tcalvec_integral_superficie_32_1.png" />
-</div>
 </div>
 </div>
 </div>
@@ -1008,12 +1000,12 @@ f(\sigma(r, \theta)) = \sqrt{ r^2 \cos^2 \theta + r^2 \sin^2 \theta + 1} = \sqr
 <p>El diferencial de área:</p>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{d}\sigma = |{\bf n}| \mathrm{d}\theta \mathrm{d}r = \sqrt{1+r^2} \, \mathrm{d}\theta \mathrm{d}r
+\mathrm{d}\sigma = |{\bf n}| \, \mathrm{d}\theta \mathrm{d}r = \sqrt{1+r^2} \, \mathrm{d}\theta \mathrm{d}r
 \]</div>
 <p>Y la integral de la función en la superficie:</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{\sigma} f(x, y, z) \mathrm{d} \sigma 
+\int_{\sigma} f(x, y, z) \, \mathrm{d} \sigma 
 = \int_0^{2 \pi} \int_0^1 \sqrt{r^2 + 1} \sqrt{r^2 +1} \, \mathrm{d}r \mathrm{d}\theta 
 \]</div>
 <div class="math notranslate nohighlight">

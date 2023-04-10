@@ -582,12 +582,12 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; [[&gt;]] &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Time &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [[&gt;]]  Tue Mar 14 13:07:43 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Time  Mon Apr 10 21:42:59 2023
 </pre></div>
 </div>
 </div>
@@ -643,10 +643,11 @@ title="Print to PDF"
 \[
 x \in [a, b], \; {\bf c_1}(x) = \left(x, y_1(x) \right) 
 \]</div>
-<p>y la superior con:
-$<span class="math notranslate nohighlight">\(
+<p>y la superior con:</p>
+<div class="math notranslate nohighlight">
+\[
 x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right) 
-\)</span>$</p>
+\]</div>
 <p><em>Observa</em>: En la siguiente figura se muestra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> y la elipse de ejes <span class="math notranslate nohighlight">\(a=2\)</span> en <span class="math notranslate nohighlight">\(x\)</span> y <span class="math notranslate nohighlight">\(b=1\)</span> en <span class="math notranslate nohighlight">\(y\)</span>. Recuerda que el área de elipse es <span class="math notranslate nohighlight">\(\pi a b\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -742,14 +743,14 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 </div>
 <div class="section" id="id2">
 <h3>Teorema de Green<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p><strong>Teorema</strong>: La integral del campo vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), \; F_y(x, y)\right)\)</span>, con <span class="math notranslate nohighlight">\(F_x(x, y), F_y(x, y)\)</span> con derivadas primeras continuas en una región, <span class="math notranslate nohighlight">\(R\)</span>, a lo largo de una línea frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span> de la región <span class="math notranslate nohighlight">\(R\)</span> en sentido anti-horario es:</p>
+<p><strong>Teorema</strong>: La integral del campo vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), \; F_y(x, y)\right)\)</span>, con <span class="math notranslate nohighlight">\(F_x(x, y), F_y(x, y)\)</span> con derivadas primeras continuas en una región, <span class="math notranslate nohighlight">\(R\)</span>, a lo largo de una línea frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span> de la región <span class="math notranslate nohighlight">\(R\)</span>, recorrida en sentido anti-horario es:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \oint_{{\bf c}} {\bf F}(x, y) \, \mathrm{d} {\bf s} = 
-\oint_{{\bf c}} F_x(x, y) \, \mathrm{d}x + F_y(x, y) \mathrm{d}y =
+\oint_{{\bf c}} F_x(x, y) \, \mathrm{d}x + F_y(x, y) \mathrm{d}y \\ = 
 \int_{R} \left( \frac{\partial F_y(x, y)}{\partial x} - \frac{\partial F_x(x, y)}{\partial y} \right) \mathrm{d}x \mathrm{d}y
-\]</div>
-<p><strong>Lema</strong>: Sea una función vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), 0 \right)\)</span> con <span class="math notranslate nohighlight">\(F_x(x, y)\)</span> con derivadas primeras continuas en una región, <span class="math notranslate nohighlight">\(R\)</span>; la integral de <span class="math notranslate nohighlight">\({\bf F} \)</span> a lo largo de una línea frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span>, de <span class="math notranslate nohighlight">\(R\)</span> en sentido anti-horario es:</p>
+\end{split}\]</div>
+<p><strong>Lema</strong>: Sea una función vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), 0 \right)\)</span> con <span class="math notranslate nohighlight">\(F_x(x, y)\)</span> con derivadas primeras continuas en una región, <span class="math notranslate nohighlight">\(R\)</span>; la integral de <span class="math notranslate nohighlight">\({\bf F} \)</span> a lo largo de una línea frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span>, de <span class="math notranslate nohighlight">\(R\)</span>, recorrida en sentido anti-horario es:</p>
 <div class="math notranslate nohighlight">
 \[
 \oint_{{\bf c}} {\bf F}(x,  y) \, \mathrm{d} {\bf s} = 
@@ -801,7 +802,7 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 <div class="math notranslate nohighlight">
 \[
 \int_{{\bf c}_2} {\bf F}(x, y) \, \mathrm{d}{\bf s} 
-= \int_{{\bf c}_2} \left(F_x(x, y), 0\right) \mathrm{d}{\bf s} 
+= \int_{{\bf c}_2} \left(F_x(x, y), 0\right) \, \mathrm{d}{\bf s} 
 = \int_{{\bf c}_2} F_x(x, y) \, \mathrm{d} x  
 \]</div>
 <p>Como en el caso anterior:</p>
@@ -811,11 +812,12 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 \]</div>
 <p>Y por lo tanto</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \int_{{\bf c}_2} \left(F_x(x, y), 0 \right) \,\mathrm{d} {\bf s} 
-= \int_a^b \left( F_x(x, y_2(x)), 0 \right) \, \left( 1, \dot{y}_2(x) \right) \mathrm{d} x = \int_a^b F_x(x, y_2(x)) \, \mathrm{d}x
-\]</div>
-<p>que corresponde al primer término de la integral anterior de área.</p>
+= \int_a^b \left( F_x(x, y_2(x)), 0 \right) \, \left( 1, \dot{y}_2(x) \right) \, \mathrm{d} x  \\
+= \int_a^b F_x(x, y_2(x)) \, \mathrm{d}x
+\end{split}\]</div>
+<p>que corresponde al primer término de la integral anterior.</p>
 <p>Si calculamos entonces la integral del campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), 0 \right)\)</span> en dirección horaria de la curva cerrada, <span class="math notranslate nohighlight">\({\bf c}\)</span>, que es la frontera de <span class="math notranslate nohighlight">\(R\)</span>, y que corresponde a integrar en <span class="math notranslate nohighlight">\({\bf c}_2\)</span> y luego en <span class="math notranslate nohighlight">\({\bf c}_1\)</span> (en sentido opuesto), esto es, en sentido horario, obtenemos:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -831,7 +833,8 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 \[
 \oint_{{\bf c}} \left(F_x(x, y), 0 \right) \mathrm{d} {\bf s} = \int_{R} -\frac{\partial F_x(x, y)}{\partial y} \mathrm{d}x \mathrm{d}y
 \]</div>
-<p><em>Ejercicio</em>: Verificar el siguiente lema</p>
+<p>con lo que hemos verificado el lema.</p>
+<p><em>Ejercicio</em>: Verificar ahora este segundo lema:</p>
 <p><strong>Lema</strong>: La integral de la función vectorial <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( 0, F_y(x, y) \right)\)</span> a lo largo de la curva <span class="math notranslate nohighlight">\({\bf c}\)</span>, que limita una región <span class="math notranslate nohighlight">\(R\)</span>, en sentido anti-horario es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -888,8 +891,8 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 </div>
 <div class="section" id="teorema-de-la-divergencia">
 <h3>Teorema de la divergencia.<a class="headerlink" href="#teorema-de-la-divergencia" title="Permalink to this heading">#</a></h3>
-<p>Vamos a considerar la integral de una función vectorial de dos dimensiones, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, <em>a través de</em> una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>.</p>
-<p>Dado el elemento vectorial diferencial de arco <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = (\mathrm{d}x, \mathrm{d}y)\)</span>, en vez de calcular el productor escalar del campo a lo largo de la trayectoria, <span class="math notranslate nohighlight">\( {\bf F}(x, y) \, \mathrm{d}{\bf s}\)</span>, lo calculamos a través de ella, normal a ella, <span class="math notranslate nohighlight">\({\bf F}(x, y) \, \mathrm{d}{\bf n}\)</span>, donde, <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n}\)</span> es normal a <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span>, pero con igual módulo, que damos por: <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n} = ( \mathrm{d}y, -\mathrm{d}x)\)</span>.</p>
+<p>Vamos a considerar la integral de una función vectorial de dos dimensiones, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, <em>a través de</em> una línea cerrada, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>.</p>
+<p>Dado el elemento vectorial diferencial de arco <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = (\mathrm{d}x, \mathrm{d}y)\)</span>, en vez de calcular el productor escalar del campo a lo largo de la trayectoria, <span class="math notranslate nohighlight">\( {\bf F}(x, y) \, \mathrm{d}{\bf s}\)</span>, lo calculamos a través de ella, normal a ella, <span class="math notranslate nohighlight">\({\bf F}(x, y) \, \mathrm{d}{\bf n}\)</span>, donde, <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n}\)</span> es normal a <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span>, pero con igual módulo, donde definimos <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n} = ( \mathrm{d}y, -\mathrm{d}x)\)</span>.</p>
 <p>Esto es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1042,20 +1045,20 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 \]</div>
 <p>2i) La integral del campo, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, x^2)\)</span> a lo largo de <span class="math notranslate nohighlight">\({\bf c}_1\)</span> es:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \int_{{\bf c}_1} {\bf F} \, \mathrm{d}{\bf s} \to \int_0^1 (x^2, x^2) \, (1, 2x) \, \mathrm{d}x 
-= \int_0^1 x^2 + 2x^3 \mathrm{d}x 
+= \int_0^1 x^2 + 2x^3 \mathrm{d}x \\
 = \left(\frac{x^3}{3} + \frac{x^4}{2} \right) \Big|_0^1 
 = \frac{5}{6}
-\]</div>
+\end{split}\]</div>
 <p>2ii) La integral del campo a lo largo de <span class="math notranslate nohighlight">\({\bf c}_2\)</span> es:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \int_{{\bf c}_2} {\bf F} \, \mathrm{d}{\bf s} \to \int_0^1 (x, x^2) \, (1, 1) \, \mathrm{d}x 
-= \int_0^1 x + x^2 \mathrm{d}x 
+= \int_0^1 x + x^2 \mathrm{d}x \\
 = \left(\frac{x^2}{2} + \frac{x^3}{3} \right) \Big|_0^1 
 = \frac{5}{6}
-\]</div>
+\end{split}\]</div>
 <p>2iii) La integral del campo a lo largo de <span class="math notranslate nohighlight">\({\bf c}_1\)</span> y luego <span class="math notranslate nohighlight">\({\bf c}_2\)</span> (en sentido contrario), de tal forma que recorrarmos la frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span>, en sentido antihorario es:</p>
 <div class="math notranslate nohighlight">
 \[

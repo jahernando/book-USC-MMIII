@@ -567,7 +567,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Mar 14 13:07:46 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:02 2023
 </pre></div>
 </div>
 </div>
@@ -612,7 +612,7 @@ title="Print to PDF"
 <h2>Integral de línea<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <div class="section" id="revision-de-parametrizacion-de-lineas">
 <h3>Revisión de parametrización de líneas.<a class="headerlink" href="#revision-de-parametrizacion-de-lineas" title="Permalink to this heading">#</a></h3>
-<p>Hemos visto con anterioridad que podemos parametrizar una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, de un especio <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, como una función vectorial definida en un intervalo <span class="math notranslate nohighlight">\([t_a, t_b]\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}\)</span>.</p>
+<p>Hemos visto con anterioridad que podemos parametrizar una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, de un espacio <span class="math notranslate nohighlight">\(\mathrm{R}^n\)</span>, con <span class="math notranslate nohighlight">\(n&gt;1\)</span>, como una función vectorial definida en un intervalo <span class="math notranslate nohighlight">\([t_a, t_b]\)</span> de <span class="math notranslate nohighlight">\(\mathrm{R}\)</span>.</p>
 <p><em>Ejemplo</em>: parametrización de una circunferencia de radio <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -640,7 +640,7 @@ t \in [0, 2 n \pi] \to \left( r \cos \omega t, r \sin \omega t, v_z t \right)
 <img alt="../_images/tcalvec_integral_linea_7_0.png" src="../_images/tcalvec_integral_linea_7_0.png" />
 </div>
 </div>
-<p>Calculamos la longitud de arco, <span class="math notranslate nohighlight">\(s\)</span>, de una línea, mediante la integral en una dimensión dada por:</p>
+<p>Calculamos en su momento la longitud de arco, <span class="math notranslate nohighlight">\(s\)</span>, de una línea, mediante la integral en una dimensión dada por:</p>
 <div class="math notranslate nohighlight">
 \[
 s = \int_{{\bf c}} \, \mathrm{d}s = \int_{t_a}^{t_b} | \dot{{\bf c}}(t) | \mathrm{d}t
@@ -657,19 +657,18 @@ s = \int_{{\bf c}} \, \mathrm{d}s = \int_{t_a}^{t_b} | \dot{{\bf c}}(t) | \mathr
 \[
 \mathrm{d}s = | {\bf \dot{c}}(t)| \, \mathrm{d}t
 \]</div>
-<p>es un diferencial de distancia. Fíjate que es un escalar.</p>
-<p>En física, si <span class="math notranslate nohighlight">\(t\)</span> es el tiempo, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> es la trayectoria de un móvil, <span class="math notranslate nohighlight">\({\bf \dot{c}}(t)\)</span>, es la velocidad, y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s} = |{\bf \dot{c}}(t)| \mathrm{d}t\)</span>, el diferencial de distancia recorrido en un diferencial de tiempo <span class="math notranslate nohighlight">\(\mathrm{d}t\)</span>.</p>
+<p>es el diferencial de arco. Fíjate que es una cantidad escalar.</p>
+<p>En física, si <span class="math notranslate nohighlight">\(t\)</span> es el tiempo, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> es la trayectoria de un móvil, <span class="math notranslate nohighlight">\({\bf \dot{c}}(t)\)</span>, es la velocidad, y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s} = |{\bf \dot{c}}(t)| \, \mathrm{d}t\)</span>, el diferencial de distancia recorrida en un diferencial de tiempo <span class="math notranslate nohighlight">\(\mathrm{d}t\)</span>.</p>
 </div>
 <div class="section" id="integral-de-una-funcion-escalar-a-lo-largo-de-una-linea">
 <h3>Integral de una función escalar a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-escalar-a-lo-largo-de-una-linea" title="Permalink to this heading">#</a></h3>
-<p>El una famosa escena de la novela homónima, Tom Sowyer convence a sus amigos para que pinten por él la valla que su tia Polly le ha obligado pintar como castigo por hacer novillos. ¿Sabría Tom Sayer qué superficie tiene la valla? <a class="reference external" href="https://www.youtube.com/watch?v=kmJLCvp4UD4">[&gt;]</a></p>
-<p>La valla recorre sobre la base una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, y tiene un altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span> en cada punto de esa línea, <span class="math notranslate nohighlight">\(f({\bf c}(t))\)</span>.</p>
-<p>El área de la valla, <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, será la integral de la función altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, a lo largo de la línea de su base, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, parametrizada en función de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>El una famosa escena de la novela «Las aventuras de Tom Sowyer», la tía de Tom le obliga a pintar la valla de la casa como castigo por una de sus travesuras, pero Tom, que es un pícaro, convence a sus amigos para que la pinten por él diciéndoles que pintar es muy divertido, ¡todo un <em>influencer</em> para la época!, pero ¿sabría Tom calcular la superficie de la valla? <a class="reference external" href="https://www.youtube.com/watch?v=kmJLCvp4UD4">[&gt;]</a></p>
+<p>Consideremos que la valla se asienta sobre una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, y tiene un altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span>, en cada punto de esa línea, <span class="math notranslate nohighlight">\(f({\bf c}(t))\)</span>. El área de la valla, <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, será la integral de la altura, <span class="math notranslate nohighlight">\(f(x, y)\)</span> por el diferencial de arco, <span class="math notranslate nohighlight">\(\mathrm{d}s = |{\bf \dot{c}}| \, \mathrm{d}t\)</span>, a lo largo de la línea.</p>
 <div class="math notranslate nohighlight">
 \[
-\mathcal{A} = \int_{{\bf c}} f({\bf x}) \, \mathrm{d} s = \int_{t_a}^{t_b} f({\bf c}(t)) \, |{\bf \dot{c}}(t)| \mathrm{d}t 
+\mathcal{A} = \int_{{\bf c}} f(x, y) \, \mathrm{d} s = \int_{t_a}^{t_b} f({\bf c}(t)) \, |{\bf \dot{c}}(t)| \mathrm{d}t 
 \]</div>
-<p>que si te fijas, aunque aparecen vectores, es simplemente una integral de 1 dimensión en <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>que es simplemente una integral de una dimensión en <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <p><em>Ejercicio</em>: Calcula la integral de línea de la función <span class="math notranslate nohighlight">\(f(x, y) = x + y\)</span> a lo largo de la circunferencia de radio unidad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -742,9 +741,9 @@ f({\bf c} (t))  = (1 + \sin^3 t)
 <p>Definimos la integral de una función vectoral, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, a lo largo de una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [t_0, t_1]\)</span>, como:</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{{\bf c}} {\bf F} ({\bf x}) \, \mathrm{d} {\bf s} = \int_{t_0}^{t_1} {\bf F}({\bf c}(t)) \, {\bf {\dot c}}(t) \mathrm{d} t
+\int_{{\bf c}} {\bf F} ({\bf x}) \, \mathrm{d} {\bf s} = \int_{t_0}^{t_1} {\bf F}({\bf c}(t)) \, {\bf {\dot c}}(t) \, \mathrm{d} t
 \]</div>
-<p>donde <span class="math notranslate nohighlight">\({\bf F}({\bf c}(t))\)</span> es la función valorada a lo largo de la línea, <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = {\bf \dot{c}}(t) \mathrm{d} t\)</span>, es el elemento diferencial de arco. Fíjate que ahora es un deferencial vectorial y que integramos el producto escalar entre ambos.</p>
+<p>donde <span class="math notranslate nohighlight">\({\bf F}({\bf c}(t))\)</span> es la función valorada a lo largo de la línea y <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = {\bf \dot{c}}(t) \, \mathrm{d}t\)</span> es el diferencial de arco. Fíjate que ahora <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s}\)</span> es un diferencial vectorial y que integramos el producto escalar entre ambos vectores, <span class="math notranslate nohighlight">\({\bf F} \, \mathrm{d}{\bf s}\)</span>.</p>
 <p><em>Ejemplo:</em> Sea la función vectoral <span class="math notranslate nohighlight">\({\bf E}(x, y) = (0, E_0)\)</span>.
 Calcular la integral a lo largo de una línea horizonal, otra vertical y en la diagonal.</p>
 <div class="cell docutils container">
@@ -794,7 +793,7 @@ Calcular la integral a lo largo de una línea horizonal, otra vertical y en la d
 \[
 {\bf F} \, \mathrm{d}{\bf s} = (F_x, F_y) \, (\mathrm{d}x, \mathrm{d} y) =F_x \mathrm{d}x + F_y \mathrm{d}y \to (F_x \dot{x} + F_y \dot{y}) \, \mathrm{d}t
 \]</div>
-<p><em>Observa</em>: En la siguiente figura se muestra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> y la elipse con ejes <span class="math notranslate nohighlight">\(a, b\)</span>, que recorremos en este caso en sentido horario (empieza por ejemplo en (-a, 0)). Hazte una idea de cómo es el producto escalar entre el campo y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span> a lo largo de elipse. ¿Dónde es mayor? ¿Dónde es nulo?</p>
+<p><em>Observa</em>: En la siguiente figura se muestra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> y la elipse con ejes <span class="math notranslate nohighlight">\(a, b\)</span>, que recorremos en este caso en sentido horario (empieza por ejemplo en (-a, 0)). Hazte una idea de cómo es el producto escalar entre el campo, <span class="math notranslate nohighlight">\({\bf F}\)</span>, y <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span> a lo largo de elipse. ¿Dónde es mayor? ¿Dónde es nulo?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span>
@@ -813,24 +812,7 @@ Calcular la integral a lo largo de una línea horizonal, otra vertical y en la d
 <img alt="../_images/tcalvec_integral_linea_23_0.png" src="../_images/tcalvec_integral_linea_23_0.png" />
 </div>
 </div>
-<p><em>Observa</em>: En las siguiente figura se muestra la elipse, <span class="math notranslate nohighlight">\({\bf c}(t) = (-a \cos t, b \sin t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [0, 2 \pi)\)</span> y el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> recorrida en sentido horario.</p>
-<p>Para una partición de <span class="math notranslate nohighlight">\(t \in [0, 2\pi)\)</span>, el término <span class="math notranslate nohighlight">\({\bf F} \, \mathrm{d}{\bf s} = F_x \, \mathrm{d}x  = y  \, \mathrm{d}x\)</span> corresponde al rectángulo de base <span class="math notranslate nohighlight">\(\mathrm{d}x\)</span> y altura <span class="math notranslate nohighlight">\(y\)</span>. Y la integral nos queda el área de la elipse.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
-<span class="n">val</span> <span class="o">=</span> <span class="n">gf</span><span class="o">.</span><span class="n">int_fvect_line</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;integral &#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>integral  -0.9956796827723801
-</pre></div>
-</div>
-<img alt="../_images/tcalvec_integral_linea_25_1.png" src="../_images/tcalvec_integral_linea_25_1.png" />
-</div>
-</div>
-<p><em>Ejercicio</em>: Integra <span class="math notranslate nohighlight">\({\bf F}(x, y) = (-y, 0)\)</span> en la elipse de exes <span class="math notranslate nohighlight">\(a, b\)</span>, recorrida en sentido anti-horario.</p>
+<p><em>Ejercicio</em>: Integra ahora <span class="math notranslate nohighlight">\({\bf F}(x, y) = (-y, 0)\)</span> en la elipse de exes <span class="math notranslate nohighlight">\(a, b\)</span>, recorrida en sentido anti-horario.</p>
 <p>La elipse podemos parametrizarla con:</p>
 <div class="math notranslate nohighlight">
 \[

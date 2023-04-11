@@ -557,7 +557,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:09 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Apr 11 18:07:14 2023
 </pre></div>
 </div>
 </div>
@@ -709,7 +709,7 @@ F_x &amp; F_y &amp; F_z \\
 <img alt="../_images/tcalvec_rotdiv_conservativos_12_0.png" src="../_images/tcalvec_rotdiv_conservativos_12_0.png" />
 </div>
 </div>
-<p><em>Ejercicio</em>: Demostrar que si las funciones componentes del campo vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (F_x, F_y, F_z)\)</span> tienen derivadas segundas continuas, se cumple: <span class="math notranslate nohighlight">\(\nabla (\nabla \times {\bf F}) = 0\)</span>, la divergencia del rotacional es nula.</p>
+<p><em>Ejercicio</em>: Demostrar que si las funciones componentes del campo vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (F_x, F_y, F_z)\)</span> tienen derivadas segundas continuas, se cumple: <span class="math notranslate nohighlight">\(\nabla \cdot (\nabla \times {\bf F}) = 0\)</span>, la divergencia del rotacional es nula.</p>
 <p><em>Teorema</em>: Sean <span class="math notranslate nohighlight">\(f,g\)</span> campos escalares, <span class="math notranslate nohighlight">\({\bf F},{\bf G}\)</span> campos vectoriales, con derivadas segundas continuas, y <span class="math notranslate nohighlight">\(c\)</span> una constante, se cumple:</p>
 <p><span class="math notranslate nohighlight">\(\nabla (f+g) = \nabla f  + \nabla g\)</span></p>
 <p><span class="math notranslate nohighlight">\(\nabla (cf) = c \, \nabla f \)</span></p>
@@ -739,7 +739,7 @@ F_x &amp; F_y &amp; F_z \\
 \[
 \oint_{{\bf c}} {\bf F} \, \mathrm{d}{\bf s} = 0
 \]</div>
-<p><em>Teorema</em>: Sea un campo <span class="math notranslate nohighlight">\({\bf F}(x, y)\)</span> es conservativo si y solo sí:</p>
+<p><strong>Teorema</strong>: Sea un campo <span class="math notranslate nohighlight">\({\bf F}(x, y)\)</span> es conservativo si y solo sí:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} = 0
@@ -761,7 +761,7 @@ F_x &amp; F_y &amp; F_z \\
 \frac{\partial F_y}{\partial x} = \frac{\partial F_x}{\partial y}
 \]</div>
 <p>entonces la integral a lo largo de la frontera de la bola <span class="math notranslate nohighlight">\(\oint_{{\bf c}} {\bf F}\, \mathrm{d}{\bf s} \neq 0\)</span>, y el campo no es conservativo.</p>
-<p><em>Ejercicio</em>: Verfica que el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (2xy + y^3, x^2 + 3xy^2 + y^2)\)</span> es conservativo.</p>
+<p><strong>Ejercicio</strong>: Verfica que el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (2xy + y^3, x^2 + 3xy^2 + y^2)\)</span> es conservativo.</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial F_x}{ \partial y} = 2x + 3y^2
@@ -786,13 +786,13 @@ F_x &amp; F_y &amp; F_z \\
 </div>
 </div>
 <p>Pero todavía es más fuerte:</p>
-<p><em>Teorema</em>: El campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (F_x, F_y)\)</span> es conservativo sí y solo sí, existe un campo escalar <span class="math notranslate nohighlight">\(U(x, y)\)</span> tal que <span class="math notranslate nohighlight">\({\bf F} = \nabla U\)</span>.</p>
+<p><strong>Teorema</strong>: El campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (F_x, F_y)\)</span> es conservativo sí y solo sí, existe un campo escalar <span class="math notranslate nohighlight">\(U(x, y)\)</span> tal que <span class="math notranslate nohighlight">\({\bf F} = \nabla U\)</span>.</p>
 <p>Si <span class="math notranslate nohighlight">\({\bf F} = \nabla U\)</span>, entonces se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{ \partial y} = 0
 \]</div>
-<p>Si <span class="math notranslate nohighlight">\({\bf F}\)</span> es conservativo, entonces podemos encontrar <span class="math notranslate nohighlight">\(U(x, y)\)</span>, tomemos como referencia un punto <span class="math notranslate nohighlight">\((x_0, y_0)\)</span></p>
+<p>Si <span class="math notranslate nohighlight">\({\bf F}\)</span> es conservativo, entonces podemos encontrar <span class="math notranslate nohighlight">\(U(x, y)\)</span>. Tomemos como referencia un punto <span class="math notranslate nohighlight">\((x_0, y_0)\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 U(x, y) = \int_{x_0}^x F_x(x, y) \, \mathrm{d}x + g(y)
@@ -815,7 +815,7 @@ g(y) = \int_{y_0}^y \left( F_y(x, y) - \int_{x_0}^x \frac{\partial F_x(x, y)}{\p
 \[
 \frac{\partial g(y)}{\partial x} = \int_{y_0}^y \left( \frac{\partial F_y}{ \partial x} - \frac{\partial F_x}{\partial y}\right) \mathrm{d}y = 0
 \]</div>
-<p><em>Ejercicio</em>: Calcula el campo escalar, <span class="math notranslate nohighlight">\(U(x, y)\)</span>, cuyo campo conservativo es <span class="math notranslate nohighlight">\({\bf F}(x, y) = (2xy + y^3, x^2 + 3xy^2 + y^2)\)</span>.</p>
+<p><strong>Ejercicio</strong>: Calcula el campo escalar, <span class="math notranslate nohighlight">\(U(x, y)\)</span>, cuyo campo conservativo es <span class="math notranslate nohighlight">\({\bf F}(x, y) = (2xy + y^3, x^2 + 3xy^2 + y^2)\)</span>.</p>
 <p>tomemos <span class="math notranslate nohighlight">\((x_0, y_0)\)</span> el origen.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -866,7 +866,7 @@ U(x, y) = x^2y + x y^3 + y^2 +C
 Si un campo no tiene rotacional es convervativo. Y si es conservativo no tiene rotacional.</p>
 <p>Observa el dibujo de Escher ¡debe ser una ilusión óptica! porque las escaleras siguen el gradiente de su altura, y por lo tanto al circular a lo largo como la pista cerrada que forman no puede tener rotacional.</p>
 <a class="reference internal image-reference" href="../_images/escher_stairs.jpg"><img alt="../_images/escher_stairs.jpg" src="../_images/escher_stairs.jpg" style="width: 300px;" /></a>
-<p><em>Teorema</em>: Sea <span class="math notranslate nohighlight">\(U(x, y)\)</span> un campo escalar con derivadas segundas continuas, entonces la integral de su gradiente, <span class="math notranslate nohighlight">\(\nabla U\)</span>, a lo largo de una trayectoria, <span class="math notranslate nohighlight">\({\bf c}\)</span>, que une dos puntos, <span class="math notranslate nohighlight">\(A, \, B\)</span> es la diferencia de <span class="math notranslate nohighlight">\(U\)</span> en <span class="math notranslate nohighlight">\(B\)</span> y <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>Teorema</strong>: Sea <span class="math notranslate nohighlight">\(U(x, y)\)</span> un campo escalar con derivadas segundas continuas, entonces la integral de su gradiente, <span class="math notranslate nohighlight">\(\nabla U\)</span>, a lo largo de una trayectoria, <span class="math notranslate nohighlight">\({\bf c}\)</span>, que une dos puntos, <span class="math notranslate nohighlight">\(A, \, B\)</span> es la diferencia de <span class="math notranslate nohighlight">\(U\)</span> en <span class="math notranslate nohighlight">\(B\)</span> y <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{{\bf c}} \nabla U \, \mathrm{d}{\bf s} = U(B) - U(A)

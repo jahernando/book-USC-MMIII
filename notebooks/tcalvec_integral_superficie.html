@@ -577,7 +577,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:06 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Apr 11 18:07:10 2023
 </pre></div>
 </div>
 </div>
@@ -732,7 +732,7 @@ title="Print to PDF"
 \[
 {\bf n} = {\bf t}_u \times {\bf t}_v
 \]</div>
-<p>Si te das cuenta <span class="math notranslate nohighlight">\(|{\bf n}|\)</span> es la normal a los dos vectores y su módulo corresponde al área del paralelogramo que sustentan <span class="math notranslate nohighlight">\({\bf t}_u, \; {\bf t}_v\)</span>.</p>
+<p>Si te das cuenta <span class="math notranslate nohighlight">\({\bf n}\)</span> es la normal a los dos vectores y su módulo corresponde al área del paralelogramo que sustentan <span class="math notranslate nohighlight">\({\bf t}_u, \; {\bf t}_v\)</span>.</p>
 <p>El diferencial de área</p>
 <div class="math notranslate nohighlight">
 \[
@@ -812,7 +812,7 @@ title="Print to PDF"
 \[
 S = \int_{\sigma} \mathrm{d}\sigma = \int_{R} |{\bf n} | \, \mathrm{d}u \mathrm{d}v = \int_{R} |{\bf t}_u \times {\bf t}_v | \, \mathrm{d}u \mathrm{d}v
 \]</div>
-<p><em>Ejemplo</em>: Calcula el área de una esfera de radio <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p><strong>Ejemplo</strong>: Calcula el área de una esfera de radio <span class="math notranslate nohighlight">\(r\)</span>.</p>
 <p>La superficie parametrizada es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -900,7 +900,7 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \, \mathrm{d} u \mathrm{d}
 \mathrm{d}\sigma = \frac{\mathrm{d}x \mathrm{d}y}{\cos \gamma}, \;\;
 \cos \gamma = \frac{1}{\sqrt{1 + \left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y} \right)^2}}
 \]</div>
-<p>Donde <span class="math notranslate nohighlight">\(\gamma\)</span> es ahora el ángulo que forma la normal con el eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<p>Donde <span class="math notranslate nohighlight">\(\gamma\)</span> es ahora el ángulo que forma la normal, <span class="math notranslate nohighlight">\({\bf n}\)</span>, con el eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -953,7 +953,7 @@ S = \int_{\sigma} \mathrm{d}\sigma = \int_R |{\bf n}| \, \mathrm{d} u \mathrm{d}
 \int_{S} f(x, y, z) \, \mathrm{d}\sigma = \int_R f(\sigma(u, v)) \, |{\bf n}| \mathrm{d}u \mathrm{d}v 
 \]</div>
 <p><em>Cuestión</em>: ¿Puedes dar una interpretación a la integral de una función escalar sobre una superficie?</p>
-<p><em>Ejercicio</em>: Integra la función <span class="math notranslate nohighlight">\(f(x, y, z) = \sqrt{x^2 + y^2 +1}\)</span> en el helicoloide dado por: <span class="math notranslate nohighlight">\(\sigma (r, \theta) = \left( r \cos \theta, r \sin \theta, \theta \right)\)</span> con <span class="math notranslate nohighlight">\(\theta \in [0, 2 \pi]\)</span> y <span class="math notranslate nohighlight">\(r \in [0, 1]\)</span></p>
+<p><strong>Ejercicio</strong>: Integra la función <span class="math notranslate nohighlight">\(f(x, y, z) = \sqrt{x^2 + y^2 +1}\)</span> en el helicoloide dado por <span class="math notranslate nohighlight">\(\sigma (r, \theta) = \left( r \cos \theta, r \sin \theta, \theta \right)\)</span> con <span class="math notranslate nohighlight">\(\theta \in [0, 2 \pi]\)</span> y <span class="math notranslate nohighlight">\(r \in [0, 1]\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thetarange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
@@ -1023,7 +1023,7 @@ Llamamos integral de la función <span class="math notranslate nohighlight">\({\
 \int_{\sigma} {\bf F}(x, y, z) \, \mathrm{d} \vec{\sigma} = \int_R {\bf F}(\sigma(u, v)) \, {\bf n} \, \mathrm{d}u \mathrm{d}v 
 \]</div>
 <p><em>Cuestión</em>: ¿Puedes dar una interpretación de la integral de un campo <span class="math notranslate nohighlight">\({\bf F}\)</span> a través de una superficie? En Física seguro que has encontrado este caso con anterioridad. ¡Se trata del flujo!</p>
-<p><em>Ejercicio</em>: Integra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x, y, z)\)</span> sobre la esfera de radio unidad.</p>
+<p><strong>Ejercicio</strong>: Integra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x, y, z)\)</span> sobre la esfera de radio unidad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>

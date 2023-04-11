@@ -567,7 +567,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:02 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Apr 11 18:07:07 2023
 </pre></div>
 </div>
 </div>
@@ -652,7 +652,7 @@ s = \int_{{\bf c}} \, \mathrm{d}s = \int_{t_a}^{t_b} | \dot{{\bf c}}(t) | \mathr
 \frac{\mathrm{d}x_n(t)}{\mathrm{d}t}\right)
 \]</div>
 <p>es la derivada de <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>.</p>
-<p>Y</p>
+<p>y</p>
 <div class="math notranslate nohighlight">
 \[
 \mathrm{d}s = | {\bf \dot{c}}(t)| \, \mathrm{d}t
@@ -697,9 +697,9 @@ s = \int_{{\bf c}} \, \mathrm{d}s = \int_{t_a}^{t_b} | \dot{{\bf c}}(t) | \mathr
 <p>La integral a lo largo de la circunferencia,</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{{\bf c}} (x + y) \, \mathrm{d} s = \int_{0}^{2 \pi} (\sin t + \cos t) \mathrm{d}t  = -\cos t + \sin t \Big|_0^{2 \pi} = 0
+\int_{{\bf c}} (x + y) \, \mathrm{d} s = \int_{0}^{2 \pi} (\sin t + \cos t) \, \mathrm{d}t  = -\cos t + \sin t \Big|_0^{2 \pi} = 0
 \]</div>
-<p><em>Ejercicio</em>: Calcula la integral de la función <span class="math notranslate nohighlight">\(f(x, y) = 1 + y/3\)</span>, a lo largo de la línea parametrizada por: <span class="math notranslate nohighlight">\({\bf c}(t) = (3 \cos^3 t, 3 \sin^3 t)\)</span> con <span class="math notranslate nohighlight">\(t \in [0, \pi/2]\)</span>.</p>
+<p><em>Ejercicio</em>: Calcula la integral de la función <span class="math notranslate nohighlight">\(f(x, y) = 1 + y/3\)</span>, a lo largo de la línea parametrizada por <span class="math notranslate nohighlight">\({\bf c}(t) = (3 \cos^3 t, 3 \sin^3 t)\)</span> con <span class="math notranslate nohighlight">\(t \in [0, \pi/2]\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 {\bf c}(t) = \left( 3 \cos^3 t, 3 \sin^3t \right) \to {\bf \dot{c}}(t) = 9 \cos t \sin t \left( -\cos t, \sin t \right)
@@ -738,10 +738,10 @@ f({\bf c} (t))  = (1 + \sin^3 t)
 </div>
 <div class="section" id="integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea">
 <h3>Integral de una función vectorial a lo largo de una línea<a class="headerlink" href="#integral-de-una-funcion-vectorial-a-lo-largo-de-una-linea" title="Permalink to this heading">#</a></h3>
-<p>Definimos la integral de una función vectoral, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, a lo largo de una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [t_0, t_1]\)</span>, como:</p>
+<p>Definimos la integral de una función vectoral, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, a lo largo de una línea, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>, con <span class="math notranslate nohighlight">\(t \in [t_a, t_b]\)</span>, como:</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{{\bf c}} {\bf F} ({\bf x}) \, \mathrm{d} {\bf s} = \int_{t_0}^{t_1} {\bf F}({\bf c}(t)) \, {\bf {\dot c}}(t) \, \mathrm{d} t
+\int_{{\bf c}} {\bf F} ({\bf x}) \, \mathrm{d} {\bf s} = \int_{t_a}^{t_b} {\bf F}({\bf c}(t)) \, {\bf {\dot c}}(t) \, \mathrm{d} t
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\({\bf F}({\bf c}(t))\)</span> es la función valorada a lo largo de la línea y <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = {\bf \dot{c}}(t) \, \mathrm{d}t\)</span> es el diferencial de arco. Fíjate que ahora <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s}\)</span> es un diferencial vectorial y que integramos el producto escalar entre ambos vectores, <span class="math notranslate nohighlight">\({\bf F} \, \mathrm{d}{\bf s}\)</span>.</p>
 <p><em>Ejemplo:</em> Sea la función vectoral <span class="math notranslate nohighlight">\({\bf E}(x, y) = (0, E_0)\)</span>.
@@ -752,8 +752,8 @@ Calcular la integral a lo largo de una línea horizonal, otra vertical y en la d
 <span class="n">trange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
 <span class="n">Ex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mi">0</span> <span class="o">+</span> <span class="mf">0.</span><span class="o">*</span><span class="n">x</span>
 <span class="n">Ey</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mf">1.</span><span class="o">+</span> <span class="mf">0.</span><span class="o">*</span><span class="n">x</span>
-<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="mf">1.</span><span class="o">*</span><span class="n">t</span>
-<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="mf">0.</span><span class="o">*</span><span class="n">t</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="mf">0.</span><span class="o">*</span><span class="n">t</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span>    <span class="p">:</span> <span class="mf">1.</span><span class="o">*</span><span class="n">t</span>
 <span class="n">gf</span><span class="o">.</span><span class="n">line2d</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">trange</span><span class="p">);</span> 
 <span class="n">gf</span><span class="o">.</span><span class="n">quiver2d</span><span class="p">(</span><span class="n">Ex</span><span class="p">,</span> <span class="n">Ey</span><span class="p">,</span> <span class="n">xrange</span><span class="p">,</span> <span class="n">xrange</span><span class="p">);</span>
 </pre></div>

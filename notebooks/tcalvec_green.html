@@ -499,11 +499,13 @@ title="Print to PDF"
      Teorema de Green
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teorema-de-la-divergencia">
-     Teorema de la divergencia.
-    </a>
-   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teorema-de-la-divergencia">
+   Teorema de la divergencia.
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#apendices">
      Apéndices
@@ -555,11 +557,13 @@ title="Print to PDF"
      Teorema de Green
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teorema-de-la-divergencia">
-     Teorema de la divergencia.
-    </a>
-   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teorema-de-la-divergencia">
+   Teorema de la divergencia.
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#apendices">
      Apéndices
@@ -582,12 +586,12 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Time &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Última actualización &#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Time  Mon Apr 10 21:42:59 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última actualización  Tue Apr 11 18:07:03 2023
 </pre></div>
 </div>
 </div>
@@ -648,7 +652,7 @@ x \in [a, b], \; {\bf c_1}(x) = \left(x, y_1(x) \right)
 \[
 x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right) 
 \]</div>
-<p><em>Observa</em>: En la siguiente figura se muestra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> y la elipse de ejes <span class="math notranslate nohighlight">\(a=2\)</span> en <span class="math notranslate nohighlight">\(x\)</span> y <span class="math notranslate nohighlight">\(b=1\)</span> en <span class="math notranslate nohighlight">\(y\)</span>. Recuerda que el área de elipse es <span class="math notranslate nohighlight">\(\pi a b\)</span>.</p>
+<p><em>Observa</em>: En la siguiente figura se muestra el campo <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, 0)\)</span> y la elipse de ejes <span class="math notranslate nohighlight">\(a=2\)</span> en <span class="math notranslate nohighlight">\(x\)</span> y <span class="math notranslate nohighlight">\(b=1\)</span> en <span class="math notranslate nohighlight">\(y\)</span>. Recuerda que el área de elipse es <span class="math notranslate nohighlight">\(a b \pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span>
@@ -747,7 +751,7 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \oint_{{\bf c}} {\bf F}(x, y) \, \mathrm{d} {\bf s} = 
-\oint_{{\bf c}} F_x(x, y) \, \mathrm{d}x + F_y(x, y) \mathrm{d}y \\ = 
+\oint_{{\bf c}} F_x(x, y) \, \mathrm{d}x + F_y(x, y) \, \mathrm{d}y \\ = 
 \int_{R} \left( \frac{\partial F_y(x, y)}{\partial x} - \frac{\partial F_x(x, y)}{\partial y} \right) \mathrm{d}x \mathrm{d}y
 \end{split}\]</div>
 <p><strong>Lema</strong>: Sea una función vectorial, <span class="math notranslate nohighlight">\({\bf F}(x, y) = \left( F_x(x, y), 0 \right)\)</span> con <span class="math notranslate nohighlight">\(F_x(x, y)\)</span> con derivadas primeras continuas en una región, <span class="math notranslate nohighlight">\(R\)</span>; la integral de <span class="math notranslate nohighlight">\({\bf F} \)</span> a lo largo de una línea frontera, <span class="math notranslate nohighlight">\({\bf c}\)</span>, de <span class="math notranslate nohighlight">\(R\)</span>, recorrida en sentido anti-horario es:</p>
@@ -810,7 +814,7 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 \[
 \mathrm{d} {\bf s} = {\bf {\dot c}_2}(x) \, \mathrm{d}x = \left(1, \dot{y}_2(x) \right) \mathrm{d}x
 \]</div>
-<p>Y por lo tanto</p>
+<p>Y por lo tanto:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \int_{{\bf c}_2} \left(F_x(x, y), 0 \right) \,\mathrm{d} {\bf s} 
@@ -854,7 +858,7 @@ x \in [a, b], \; {\bf c_2}(x) = \left( x, y_2(x) \right)
 \oint_{{\bf c}} -\frac{y}{2} \, \mathrm{d}x + \frac{x}{2} \mathrm{d}y = 
 \int_{R} \mathrm{d}x \mathrm{d}y
 \]</div>
-<p><em>Ejercicio</em>: Verificar el teorema de Green con la función vectorial <span class="math notranslate nohighlight">\({\bf F}(x, y) = (x, y)\)</span> en el disco de radio unidad.</p>
+<p><strong>Ejercicio</strong>: Verificar el teorema de Green con la función vectorial <span class="math notranslate nohighlight">\({\bf F}(x, y) = (x, y)\)</span> en el disco de radio unidad.</p>
 <p>El término de la derecha del teorema de Green es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -889,8 +893,9 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="teorema-de-la-divergencia">
-<h3>Teorema de la divergencia.<a class="headerlink" href="#teorema-de-la-divergencia" title="Permalink to this heading">#</a></h3>
+<h2>Teorema de la divergencia.<a class="headerlink" href="#teorema-de-la-divergencia" title="Permalink to this heading">#</a></h2>
 <p>Vamos a considerar la integral de una función vectorial de dos dimensiones, <span class="math notranslate nohighlight">\({\bf F}({\bf x})\)</span>, <em>a través de</em> una línea cerrada, <span class="math notranslate nohighlight">\({\bf c}(t)\)</span>.</p>
 <p>Dado el elemento vectorial diferencial de arco <span class="math notranslate nohighlight">\(\mathrm{d} {\bf s} = (\mathrm{d}x, \mathrm{d}y)\)</span>, en vez de calcular el productor escalar del campo a lo largo de la trayectoria, <span class="math notranslate nohighlight">\( {\bf F}(x, y) \, \mathrm{d}{\bf s}\)</span>, lo calculamos a través de ella, normal a ella, <span class="math notranslate nohighlight">\({\bf F}(x, y) \, \mathrm{d}{\bf n}\)</span>, donde, <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n}\)</span> es normal a <span class="math notranslate nohighlight">\(\mathrm{d}{\bf s}\)</span>, pero con igual módulo, donde definimos <span class="math notranslate nohighlight">\(\mathrm{d}{\bf n} = ( \mathrm{d}y, -\mathrm{d}x)\)</span>.</p>
 <p>Esto es:</p>
@@ -988,10 +993,9 @@ t \in [0, 2 \pi), \; {\bf c}(t) = \left( \cos t, \sin t\right)
 <img alt="../_images/tcalvec_green_32_0.png" src="../_images/tcalvec_green_32_0.png" />
 </div>
 </div>
-</div>
 <div class="section" id="apendices">
 <h3>Apéndices<a class="headerlink" href="#apendices" title="Permalink to this heading">#</a></h3>
-<p><em>Ejercicio</em>: Verifica el teorema de Green para el campo, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, x^2)\)</span> en la región definida como: <span class="math notranslate nohighlight">\(\{0 \le x \le 1, \; x^2 \le y \le x \}\)</span>.</p>
+<p><strong>Ejercicio</strong>: Verifica el teorema de Green para el campo, <span class="math notranslate nohighlight">\({\bf F}(x, y) = (y, x^2)\)</span> en la región definida como: <span class="math notranslate nohighlight">\(\{0 \le x \le 1, \; x^2 \le y \le x \}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>

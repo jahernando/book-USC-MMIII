@@ -616,7 +616,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Mar 14 13:08:39 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución   Tue Apr 11 18:07:20 2023
 </pre></div>
 </div>
 </div>
@@ -674,7 +674,7 @@ title="Print to PDF"
 <p>Decimos que una función <span class="math notranslate nohighlight">\(f(x)\)</span> es <strong>periódica</strong> con periodo <span class="math notranslate nohighlight">\(T\)</span> si: <span class="math notranslate nohighlight">\(f(x + T) = f(x)\)</span>.</p>
 <p>Por ejemplo, <span class="math notranslate nohighlight">\(f(x) = sin(x)\)</span> es una función periódica de periodo <span class="math notranslate nohighlight">\(T = 2\pi\)</span>, <span class="math notranslate nohighlight">\(\sin(2\pi + x) = \sin(x)\)</span></p>
 <p>Una función es par si <span class="math notranslate nohighlight">\(f(- x) = f(x)\)</span> e impar si <span class="math notranslate nohighlight">\(f(-x) = - f(x)\)</span></p>
-<p>Por ejemplo, <span class="math notranslate nohighlight">\(f(x) = \cos(n x)\)</span> es par, y <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span> es impar.</p>
+<p>Por ejemplo, <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span> es par, y <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span> es impar.</p>
 <p><em>Ejercicio:</em> Verifica que dado <span class="math notranslate nohighlight">\(n\)</span> natural, <span class="math notranslate nohighlight">\(n&gt;0\)</span>, <span class="math notranslate nohighlight">\(\cos (n x)\)</span> es par y <span class="math notranslate nohighlight">\(\sin(nx)\)</span> impar, y ambos son periódicas con periodo <span class="math notranslate nohighlight">\(2 \pi\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -705,19 +705,19 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(\int_{-\pi}^{\pi} f(x) \, \sin(nx) \, \mathrm{d}x = 0\)</span>,</p></li>
 </ol>
 <p>para <span class="math notranslate nohighlight">\(n=1, 2, \dots \in \mathcal{N}\)</span></p>
-<p><em>Ejercicio</em>: Toda función <span class="math notranslate nohighlight">\(f(x)\)</span> se puede expresar como la suma de una función par y otra impar.</p>
+<p><strong>Ejercicio</strong>: Toda función <span class="math notranslate nohighlight">\(f(x)\)</span> se puede expresar como la suma de una función par y otra impar.</p>
 <p>Definimos:</p>
 <div class="math notranslate nohighlight">
 \[
 h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\(h(x)\)</span> es par, <span class="math notranslate nohighlight">\(g(x)\)</span> es impar y <span class="math notranslate nohighlight">\(f(x) = h(x) + g(x)\)</span></p>
-<p><em>Ejemplo:</em> Convertir <span class="math notranslate nohighlight">\(f(x) = 0\)</span> si <span class="math notranslate nohighlight">\(x \le 0\)</span> y 1 si <span class="math notranslate nohighlight">\(x \gt 0\)</span> en una suma de función par e impar.</p>
+<p><em>Ejercicio:</em> Convertir <span class="math notranslate nohighlight">\(f(x) = 0\)</span> si <span class="math notranslate nohighlight">\(x \le 0\)</span> y 1 si <span class="math notranslate nohighlight">\(x \gt 0\)</span> en una suma de función par e impar.</p>
 </div>
 <div class="section" id="funciones-ortogonales">
 <h3>Funciones ortogonales<a class="headerlink" href="#funciones-ortogonales" title="Permalink to this heading">#</a></h3>
 <p>Las siguiente funciones, <span class="math notranslate nohighlight">\(\sin(nx), \, \cos(mx)\)</span> con <span class="math notranslate nohighlight">\(n, m = 1, 2, \dots \in \mathcal{N}\)</span> son «ortogonales».</p>
-<p><em>Teorema:</em> Se cumple:</p>
+<p><strong>Teorema</strong>: Se cumple:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\int_{-\pi}^{\pi} \sin(nx) \cos (mx) \mathrm{d}x = 0\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\int_{-\pi}^{\pi} \cos(nx) \cos (mx) \mathrm{d}x = \pi \delta_{nm}\)</span></p></li>
@@ -725,7 +725,7 @@ h(x) = \frac{1}{2}(f(x)  + f(-x)), \; g(x) = \frac{1}{2}(f(x) - f(-x))
 </ol>
 <p>donde:</p>
 <p><span class="math notranslate nohighlight">\( \delta_{nm} = 1\)</span> si <span class="math notranslate nohighlight">\(n = m\)</span> y 0 si <span class="math notranslate nohighlight">\(n \ne m\)</span></p>
-<p><em>Ejercicio</em>: Comprueba que las funciones, <span class="math notranslate nohighlight">\(\sin n x, \, \cos m x \)</span>, con <span class="math notranslate nohighlight">\(n, m = 1, 2, \dots \in \mathcal{N}\)</span> son ortogonales en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span></p>
+<p><strong>Ejercicio</strong>: Comprueba que las funciones, <span class="math notranslate nohighlight">\(\sin n x, \, \cos m x \)</span>, con <span class="math notranslate nohighlight">\(n, m = 1, 2, \dots \in \mathcal{N}\)</span> son ortogonales en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span>
@@ -806,7 +806,7 @@ a_n = \int_a^b f(x) \, \Psi_n(x) \mathrm{d}x
 <p>El siguiente conjunto de funciones definidas es completo en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{\sqrt{2\pi}}, \frac{1}{\sqrt{\pi}} \sin nx, \frac{1}{\sqrt{\pi}} \cos mx
+\left\{ \frac{1}{\sqrt{2\pi}}, \frac{1}{\sqrt{\pi}} \sin nx, \frac{1}{\sqrt{\pi}} \cos mx \right\}
 \]</div>
 <p>con <span class="math notranslate nohighlight">\(n=1, 2, \dots \in \mathrm{N}\)</span></p>
 <p>Toda función periódica continua, acotada, <span class="math notranslate nohighlight">\(f(x)\)</span>, con periodo <span class="math notranslate nohighlight">\(T= 2 \pi\)</span> puede darse como una serie de Fourier:</p>
@@ -828,7 +828,7 @@ a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \cos nx \, \mathrm{d}x
 b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \sin nx \, \mathrm{d}x
 \]</div>
 <p><em>Cuestión</em>: Si <span class="math notranslate nohighlight">\(f(x)\)</span> es continua con periodo <span class="math notranslate nohighlight">\(2\pi\)</span> y par, ¿tendra coeficientes <span class="math notranslate nohighlight">\(b_n\)</span>? ¿Y si es impar tendrá <span class="math notranslate nohighlight">\(a_n\)</span>?</p>
-<p><em>Ejemplo</em>: Obtener la serie de Fourier de la función <span class="math notranslate nohighlight">\(f(x) = x\)</span> si <span class="math notranslate nohighlight">\(x \ge 0\)</span> y <span class="math notranslate nohighlight">\(f(x) = - x\)</span> si <span class="math notranslate nohighlight">\(x \le 0\)</span>.</p>
+<p><strong>Ejemplo</strong>: Obtener la serie de Fourier de la función <span class="math notranslate nohighlight">\(f(x) = x\)</span> si <span class="math notranslate nohighlight">\(x \ge 0\)</span> y <span class="math notranslate nohighlight">\(f(x) = - x\)</span> si <span class="math notranslate nohighlight">\(x \le 0\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -881,7 +881,7 @@ S(x) = \frac{\pi}{2} - \frac{4}{\pi} \sum_k \frac{1}{(2k+1)^2} \cos (2k+1) x
 </div>
 </div>
 <p>A veces las series de Fourier pueden ayudarnos a calcular series numéricas</p>
-<p><em>Ejercicio</em>: Calcula, usando el desarrollo de Fourier anterior, el valor de:</p>
+<p>**Ejercicio*¨: Calcula, usando el desarrollo de Fourier anterior, el valor de:</p>
 <div class="math notranslate nohighlight">
 \[
 \sum_{k=0}^\infty \frac{1}{(2 k + 1)^2}
@@ -899,7 +899,7 @@ S(0) = \frac{\pi}{2} - \sum_{k=0}^\infty \frac{4}{(2 k +1)^2 \pi} = 0
 <p><strong>Teorema de Dirichlet</strong> Toda función periódica en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span> (continua en un número finito de trozos y con un número finito de máximos y mínimos) admite desarrollo en serie de Fourier.</p>
 <p>La función puede ser discontinua en un número finito de puntos mientras que la serie de Fourier <em>siempre</em> es continua.</p>
 <p>En los puntos de discontinuidad la serie nos da el valor medio entre su valor a la izquierda y la derecha de la función en ese punto.</p>
-<p><em>Ejemplo:</em> Sea la función definida en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span></p>
+<p><strong>Ejemplo</strong>: Sea la función definida en <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 f(x) = 0 \; \mathrm{si} \, x \lt 0, 1 \; \mathrm{si} \, x \ge 0
@@ -927,9 +927,9 @@ a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \mathrm{d}x = \frac{1}{\pi} \int_0
 a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \cos nx \, \mathrm{d}x = \frac{1}{\pi} \int_0^{\pi} \cos nx \, \mathrm{d}x =  \frac{1}{n \pi} \sin n\pi \Big|_0^\pi = 0
 \]</div>
 <div class="math notranslate nohighlight">
-\[
-b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \sin nx \, \mathrm{d}x = \frac{1}{\pi} \int_0^{\pi} \sin nx \, \mathrm{d}x = -\frac{1}{n \pi} \cos nx \Big|_0^{\pi} = -  \frac{(-1)^n -1}{n \pi} =  \frac{1-(-1)^n}{n \pi}
-\]</div>
+\[\begin{split}
+b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, \sin nx \, \mathrm{d}x = \frac{1}{\pi} \int_0^{\pi} \sin nx \, \mathrm{d}x  \\ = -\frac{1}{n \pi} \cos nx \Big|_0^{\pi} = -  \frac{(-1)^n -1}{n \pi} =  \frac{1-(-1)^n}{n \pi}
+\end{split}\]</div>
 <p>los términos <span class="math notranslate nohighlight">\(b_n\)</span> para <span class="math notranslate nohighlight">\(n\)</span> par se anulan, así podemos dar:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -966,7 +966,7 @@ S(x) = \frac{1}{2} + \sum_{k=0} \frac{2}{(2k+1) \pi} \sin (2k+1)x
 <p>Sea ahora una función periódica con periodo <span class="math notranslate nohighlight">\([-L, L]\)</span>, la podemos dar como una serie de Fourier a partir del siguiente conjunto de funciones ortonormales.</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{\sqrt{2L}}, \, \frac{1}{\sqrt{L}} \sin  \frac{n\pi x}{L}, \, \frac{1}{\sqrt{L}} \cos \frac{n \pi x}{L}
+\left\{ \frac{1}{\sqrt{2L}}, \, \frac{1}{\sqrt{L}} \sin  \frac{n\pi x}{L}, \, \frac{1}{\sqrt{L}} \cos \frac{n \pi x}{L} \right\}
 \]</div>
 <p>con:</p>
 <div class="math notranslate nohighlight">
@@ -990,8 +990,9 @@ S(x) = \frac{a_0}{2} + \sum_{n} a_n \cos \frac{n \pi x}{L} + \sum_{n} b_n \sin \
 </div>
 <div class="section" id="desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l">
 <h3>Desarrollo de Fourier para una función no periódica definida en un intervalo [0, L]<a class="headerlink" href="#desarrollo-de-fourier-para-una-funcion-no-periodica-definida-en-un-intervalo-0-l" title="Permalink to this heading">#</a></h3>
-<p>¿Y si la función está definida solo en una región <span class="math notranslate nohighlight">\([0, L]\)</span>? Podemos extender la función a <span class="math notranslate nohighlight">\([-L, L]\)</span> por ejemplo <span class="math notranslate nohighlight">\(f(-x) = f(x)\)</span> haciéndola par, y calculado su serie de Fourier, y declarándola válida solo en el intervalo <span class="math notranslate nohighlight">\([0, L]\)</span></p>
-<p><em>Ejercicio:</em> Sea <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> definida en <span class="math notranslate nohighlight">\([0, 2]\)</span> dar su desarrollo en serie de Fourier.</p>
+<p>¿Y si la función está definida solo en una región <span class="math notranslate nohighlight">\([0, L]\)</span>?</p>
+<p>Podemos extender la función a <span class="math notranslate nohighlight">\([-L, L]\)</span> por ejemplo <span class="math notranslate nohighlight">\(f(-x) = f(x)\)</span> haciéndola par, y calculado su serie de Fourier, y declarándola válida solo en el intervalo <span class="math notranslate nohighlight">\([0, L]\)</span></p>
+<p><strong>Ejercicio</strong>: Sea <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> definida en <span class="math notranslate nohighlight">\([0, 2]\)</span> dar su desarrollo en serie de Fourier.</p>
 <p>definimos <span class="math notranslate nohighlight">\(g(x) = x^2\)</span> en <span class="math notranslate nohighlight">\([-2, 2]\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -1002,7 +1003,7 @@ a_0 = \frac{1}{2} \int_{-2}^{2} x^2 \mathrm{d}x = \int_0^2 x^2 \mathrm{d}x = \fr
 a_n = \frac{1}{2} \int_{-2}^2 x^2 \cos \frac{n \pi x}{2} \, \mathrm{d}x
 = \int_{0}^2 x^2 \cos \frac{n \pi x}{2} \, \mathrm{d}x
 \]</div>
-<p>integrando por partes:</p>
+<p>e integrando por partes:</p>
 <div class="math notranslate nohighlight">
 \[
 = \frac{2x^2}{n \pi} \sin \frac{n\pi x}{2}  - \int_0^2 \frac{4x}{n\pi} \sin \frac{n\pi x}{2} \mathrm{d}x

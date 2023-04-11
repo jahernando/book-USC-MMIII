@@ -571,7 +571,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Mon Apr 10 21:43:13 2023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Última ejecución  Tue Apr 11 18:07:17 2023
 </pre></div>
 </div>
 </div>
@@ -639,7 +639,7 @@ title="Print to PDF"
 </div>
 </div>
 <p><strong>El teorema de Stockes</strong> es la generalización del de Green a 3 dimensiones.</p>
-<p><em>Teorema</em>: Sea una superficie <span class="math notranslate nohighlight">\(S\)</span> orientable, cuya frontera <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> se recorre en sentido anti-horario, y parametrizada con <span class="math notranslate nohighlight">\(\sigma(u, v)\)</span>, donde <span class="math notranslate nohighlight">\((u, v)\)</span> están definidas en una región <span class="math notranslate nohighlight">\(R\)</span>; y sea un campo vectorial con derivadas primeras continuas <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = \left( F_x, F_y, F_z \right)\)</span>, se cumple:</p>
+<p><strong>Teorema</strong>: Sea una superficie <span class="math notranslate nohighlight">\(S\)</span> orientable, cuya frontera <span class="math notranslate nohighlight">\({\bf c}(t)\)</span> se recorre en sentido anti-horario, y parametrizada con <span class="math notranslate nohighlight">\(\sigma(u, v)\)</span>, donde <span class="math notranslate nohighlight">\((u, v)\)</span> están definidas en una región <span class="math notranslate nohighlight">\(R\)</span>; y sea un campo vectorial con derivadas primeras continuas <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = \left( F_x, F_y, F_z \right)\)</span>, se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{S} \nabla \times {\bf F} \, \mathrm{d} \vec{\sigma} = \oint_{\bf c} {\bf F} \, \mathrm{d}{\bf s}
@@ -721,10 +721,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 = \int_S \nabla\times F \, \mathrm{d}\vec{\sigma}
 \]</div>
+<p>con lo que queda demostrado el teorema de Stockes.</p>
 <p>En la siguiente figura se muestra una la malla, la superficie está dividida en pequeños cuadrados. Consideremoslos infinitesimales. Si aplicamos el teorema de Stockes en cada cuadradito, la circulación en sus lados coincide con el rotacional en el centro por el área diferencial del cuadrado.</p>
 <a class="reference internal image-reference" href="../_images/malla_stockes.jpg"><img alt="../_images/malla_stockes.jpg" src="../_images/malla_stockes.jpg" style="width: 300px;" /></a>
 <p>Si te das cuenta la circulación en dos cuadrados adyacentes se anulan y da como resultado la circulación en la frontera externa. Y esa cantidad debe ser igual a la integral del rotacional en la superficie.</p>
-<p>Date cuenta que la superficie es maleable y el teorema se aplica igualmente, la circulación en todos los cuadraditos es al final siempre la circulación en su frontera, e igual a la integral del rotacional en la superficie, da igual su forma.</p>
+<p>Date cuenta que si la superficie es maleable, el teorema se aplica igualmente, la circulación en todos los cuadraditos es al final siempre la circulación en su frontera, e igual a la integral del rotacional en la superficie, da igual la forma de ésta.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">espira</span><span class="p">():</span>
@@ -756,7 +757,7 @@ $<span class="math notranslate nohighlight">\(
 <img alt="../_images/tcalvec_stockes_gauss_17_0.png" src="../_images/tcalvec_stockes_gauss_17_0.png" />
 </div>
 </div>
-<p>Considera la integral por los lados verticales, solo partipa <span class="math notranslate nohighlight">\(F_y\)</span>. Nota que el lado de la derecha entra con un (+) y el de la izquierda con un (-) en la circulación. La integral podemos aproximarla:</p>
+<p>Considera la integral por los lados verticales en los que solo partipa <span class="math notranslate nohighlight">\(F_y\)</span>. Nota que el lado de la derecha entra con un (+) y el de la izquierda con un (-) en la circulación. La integral podemos aproximarla:</p>
 <div class="math notranslate nohighlight">
 \[
 F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\partial F_y}{\partial x}(x_0 ,y_0) \, \Delta x \Delta y
@@ -771,7 +772,7 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 \[
 \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \, \mathrm{d}x \mathrm{d}y
 \]</div>
-<p><em>Ejercicio</em>: Verificar el teorema de Stockes en la superficie dada por la intersección de un cilindro infinito con eje en la dirección <span class="math notranslate nohighlight">\(z\)</span> y base <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>, y el plano <span class="math notranslate nohighlight">\(x+y+z =1\)</span>, con <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (-y^3, x^3, z^3)\)</span></p>
+<p><strong>Ejercicio</strong>: Verificar el teorema de Stockes en la superficie dada por la intersección de un cilindro infinito con eje en la dirección <span class="math notranslate nohighlight">\(z\)</span> y base <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>, y el plano <span class="math notranslate nohighlight">\(x+y+z =1\)</span>, con <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (-y^3, x^3, z^3)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">phirange</span><span class="p">,</span> <span class="n">zrange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -851,7 +852,7 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 <p>Y la frontera con la línea:</p>
 <div class="math notranslate nohighlight">
 \[
-{\bf c}(\phi) = (\cos \phi, \sin \phi, 1 - \cos \phi - \sin \phi),\,\,\, \phi \in [0, 2 \pi]
+{\bf c}(\phi) = (\cos \phi, \sin \phi, 1 - \cos \phi - \sin \phi),\,\,\, \phi \in [0, 2 \pi)
 \]</div>
 <p>donde:</p>
 <div class="math notranslate nohighlight">
@@ -870,11 +871,10 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 \end{split}\]</div>
 <p>La integral en la superfice:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \int_{S} \nabla \times {\bf F} \, \mathrm{d}\vec{\sigma} = \int_{R} (0, 0, 3 x^2 + 3 y^2) \, (1, 1, 1) \, 
-\mathrm{d}x\mathrm{d}y
-= \int_R 3 (x^2 + y^2)\, \mathrm{d}x\mathrm{d}y 
-\]</div>
+\mathrm{d}x\mathrm{d}y \\ = \int_R 3 (x^2 + y^2)\, \mathrm{d}x\mathrm{d}y 
+\end{split}\]</div>
 <p>La región <span class="math notranslate nohighlight">\(R\)</span> es el disco de radio unidad, que podemos integrar en polares</p>
 <div class="math notranslate nohighlight">
 \[
@@ -899,9 +899,9 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 <p>Que dividimos en dos integrales:</p>
 <div class="math notranslate nohighlight">
 \[
- \int_0^{2\pi} (\sin^4 \phi + \cos^4 \phi) \mathrm{d}\phi + \int_0^{2\pi} (1-\cos\phi-\sin\phi)^3 (\sin \phi -\cos \phi) \, \mathrm{d}\phi
+ \int_0^{2\pi} (\sin^4 \phi + \cos^4 \phi) \, \mathrm{d}\phi + \int_0^{2\pi} (1-\cos\phi-\sin\phi)^3 (\sin \phi -\cos \phi) \, \mathrm{d}\phi
 \]</div>
-<p>La primera intergral, como:</p>
+<p>En la primera intergral, si operamos:</p>
 <div class="math notranslate nohighlight">
 \[
 \sin^4 \phi + \cos^4 \phi
@@ -926,7 +926,7 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
  \int_0^{2\pi} (1-\cos\phi-\sin\phi)^3 (\sin \phi -\cos \phi) \, \mathrm{d}\phi
 = \frac{1}{4}\left( 1 - \cos \phi - \sin \phi \right)^4 \Big|_0^{2\pi} = 0
 \]</div>
-<p><em>Ejercicio:</em> Verifica el teorema de Stockes con el campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (-y, x, 0)\)</span> en la superficie <span class="math notranslate nohighlight">\(z = 4 - x^2 - y^2\)</span> con <span class="math notranslate nohighlight">\(z \ge 0\)</span>.</p>
+<p><strong>Ejercicio</strong>: Verifica el teorema de Stockes con el campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (-y, x, 0)\)</span> en la superficie <span class="math notranslate nohighlight">\(z = 4 - x^2 - y^2\)</span> con <span class="math notranslate nohighlight">\(z \ge 0\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sx</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">,</span> <span class="n">phi</span> <span class="p">:</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
@@ -1034,20 +1034,20 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 <div class="section" id="teorema-de-strogradski-gauss">
 <h2>Teorema de Strogradski-Gauss<a class="headerlink" href="#teorema-de-strogradski-gauss" title="Permalink to this heading">#</a></h2>
 <p>El teorema de Gauss corresponde a la extensión del teorema de la divergencia a 3 dimensiones.</p>
-<p><em>Teorema</em>: Sea un volumen regular, <span class="math notranslate nohighlight">\(V\)</span> limitado por una superficie cerrada <span class="math notranslate nohighlight">\(S\)</span>, y sea un campo vectorial con derivadas primeras continuas <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = \left( F_x, F_y, F_z \right)\)</span>, se cumple:</p>
+<p><strong>Teorema</strong>: Sea un volumen regular <span class="math notranslate nohighlight">\(V\)</span>, limitado por una superficie cerrada <span class="math notranslate nohighlight">\(S\)</span>, y sea un campo vectorial con derivadas primeras continuas <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = \left( F_x, F_y, F_z \right)\)</span>, se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
-\oint_{S} {\bf F} \, \mathrm{d}\vec{\sigma} = \int_V \nabla {\bf F} \, \mathrm{d}x\mathrm{d}y\mathrm{d}x
+\oint_{S} {\bf F} \, \mathrm{d}\vec{\sigma} = \int_V \nabla \cdot {\bf F} \, \mathrm{d}x\mathrm{d}y\mathrm{d}x
 \]</div>
 <p>donde la superficie cerrada está definida hacia afuera.</p>
 <p>Sea un volumen regular definido por una región <span class="math notranslate nohighlight">\(D\)</span> en <span class="math notranslate nohighlight">\((x, y)\)</span> y <span class="math notranslate nohighlight">\(z_1(x, y) \le z \le z_2(x, y)\)</span>, donde <span class="math notranslate nohighlight">\(z_1(x,y), \, z_2(x,y)\)</span> son dos funciones escalares que nos limitan los valores de <span class="math notranslate nohighlight">\(z\)</span>.</p>
 <p>Consideremos:</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \int_V \frac{\partial F_z}{\partial z} \, \mathrm{d}x\mathrm{d}y\mathrm{d}z 
-= \int_D F_z(x, y, z) \Big|_{z_1}^{z_2} \, \mathrm{d}x\mathrm{d}y
+= \int_D F_z(x, y, z) \Big|_{z_1}^{z_2} \, \mathrm{d}x\mathrm{d}y \\
 = \int_D  \left[F_z(x, y, z_2(x,y)) - F_z(x, y, z_1(x,y) \right] \mathrm{d}x \mathrm{d}y
-\]</div>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">,</span> <span class="n">phirange</span>              <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -1101,10 +1101,11 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 \int_V \frac{\partial F_x}{\partial x} \, \mathrm{d}x\mathrm{d}y\mathrm{d}z 
 = \oint F_x \hat{i} \, \mathrm{d}\vec{\sigma} 
 \]</div>
+<p>Con lo que queda demostrato el teorema de Gauss.</p>
 <p><em>Observa</em> el siguiente cubo construido con cubitos. Si fueran infinitesimales, la integral del flujo en sus caras sería lo mismo que la divergencia en el centro del cubito por su volumen diferencial</p>
 <p>Si los cubitos están adyantes el cálculo de su flujo se anula en las paredes que se tocan, y la suma de los flujos en todos los cubitos es igual a la de las caras de la superficie frontera. ¡Mientras que esa cantidad será igual a la suma de la divergencia en cada cubito por su volumen!</p>
 <a class="reference internal image-reference" href="../_images/cubes_gauss.jpeg"><img alt="../_images/cubes_gauss.jpeg" src="../_images/cubes_gauss.jpeg" style="width: 250px;" /></a>
-<p><em>Ejemplo</em>: Verifica el teorema de Gauss con el campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x, y, z)\)</span> en la esfera de radio unidad.</p>
+<p><strong>Ejemplo</strong>: Verifica el teorema de Gauss con el campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x, y, z)\)</span> en la esfera de radio unidad.</p>
 <p><em>Observa</em>: Como el campo es radial, igual que los elementos diferenciales de área de la esfera.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1128,7 +1129,7 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 <span class="math notranslate nohighlight">\(\nabla \, {\bf F} = 3\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-\int_V 3 \mathrm{d}x \mathrm{d}y \mathrm{d}z = 3 \frac{4 \pi}{3} = 4 \pi
+\int_V 3 \, \mathrm{d}x \mathrm{d}y \mathrm{d}z = 3 \frac{4 \pi}{3} = 4 \pi
 \]</div>
 <p>b) Si parametrizamos la esfera en coordenadas esféricas, ya vimos que</p>
 <div class="math notranslate nohighlight">
@@ -1149,7 +1150,7 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 \[
 \oint_{S} {\bf F} \, \mathrm{d}\vec{\sigma} = \int_0^\pi \int_0^{2\pi} \sin \theta \, \mathrm{d}\theta \mathrm{d}\phi = \phi \Big|_0^{2\pi} (-\cos \theta) \Big|_0^{\pi} = 4 \pi
 \]</div>
-<p><em>Ejercicio:</em> Calcular el flujo del campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (2x, y^2, z^2)\)</span> en la esfera de radio unidad.</p>
+<p><strong>Ejercicio</strong>: Calcular el flujo del campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (2x, y^2, z^2)\)</span> en la esfera de radio unidad.</p>
 <p>Aplicamos el teorema de Gauss,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1160,17 +1161,17 @@ F_y(x_0 + \Delta x, y_0) \, \Delta y - F_y(x_0, y_0) \, \Delta y \simeq \frac{\p
 \[
 \int_V ( 2 + 2 y + 2z) \, \mathrm{d}x\mathrm{d}y\mathrm{d}z
 \]</div>
-<p>Las dos últimas integrales son nulas. Considera la primera, el volumen devidido en dos semiesferas <span class="math notranslate nohighlight">\(y \le0\)</span> e <span class="math notranslate nohighlight">\(y \ge 0\)</span>, la integral vale lo mismo en cada semiesfera pero con signo cambiado.</p>
+<p>Las dos últimas integrales son nulas. Considera la primera. Dividimos el volumen en dos semiesferas <span class="math notranslate nohighlight">\(y \le0\)</span> e <span class="math notranslate nohighlight">\(y \ge 0\)</span>, la integral vale lo mismo en cada semiesfera pero con signo cambiado.</p>
 <div class="math notranslate nohighlight">
 \[
 \int_V  2y \, \mathrm{d}x\mathrm{d}y\mathrm{d}z = \int_V  2z \, \mathrm{d}x\mathrm{d}y\mathrm{d}z = 0
 \]</div>
-<p>La integral que resta es simplemente dos veces el volumen de la esfera</p>
+<p>La integral que resta es simplemente dos veces el volumen de la esfera:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_V  2 \, \mathrm{d}x\mathrm{d}y\mathrm{d}z = 2 \frac{4 \pi}{3}
 \]</div>
-<p><em>Ejercicio:</em> Calcular el flujo del campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x y^2, y x^2, y)\)</span> sobre el cilindro de disco unidad y altura en <span class="math notranslate nohighlight">\(z\)</span> en <span class="math notranslate nohighlight">\([-1, 1]\)</span></p>
+<p><strong>Ejercicio</strong>: Calcular el flujo del campo <span class="math notranslate nohighlight">\({\bf F}(x, y, z) = (x y^2, y x^2, y)\)</span> sobre el cilindro de disco unidad y altura en <span class="math notranslate nohighlight">\(z\)</span> en <span class="math notranslate nohighlight">\([-1, 1]\)</span></p>
 <p>Aplicamos el teorema de Gauss:</p>
 <div class="math notranslate nohighlight">
 \[
